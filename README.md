@@ -1,6 +1,6 @@
 # arthmc.xyz
 
-This repo is a remake of the origional https://arthmc.xyz, which was made with wordpress. The arth website has info on various minecraft-relate services, softawres, and more by Arth. 
+This repo is a remake of the origional https://arthmc.xyz, which was made with wordpress. The arth website has info on various minecraft-relate services, softawres, and more by Arth. This project shares a good amount of code and UI with our [observer](https://github.com/diamonc/observer). project, so shoutout to all our contributors on observer!
 
 ## What is Arth?
 
