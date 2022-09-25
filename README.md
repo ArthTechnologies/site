@@ -1,21 +1,12 @@
-# Observer
+# arthmc.xyz
 
-Observer is a frontend for Arth Panel, an open-source & self-hosted minecraft server panel. Observer is meant to be run as a docker container, and is made with HTML/CSS/JS, Node, SvelteKit, TailwindCSS, and DaisyUI. 
-
-## Why Arth Panel?
-The main difference between an alternative like pufferpanel or pterodactyl is that it's meant to work in a way so that if an issue were to occur, you could easily just SSH into the machine and run the jar directly in a folder, so you know that your server's uptime is not dependant on a panel someone else made working flawlessly.  
+This repo is a remake of the origional https://arthmc.xyz, which was made with wordpress. The arth website has info on various minecraft-relate services, softawres, and more by Arth. 
 
 ## Planned Pages
 
 ```
-/servers (Where all servers you have access too are listed)
-/settings (Configure things like site URL)
-/newserver (Page to create a new server)
-/server/[server technicalname] (page showing eventually terminal)
-/login
-/signin
-/account (manage account/profile)
-/billing (add to your balance and view your balance as well as next charges)
+/ 
+
 ```
 
 ## Contributing
@@ -24,10 +15,7 @@ Contributions are very much appreciated! Feel free to contribute, preferably som
 
 # To-do list
 ✅ Setup a basic node application with Svelte, Tailwind, & DaisyUI.  
-✅ Navbar with Arth Panel, Servers, & Settings on left. On right: Night/darkmode button, Create server button, Account button.  
-✅ Basic UI for all planned pages  
-🔨 Basic UI and function for terminal on the frontend
+✅ Navbar with Home, Hosting, dark/lightmode switch, and links button with links to docs, discord, and more.
+🔨 Basic UI for all planned pages  
 ❌ Communication with backend (No backend yet, I'm not experienced in backends)   
-❌ Balance deposits & withdraws with paypal  
-❌ Web Terminal using WebSockets  
-❓ Balance deposits & withdraws with stripe  
+❌ Integration with Arth Hosting's [panel](https://github.com/diamonc/observer).
