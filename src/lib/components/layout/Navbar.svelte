@@ -12,14 +12,14 @@
   <div class="navbar bg-base-300 px-4">
     <div class="flex-1">
       <a class="btn btn-ghost normal-case text-xl" href="/"
-        ><img src="/images/sitelogo.png" alt="Arth" width="75" /></a
+        ><img src="/images/sitelogo.png" alt="Arth" width="75" /><span
+          class="badge badge-info">Beta</span
+        ></a
       >
     </div>
     <div class="flex-none space-x-2">
       <ul class="menu menu-horizontal p-0">
         <li><a href="/">Home</a></li>
-        <li><a href="/settings">Hosting</a></li>
-        <li><a href="/settings">My Servers</a></li>
       </ul>
 
       <ThemeToggle />
@@ -49,14 +49,19 @@
           class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-200 rounded-box w-52"
         >
           <li>
-            <a class="justify-between"> Docs </a>
+            <a class="justify-between"> Docs (Coming Soon)</a>
           </li>
           <li>
-            <a class="justify-between"> Discord </a>
+            <a
+              href="https://discord.com/invite/bjY39AbK35"
+              class="justify-between"
+            >
+              Discord
+            </a>
           </li>
           <li>
             <a class="justify-between">
-              Panel
+              Panel (Coming Soon)
               <div
                 class="tooltip tooltip-left"
                 data-tip="Arth panel is a software allowing you to manage game servers on a server computer you own. This is not related to any paid Arth Services."
