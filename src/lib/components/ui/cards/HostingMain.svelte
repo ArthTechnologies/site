@@ -1,7 +1,7 @@
 
 <div class="card shadow-2xl space-y-10 space-x-10">
   <div
-    class="card-body bg-gradient-to-tl from-orange-500 to-teal-600 rounded-xl hero"
+    class="card-body bg-gradient-to-tl from-orange-500 to-pink-600 rounded-xl hero"
   >
     <div class="hero-content text-center">
       <div class="max-w-md">
