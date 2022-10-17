@@ -16,7 +16,7 @@
         <ul class="py-7 text-neutral-focus">
         <li>What's a plugin? A Plugin is an add-on to your server that gives it new features, like WorldEdit, which lets you build giant structures & landscapes effortlessly with new brushes & commands.</li>
         <li>
-        </ul
+        </ul>
 
         <div class="btn glass text-neutral-focus">
           <a href="/hosting">Coming Soon</a>
