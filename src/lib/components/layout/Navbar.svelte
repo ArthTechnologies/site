@@ -20,6 +20,7 @@
     <div class="flex-none space-x-2">
       <ul class="menu menu-horizontal p-0">
         <li><a href="/">Home</a></li>
+        <li><a href="/">Hosting</a></li>
       </ul>
 
       <ThemeToggle />
