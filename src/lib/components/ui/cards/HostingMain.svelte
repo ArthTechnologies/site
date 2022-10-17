@@ -42,9 +42,9 @@
       </tr>
       <!-- row 3 -->
       <tr>
-        <th>Apex Hosting</th>
-        <td>$10/Month</td>
-        <td>You can't install any mods or plugins, and have a limited amount of players.</td>
+        <th>Minecraft Realms</th>
+        <td>$8/Month</td>
+        <td>No Mods/Plugins, Limited Amount of PLayers</td>
         <td>No.</td>
       </tr>
     </tbody>
