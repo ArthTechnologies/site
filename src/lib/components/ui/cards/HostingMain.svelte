@@ -50,6 +50,7 @@
     </tbody>
   </table>
 </div>
+<div class="divider-horizontal"></div>
         <div class="btn glass text-neutral-focus">
           <a href="/hosting">Coming Soon</a>
         </div>
