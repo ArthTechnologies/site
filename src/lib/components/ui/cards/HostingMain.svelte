@@ -14,7 +14,13 @@
           Get your own minecraft server with the most user-friendly setup out
           there! Plus, both Java & Bedrock Edition players will be able to join!
         </p>
-        <div class="overflow-x-auto">
+        
+        <div class="btn glass text-neutral-focus">
+          <a href="/hosting">Coming Soon</a>
+        </div>
+      </div>
+    </div>
+    <div class="overflow-x-auto">
   <table class="table w-full bg-base-100 table-normal">
     <!-- head -->
     <thead>
@@ -50,10 +56,5 @@
     </tbody>
   </table>
 </div>
-        <div class="btn glass text-neutral-focus">
-          <a href="/hosting">Coming Soon</a>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
