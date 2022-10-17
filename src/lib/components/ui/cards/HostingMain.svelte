@@ -15,7 +15,7 @@
           there! Plus, both Java & Bedrock Edition players will be able to join!
         </p>
         <div class="overflow-x-auto">
-  <table class="table w-full bg-base-100">
+  <table class="table w-full bg-base-100 p-10">
     <!-- head -->
     <thead>
       <tr>
@@ -28,10 +28,10 @@
     <tbody>
       <!-- row 1 -->
       <tr>
-        <th>Apex Hosting</th>
-        <td>$10/Month</td>
-        <td>You need to pay $15 to use plugins.</td>
-        <td>Only if you pay for plugins</td>
+        <th>Arth Hosting</th>
+        <td>$7/Month</td>
+        <td>Plugins, Mods & More for free, easy-to-use panel.</td>
+        <td>Yes, For free.</td>
       </tr>
       <!-- row 2 -->
       <tr>
@@ -44,8 +44,8 @@
       <tr>
         <th>Apex Hosting</th>
         <td>$10/Month</td>
-        <td>You need to pay $15 to use plugins.</td>
-        <td>Only if you pay for plugins</td>
+        <td>You can't install any mods or plugins, and have a limited amount of players.</td>
+        <td>No</td>
       </tr>
     </tbody>
   </table>
