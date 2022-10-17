@@ -1,7 +1,7 @@
 FROM node:18
 
 # Create app directory
-WORKDIR /usr/src/observer
+WORKDIR /usr/src/site
 
 # Copy package files
 COPY package*.json ./
