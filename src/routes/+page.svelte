@@ -5,8 +5,8 @@
   import Mods from "$lib/components/ui/cards/Mods.svelte";
 </script>
 
-<div class="space-y-5">
-  <Navbar navType="default" />
+<Navbar navType="default" />
+<div class="p-5 space-y-5">
   <Network />
   <Hosting />
   <Mods />

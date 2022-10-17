@@ -5,16 +5,18 @@
     <div class="hero-content text-center">
       <div class="max-w-md">
         <h1
-          class="font-title mb-2 text-4xl font-extrabold sm:text-5xl lg:text-7xl"
+          class="font-title text-neutral-focus mb-2 text-4xl font-extrabold sm:text-5xl lg:text-7xl"
         >
           Arth Hosting
         </h1>
-        <p class="py-7">
+        <p class="py-7 text-neutral-focus">
           Get your own minecraft server with the most user-friendly setup out
           there! Plus, both Java & Bedrock Edition players will be able to join!
         </p>
 
-        <div class="btn glass"><a href="/hosting">Coming Soon</a></div>
+        <div class="btn glass text-neutral-focus">
+          <a href="/hosting">Coming Soon</a>
+        </div>
       </div>
     </div>
   </div>
