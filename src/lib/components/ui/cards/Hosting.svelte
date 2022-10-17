@@ -15,7 +15,7 @@
         </p>
 
         <div class="btn glass text-neutral-focus">
-          <a href="/hosting">Coming Soon</a>
+          <a href="/hosting">Learn More</a>
         </div>
       </div>
     </div>
