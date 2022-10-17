@@ -7,12 +7,16 @@
         <h1
           class="font-title text-neutral-focus mb-2 text-4xl font-extrabold sm:text-5xl lg:text-7xl"
         >
-          Frequently Asked Questions
+          F.A.Q
         </h1>
         <p class="py-7 text-neutral-focus">
           Get your own minecraft server with the most user-friendly setup out
-          there! Plus, both Java & Bedrock Edition players will be able to join!
+          there! Arth Hosting lets you customize your server with plugins, worldgen mods, and more. Plus, both Java & Bedrock Edition players will be able to join!
         </p>
+        <ul class="py-7 text-neutral-focus">
+        <li>What's a plugin? A Plugin is an add-on to your server that gives it new features, like WorldEdit, which lets you build giant structures & landscapes effortlessly with new brushes & commands.</li>
+        <li>
+        </ul
 
         <div class="btn glass text-neutral-focus">
           <a href="/hosting">Coming Soon</a>
