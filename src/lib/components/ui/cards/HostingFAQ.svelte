@@ -16,9 +16,6 @@
         <li>• If both java & bedrock players can join, how do things like combat work? The experience for java players will be the same, and most things like player heads & modern combat will work as they do on java for Bedock Players.</li>
         </ul>
 
-        <div class="btn glass text-neutral-focus">
-          <a href="/hosting">Coming Soon</a>
-        </div>
       </div>
     </div>
   </div>
