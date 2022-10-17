@@ -36,15 +36,15 @@
       <!-- row 2 -->
       <tr>
         <th>Apex Hosting</th>
-        <td>$10/Month</td>
+        <td>$9.99/Month</td>
         <td>You need to pay $15 to use plugins.</td>
         <td>Only if you pay for plugins</td>
       </tr>
       <!-- row 3 -->
       <tr>
         <th>Minecraft Realms</th>
-        <td>$8/Month</td>
-        <td>No Mods/Plugins, Limited Amount of PLayers</td>
+        <td>$7.99/Month</td>
+        <td>No Mods/Plugins, Limited Amount of Players</td>
         <td>No.</td>
       </tr>
     </tbody>
