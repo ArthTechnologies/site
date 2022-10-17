@@ -15,7 +15,7 @@
           there! Plus, both Java & Bedrock Edition players will be able to join!
         </p>
         <div class="overflow-x-auto">
-  <table class="table w-full bg-base-100 p-10">
+  <table class="table w-full bg-base-100 table-normal">
     <!-- head -->
     <thead>
       <tr>
