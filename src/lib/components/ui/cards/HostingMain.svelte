@@ -20,7 +20,7 @@
         </div>
       </div>
     </div>
-    <div class="overflow-x-auto">
+
   <table class="table w-full bg-base-100 table-normal">
     <!-- head -->
     <thead>
@@ -55,6 +55,6 @@
       </tr>
     </tbody>
   </table>
-</div>
+
   </div>
 </div>
