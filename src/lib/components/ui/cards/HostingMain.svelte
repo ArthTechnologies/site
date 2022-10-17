@@ -19,33 +19,33 @@
     <!-- head -->
     <thead>
       <tr>
-        <th></th>
         <th>Name</th>
-        <th>Job</th>
-        <th>Favorite Color</th>
+        <th>Price</th>
+        <th>Notes</th>
+        <th>Supports Bedrock/Java Crossplay</th>
       </tr>
     </thead>
     <tbody>
       <!-- row 1 -->
       <tr>
-        <th>1</th>
-        <td>Cy Ganderton</td>
-        <td>Quality Control Specialist</td>
-        <td>Blue</td>
+        <th>Apex Hosting</th>
+        <td>$10/Month</td>
+        <td>You need to pay $15 to use plugins.</td>
+        <td>Only if you pay for plugins</td>
       </tr>
       <!-- row 2 -->
-      <tr class="active">
-        <th>2</th>
-        <td>Hart Hagerty</td>
-        <td>Desktop Support Technician</td>
-        <td>Purple</td>
+      <tr>
+        <th>Apex Hosting</th>
+        <td>$10/Month</td>
+        <td>You need to pay $15 to use plugins.</td>
+        <td>Only if you pay for plugins</td>
       </tr>
       <!-- row 3 -->
       <tr>
-        <th>3</th>
-        <td>Brice Swyre</td>
-        <td>Tax Accountant</td>
-        <td>Red</td>
+        <th>Apex Hosting</th>
+        <td>$10/Month</td>
+        <td>You need to pay $15 to use plugins.</td>
+        <td>Only if you pay for plugins</td>
       </tr>
     </tbody>
   </table>
