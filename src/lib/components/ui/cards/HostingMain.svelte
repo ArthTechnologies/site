@@ -37,7 +37,7 @@
       <tr>
         <th>Apex Hosting</th>
         <td>$9.99/Month</td>
-        <td>You need to pay $15 to use plugins.</td>
+        <td>You need to pay $15 for the 'Plugin Installation Addon'.</td>
         <td>Only if you pay for plugins</td>
       </tr>
       <!-- row 3 -->
