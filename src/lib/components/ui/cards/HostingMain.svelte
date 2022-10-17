@@ -1,151 +1,59 @@
-<div class="overflow-x-auto w-full">
-  <table class="table w-full bg-base-200">
+
+<div class="card shadow-2xl bg-base-200">
+  <div
+    class="card-body bg-gradient-to-tl from-sky-500 to-fuchsia-600 rounded-xl hero"
+  >
+    <div class="hero-content text-center">
+      <div class="max-w-md">
+        <h1
+          class="font-title text-neutral-focus mb-2 text-4xl font-extrabold sm:text-5xl lg:text-7xl"
+        >
+          Arth Hosting
+        </h1>
+        <p class="py-7 text-neutral-focus">
+          Get your own minecraft server with the most user-friendly setup out
+          there! Plus, both Java & Bedrock Edition players will be able to join!
+        </p>
+        <div class="overflow-x-auto">
+  <table class="table w-full bg-base-100">
     <!-- head -->
     <thead>
       <tr>
-        <th>
-          <label>
-            <input type="checkbox" class="checkbox" />
-          </label>
-        </th>
         <th>Name</th>
-        <th>Job</th>
-        <th>Favorite Color</th>
-        <th></th>
+        <th>Price</th>
+        <th>Notes</th>
+        <th>Supports Bedrock/Java Crossplay</th>
       </tr>
     </thead>
     <tbody>
       <!-- row 1 -->
       <tr>
-        <th>
-          <label>
-            <input type="checkbox" class="checkbox" />
-          </label>
-        </th>
-        <td>
-          <div class="flex items-center space-x-3">
-            <div class="avatar">
-              <div class="mask mask-squircle w-12 h-12">
-                <img src="/tailwind-css-component-profile-2@56w.png" alt="Avatar Tailwind CSS Component" />
-              </div>
-            </div>
-            <div>
-              <div class="font-bold">Hart Hagerty</div>
-              <div class="text-sm opacity-50">United States</div>
-            </div>
-          </div>
-        </td>
-        <td>
-          Zemlak, Daniel and Leannon
-          <br>
-          <span class="badge badge-ghost badge-sm">Desktop Support Technician</span>
-        </td>
-        <td>Purple</td>
-        <th>
-          <button class="btn btn-ghost btn-xs">details</button>
-        </th>
+        <th>Arth Hosting</th>
+        <td>$7/Month</td>
+        <td>Plugins, Mods & More for free, easy-to-use panel.</td>
+        <td>Yes, For free.</td>
       </tr>
       <!-- row 2 -->
       <tr>
-        <th>
-          <label>
-            <input type="checkbox" class="checkbox" />
-          </label>
-        </th>
-        <td>
-          <div class="flex items-center space-x-3">
-            <div class="avatar">
-              <div class="mask mask-squircle w-12 h-12">
-                <img src="/tailwind-css-component-profile-3@56w.png" alt="Avatar Tailwind CSS Component" />
-              </div>
-            </div>
-            <div>
-              <div class="font-bold">Brice Swyre</div>
-              <div class="text-sm opacity-50">China</div>
-            </div>
-          </div>
-        </td>
-        <td>
-          Carroll Group
-          <br>
-          <span class="badge badge-ghost badge-sm">Tax Accountant</span>
-        </td>
-        <td>Red</td>
-        <th>
-          <button class="btn btn-ghost btn-xs">details</button>
-        </th>
+        <th>Apex Hosting</th>
+        <td>$10/Month</td>
+        <td>You need to pay $15 to use plugins.</td>
+        <td>Only if you pay for plugins</td>
       </tr>
       <!-- row 3 -->
       <tr>
-        <th>
-          <label>
-            <input type="checkbox" class="checkbox" />
-          </label>
-        </th>
-        <td>
-          <div class="flex items-center space-x-3">
-            <div class="avatar">
-              <div class="mask mask-squircle w-12 h-12">
-                <img src="/tailwind-css-component-profile-4@56w.png" alt="Avatar Tailwind CSS Component" />
-              </div>
-            </div>
-            <div>
-              <div class="font-bold">Marjy Ferencz</div>
-              <div class="text-sm opacity-50">Russia</div>
-            </div>
-          </div>
-        </td>
-        <td>
-          Rowe-Schoen
-          <br>
-          <span class="badge badge-ghost badge-sm">Office Assistant I</span>
-        </td>
-        <td>Crimson</td>
-        <th>
-          <button class="btn btn-ghost btn-xs">details</button>
-        </th>
-      </tr>
-      <!-- row 4 -->
-      <tr>
-        <th>
-          <label>
-            <input type="checkbox" class="checkbox" />
-          </label>
-        </th>
-        <td>
-          <div class="flex items-center space-x-3">
-            <div class="avatar">
-              <div class="mask mask-squircle w-12 h-12">
-                <img src="/tailwind-css-component-profile-5@56w.png" alt="Avatar Tailwind CSS Component" />
-              </div>
-            </div>
-            <div>
-              <div class="font-bold">Yancy Tear</div>
-              <div class="text-sm opacity-50">Brazil</div>
-            </div>
-          </div>
-        </td>
-        <td>
-          Wyman-Ledner
-          <br>
-          <span class="badge badge-ghost badge-sm">Community Outreach Specialist</span>
-        </td>
-        <td>Indigo</td>
-        <th>
-          <button class="btn btn-ghost btn-xs">details</button>
-        </th>
+        <th>Apex Hosting</th>
+        <td>$10/Month</td>
+        <td>You can't install any mods or plugins, and have a limited amount of players.</td>
+        <td>No.</td>
       </tr>
     </tbody>
-    <!-- foot -->
-    <tfoot>
-      <tr>
-        <th></th>
-        <th>Name</th>
-        <th>Job</th>
-        <th>Favorite Color</th>
-        <th></th>
-      </tr>
-    </tfoot>
-    
   </table>
+</div>
+        <div class="btn glass text-neutral-focus">
+          <a href="/hosting">Coming Soon</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
