@@ -1,5 +1,5 @@
 
-<div class="card shadow-2xl bg-base-200">
+<div class="card shadow-2xl">
   <div
     class="card-body bg-gradient-to-tl from-sky-500 to-fuchsia-600 rounded-xl hero"
   >
@@ -15,7 +15,7 @@
           there! Plus, both Java & Bedrock Edition players will be able to join!
         </p>
         <div class="overflow-x-auto">
-  <table class="table w-full bg-base-100">
+  <table class="table w-full bg-base-100 rounded-md">
     <!-- head -->
     <thead>
       <tr>
