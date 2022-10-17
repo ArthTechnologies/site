@@ -7,7 +7,7 @@
         <h1
           class="font-title text-neutral-focus mb-2 text-4xl font-extrabold sm:text-5xl lg:text-7xl"
         >
-          F.A.Q
+          F.A.Q.
         </h1>
     
         <ul class="py-7 text-neutral-focus">
