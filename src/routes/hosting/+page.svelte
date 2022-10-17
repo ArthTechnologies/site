@@ -6,7 +6,7 @@
 </script>
 
 <Navbar navType="default" />
-<div class=" space-y-5">
+<div class="p-5 space-y-5">
   <HostingMain />
   <HostingFAQ />
 
