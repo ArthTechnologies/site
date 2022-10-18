@@ -11,7 +11,7 @@
         </h1>
         <p class="py-7 text-neutral-focus">
           We make modpacks, which can add new features to your game or improve
-          performance, for Minecraft: Java Edition
+          performance, for Minecraft: Java Edition.
         </p>
         <div class="space-x-3 space-y-3 ">
           <div class="btn btn-sm">
