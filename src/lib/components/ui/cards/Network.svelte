@@ -1,7 +1,7 @@
 <div class="card shadow-2xl">
   <div class="card-body bg-[url('/images/card1bg.webp')] rounded-xl hero">
     <div class="hero-content text-center">
-      <div class="max-w-md">
+      <div class="max-w-lg lg:max-w-2xl">
         <h1
           class="font-title mb
           2 text-4xl font-extrabold sm:text-5xl lg:text-7xl text-neutral-focus"
