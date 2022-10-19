@@ -1,16 +1,16 @@
 
 <div class="card shadow-2xl space-y-10 space-x-10">
   <div
-    class="card-body bg-gradient-to-tl from-orange-500 to-pink-600 rounded-xl hero min-w-[50%]"
+    class="card-body bg-gradient-to-tl from-orange-500 to-pink-600 rounded-xl hero "
   >
     <div class="hero-content text-center">
-      <div class="max-w-md">
+      <div class="max-w-xs sm:max-w-sm lg:max-w-3xl">
         <h1
-          class="font-title text-neutral-focus mb-2 text-4xl font-extrabold sm:text-5xl lg:text-7xl"
+          class="font-title text-left md:text-center text-neutral-focus mb-2 text-4xl font-extrabold sm:text-5xl lg:text-7xl"
         >
           Arth Hosting
         </h1>
-        <p class="py-7 text-neutral-focus">
+        <p class="py-7 text-left md:text-center text-neutral-focus">
           Get your own minecraft server with the most user-friendly setup out
           there! Plus, both Java & Bedrock Edition players will be able to join! See how Arth Hosting stacks up to the two most popular alternatives:
         </p>
@@ -22,7 +22,7 @@
         <th>Name</th>
         <th>Price</th>
         <th>Notes</th>
-        <th>Supports Bedrock/Java Crossplay</th>
+        <th>Bedrock/Java Crossplay</th>
       </tr>
     </thead>
     <tbody>
@@ -38,14 +38,14 @@
         <th>Apex Hosting</th>
         <td>$9.99/Month</td>
         <td>You need to pay $15 for the 'Plugin Installation Addon'.</td>
-        <td>Only if you pay for plugins</td>
+        <td>Manually via plugins</td>
       </tr>
       <!-- row 3 -->
       <tr>
         <th>Minecraft Realms</th>
         <td>$7.99/Month</td>
         <td>No Mods/Plugins, Limited Amount of Players</td>
-        <td>No.</td>
+        <td>No</td>
       </tr>
     </tbody>
   </table>
