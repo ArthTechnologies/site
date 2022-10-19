@@ -9,7 +9,7 @@ The arth website has info on various minecraft-relate services, softawres, and m
 Arth is an organization offering:
 
 **Free Services** - A minecraft server network.  
-**FOSS Software** - A self-hostable minecraft server panel in developnment, Two modpacks.  
+**FOSS Software** - A self-hostable minecraft server panel in developnment, Three modpacks.  
 **Paid Services** - Upoming Minecraft server hosting using our FOSS panel.    
 
 ## Planned Pages
@@ -28,7 +28,8 @@ Contributions are very much appreciated! Feel free to contribute, preferably som
 
 # To-do list
 ✅ Setup a basic node application with Svelte, Tailwind, & DaisyUI.  
-✅ Navbar with Home, Hosting, dark/lightmode switch, and links button with links to docs, discord, and more.
-🔨 Basic UI for all planned pages  
-❌ Communication with backend (No backend yet, I'm not experienced in backends)   
+✅ Navbar with Home, Hosting, dark/lightmode switch, and links button with links to docs, discord, and more.  
+✅ Progressive Web App
+🔨 Basic UI for all planned pages   
+🔨 Feature-complete, responsive UI for all planned pages
 ❌ Integration with Arth Hosting's [panel](https://github.com/diamonc/observer).
