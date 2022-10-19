@@ -7,16 +7,16 @@ The arth website has info on various minecraft-relate services, softawres, and m
 
 Arth is an organization offering:
 
-**Free Services** - A minecraft server network.
-**Self-Hosted FOSS Software** - A minecraft server panel in developnment, Two modpacks.
-**Paid Services** - Upoming Minecraft server hosting using our FOSS panel.
+**Free Services** - A minecraft server network.  
+**FOSS Software** - A self-hostable minecraft server panel in developnment, Two modpacks.  
+**Paid Services** - Upoming Minecraft server hosting using our FOSS panel.    
 
 ## Planned Pages
 
 ```
 / (info on server network, modpack, and more)
 /hosting (info on arth hosting software
-/panel (info on arth panel software)
+/software (info on arth panel software and more)
 
 servers.arthmc.xyz (panel for arth hosting)
 ```
