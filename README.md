@@ -29,7 +29,7 @@ Contributions are very much appreciated! Feel free to contribute, preferably som
 # To-do list
 ✅ Setup a basic node application with Svelte, Tailwind, & DaisyUI.  
 ✅ Navbar with Home, Hosting, dark/lightmode switch, and links button with links to docs, discord, and more.  
-✅ Progressive Web App
+✅ Progressive Web App  
 🔨 Basic UI for all planned pages   
-🔨 Feature-complete, responsive UI for all planned pages
-❌ Integration with Arth Hosting's [panel](https://github.com/diamonc/observer).
+🔨 Feature-complete, responsive UI for all planned pages  
+❌ Integration with Arth Hosting's [panel](https://github.com/diamonc/observer).  
