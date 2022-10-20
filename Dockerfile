@@ -14,6 +14,5 @@ COPY . .
 
 EXPOSE 3301
 
-
 # Run the app
 CMD ["npm", "i", "CI=", "npm", "run", "build", "&&", "node", "build" ]
