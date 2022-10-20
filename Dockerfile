@@ -16,4 +16,4 @@ EXPOSE 3301
 
 
 # Run the app
-CMD [ "node", "build" ]
+CMD [ "npm", "run", "build", "&&", "node", "build" ]
