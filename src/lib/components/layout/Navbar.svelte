@@ -66,13 +66,7 @@
             </a>
           </li>
           <li>
-<<<<<<< HEAD
-            <a href="/software" class="justify-between">
-              Software
-            </a>
-=======
-            <a class="justify-between"> Software </a>
->>>>>>> 01b9f776f3eb49b934f9e13285ddd8653567e80c
+            <a href="/software" class="justify-between"> Software </a>
           </li>
         </ul>
       </div>
