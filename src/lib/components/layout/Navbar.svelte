@@ -12,7 +12,12 @@
   <div class="navbar bg-base-300 px-4">
     <div class="flex-1">
       <a class="btn btn-ghost normal-case text-xl invisible sm:visible" href="/"
-        ><img src="/images/sitelogo.png" alt="Arth" width="75" height="75" /></a
+        ><img
+          src="/images/sitelogo.webp"
+          alt="Arth"
+          width="75"
+          height="75"
+        /></a
       >
     </div>
     <div class="flex-none space-x-2">
