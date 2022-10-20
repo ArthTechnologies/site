@@ -1,6 +1,6 @@
 # arthmc.xyz
 
-The arth website has info on various minecraft-relate services, softawres, and more by Arth. This project shares a good amount of code and UI with our [observer](https://github.com/arthmc/observer) project, so shoutout to all our contributors on observer!  
+The arth website has info on various minecraft-related services, softwares, and more by Arth. This project shares a good amount of code and UI with our [observer](https://github.com/arthmc/observer) project, so shoutout to all our contributors on observer!  
 
 ![image](https://user-images.githubusercontent.com/88857034/196309266-29704ed0-c100-4200-85db-008e4a81abda.png)
 
@@ -10,7 +10,7 @@ Arth is an organization offering:
 
 **Free Services** - A minecraft server network.  
 **FOSS Software** - A self-hostable minecraft server panel in developnment, Three modpacks.  
-**Paid Services** - Upoming Minecraft server hosting using our FOSS panel.    
+**Paid Services** - Upcoming Minecraft server hosting using our FOSS panel.    
 
 ## Planned Pages
 
