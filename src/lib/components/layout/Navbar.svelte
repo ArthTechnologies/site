@@ -45,7 +45,7 @@
             </a>
           </li>
           <li>
-            <a class="justify-between">
+            <a href="/software" class="justify-between">
               Software
             </a>
           </li>
