@@ -29,6 +29,18 @@ export default {
 		"hosting.table.notes":"Notes",
 		"hosting.table.cp":"Bedrock/Java Crossplay",
 		"month":"Month",
+		"faq.title":"F.A.Q",
+		"faq.1":"• What's a plugin? A Plugin is an add-on to your server that gives it new features, like WorldEdit, which lets you build giant structures & landscapes effortlessly with new brushes & commands.",
+		"faq.2":"• What's a worldgen mod? A worldgen can add new biomes and change the look of a world.",
+		"faq.3":"• If both java & bedrock players can join, how do things like combat work? The experience for java players will be the same, and most things like player heads & modern combat will work as they do on java for Bedock Players.",
+		"panel.title":"Arth Panel",
+		"panel.desc":"The free and open-source software behind Arth Hosting! If you have access to server computer(s) to run arth panel, you can make your own hosting service with ease.",
+		"button.frontend":"View frontend",
+		"button.frontend":"View backend",
+		"navbar.home":"Home",
+		"navbar.hosting":"Hosting",
+		"navbar.software":"Software",
+		"navbar.discord":"Discord"
 		
 	}
 }

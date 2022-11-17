@@ -33,23 +33,23 @@
       <!-- row 1 -->
       <tr>
         <th>{$t("hosting.table.name.arth")}</th>
-        <td>$7/Month</td>
-        <td>Plugins, Mods & More for free, easy-to-use panel.</td>
-        <td>Yes, For free.</td>
+        <td>$7/{$t("month")}</td>
+        <td>{$t("hosting.table.notes.arth")}</td>
+        <td>{$t("hosting.table.cp.arth")}</td>
       </tr>
       <!-- row 2 -->
       <tr>
-        <th>{$t("hosting.table.name.apex")}g</th>
-        <td>$9.99/Month</td>
-        <td>You need to pay $15 for the 'Plugin Installation Addon'.</td>
-        <td>Manually via plugins</td>
+        <th>{$t("hosting.table.name.apex")}</th>
+        <td>$9.99/{$t("month")}</td>
+        <td>{$t("hosting.table.notes.apex")}</td>
+        <td>{$t("hosting.table.cp.apex")}</td>
       </tr>
       <!-- row 3 -->
       <tr>
         <th>{$t("hosting.table.name.realms")}</th>
-        <td>$7.99/Month</td>
-        <td>No Mods/Plugins, Limited Amount of Players</td>
-        <td>No</td>
+        <td>$7.99/{$t("month")}</td>
+        <td>{$t("hosting.table.notes.realms")}</td>
+        <td>{$t("hosting.table.cp.realms")}</td>
       </tr>
     </tbody>
   </table>

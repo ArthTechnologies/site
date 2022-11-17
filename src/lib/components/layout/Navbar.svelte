@@ -6,6 +6,7 @@
   type NavType = "default" | "welcome";
 
   export let navType: NavType;
+	import {t} from "$lib/scripts/i18n"
 </script>
 
 {#if navType === "default"}
@@ -22,8 +23,8 @@
     </div>
     <div class="flex-none space-x-2">
       <ul class="menu menu-horizontal p-0">
-        <li><a href="/">Home</a></li>
-        <li><a href="/hosting">Hosting</a></li>
+        <li><a href="/">{$t("navbar.home")}</a></li>
+        <li><a href="/hosting">{$t("navbar.hosting")}</a></li>
       </ul>
 
       <ThemeToggle />
@@ -62,11 +63,11 @@
               href="https://discord.com/invite/bjY39AbK35"
               class="justify-between"
             >
-              Discord
+              {$t("navbar.discord")}
             </a>
           </li>
           <li>
-            <a href="/software" class="justify-between"> Software </a>
+            <a href="/software" class="justify-between"> {$t("navbar.software")} </a>
           </li>
         </ul>
       </div>
