@@ -32,7 +32,7 @@
     <tbody>
       <!-- row 1 -->
       <tr>
-        <t{$t("hosting.table.name.arth")}</th>
+        <th>{$t("hosting.table.name.arth")}</th>
         <td>$7/Month</td>
         <td>Plugins, Mods & More for free, easy-to-use panel.</td>
         <td>Yes, For free.</td>
