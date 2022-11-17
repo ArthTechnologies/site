@@ -7,7 +7,7 @@
 
 <Navbar navType="default" />
 <div class="p-5 space-y-5">
-  <Network />
   <Hosting />
+	<Network />
   <Mods />
 </div>
