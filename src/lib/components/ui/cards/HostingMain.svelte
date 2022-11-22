@@ -1,8 +1,11 @@
+
 <script>
 	import {t} from "$lib/scripts/i18n"
 
 	//{$t("")}
 </script>
+
+
 <div class="card shadow-2xl space-y-10 space-x-10">
   <div
     class="card-body bg-gradient-to-tl from-orange-500 to-pink-600 rounded-xl hero "
@@ -15,6 +18,7 @@
           {$t("hosting.title")}
         </h1>
         <p class="py-7 text-left md:text-center text-neutral-focus">
+
           {$t("hosting.desc")} 
 					{$t("hosting.desc2")}
         </p>

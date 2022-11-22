@@ -15,13 +15,14 @@
         >
           {$t("faq.title")}
         </h1>
-    
+
         <ul class="py-7 text-neutral-focus">
+
         <li>{$t("faq.1")}</li>
         <li>{$t("faq.2")}</li>
         <li>{$t("faq.3")}</li>
-        </ul>
 
+        </ul>
       </div>
     </div>
   </div>
