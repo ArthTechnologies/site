@@ -6,7 +6,13 @@
   type NavType = "default" | "welcome";
 
   export let navType: NavType;
-	import {t} from "$lib/scripts/i18n"
+	import {t, locale, locales} from "$lib/scripts/i18n"
+
+  //set locale to browser language if navigator is available
+  if (typeof navigator !== "undefined") {
+    locale.set(navigator.language);
+  }
+  
 </script>
 
 {#if navType === "default"}

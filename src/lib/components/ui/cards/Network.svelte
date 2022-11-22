@@ -25,8 +25,7 @@
           <div class="stat">
             <div class="stat-title">{$t("network.iptext")}</div>
             <div class="stat-value">{$t("network.address")}</div>
-            <div class="stat-desc">{$t("network.editions")}<div /><div class="badge badge-info">
-							{$t("badge.comingsoon")}</div></div>
+            <div class="stat-desc">{$t("network.editions")}<div /></div>
           </div>
         </div>
       </div>
