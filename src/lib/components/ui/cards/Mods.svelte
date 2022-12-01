@@ -1,3 +1,9 @@
+<script>
+	import {t} from "$lib/scripts/i18n"
+
+	//{$t("")}
+</script>
+
 <div class="card shadow-2xl">
   <div
     class="card-body bg-gradient-to-tl from-red-500 to-amber-600 rounded-xl hero"
@@ -7,27 +13,26 @@
         <h1
           class="font-title mb-2 text-4xl font-extrabold sm:text-5xl lg:text-7xl"
         >
-          Modpacks
+          {$t("mods.title")}
         </h1>
         <p class="py-7 text-neutral-focus">
-          We make modpacks, which can add new features to your game or improve
-          performance, for Minecraft: Java Edition.
+          {$t("mods.desc")}
         </p>
         <div class="space-x-3 space-y-3 ">
           <div class="btn btn-sm md:btn-md">
             <a
               href="https://www.curseforge.com/minecraft/modpacks/arthean-expansion"
-              >Arthean Expansion (1.16)</a
+              >{$t("b.aexpan")}</a
             >
           </div>
           <div class="btn btn-sm md:btn-md">
             <a href="https://modrinth.com/modpack/arthean-evolution"
-              >Arthean Expedition (1.18)</a
+              >{$t("b.aexped")}</a
             >
           </div>
           <div class="btn btn-sm md:btn-md">
             <a href="https://modrinth.com/modpack/arth-client"
-              >Arth Client (Performance)</a
+              >{$t("b.ac")}</a
             >
           </div>
         </div>

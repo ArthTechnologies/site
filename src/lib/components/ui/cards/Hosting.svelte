@@ -1,3 +1,10 @@
+<script>
+	import {t} from "$lib/scripts/i18n"
+
+	//{$t("")}
+	
+</script>
+
 <div class="card shadow-2xl">
   <div
     class="card-body bg-gradient-to-tl from-sky-500 to-fuchsia-600 rounded-xl hero"
@@ -7,15 +14,14 @@
         <h1
           class="font-title text-neutral-focus mb-2 text-4xl font-extrabold sm:text-5xl lg:text-7xl"
         >
-          Arth Hosting
+          {$t("hosting.title")}
         </h1>
         <p class="py-7 text-neutral-focus">
-          Get your own minecraft server with the most user-friendly setup out
-          there! Plus, both Java & Bedrock Edition players will be able to join!
+          {$t("hosting.desc")}
         </p>
 
         <div class="btn glass text-neutral-focus">
-          <a href="/hosting">Learn More</a>
+          <a href="/hosting">{$t("b.learnmore")}</a>
         </div>
       </div>
     </div>

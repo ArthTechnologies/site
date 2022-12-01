@@ -6,24 +6,26 @@
   type NavType = "default" | "welcome";
 
   export let navType: NavType;
+	import {t, locale, locales} from "$lib/scripts/i18n"
+
+  //set locale to browser language if navigator is available
+  if (typeof navigator !== "undefined") {
+    locale.set(navigator.language);
+  }
+  
 </script>
 
 {#if navType === "default"}
   <div class="navbar bg-base-300 px-4">
     <div class="flex-1">
       <a class="btn btn-ghost normal-case text-xl invisible sm:visible" href="/"
-        ><img
-          src="/images/sitelogo.webp"
-          alt="Arth"
-          width="75"
-          height="75"
-        /></a
+        ><img src="/images/sitelogo.svg" alt="Arth" width="75" height="75" /></a
       >
     </div>
     <div class="flex-none space-x-2">
       <ul class="menu menu-horizontal p-0">
-        <li><a href="/">Home</a></li>
-        <li><a href="/hosting">Hosting</a></li>
+        <li><a href="/">{$t("navbar.home")}</a></li>
+        <li><a href="/hosting">{$t("navbar.hosting")}</a></li>
       </ul>
 
       <ThemeToggle />
@@ -62,11 +64,11 @@
               href="https://discord.com/invite/bjY39AbK35"
               class="justify-between"
             >
-              Discord
+              {$t("navbar.discord")}
             </a>
           </li>
           <li>
-            <a href="/software" class="justify-between"> Software </a>
+            <a href="/software" class="justify-between"> {$t("navbar.software")} </a>
           </li>
         </ul>
       </div>
