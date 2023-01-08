@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
 
-  export let name;
+  export let link;
 
   let textarea;
 
@@ -11,4 +11,4 @@
   });
 </script>
 
-<textarea bind:value={name} bind:this={textarea} />
+<textarea bind:value={link} bind:this={textarea} />

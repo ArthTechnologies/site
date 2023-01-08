@@ -42,7 +42,7 @@
     <div class="flex">
       <div class="modal-action">
         <a class="btn" on:click={copy}>Copy Link</a>
-        <a class="btn">Download .rss file</a>
+        <a class="btn" href="/arthblog.rss" download>Download .rss file</a>
         <a href="#" class="btn">Close</a>
       </div>
     </div>

@@ -1,4 +1,4 @@
-<a href="#email" class="btn btn-ghost">
+<a href="#email" class="btn btn-ghost btn-disabled">
   Subscribe via email  
   <svg
     xmlns="http://www.w3.org/2000/svg"
