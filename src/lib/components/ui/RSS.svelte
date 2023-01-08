@@ -1,3 +1,16 @@
+<script>
+  import CopyClipboard from "$lib/components/ui/CopyClipboard.svelte";
+  let link = "https://arthmc.xyz/rss.xml";
+
+  const copy = () => {
+    const app = new CopyClipboard({
+      target: document.getElementById("clipboard"),
+      props: { link },
+    });
+    app.$destroy();
+  };
+</script>
+
 <a href="#rss" class="btn btn-ghost">
   Subscribe via rss  
   <svg
@@ -28,10 +41,12 @@
     </p>
     <div class="flex">
       <div class="modal-action">
-        <a class="btn">Copy Link</a>
+        <a class="btn" on:click={copy}>Copy Link</a>
         <a class="btn">Download .rss file</a>
         <a href="#" class="btn">Close</a>
       </div>
     </div>
   </div>
 </div>
+
+<div id="clipboard" />
