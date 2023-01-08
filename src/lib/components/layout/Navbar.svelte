@@ -6,13 +6,12 @@
   type NavType = "default" | "welcome";
 
   export let navType: NavType;
-	import {t, locale, locales} from "$lib/scripts/i18n"
+  import { t, locale, locales } from "$lib/scripts/i18n";
 
   //set locale to browser language if navigator is available
   if (typeof navigator !== "undefined") {
     locale.set(navigator.language);
   }
-  
 </script>
 
 {#if navType === "default"}
@@ -24,8 +23,13 @@
     </div>
     <div class="flex-none space-x-2">
       <ul class="menu menu-horizontal p-0">
-        <li><a href="/">{$t("navbar.home")}</a></li>
-        <li><a href="/hosting">{$t("navbar.hosting")}</a></li>
+        <li><a href="/" class="rounded-lg">{$t("navbar.home")}</a></li>
+        <li>
+          <a href="/hosting" class="rounded-lg">{$t("navbar.hosting")}</a>
+        </li>
+        <li>
+          <a href="/blog" class="rounded-lg">Blog</a>
+        </li>
       </ul>
 
       <ThemeToggle />
@@ -68,7 +72,9 @@
             </a>
           </li>
           <li>
-            <a href="/software" class="justify-between"> {$t("navbar.software")} </a>
+            <a href="/software" class="justify-between">
+              {$t("navbar.software")}
+            </a>
           </li>
         </ul>
       </div>

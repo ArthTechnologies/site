@@ -1,8 +1,10 @@
 <script lang="ts">
   import { browser } from "$app/environment";
   import { goto } from "$app/navigation";
+  import { onMount } from "svelte";
   let url: string;
   let link = "";
+  let instance = "";
   if (browser) {
     url = window.location.href;
     //cut everything after the # in the url off
@@ -11,12 +13,17 @@
 
   function share() {
     if (browser) {
-      let instance = document.getElementById("instance").value;
+      instance = document.getElementById("instance").value;
       link = "https://" + instance + "/share?text=" + encodeURIComponent(url);
     }
   }
 
-  share();
+  onMount(() => {
+    if (browser) {
+      //set the instance to the one in local storage
+      instance = document.getElementById("instance").value = instance;
+    }
+  });
 </script>
 
 <a href="#shareToMasto" class="btn btn-circle btn-ghost">
