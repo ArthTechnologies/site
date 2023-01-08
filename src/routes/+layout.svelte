@@ -14,4 +14,5 @@
   // will break if not used here
 </script>
 
+<Navbar navType="default" />
 <slot />

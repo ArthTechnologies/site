@@ -4,7 +4,6 @@
 </script>
 
 <div>
-  <Navbar navType="default" />
   <slot />
   <div class="hero min-h-screen">
     <div class="hero-content text-center">
