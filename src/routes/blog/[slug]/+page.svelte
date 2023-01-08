@@ -1,9 +1,9 @@
-<script>
+<script type="ts">
   import { browser } from "$app/environment";
-
+  import ShareToMastodon from "$lib/components/ui/ShareToMastodon.svelte";
   //set slug variable to the slug
   let slug;
-  let title;
+  let title: string;
   let desc;
   let date;
   let author;
@@ -55,21 +55,14 @@
 <div class="p-5 flex flex-col">
   <p class="text-5xl text-center p-4 font-bold">{title}</p>
   <p class="text-xl text-center p-4 ">{desc}</p>
-  <div class="">
+  <div class="flex space-x-2">
     <img alt="{author}'s Icon" src={authorImage} class="" width="50" />
     <div class="flex flex-col">
-      <p class="">{author}</p>
+      <a class="link" href={authorLink}>{author}</a>
       <p class="">{date}</p>
     </div>
-    <div class="flex flex-reverse-row">
-      <a href={authorLink}>
-        <img
-          alt="GitHub Icon"
-          src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-          class=""
-          width="50"
-        />
-      </a>
+    <div class="flex-row-reverse">
+      <ShareToMastodon />
     </div>
   </div>
   <div id="text" class="space-y-5 text-center" />

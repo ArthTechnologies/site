@@ -1,5 +1,5 @@
-<a href="#rss" class="btn btn-ghost">
-  Subscribe via rss  
+<a href="#email" class="btn btn-ghost">
+  Subscribe via email  
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -10,22 +10,16 @@
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
-    class="feather feather-rss"
-    ><path d="M4 11a9 9 0 0 1 9 9" /><path d="M4 4a16 16 0 0 1 16 16" /><circle
-      cx="5"
-      cy="19"
-      r="1"
-    /></svg
+    class="feather feather-mail"
+    ><path
+      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+    /><polyline points="22,6 12,13 2,6" /></svg
   >
 </a>
-
-<div class="modal" id="rss">
+<div class="modal" id="email">
   <div class="modal-box">
-    <h3 class="font-bold text-lg">Subscribe to our RSS feed</h3>
-    <p class="py-4">
-      RSS is a way to get updates from websites all in one place. Download an
-      RSS app to get started.
-    </p>
+    <h3 class="font-bold text-lg">Subscribe to our email newsleter</h3>
+    <p class="py-4">Get new blog posts sent to your inbox.</p>
     <div class="flex">
       <div class="modal-action">
         <a class="btn">Copy Link</a>
