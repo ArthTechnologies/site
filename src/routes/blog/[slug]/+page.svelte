@@ -57,6 +57,11 @@
             '<img src="$2" class="border-solid border-2 border-base-300 mt-3"></img>'
           );
 
+          //replace [text](link) with <a href="link">text</a>
+          text = text.replace(
+            /\[(.*)\]\((.*)\)/gm,
+            '<a href="$2" class="link">$1</a>'
+          );
           //turn 2 spaces into \n
           text = text.replace(/  /gm, "<br>");
 
@@ -74,7 +79,12 @@
   <p class="text-5xl text-center p-4 font-bold">{title}</p>
   <p class="text-xl text-center p-4 ">{desc}</p>
   <div class="flex space-x-2 pb-5">
-    <img alt="{author}'s Icon" src={authorImage} class="" width="50" />
+    <img
+      alt="{author}'s Icon"
+      src={authorImage}
+      class="mask mask-squircle"
+      width="50"
+    />
     <div class="flex flex-col">
       <a class="link" href={authorLink}>{author}</a>
       <p class="">{date}</p>
