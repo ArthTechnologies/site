@@ -48,13 +48,7 @@
           //if a line starts with ![image], put what's inside the parentheses inside <img src="..."> </img>
           text = text.replace(
             /!\[(.*)\]\((.*)\)/gm,
-            '<img src="$2" class="py-3"></img>'
-          );
-
-          //if a line starts with ![image-bordered], put what's inside the parentheses inside <img src="..." class="border-2 border-base-300"> </img>
-          text = text.replace(
-            /!\[(.*)-bordered\]\((.*)\)/gm,
-            '<img src="$2" class="border-solid border-2 border-base-300 mt-3"></img>'
+            '<img src="$2" class="pt-3"></img>'
           );
 
           //replace [text](link) with <a href="link">text</a>
@@ -75,7 +69,7 @@
   });
 </script>
 
-<div class="p-5 flex flex-col px-[300px]">
+<div class="p-5 flex flex-col px-0 md:px-[150px] xl:px-[300px]">
   <p class="text-5xl text-center p-4 font-bold">{title}</p>
   <p class="text-xl text-center p-4 ">{desc}</p>
   <div class="flex space-x-2 pb-5">
