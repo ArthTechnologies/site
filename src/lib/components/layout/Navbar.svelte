@@ -30,6 +30,9 @@
         <li>
           <a href="/blog" class="rounded-lg">Blog</a>
         </li>
+                <li>
+          <a href="/docs" class="rounded-lg">Docs</a>
+        </li>
       </ul>
 
       <ThemeToggle />
