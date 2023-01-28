@@ -2,6 +2,7 @@
   import { browser } from "$app/environment";
   import ShareToMastodon from "$lib/components/ui/ShareToMastodon.svelte";
   import { onMount } from "svelte";
+  import {marked} from "marked";
   //set slug variable to the slug
   let slug;
   let title: string;
@@ -10,7 +11,7 @@
   let author;
   let authorLink;
   let authorImage;
-
+let t;
   if (browser) {
     slug = window.location.pathname.split("/").pop();
   }
@@ -32,38 +33,10 @@
           //remove the first 7 lines
           text = text.split("\n").slice(8).join("\n");
 
-          //line changes
+          t = marked(text);
+          
 
-          //if a line starts with a #, put it inside <p class="hi"> </p>
-          text = text.replace(
-            /^(# )(.*)/gm,
-            '<p class="text-3xl font-bold py-3">$2</p>'
-          );
 
-          text = text.replace(
-            /^(## )(.*)/gm,
-            '<p class="text-2xl font-bold py-3">$2</p>'
-          );
-
-          //if a line starts with ![image], put what's inside the parentheses inside <img src="..."> </img>
-          text = text.replace(
-            /!\[(.*)\]\((.*)\)/gm,
-            '<img src="$2" class="pt-3"></img>'
-          );
-
-          //replace [text](link) with <a href="link">text</a>
-          text = text.replace(
-            /\[(.*)\]\((.*)\)/gm,
-            '<a href="$2" class="link">$1</a>'
-          );
-          //turn 2 spaces into \n
-          text = text.replace(/  /gm, "<br>");
-
-          //turn ** into <b> </b>
-          text = text.replace(/\*\*(.*)\*\*/gm, "<b>$1</b>");
-          console.log(text);
-          //appent text to the body
-          document.getElementById("text").innerHTML = text;
         });
     }
   });
@@ -87,5 +60,7 @@
       <ShareToMastodon />
     </div>
   </div>
-  <div id="text" class="space-y-1 mr-8 ml-8 text-lg" />
+  <div id="text" class="space-y-1 mr-8 ml-8 text-lg">
+    {@html t}
+  </div>
 </div>

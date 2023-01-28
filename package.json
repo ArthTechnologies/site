@@ -27,6 +27,7 @@
 	"dependencies": {
 		"appwrite": "^10.0.1",
 		"daisyui": "^2.46.1",
+		"marked": "^4.2.12",
 		"sass": "^1.54.9",
 		"theme-change": "^2.2.0"
 	}
