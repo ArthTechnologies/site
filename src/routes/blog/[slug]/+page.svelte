@@ -49,7 +49,7 @@ let t;
     <img
       alt="{author}'s Icon"
       src={authorImage}
-      class="mask mask-squircle"
+      class="bg-slate-400 mask mask-squircle "
       width="50"
     />
     <div class="flex flex-col">
@@ -60,7 +60,7 @@ let t;
       <ShareToMastodon />
     </div>
   </div>
-  <div id="text" class="space-y-1 mr-8 ml-8 text-lg">
+  <article class="space-y-1 mr-8 ml-8 text-lg prose max-w-none">
     {@html t}
-  </div>
+  </article>
 </div>

@@ -1,28 +1,25 @@
 <script lang="ts">
-    import { onMount } from "svelte";
+    import { marked } from "marked";
         import { browser } from "$app/environment";
-        import {docs} from "$lib/scripts/load";
 
+let t;
         //make slug a dynamic variable
         $: slug = "";
         if (browser) {
           slug = window.location.pathname.split("/").pop();
-        }
-        //run load(); everytime slug changes
-        $slug: {
-          console.log("hi")
-        }
+          fetch("/docs/" + slug + ".mdn")
+    .then((response) => response.text())
+    .then((text) => {
 
+      t = marked(text);
 
-
-    onMount(() => {
-       docs();
-     
       });
+        }
+        
 
      
 
     </script>
-    <div id="text">
-
-    </div>
+    <article class="prose max-w-screen text-lg pl-5 pt-5">
+        {@html t}
+    </article>
