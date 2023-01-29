@@ -13,7 +13,11 @@
   });
   // will break if not used here
 </script>
+<div class="flex flex-col h-screen justify-between">
 
-<Navbar navType="default" />
+<div>
+  <Navbar navType="default" />
 <slot />
+</div>
 <Footer navType="default" />
+</div>

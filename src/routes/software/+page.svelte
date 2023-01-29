@@ -3,6 +3,6 @@
   import Panel from "$lib/components/ui/cards/Panel.svelte";
 </script>
 
-<div class="p-5 space-y-5 h-screen">
+<div class="p-5 space-y-5">
   <Panel />
 </div>
