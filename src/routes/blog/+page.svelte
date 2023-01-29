@@ -32,4 +32,4 @@
   <RSS />
   <Email />
 </div>
-<div id="posts" class="sm:text-left p-5 space-y-5 pr-20 pl-20" />
+<div id="posts" class="sm:text-left p-5 space-y-5 pr-20 pl-20 h-screen" />

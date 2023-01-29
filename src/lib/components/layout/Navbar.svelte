@@ -15,7 +15,7 @@
 </script>
 
 {#if navType === "default"}
-  <div class="navbar bg-base-300 px-4">
+  <div class="navbar bg-base-300">
     <div class="flex-1">
       <a class="btn btn-ghost normal-case text-xl invisible sm:visible" href="/"
         ><img src="/images/sitelogo.svg" alt="Arth" width="75" height="75" /></a
@@ -31,13 +31,13 @@
           <a href="/blog" class="rounded-lg">Blog</a>
         </li>
                 <li>
-          <a href="/docs" class="rounded-lg">Docs</a>
+          <a href="/docs/" class="rounded-lg">Docs</a>
         </li>
       </ul>
 
       <ThemeToggle />
 
-      <div class="dropdown dropdown-end">
+      <div class="dropdown dropdown-end ">
         <label tabindex="0" class="btn btn-ghost btn-circle">
           <svg
             xmlns="http://www.w3.org/2000/svg"

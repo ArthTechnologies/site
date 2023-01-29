@@ -19,7 +19,7 @@ let t;
   onMount(() => {
     //set text to the contents of "/posts" + slug + ".md"
     if (browser) {
-      fetch("/posts/" + slug + ".mdn")
+      fetch("/posts/" + slug + ".md")
         .then((response) => response.text())
         .then((text) => {
           //turn everything before line 7 into a variable and remove the from text

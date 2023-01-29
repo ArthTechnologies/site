@@ -16,3 +16,4 @@
 
 <Navbar navType="default" />
 <slot />
+<Footer navType="default" />

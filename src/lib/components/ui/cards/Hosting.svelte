@@ -20,9 +20,9 @@
           {$t("hosting.desc")}
         </p>
 
-        <div class="btn glass text-neutral-focus">
-          <a href="/hosting">{$t("b.learnmore")}</a>
-        </div>
+        
+          <a href="/hosting"><div class="btn glass text-neutral-focus">{$t("b.learnmore")}</div></a>
+        
       </div>
     </div>
   </div>
