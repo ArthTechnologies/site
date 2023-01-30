@@ -19,5 +19,5 @@
   <Navbar navType="default" />
 <slot />
 </div>
-<Footer navType="default" />
+<Footer/>
 </div>
