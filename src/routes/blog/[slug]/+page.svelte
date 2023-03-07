@@ -2,7 +2,7 @@
   import { browser } from "$app/environment";
   import ShareToMastodon from "$lib/components/ui/ShareToMastodon.svelte";
   import { onMount } from "svelte";
-  import {marked} from "marked";
+  import { marked } from "marked";
   //set slug variable to the slug
   let slug;
   let title: string;
@@ -11,7 +11,7 @@
   let author;
   let authorLink;
   let authorImage;
-let t;
+  let t;
   if (browser) {
     slug = window.location.pathname.split("/").pop();
   }
@@ -19,7 +19,7 @@ let t;
   onMount(() => {
     //set text to the contents of "/posts" + slug + ".md"
     if (browser) {
-      fetch("/posts/" + slug + ".md")
+      fetch("https://backend.arthmc.xyz/file/posts/" + slug + ".md")
         .then((response) => response.text())
         .then((text) => {
           //turn everything before line 7 into a variable and remove the from text
@@ -34,9 +34,6 @@ let t;
           text = text.split("\n").slice(8).join("\n");
 
           t = marked(text);
-          
-
-
         });
     }
   });
