@@ -6,7 +6,7 @@
   //get the top 10 posts
   let posts = [];
   if (browser) {
-    fetch("https://backend.arthmc.xyz/index/posts")
+    fetch("https://pb.arthmc.xyz/index/posts")
       .then((response) => response.json())
       .then((json) => {
         //take each item in the array, take the title and desc, and put them in posts
