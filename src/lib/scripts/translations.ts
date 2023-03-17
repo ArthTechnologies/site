@@ -2,7 +2,7 @@ export default {
   "en-US": {
     "hosting.title": "Arth Hosting",
     "hosting.desc":
-      "Get your own minecraft server with the most user-friendly setup out there! Plus, both Java & Bedrock Edition players will be able to join!",
+      "Get a Minecraft server with a price, customizability, and ease of use that's unmatched with Arth Hosting. Plus, Java and Bedrock Edition players can play together, and it's only $3<small>/mo</small> for the rest of 2023.",
     "b.learnmore": "LEARN MORE",
     "badge.comingsoon": "Coming Soon",
     "network.title": "Arth Network",
@@ -37,11 +37,11 @@ export default {
     month: "Month",
     "faq.title": "F.A.Q",
     "faq.1":
-      "• What's a plugin? A Plugin is an add-on to your server that gives it new features, like WorldEdit, which lets you build giant structures & landscapes effortlessly with new brushes & commands.",
+      "• <strong>What's a plugin?</strong> A Plugin is an add-on to your server that gives it new features, like WorldEdit, which lets you build giant structures & landscapes effortlessly with new brushes & commands.",
     "faq.2":
-      "• What's a worldgen mod? A worldgen can add new biomes and change the look of a world.",
+      "• <strong>What's a worldgen mod?</strong> A worldgen can add new biomes and change the look of a world.",
     "faq.3":
-      "• If both java & bedrock players can join, how do things like combat work? The experience for java players will be the same, and most things like player heads & modern combat will work as they do on java for Bedock Players.",
+      "• <strong>If both java & bedrock players can join, how do things like combat work?</strong> The experience for java players will be the same, and most things like player heads & modern combat will work as they do on java for Bedock Players.",
     "panel.title": "Arth Panel",
     "panel.desc":
       "The free and open-source software behind Arth Hosting! If you have access to server computer(s) to run arth panel, you can make your own hosting service with ease.",

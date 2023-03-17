@@ -1,8 +1,7 @@
 <script>
-	import {t} from "$lib/scripts/i18n"
+  import { t } from "$lib/scripts/i18n";
 
-	//{$t("")}
-	
+  //{$t("")}
 </script>
 
 <div class="card shadow-2xl">
@@ -17,12 +16,14 @@
           {$t("hosting.title")}
         </h1>
         <p class="py-7 text-neutral-focus">
-          {$t("hosting.desc")}
+          {@html $t("hosting.desc")}
         </p>
 
-        
-          <a href="/hosting"><div class="btn glass text-neutral-focus">{$t("b.learnmore")}</div></a>
-        
+        <a href="/hosting"
+          ><div class="btn glass text-neutral-focus">
+            {@html $t("b.learnmore")}
+          </div></a
+        >
       </div>
     </div>
   </div>
