@@ -19,9 +19,11 @@
           <div class="font-bold"><strike>$5</strike> $3<small>/mo</small></div>
           <p class="text-[1.1rem]">For the rest of 2023</p>
         </div>
-        <div class="overflow-x-auto flex space-x-5">
+        <div
+          class="space-y-5 flex  flex-col lg:flex-row items-center space-x-5"
+        >
           <!-- Minecraft Realms Table -->
-          <div class="bg-base-200 w-96  rounded-xl p-4 space-y-3">
+          <div class="bg-base-200 w-96  rounded-xl p-4 space-y-3 ml-5 mt-5">
             <p class="text-2xl font-bold -mb-3">Minecraft Realms</p>
             <p class="text-sm">Cheapest Plan</p>
             <div class="flex justify-between px-2">
