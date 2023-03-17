@@ -30,7 +30,7 @@
         <li>
           <a href="/blog" class="rounded-lg">Blog</a>
         </li>
-                <li>
+        <li>
           <a href="/docs/" class="rounded-lg">Docs</a>
         </li>
       </ul>
@@ -78,6 +78,9 @@
             <a href="/software" class="justify-between">
               {$t("navbar.software")}
             </a>
+          </li>
+          <li>
+            <a href="/status" class="justify-between"> Status </a>
           </li>
         </ul>
       </div>
