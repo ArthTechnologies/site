@@ -17,7 +17,7 @@
       localStorage.setItem("allowAnalytics", "false");
     } else {
       localStorage.setItem("allowAnalytics", "true");
-      fetch("http://localhost:5000/analytics/", {
+      fetch("https://pb.arthmc.xyz/analytics/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -25,6 +25,7 @@
         body: JSON.stringify({
           url: window.location.pathname,
           platform: navigator.platform,
+          locale: navigator.language,
         }),
       });
     }
