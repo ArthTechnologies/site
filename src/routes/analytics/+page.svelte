@@ -19,7 +19,7 @@
   let android;
   let ios;
   if (browser) {
-    fetch("http://localhost:5000/analytics")
+    fetch("https://pb.arthmc.xyz:5000/analytics")
       .then((response) => response.json())
       .then((json) => {
         res = json;
@@ -82,31 +82,31 @@
 <div class="flex flex-col items-center">
   <p class="text-lg font-bold mt-3 ml-8 mb-3">Hits by platform</p>
   <div
-    class="bg-base-200 w-1/4 rounded-xl shadow p-5 flex justify-between mb-3"
+    class="bg-base-200 w-1/3 md:w-1/4 rounded-xl shadow p-5 flex justify-between mb-3"
   >
     <p class="text-left">Windows: {windows}</p>
     <p class="text-center">{(windows / res.max) * 100}%</p>
   </div>
   <div
-    class="bg-base-200 w-1/4 rounded-xl shadow p-5 flex justify-between mb-3"
+    class="bg-base-200 w-1/3 md:w-1/4 rounded-xl shadow p-5 flex justify-between mb-3"
   >
     <p class="text-left">Linux: {linux}</p>
     <p class="text-center">{(linux / res.max) * 100}%</p>
   </div>
   <div
-    class="bg-base-200 w-1/4 rounded-xl shadow p-5 flex justify-between mb-3"
+    class="bg-base-200 w-1/3 md:w-1/4 rounded-xl shadow p-5 flex justify-between mb-3"
   >
     <p class="text-left">Mac: {macos}</p>
     <p class="text-center">{(macos / res.max) * 100}%</p>
   </div>
   <div
-    class="bg-base-200 w-1/4 rounded-xl shadow p-5 flex justify-between mb-3"
+    class="bg-base-200 w-1/3 md:w-1/4 rounded-xl shadow p-5 flex justify-between mb-3"
   >
     <p class="text-left">iOS: {ios}</p>
     <p class="text-center">{(ios / res.max) * 100}%</p>
   </div>
   <div
-    class="bg-base-200 w-1/4 rounded-xl shadow p-5 flex justify-between mb-3"
+    class="bg-base-200 w-1/3 md:w-1/4 rounded-xl shadow p-5 flex justify-between mb-3"
   >
     <p class="text-left">Android: {android}</p>
     <p class="text-center">{(android / res.max) * 100}%</p>
