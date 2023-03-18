@@ -19,7 +19,7 @@
   let android;
   let ios;
   if (browser) {
-    fetch("https://pb.arthmc.xyz:5000/analytics")
+    fetch("https://pb.arthmc.xyz/analytics")
       .then((response) => response.json())
       .then((json) => {
         res = json;
