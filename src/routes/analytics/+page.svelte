@@ -28,13 +28,13 @@
         platforms = json.devices;
         for (let i = res.day - 30; i <= res.day; i++) {
           if (res.days[i] == undefined) {
-            y1.push(0);
+            y1.push(100);
           } else {
-            y1.push(res.days[i]);
+            y1.push(res.max * (res.max / res.days[i]));
           }
         }
         for (let i = 0; i <= 30; i++) {
-          points += `${x1[i]},${res.max * (100 / res.max) - y1[i]} `;
+          points += `${x1[i]},${y1[i]} `;
         }
         linux = res.devices.linux;
         windows = res.devices.windows;
