@@ -106,7 +106,12 @@
           </div>
           <!-- Arth Hosting Table -->
           <div class="bg-base-200 w-96  rounded-xl p-4 space-y-3">
-            <p class="text-2xl font-bold -mb-3">Arth Hosting</p>
+            <p
+              class="text-2xl font-bold -mb-3 text-transparent bg-clip-text sm:bg-gradient-to-tr from-orange-500 to-pink-600"
+            >
+              Arth Hosting
+            </p>
+
             <p class="text-sm">Only Plan</p>
             <div class="flex justify-between px-2">
               <div class="flex items-center space-x-2">
@@ -160,9 +165,7 @@
               </div>
             </div>
             <a href="/hosting">
-              <button
-                class=" btn btn-outline btn-sm bg-gradient-to-br from-teal-500 to-indigo-600 hover:from-orange-500 hover:to-pink-600 mt-2.5"
-              >
+              <button class=" btn btn-outline btn-sm  mt-2.5">
                 <div class="flex items-center">Coming Soon</div>
               </button>
             </a>
