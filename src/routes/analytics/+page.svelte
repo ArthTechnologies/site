@@ -85,31 +85,31 @@
     class="bg-base-200 w-1/3 md:w-1/4 rounded-xl shadow p-5 flex justify-between mb-3"
   >
     <p class="text-left">Windows: {windows}</p>
-    <p class="text-center">{(windows / res.max) * 100}%</p>
+    <p class="text-center">{(windows / res.hits) * 100}%</p>
   </div>
   <div
     class="bg-base-200 w-1/3 md:w-1/4 rounded-xl shadow p-5 flex justify-between mb-3"
   >
     <p class="text-left">Linux: {linux}</p>
-    <p class="text-center">{(linux / res.max) * 100}%</p>
+    <p class="text-center">{(linux / res.hits) * 100}%</p>
   </div>
   <div
     class="bg-base-200 w-1/3 md:w-1/4 rounded-xl shadow p-5 flex justify-between mb-3"
   >
     <p class="text-left">Mac: {macos}</p>
-    <p class="text-center">{(macos / res.max) * 100}%</p>
+    <p class="text-center">{(macos / res.hits) * 100}%</p>
   </div>
   <div
     class="bg-base-200 w-1/3 md:w-1/4 rounded-xl shadow p-5 flex justify-between mb-3"
   >
     <p class="text-left">iOS: {ios}</p>
-    <p class="text-center">{(ios / res.max) * 100}%</p>
+    <p class="text-center">{(ios / res.hits) * 100}%</p>
   </div>
   <div
     class="bg-base-200 w-1/3 md:w-1/4 rounded-xl shadow p-5 flex justify-between mb-3"
   >
     <p class="text-left">Android: {android}</p>
-    <p class="text-center">{(android / res.max) * 100}%</p>
+    <p class="text-center">{(android / res.hits) * 100}%</p>
   </div>
 </div>
 
