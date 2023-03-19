@@ -15,7 +15,7 @@ export default {
     "mods.desc":
       "We make modpacks, which can add new features to your game or improve performance, for Minecraft: Java Edition.",
     "b.aexpan": "ARTHEAN EXPANSION (1.16)",
-    "b.aexped": "ARTHEAN EXPEDITION (1.18)",
+    "b.aexped": "ARTHEAN EVOLUTION (1.18)",
     "b.ac": "ARTHEAN CLIENT (PERFORMANCE)",
     "hosting.desc2":
       "See how Arth Hosting stacks up to the two most popular alternatives:",
@@ -68,7 +68,7 @@ export default {
     "mods.desc":
       "Hacemos modpacks, que pueden agregar nuevas funciones a su juego o mejorar el rendimiento, para Minecraft: Java Edition.",
     "b.aexpan": "ARTHEAN EXPANSION (1.16)",
-    "b.aexped": "ARTHEAN EXPEDITION (1.18)",
+    "b.aexped": "ARTHEAN EVOLUTION (1.18)",
     "b.ac": "ARTHEAN CLIENT (actuación)",
     "hosting.desc2":
       "Vea cómo Arth Hosting se compara con las dos alternativas más populares:",
