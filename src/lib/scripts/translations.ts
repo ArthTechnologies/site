@@ -2,7 +2,7 @@ export default {
   "en-US": {
     "hosting.title": "Arth Hosting",
     "hosting.desc":
-      "Get a Minecraft server with a price, customizability, and ease of use that's unmatched with Arth Hosting. Plus, Java and Bedrock Edition players can play together, and it's only $3<small>/mo</small> for the rest of 2023.",
+      "Offering Minecraft Servers with price, customizability, and ease of use that's unmatched. Plus, Java and Bedrock Edition players can play together, and it's only $3<small>/mo</small> for the rest of 2023.",
     "b.learnmore": "LEARN MORE",
     "badge.comingsoon": "Coming Soon",
     "network.title": "Arth Network",
