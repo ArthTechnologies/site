@@ -16,14 +16,16 @@
           {$t("hosting.title")}
         </h1>
         <div class=" py-7 text-left text-4xl md:text-center text-neutral-focus">
-          <div class="font-bold"><strike>$5</strike> $3<small>/mo</small></div>
-          <p class="text-[1.1rem]">For the rest of 2023</p>
+          <div class="font-bold">
+            <strike>$5</strike> $3<small>{$t("mo")}</small>
+          </div>
+          <p class="text-[1.1rem]">{$t("hosting.price")}</p>
         </div>
         <div class="space-y-5 flex  flex-col lg:flex-row  space-x-5">
           <!-- Minecraft Realms Table -->
           <div class="bg-base-200 w-96  rounded-xl p-4 space-y-3 ml-5 mt-5">
             <p class="text-2xl font-bold -mb-3">Minecraft Realms</p>
-            <p class="text-sm">Cheapest Plan</p>
+            <p class="text-sm">{$t("hosting.cheapestplan")}</p>
             <div class="flex justify-between px-2">
               <div class="flex items-center space-x-2">
                 <div class="bg-slate-300 w-2 h-2 rounded-full" />
@@ -31,16 +33,16 @@
                   <p class="font-mono" style="font-variant: small-caps">
                     price
                   </p>
-                  <p class="font-bold text-xl -mt-1.5">$4/mo</p>
+                  <p class="font-bold text-xl -mt-1.5">$4{$t("mo")}</p>
                 </div>
               </div>
               <div class="flex items-center space-x-2">
                 <div class="bg-slate-300 w-2 h-2 rounded-full" />
                 <div class="bg-base-300 w-36 h-12 rounded-lg text-left px-1.5">
                   <p class="font-mono" style="font-variant: small-caps">
-                    plugins
+                    {$t("label.plugins")}
                   </p>
-                  <p class="font-bold text-xl -mt-1.5">None</p>
+                  <p class="font-bold text-xl -mt-1.5">{$t("none")}</p>
                 </div>
               </div>
             </div>
@@ -49,18 +51,18 @@
                 <div class="bg-slate-300 w-2 h-2 rounded-full" />
                 <div class="bg-base-300 w-36 h-12 rounded-lg text-left px-1.5">
                   <p class="font-mono" style="font-variant: small-caps">
-                    worldgen mods
+                    {$t("label.worldgenmods")}
                   </p>
-                  <p class="font-bold text-xl -mt-1.5">None</p>
+                  <p class="font-bold text-xl -mt-1.5">{$t("none")}</p>
                 </div>
               </div>
               <div class="flex items-center space-x-2">
                 <div class="bg-slate-300 w-2 h-2 rounded-full" />
                 <div class="bg-base-300 w-36 h-12 rounded-lg text-left px-1.5">
                   <p class="font-mono" style="font-variant: small-caps">
-                    memory
+                    {$t("label.memory")}
                   </p>
-                  <p class="font-bold text-xl -mt-1.5">Unreported</p>
+                  <p class="font-bold text-xl -mt-1.5">{$t("unreported")}</p>
                 </div>
               </div>
             </div>
@@ -68,10 +70,10 @@
               <div class="bg-slate-300 w-3 h-2 rounded-full" />
               <div class="bg-base-300 w-42 h-20 rounded-lg text-left px-1.5">
                 <p class="font-mono" style="font-variant: small-caps">
-                  crossplay
+                  {$t("label.crossplay")}
                 </p>
                 <p class="font-bold text-xl -mt-1.5">
-                  Bedrock & Java Edition players can't play together.
+                  {$t("hosting.realms.crossplay")}
                 </p>
               </div>
             </div>
@@ -97,7 +99,7 @@
                       x2="21"
                       y2="3"
                     /></svg
-                  >View
+                  >{$t("view")}
                 </div>
               </button>
             </a>
@@ -110,24 +112,24 @@
               Arth Hosting
             </p>
 
-            <p class="text-sm">Only Plan</p>
+            <p class="text-sm">{$t("hosting.onlyplan")}</p>
             <div class="flex justify-between px-2">
               <div class="flex items-center space-x-2">
                 <div class="bg-slate-300 w-2 h-2 rounded-full" />
                 <div class="bg-base-300 w-36 h-12 rounded-lg text-left px-1.5">
                   <p class="font-mono" style="font-variant: small-caps">
-                    price
+                    {$t("label.price")}
                   </p>
-                  <p class="font-bold text-xl -mt-1.5">$3/mo</p>
+                  <p class="font-bold text-xl -mt-1.5">$3{$t("mo")}</p>
                 </div>
               </div>
               <div class="flex items-center space-x-2">
                 <div class="bg-slate-300 w-2 h-2 rounded-full" />
                 <div class="bg-base-300 w-36 h-12 rounded-lg text-left px-1.5">
                   <p class="font-mono" style="font-variant: small-caps">
-                    plugins
+                    {$t("label.plugins")}
                   </p>
-                  <p class="font-bold text-xl -mt-1.5">Yes</p>
+                  <p class="font-bold text-xl -mt-1.5">{$t("yes")}</p>
                 </div>
               </div>
             </div>
@@ -136,16 +138,16 @@
                 <div class="bg-slate-300 w-2 h-2 rounded-full" />
                 <div class="bg-base-300 w-36 h-12 rounded-lg text-left px-1.5">
                   <p class="font-mono" style="font-variant: small-caps">
-                    worldgen mods
+                    {$t("label.worldgenmods")}
                   </p>
-                  <p class="font-bold text-xl -mt-1.5">Yes</p>
+                  <p class="font-bold text-xl -mt-1.5">{$t("yes")}</p>
                 </div>
               </div>
               <div class="flex items-center space-x-2">
                 <div class="bg-slate-300 w-2 h-2 rounded-full" />
                 <div class="bg-base-300 w-36 h-12 rounded-lg text-left px-1.5">
                   <p class="font-mono" style="font-variant: small-caps">
-                    memory
+                    {$t("label.memory")}
                   </p>
                   <p class="font-bold text-xl -mt-1.5">3GB+</p>
                 </div>
@@ -155,40 +157,40 @@
               <div class="bg-slate-300 w-3 h-2 rounded-full" />
               <div class="bg-base-300 w-42 h-20 rounded-lg text-left px-1.5">
                 <p class="font-mono" style="font-variant: small-caps">
-                  crossplay
+                  {$t("label.crossplay")}
                 </p>
                 <p class="font-bold text-xl -mt-1.5">
-                  Bedrock & Java Edition players can play together.
+                  {$t("hosting.arth.crossplay")}
                 </p>
               </div>
             </div>
             <a href="/hosting">
               <button class=" btn btn-outline btn-sm  mt-2.5">
-                <div class="flex items-center">Coming Soon</div>
+                <div class="flex items-center">{$t("badge.comingsoon")}</div>
               </button>
             </a>
           </div>
           <!-- Apex Hosting Table -->
           <div class="bg-base-200 w-96  rounded-xl p-4 space-y-3">
             <p class="text-2xl font-bold -mb-3">Apex Hosting</p>
-            <p class="text-sm">Cheapest Plan</p>
+            <p class="text-sm">{$t("hosting.cheapestplan")}</p>
             <div class="flex justify-between px-2">
               <div class="flex items-center space-x-2">
                 <div class="bg-slate-300 w-2 h-2 rounded-full" />
                 <div class="bg-base-300 w-36 h-12 rounded-lg text-left px-1.5">
                   <p class="font-mono" style="font-variant: small-caps">
-                    price
+                    {$t("label.price")}
                   </p>
-                  <p class="font-bold text-xl -mt-1.5">$7.5/mo</p>
+                  <p class="font-bold text-xl -mt-1.5">$7.5{$t("mo")}</p>
                 </div>
               </div>
               <div class="flex items-center space-x-2">
                 <div class="bg-slate-300 w-2 h-2 rounded-full" />
                 <div class="bg-base-300 w-36 h-12 rounded-lg text-left px-1.5">
                   <p class="font-mono" style="font-variant: small-caps">
-                    plugins
+                    {$t("label.plugins")}
                   </p>
-                  <p class="font-bold text-xl -mt-1.5">Yes</p>
+                  <p class="font-bold text-xl -mt-1.5">{$t("yes")}</p>
                 </div>
               </div>
             </div>
@@ -197,16 +199,16 @@
                 <div class="bg-slate-300 w-2 h-2 rounded-full" />
                 <div class="bg-base-300 w-36 h-12 rounded-lg text-left px-1.5">
                   <p class="font-mono" style="font-variant: small-caps">
-                    worldgen mods
+                    {$t("label.worldgenmods")}
                   </p>
-                  <p class="font-bold text-xl -mt-1.5">Yes</p>
+                  <p class="font-bold text-xl -mt-1.5">{$t("yes")}</p>
                 </div>
               </div>
               <div class="flex items-center space-x-2">
                 <div class="bg-slate-300 w-2 h-2 rounded-full" />
                 <div class="bg-base-300 w-36 h-12 rounded-lg text-left px-1.5">
                   <p class="font-mono" style="font-variant: small-caps">
-                    memory
+                    {$t("label.memory")}
                   </p>
                   <p class="font-bold text-xl -mt-1.5">2GB</p>
                 </div>
@@ -216,11 +218,10 @@
               <div class="bg-slate-300 w-3 h-2 rounded-full" />
               <div class="bg-base-300 w-42 h-20 rounded-lg text-left px-1.5">
                 <p class="font-mono" style="font-variant: small-caps">
-                  crossplay
+                  {$t("label.crossplay")}
                 </p>
                 <p class="font-bold text-lg -mt-1.5">
-                  Bedrock & Java Edition players can play together with extra
-                  setup.
+                  {$t("hosting.apex.crossplay")}
                 </p>
               </div>
             </div>
@@ -246,7 +247,7 @@
                       x2="21"
                       y2="3"
                     /></svg
-                  >View
+                  >{$t("view")}
                 </div>
               </button>
             </a>

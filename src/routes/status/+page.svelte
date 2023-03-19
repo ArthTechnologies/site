@@ -1,4 +1,6 @@
 <script>
+  import { browser } from "$app/environment";
+  import { t } from "$lib/scripts/i18n";
   //fetch pb.arthmc.xyz/status
   let network;
   let hosting;
@@ -33,7 +35,7 @@
     });
 </script>
 
-<p class="text-center text-5xl font-bold mt-10">Status</p>
+<p class="text-center text-5xl font-bold mt-10">{$t("status")}</p>
 <div class="p-4 space-y-5 ">
   <div class="h-24 w-80 bg-base-200 rounded-xl p-2">
     <p class="font-bold text-2xl">Arth Network</p>
