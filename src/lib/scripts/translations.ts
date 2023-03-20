@@ -13,7 +13,7 @@ export default {
     "yes": "Yes",
     "mo":"/mo",
     "view": "View",
-    "unreported": "No reportado",
+    "unreported": "Unreported",
     "hosting.realms.crossplay": "Bedrock & Java Edition players can't play together.",
     "hosting.arth.crossplay": "Bedrock & Java Edition players can play together.",
     "hosting.apex.crossplay": "Bedrock & Java Edition players can play together with extra setup.",
