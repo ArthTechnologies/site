@@ -30,6 +30,5 @@
 <p class="text-center text-5xl font-bold mt-10 mb-5">Blog</p>
 <div class="flex place-content-center">
   <RSS />
-  <Email />
 </div>
 <div id="posts" class="sm:text-left p-5 space-y-5 pr-20 pl-20 h-screen" />

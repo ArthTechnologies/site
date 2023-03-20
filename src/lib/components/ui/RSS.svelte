@@ -1,6 +1,6 @@
 <script>
   import CopyClipboard from "$lib/components/ui/CopyClipboard.svelte";
-  let link = "https://arthmc.xyz/rss.xml";
+  let link = "https://pb.arthmc.xyz/rss/";
 
   const copy = () => {
     const app = new CopyClipboard({
@@ -11,7 +11,7 @@
   };
 </script>
 
-<a href="#rss" class="btn btn-ghost">
+<a href="#rss" class="btn btn-outline">
   Subscribe via rss  
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,11 @@
     <div class="flex">
       <div class="modal-action">
         <a class="btn" on:click={copy}>Copy Link</a>
-        <a class="btn" href="/arthblog.rss" download>Download .rss file</a>
+        <a
+          class="btn"
+          href="https://pb.arthmc.xyz/rss/arthblog.rss"
+          download="arthblog.rss">Download .rss file</a
+        >
         <a href="#" class="btn">Close</a>
       </div>
     </div>

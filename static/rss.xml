@@ -33,6 +33,18 @@ Your gateway to running your own Minecraft servers.
 
 
 </item>
+<item>
+<title>We have a new RSS feed.</title>
+<description>
+Click "Subscribe via RSS" on our blog to get the new one.
+</description>
+
+<link>https://arthmc.xyz/blog/</link>
+<guid isPermaLink="true">https://arthmc.xyz/blog/</guid>
+<pubDate>Sun, 20 Mar 2023 12:00:00 +0000</pubDate>
+
+
+</item>
 
 
 </channel>
