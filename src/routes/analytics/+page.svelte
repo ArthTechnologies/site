@@ -19,7 +19,7 @@
   let android;
   let ios;
   if (browser) {
-    fetch("https://pb.arthmc.xyz/analytics")
+    fetch("https://backend.arthmc.xyz/analytics")
       .then((response) => response.json())
       .then((json) => {
         res = json;

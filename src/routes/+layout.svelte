@@ -17,7 +17,7 @@
       localStorage.setItem("allowAnalytics", "false");
     } else {
       localStorage.setItem("allowAnalytics", "true");
-      fetch("https://pb.arthmc.xyz/analytics/", {
+      fetch("https://backend.arthmc.xyz/analytics/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

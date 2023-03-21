@@ -19,7 +19,7 @@
   onMount(() => {
     //set text to the contents of "/posts" + slug + ".md"
     if (browser) {
-      fetch("https://pb.arthmc.xyz/file/posts/" + slug + ".md")
+      fetch("https://backend.arthmc.xyz/file/posts/" + slug + ".md")
         .then((response) => response.text())
         .then((text) => {
           //turn everything before line 7 into a variable and remove the from text

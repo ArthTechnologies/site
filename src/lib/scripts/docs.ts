@@ -12,7 +12,7 @@ setTimeout(() => {
         if (slug != "home") {
             slug = window.location.pathname.split("/").pop();
         }
-        fetch("https://pb.arthmc.xyz/file/docs/"+slug+".md")
+        fetch("https://backend.arthmc.xyz/file/docs/"+slug+".md")
   .then((response) => response.text())
   .then((text) => {
 

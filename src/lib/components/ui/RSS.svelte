@@ -1,6 +1,6 @@
 <script>
   import CopyClipboard from "$lib/components/ui/CopyClipboard.svelte";
-  let link = "https://pb.arthmc.xyz/rss/";
+  let link = "https://backend.arthmc.xyz/rss/";
 
   const copy = () => {
     const app = new CopyClipboard({
@@ -44,7 +44,7 @@
         <a class="btn" on:click={copy}>Copy Link</a>
         <a
           class="btn"
-          href="https://pb.arthmc.xyz/rss/arthblog.rss"
+          href="https://backend.arthmc.xyz/rss/arthblog.rss"
           download="arthblog.rss">Download .rss file</a
         >
         <a href="#" class="btn">Close</a>

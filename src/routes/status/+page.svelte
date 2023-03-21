@@ -1,7 +1,7 @@
 <script>
   import { browser } from "$app/environment";
   import { t } from "$lib/scripts/i18n";
-  //fetch pb.arthmc.xyz/status
+
   let network;
   let hosting;
   let quartz;
@@ -10,7 +10,7 @@
   let backend;
   let website;
 
-  const response = fetch("https://pb.arthmc.xyz/status")
+  const response = fetch("https://backend.arthmc.xyz/status")
     .then((response) => response.json())
     .then((json) => {
       if (json != undefined) {
