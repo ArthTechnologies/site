@@ -70,7 +70,7 @@
 
       <!-- data -->
       <polyline
-        style="stroke: red; stroke-width: 2"
+        style="stroke: #00a4cd; stroke-width: 2"
         points="
       {points}
     "
