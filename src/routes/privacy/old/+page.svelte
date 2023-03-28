@@ -8,7 +8,7 @@
   let effective;
 
   if (browser) {
-    fetch("https://pb.arthmc.xyz/file/docs/privacy_old.md")
+    fetch("https://backend.arthmc.xyz/file/docs/privacy_old.md")
       .then((response) => response.text())
       .then((text) => {
         const lines = text.split("\n");
