@@ -11,11 +11,13 @@
     <div class="md:hero-content text-center">
       <div class="max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-none">
         <h1
-          class="mt-3 md:mt-0 font-title text-left md:text-center text-neutral-focus  text-4xl font-extrabold sm:text-5xl lg:text-7xl"
+          class="mt-12 md:mt-0 font-title text-left md:text-center text-neutral-focus   font-extrabold text-5xl lg:text-7xl"
         >
           {$t("hosting.title")}
         </h1>
-        <div class=" py-7 text-left text-4xl md:text-center text-neutral-focus">
+        <div
+          class=" pt-7 sm:pb-7 text-left text-4xl md:text-center text-neutral-focus"
+        >
           <div class="font-bold">
             <strike>$5</strike> $3<small>{$t("mo")}</small>
           </div>
@@ -23,7 +25,9 @@
         </div>
         <div class="space-y-5 flex  flex-col lg:flex-row  md:space-x-5 mb-5">
           <!-- Minecraft Realms Table -->
-          <div class="bg-base-200 md:w-96  rounded-xl px-1 md:px-4 py-4 space-y-3 md:ml-5 mt-5">
+          <div
+            class="bg-base-200 md:w-96  rounded-xl px-1 md:px-4 py-4 space-y-3 md:ml-5 mt-5"
+          >
             <p class="text-2xl font-bold -mb-3">Minecraft Realms</p>
             <p class="text-sm">{$t("hosting.cheapestplan")}</p>
             <div class="flex justify-between px-2">
@@ -38,7 +42,9 @@
               </div>
               <div class="flex items-center space-x-2">
                 <div class="bg-slate-300 w-2 h-2 rounded-full" />
-                <div class="bg-base-300 w-28 md:w-36 h-12 rounded-lg text-left px-1.5">
+                <div
+                  class="bg-base-300 w-28 md:w-36 h-12 rounded-lg text-left px-1.5"
+                >
                   <p class="font-mono" style="font-variant: small-caps">
                     {$t("label.plugins")}
                   </p>
@@ -58,7 +64,9 @@
               </div>
               <div class="flex items-center space-x-2">
                 <div class="bg-slate-300 w-2 h-2 rounded-full" />
-                <div class="bg-base-300  md:w-36 h-12 rounded-lg text-left px-1.5">
+                <div
+                  class="bg-base-300  md:w-36 h-12 rounded-lg text-left px-1.5"
+                >
                   <p class="font-mono" style="font-variant: small-caps">
                     {$t("label.memory")}
                   </p>
@@ -107,7 +115,7 @@
           <!-- Arth Hosting Table -->
           <div class="bg-base-200 md:w-96  rounded-xl p-4 space-y-3 outline">
             <p
-              class="text-2xl font-bold -mb-3 text-transparent bg-clip-text sm:bg-gradient-to-tr from-orange-500 to-pink-600"
+              class="text-2xl font-bold -mb-3 text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-pink-600"
             >
               Arth Hosting
             </p>
@@ -125,7 +133,9 @@
               </div>
               <div class="flex items-center space-x-2">
                 <div class="bg-slate-300 w-2 h-2 rounded-full" />
-                <div class="bg-base-300 md:w-36 h-12 rounded-lg text-left px-1.5">
+                <div
+                  class="bg-base-300 md:w-36 h-12 rounded-lg text-left px-1.5"
+                >
                   <p class="font-mono" style="font-variant: small-caps">
                     {$t("label.plugins")}
                   </p>
@@ -145,7 +155,9 @@
               </div>
               <div class="flex items-center space-x-2">
                 <div class="bg-slate-300 w-2 h-2 rounded-full" />
-                <div class="bg-base-300 md:w-36 h-12 rounded-lg text-left px-1.5">
+                <div
+                  class="bg-base-300 md:w-36 h-12 rounded-lg text-left px-1.5"
+                >
                   <p class="font-mono" style="font-variant: small-caps">
                     {$t("label.memory")}
                   </p>
@@ -164,7 +176,11 @@
                 </p>
               </div>
             </div>
-            <a href="https://servers.arthmc.xyz/signin/" target="_blank" rel="noreferrer">
+            <a
+              href="https://servers.arthmc.xyz/signin/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <button class=" btn btn-outline btn-sm  mt-2.5">
                 <div class="flex items-center">Get Started</div>
               </button>
@@ -186,7 +202,9 @@
               </div>
               <div class="flex items-center space-x-2">
                 <div class="bg-slate-300 w-2 h-2 rounded-full" />
-                <div class="bg-base-300 md:w-36 h-12 rounded-lg text-left px-1.5">
+                <div
+                  class="bg-base-300 md:w-36 h-12 rounded-lg text-left px-1.5"
+                >
                   <p class="font-mono" style="font-variant: small-caps">
                     {$t("label.plugins")}
                   </p>
@@ -206,7 +224,9 @@
               </div>
               <div class="flex items-center space-x-2">
                 <div class="bg-slate-300 w-2 h-2 rounded-full" />
-                <div class="bg-base-300 md:w-36 h-12 rounded-lg text-left px-1.5">
+                <div
+                  class="bg-base-300 md:w-36 h-12 rounded-lg text-left px-1.5"
+                >
                   <p class="font-mono" style="font-variant: small-caps">
                     {$t("label.memory")}
                   </p>
