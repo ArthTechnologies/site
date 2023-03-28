@@ -4,14 +4,14 @@
   //{$t("")}
 </script>
 
-<div class="card shadow-2xl space-y-10 space-x-10">
+<div class="md:card shadow-2xl space-y-10 space-x-10">
   <div
-    class="card-body bg-gradient-to-tl from-orange-500 to-pink-600 rounded-xl hero "
+    class="md:card-body bg-gradient-to-tl from-orange-500 to-pink-600 rounded-xl hero "
   >
-    <div class="hero-content text-center">
+    <div class="md:hero-content text-center">
       <div class="max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-none">
         <h1
-          class="font-title text-left md:text-center text-neutral-focus  text-4xl font-extrabold sm:text-5xl lg:text-7xl"
+          class="mt-3 md:mt-0 font-title text-left md:text-center text-neutral-focus  text-4xl font-extrabold sm:text-5xl lg:text-7xl"
         >
           {$t("hosting.title")}
         </h1>
@@ -21,9 +21,9 @@
           </div>
           <p class="text-[1.1rem]">{$t("hosting.price")}</p>
         </div>
-        <div class="space-y-5 flex  flex-col lg:flex-row  space-x-5">
+        <div class="space-y-5 flex  flex-col lg:flex-row  md:space-x-5">
           <!-- Minecraft Realms Table -->
-          <div class="bg-base-200 w-96  rounded-xl p-4 space-y-3 ml-5 mt-5">
+          <div class="bg-base-200 md:w-96  rounded-xl px-1 md:px-4 py-4 space-y-3 md:ml-5 mt-5">
             <p class="text-2xl font-bold -mb-3">Minecraft Realms</p>
             <p class="text-sm">{$t("hosting.cheapestplan")}</p>
             <div class="flex justify-between px-2">
@@ -38,7 +38,7 @@
               </div>
               <div class="flex items-center space-x-2">
                 <div class="bg-slate-300 w-2 h-2 rounded-full" />
-                <div class="bg-base-300 w-36 h-12 rounded-lg text-left px-1.5">
+                <div class="bg-base-300 w-28 md:w-36 h-12 rounded-lg text-left px-1.5">
                   <p class="font-mono" style="font-variant: small-caps">
                     {$t("label.plugins")}
                   </p>
@@ -58,7 +58,7 @@
               </div>
               <div class="flex items-center space-x-2">
                 <div class="bg-slate-300 w-2 h-2 rounded-full" />
-                <div class="bg-base-300 w-36 h-12 rounded-lg text-left px-1.5">
+                <div class="bg-base-300  md:w-36 h-12 rounded-lg text-left px-1.5">
                   <p class="font-mono" style="font-variant: small-caps">
                     {$t("label.memory")}
                   </p>
@@ -105,7 +105,7 @@
             </a>
           </div>
           <!-- Arth Hosting Table -->
-          <div class="bg-base-200 w-96  rounded-xl p-4 space-y-3 outline">
+          <div class="bg-base-200 md:w-96  rounded-xl p-4 space-y-3 outline">
             <p
               class="text-2xl font-bold -mb-3 text-transparent bg-clip-text sm:bg-gradient-to-tr from-orange-500 to-pink-600"
             >
@@ -125,7 +125,7 @@
               </div>
               <div class="flex items-center space-x-2">
                 <div class="bg-slate-300 w-2 h-2 rounded-full" />
-                <div class="bg-base-300 w-36 h-12 rounded-lg text-left px-1.5">
+                <div class="bg-base-300 md:w-36 h-12 rounded-lg text-left px-1.5">
                   <p class="font-mono" style="font-variant: small-caps">
                     {$t("label.plugins")}
                   </p>
@@ -145,7 +145,7 @@
               </div>
               <div class="flex items-center space-x-2">
                 <div class="bg-slate-300 w-2 h-2 rounded-full" />
-                <div class="bg-base-300 w-36 h-12 rounded-lg text-left px-1.5">
+                <div class="bg-base-300 md:w-36 h-12 rounded-lg text-left px-1.5">
                   <p class="font-mono" style="font-variant: small-caps">
                     {$t("label.memory")}
                   </p>
@@ -164,14 +164,14 @@
                 </p>
               </div>
             </div>
-            <a href="/hosting">
+            <a href="https://servers.arthmc.xyz/signin/">
               <button class=" btn btn-outline btn-sm  mt-2.5">
-                <div class="flex items-center">{$t("badge.comingsoon")}</div>
+                <div class="flex items-center">Get Started</div>
               </button>
             </a>
           </div>
           <!-- Apex Hosting Table -->
-          <div class="bg-base-200 w-96  rounded-xl p-4 space-y-3">
+          <div class="bg-base-200 md:w-96  rounded-xl p-4 space-y-3">
             <p class="text-2xl font-bold -mb-3">Apex Hosting</p>
             <p class="text-sm">{$t("hosting.cheapestplan")}</p>
             <div class="flex justify-between px-2">
@@ -186,7 +186,7 @@
               </div>
               <div class="flex items-center space-x-2">
                 <div class="bg-slate-300 w-2 h-2 rounded-full" />
-                <div class="bg-base-300 w-36 h-12 rounded-lg text-left px-1.5">
+                <div class="bg-base-300 md:w-36 h-12 rounded-lg text-left px-1.5">
                   <p class="font-mono" style="font-variant: small-caps">
                     {$t("label.plugins")}
                   </p>
@@ -206,7 +206,7 @@
               </div>
               <div class="flex items-center space-x-2">
                 <div class="bg-slate-300 w-2 h-2 rounded-full" />
-                <div class="bg-base-300 w-36 h-12 rounded-lg text-left px-1.5">
+                <div class="bg-base-300 md:w-36 h-12 rounded-lg text-left px-1.5">
                   <p class="font-mono" style="font-variant: small-caps">
                     {$t("label.memory")}
                   </p>
@@ -220,7 +220,7 @@
                 <p class="font-mono" style="font-variant: small-caps">
                   {$t("label.crossplay")}
                 </p>
-                <p class="font-bold text-lg -mt-1.5">
+                <p class="font-bold text-[0.95rem] md:text-lg -mt-1.5">
                   {$t("hosting.apex.crossplay")}
                 </p>
               </div>

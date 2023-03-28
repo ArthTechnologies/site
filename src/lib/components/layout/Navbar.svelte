@@ -22,7 +22,7 @@
       >
     </div>
     <div class="flex-none space-x-2">
-      <ul class="menu menu-horizontal p-0">
+      <ul class="menu menu-horizontal p-0 hidden md:flex">
         <li><a href="/" class="rounded-lg">{$t("navbar.home")}</a></li>
         <li>
           <a href="/hosting" class="rounded-lg">{$t("navbar.hosting")}</a>
@@ -66,6 +66,18 @@
           tabindex="0"
           class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-200 rounded-box w-52"
         >
+        <div class="block sm:hidden">
+          <li><a href="/" class="rounded-lg">{$t("navbar.home")}</a></li>
+          <li>
+            <a href="/hosting" class="rounded-lg">{$t("navbar.hosting")}</a>
+          </li>
+          <li>
+            <a href="/blog" class="rounded-lg">Blog</a>
+          </li>
+          <li>
+            <a href="/docs/" class="rounded-lg">Docs</a>
+          </li>
+        </div>
           <li>
             <a
               href="https://discord.com/invite/bjY39AbK35"

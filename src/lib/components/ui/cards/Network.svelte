@@ -6,16 +6,16 @@
 
 
 <div class="card shadow-2xl">
-  <div class="card-body bg-[url('/images/card1bg.webp')] rounded-xl hero">
+  <div class="card-body bg-[url('/images/card1bg.webp')] rounded-xl md:hero">
     <div class="hero-content text-center">
       <div class="max-w-lg lg:max-w-2xl">
         <h1
           class="font-title mb
-          2 text-4xl font-extrabold sm:text-5xl lg:text-7xl text-neutral-focus"
+          2 text-4xl font-extrabold text-3xl  md:text-5xl lg:text-7xl text-neutral-focus"
         >
           {$t("network.title")}
         </h1>
-        <p class="py-7 text-lg font-semibold text-neutral-focus">
+        <p class="py-7 md:text-lg font-semibold text-neutral-focus">
           {$t("network.desc")}
         </p>
 

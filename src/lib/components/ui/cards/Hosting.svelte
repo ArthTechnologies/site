@@ -6,7 +6,7 @@
 
 <div class="card shadow-2xl">
   <div
-    class="card-body bg-gradient-to-tl from-sky-500 to-fuchsia-600 rounded-xl hero"
+    class=" card-body bg-gradient-to-tl from-sky-500 to-fuchsia-600 rounded-xl hero"
   >
     <div class="hero-content text-center">
       <div class="max-w-lg lg:max-w-2xl">
