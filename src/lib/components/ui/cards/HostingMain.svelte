@@ -21,7 +21,7 @@
           </div>
           <p class="text-[1.1rem]">{$t("hosting.price")}</p>
         </div>
-        <div class="space-y-5 flex  flex-col lg:flex-row  md:space-x-5">
+        <div class="space-y-5 flex  flex-col lg:flex-row  md:space-x-5 mb-5">
           <!-- Minecraft Realms Table -->
           <div class="bg-base-200 md:w-96  rounded-xl px-1 md:px-4 py-4 space-y-3 md:ml-5 mt-5">
             <p class="text-2xl font-bold -mb-3">Minecraft Realms</p>
