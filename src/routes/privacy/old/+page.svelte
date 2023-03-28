@@ -23,7 +23,7 @@
 </script>
 
 <div class="bg-base-200 w-1/2 h-13 ml-5 mt-5 rounded-xl p-2">
-  This is version {version} of our privacy policy. It was pushished on {published}
+  This is version {version} of our privacy policy. It was published on {published}
   and went into effect on {effective} before being replaced by version {version +
     1}. You can see the current version
   <a class="link" href="/privacy/">here</a>.
