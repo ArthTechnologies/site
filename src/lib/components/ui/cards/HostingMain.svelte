@@ -164,7 +164,7 @@
                 </p>
               </div>
             </div>
-            <a href="https://servers.arthmc.xyz/signin/">
+            <a href="https://servers.arthmc.xyz/signin/" target="_blank" rel="noreferrer">
               <button class=" btn btn-outline btn-sm  mt-2.5">
                 <div class="flex items-center">Get Started</div>
               </button>
