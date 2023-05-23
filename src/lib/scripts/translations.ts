@@ -19,7 +19,7 @@ export default {
     "hosting.apex.crossplay": "Bedrock & Java Edition players can play together with extra setup.",
     "hosting.title": "Arth Hosting",
     "hosting.desc":
-      "Offering Minecraft Servers with price, customizability, and ease of use that's unmatched. Plus, Java and Bedrock Edition players can play together, and it's only $3<small>/mo</small> for the rest of 2023.",
+      "Offering Minecraft Servers with price, customizability, and ease of use that's unmatched. Plus, Java and Bedrock Edition players can play together, and it's only $0<small>/mo</small> for the rest of 2023.",
     "b.learnmore": "LEARN MORE",
     "badge.comingsoon": "Coming Soon",
     "network.title": "Arth Network",
@@ -89,7 +89,7 @@ export default {
     "hosting.apex.crossplay": "Los jugadores de Bedrock & Java pueden jugar juntos con un plugin.",
     "hosting.title": "Arth Hosting",
     "hosting.desc":
-      "Servidores de Minecraft con precio, personalización y facilidad de uso incomparables. Jugadores de Java y Bedrock Edition pueden jugar juntos. ¡Solo $3/mes hasta finales de 2023!",
+      "Servidores de Minecraft con precio, personalización y facilidad de uso incomparables. Jugadores de Java y Bedrock Edition pueden jugar juntos. ¡Solo $0/mes hasta finales de 2023!",
     "b.learnmore": "Aprende más",
     "badge.comingsoon": "Viniendo en el futuro",
     "network.title": "Arth Network",

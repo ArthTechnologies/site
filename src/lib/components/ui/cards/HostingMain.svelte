@@ -19,7 +19,7 @@
           class=" pt-7 sm:pb-7 text-left text-4xl md:text-center text-neutral-focus"
         >
           <div class="font-bold">
-            <strike>$5</strike> $3<small>{$t("mo")}</small>
+            <strike>$5</strike> $0<small>{$t("mo")}</small>
           </div>
           <p class="text-[1.1rem]">{$t("hosting.price")}</p>
         </div>
@@ -128,7 +128,7 @@
                   <p class="font-mono" style="font-variant: small-caps">
                     {$t("label.price")}
                   </p>
-                  <p class="font-bold text-xl -mt-1.5">$3{$t("mo")}</p>
+                  <p class="font-bold text-xl -mt-1.5">$0{$t("mo")}</p>
                 </div>
               </div>
               <div class="flex items-center space-x-2">
