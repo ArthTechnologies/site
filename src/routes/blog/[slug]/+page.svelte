@@ -41,12 +41,12 @@
 
 <div class="p-5 flex flex-col px-0 md:px-[150px] xl:px-[300px]">
   <p class="text-5xl text-center p-4 font-bold">{title}</p>
-  <p class="text-xl text-center p-4 ">{desc}</p>
-  <div class="flex space-x-2 pb-5">
+  <p class="text-xl text-center p-4">{desc}</p>
+  <div class="flex space-x-2 ml-8 mt-4">
     <img
       alt="{author}'s Icon"
       src={authorImage}
-      class="bg-slate-400 mask mask-squircle "
+      class="bg-slate-400 mask mask-squircle"
       width="50"
     />
     <div class="flex flex-col">
@@ -57,7 +57,7 @@
       <ShareToMastodon />
     </div>
   </div>
-  <article class="space-y-1 mr-8 ml-8 text-lg prose max-w-none">
+  <article class="space-y-1 mr-8 ml-8 text-lg prose max-w-none pb-36">
     {@html t}
   </article>
 </div>
