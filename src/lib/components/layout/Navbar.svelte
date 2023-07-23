@@ -17,15 +17,38 @@
 {#if navType === "default"}
   <div class="navbar bg-base-300">
     <div class="flex-1">
-      <a class="btn btn-ghost normal-case text-xl invisible sm:visible" href="/"
+      <a class="btn btn-ghost normal-case text-xl w-24" href="/"
         ><img src="/images/sitelogo.svg" alt="Arth" width="75" height="75" /></a
       >
     </div>
     <div class="flex-none space-x-2">
-      <ul class="menu menu-horizontal p-0 hidden md:flex">
-        <li><a href="/" class="rounded-lg">{$t("navbar.home")}</a></li>
+      <ul class="menu menu-horizontal p-0">
         <li>
-          <a href="/hosting" class="rounded-lg">{$t("navbar.hosting")}</a>
+          <a href="/" class="rounded-lg hidden md:flex">{$t("navbar.home")}</a>
+        </li>
+        <li>
+          <a
+            href="https://servers.arthmc.xyz/signin"
+            class="rounded-lg btn btn-outline flex bg-gradient-to-tr from-orange-500 to-pink-600 text-black -space-x-2 pr-1.5 pl-2.5 md:pr-3 md:pl-4"
+            target="_blank"
+            rel="noreferrer"
+            ><p>Servers</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-arrow-up-right"
+              ><line x1="7" y1="17" x2="17" y2="7" /><polyline
+                points="7 7 17 7 17 17"
+              /></svg
+            ></a
+          >
         </li>
         <li>
           <a href="/blog" class="rounded-lg">Blog</a>
@@ -35,9 +58,7 @@
         </li>
       </ul>
 
-      <ThemeToggle />
-
-      <div class="dropdown dropdown-end ">
+      <div class="dropdown dropdown-end">
         <label tabindex="0" class="btn btn-ghost btn-circle">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -66,18 +87,18 @@
           tabindex="0"
           class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-200 rounded-box w-52"
         >
-        <div class="block sm:hidden">
-          <li><a href="/" class="rounded-lg">{$t("navbar.home")}</a></li>
-          <li>
-            <a href="/hosting" class="rounded-lg">{$t("navbar.hosting")}</a>
-          </li>
-          <li>
-            <a href="/blog" class="rounded-lg">Blog</a>
-          </li>
-          <li>
-            <a href="/docs/" class="rounded-lg">Docs</a>
-          </li>
-        </div>
+          <div class="block sm:hidden">
+            <li><a href="/" class="rounded-lg">{$t("navbar.home")}</a></li>
+            <li>
+              <a href="/hosting" class="rounded-lg">{$t("navbar.hosting")}</a>
+            </li>
+            <li>
+              <a href="/blog" class="rounded-lg">Blog</a>
+            </li>
+            <li>
+              <a href="/docs/" class="rounded-lg">Docs</a>
+            </li>
+          </div>
           <li>
             <a
               href="https://discord.com/invite/bjY39AbK35"

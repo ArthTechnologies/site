@@ -38,7 +38,7 @@
 </script>
 
 <div class="flex flex-col h-screen justify-between">
-  <div class="mb-32">
+  <div class="">
     <Navbar navType="default" />
     <slot />
   </div>
