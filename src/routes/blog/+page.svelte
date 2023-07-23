@@ -20,7 +20,7 @@
 
         document.getElementById("posts").innerHTML = posts
           .map((post) => {
-            return `<a href="/blog/${post.slug}"><div class="card shadow-xl bg-base-200 hover:bg-base-300 rounded-xl mb-10"><p class="text-4xl font-bold card-title text-left ml-5 md:text-center md:justify-center md:ml-0 mt-10">${post.title}</p><div class="card-body  hero"><p class="text-xl">${post.desc}</p></div></div></a>`;
+            return `<a href="/blog/${post.slug}"><div class="card shadow-xl bg-base-200 hover:bg-base-300 rounded-xl mb-10"><p class="text-4xl font-bold card-title text-left ml-8 md:text-center md:justify-center lg:ml-0 mt-10">${post.title}</p><div class="card-body  hero"><p class="text-xl">${post.desc}</p></div></div></a>`;
           })
           .join("");
       });
@@ -31,4 +31,7 @@
 <div class="flex place-content-center">
   <RSS />
 </div>
-<div id="posts" class="sm:text-left p-5 space-y-5 pr-20 pl-20 h-screen" />
+<div
+  id="posts"
+  class="sm:text-left p-5 space-y-5 md:px-20 min-h-screen mb-24"
+/>
