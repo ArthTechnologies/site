@@ -2,10 +2,12 @@
   import { load } from "$lib/scripts/docs";
 </script>
 
-<div class="flex flex-col md:flex-row p-3 space-x-3 ">
+<div
+  class="flex flex-col md:flex-row p-3 space-x-3 items-center md:items-start"
+>
   <div class="space-y-3">
     <ul
-      class="menu p-4 w-80 bg-base-300 shadow-xl text-base-content rounded-lg "
+      class="menu p-4 w-80 bg-base-300 shadow-xl text-base-content rounded-lg"
     >
       <p class="font-mono text-center font-bold">Tutorials</p>
       <!-- Sidebar content here -->
@@ -17,7 +19,7 @@
       </li>
     </ul>
     <ul
-      class="menu p-4 w-80 bg-base-300 shadow-xl text-base-content rounded-lg sm:h-96 h-72"
+      class="menu p-4 w-80 bg-base-300 shadow-xl text-base-content rounded-lg"
     >
       <p class="font-mono text-center font-bold">Arth Panel</p>
       <!-- Sidebar content here -->

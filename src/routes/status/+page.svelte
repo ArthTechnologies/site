@@ -36,7 +36,7 @@
 </script>
 
 <p class="text-center text-5xl font-bold mt-10">{$t("status")}</p>
-<div class="p-4 space-y-5 ">
+<div class="p-4 space-y-5 pb-36">
   <div class="h-24 w-80 bg-base-200 rounded-xl p-2">
     <p class="font-bold text-2xl">Arth Network</p>
     <div class="flex">
