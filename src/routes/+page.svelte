@@ -126,7 +126,7 @@
     </div>
   {/if}
 
-  <ul class="mt-48 w-[50rem]" id="footnotes">
+  <ul class="mt-48 w-[20rem] md:w-[50rem]" id="footnotes">
     <li>
       <sup>1</sup>The discontinued legacy console (Xbox One, Xbox 360, PS4, PS3,
       PlayStation Vita, Wii U, and New Nintendo 3DS) and Raspberry PI editions
