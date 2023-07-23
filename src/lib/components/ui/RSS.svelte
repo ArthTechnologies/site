@@ -45,7 +45,7 @@
         <a
           class="btn"
           href="https://backend.arthmc.xyz/rss/arthblog.rss"
-          download="arthblog.rss">Download .rss file</a
+          download="arthblog.rss">Download File</a
         >
         <a href="#" class="btn">Close</a>
       </div>
