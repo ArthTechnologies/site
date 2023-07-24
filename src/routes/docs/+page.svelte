@@ -5,4 +5,4 @@
     load("home");
 </script>
 
-<article id="text" class="prose max-w-screen text-lg pl-5 pt-5 pb-36" />
+<article id="text" class="prose max-w-screen text-lg px-1 md:px-5 pt-5 pb-36" />
