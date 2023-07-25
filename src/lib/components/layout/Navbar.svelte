@@ -50,12 +50,14 @@
             ></a
           >
         </li>
-        <li>
-          <a href="/blog" class="rounded-lg">Blog</a>
-        </li>
-        <li>
-          <a href="/docs/" class="rounded-lg">Docs</a>
-        </li>
+        <div class="hidden sm:block">
+          <li>
+            <a href="/blog" class="rounded-lg">Blog</a>
+          </li>
+          <li>
+            <a href="/docs/" class="rounded-lg">Docs</a>
+          </li>
+        </div>
       </ul>
 
       <div class="dropdown dropdown-end">
