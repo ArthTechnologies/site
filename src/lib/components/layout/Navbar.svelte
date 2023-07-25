@@ -50,7 +50,7 @@
             ></a
           >
         </li>
-        <div class="hidden sm:block">
+        <div class="hidden sm:flex">
           <li>
             <a href="/blog" class="rounded-lg">Blog</a>
           </li>
@@ -91,9 +91,6 @@
         >
           <div class="block sm:hidden">
             <li><a href="/" class="rounded-lg">{$t("navbar.home")}</a></li>
-            <li>
-              <a href="/hosting" class="rounded-lg">{$t("navbar.hosting")}</a>
-            </li>
             <li>
               <a href="/blog" class="rounded-lg">Blog</a>
             </li>
