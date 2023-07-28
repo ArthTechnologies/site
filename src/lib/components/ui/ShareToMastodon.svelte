@@ -42,6 +42,7 @@
 
 <div class="modal" id="shareToMasto">
   <div class="modal-box">
+    <a href="#" class="btn btn-sm btn-circle absolute right-2 top-2">✕</a>
     <h3 class="font-bold text-lg">Share to Mastodon</h3>
     <p class="py-4">
       Mastodon is a decentralized social network, meaning there are different
@@ -56,7 +57,6 @@
           on:keyup={share}
         />
         <a class="btn" href={link} target="_blank">share</a>
-        <a href="#" class="btn">Close</a>
       </div>
     </div>
   </div>

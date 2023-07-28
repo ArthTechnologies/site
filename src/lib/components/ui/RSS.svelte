@@ -34,6 +34,7 @@
 
 <div class="modal" id="rss">
   <div class="modal-box">
+    <a href="#" class="btn btn-sm btn-circle absolute right-2 top-2">✕</a>
     <h3 class="font-bold text-lg">Subscribe to our RSS feed</h3>
     <p class="py-4">
       RSS is a way to get updates from websites all in one place. Download an
@@ -47,7 +48,6 @@
           href="https://backend.arthmc.xyz/rss/arthblog.rss"
           download="arthblog.rss">Download File</a
         >
-        <a href="#" class="btn">Close</a>
       </div>
     </div>
   </div>
