@@ -26,8 +26,10 @@
       <a class="divider link-hover" href="/docs">Quartz API Routes</a>
       <li><a href="/docs/accounts" on:click={load}>Account</a></li>
       <li><a href="/docs/servers" on:click={load}>Servers</a></li>
+      <li><a href="/docs/proxies" on:click={load}>Proxies</a></li>
       <li><a href="/docs/terminal" on:click={load}>Terminal</a></li>
       <li><a href="/docs/settings" on:click={load}>Settings</a></li>
+      <li><a href="/docs/misc" on:click={load}>Misc</a></li>
     </ul>
   </div>
   <slot />
