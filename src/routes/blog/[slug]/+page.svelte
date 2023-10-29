@@ -3,6 +3,7 @@
   import ShareToMastodon from "$lib/components/ui/ShareToMastodon.svelte";
   import { onMount } from "svelte";
   import { marked } from "marked";
+  import ShareToX from "$lib/components/ui/ShareToX.svelte";
   //set slug variable to the slug
   let slug;
   let title: string;
@@ -55,6 +56,7 @@
     </div>
     <div class="flex-row-reverse">
       <ShareToMastodon />
+      <ShareToX />
     </div>
   </div>
   <article class="space-y-1 mr-8 ml-8 text-lg prose max-w-none pb-36">

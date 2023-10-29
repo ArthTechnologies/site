@@ -1,5 +1,6 @@
 <script>
   import CopyClipboard from "$lib/components/ui/CopyClipboard.svelte";
+  import { t } from "$lib/scripts/i18n";
   let link = "https://backend.arthmc.xyz/rss/";
 
   const copy = () => {
@@ -12,7 +13,7 @@
 </script>
 
 <a href="#rss" class="btn btn-outline">
-  Subscribe via rss  
+  {$t("blog.button.RSS")}
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -23,7 +24,7 @@
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
-    class="feather feather-rss"
+    class="feather feather-rss ml-1.5"
     ><path d="M4 11a9 9 0 0 1 9 9" /><path d="M4 4a16 16 0 0 1 16 16" /><circle
       cx="5"
       cy="19"
@@ -35,18 +36,17 @@
 <div class="modal" id="rss">
   <div class="modal-box">
     <a href="#" class="btn btn-sm btn-circle absolute right-2 top-2">✕</a>
-    <h3 class="font-bold text-lg">Subscribe to our RSS feed</h3>
+    <h3 class="font-bold text-lg">{$t("blog.RSS.title")}</h3>
     <p class="py-4">
-      RSS is a way to get updates from websites all in one place. Download an
-      RSS app to get started.
+      {$t("blog.RSS.desc")}
     </p>
     <div class="flex">
       <div class="modal-action">
-        <a class="btn" on:click={copy}>Copy Link</a>
+        <a class="btn" on:click={copy}>{$t("blog.RSS.button.copy")}</a>
         <a
           class="btn"
           href="https://backend.arthmc.xyz/rss/arthblog.rss"
-          download="arthblog.rss">Download File</a
+          download="arthblog.rss">{$t("blog.RSS.button.download")}</a
         >
       </div>
     </div>

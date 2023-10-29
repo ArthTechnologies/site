@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { t } from "$lib/scripts/i18n";
   let Webname = "Arth Panel";
 </script>
 
@@ -8,33 +9,43 @@
     <p>Arth Technologies<br />© 2022-{new Date().getFullYear()}</p>
   </div>
   <div>
-    <span class="footer-title">Resources</span>
+    <span class="footer-title">{$t("footer.resources")}</span>
     <a class="link link-hover" href="https://codeberg.org/arth/" target="_blank"
-      >Codeberg</a
+      >{$t("footer.codeberg")}</a
     >
-    <a class="link link-hover" href="/blog" target="_blank">Blog</a>
-    <a class="link link-hover" href="/docs" target="_blank">Docs</a>
+    <a class="link link-hover" href="/blog" target="_blank"
+      >{$t("footer.blog")}</a
+    >
+    <a class="link link-hover" href="/docs" target="_blank"
+      >{$t("footer.docs")}</a
+    >
   </div>
   <div>
-    <span class="footer-title">About</span>
-    <a class="link link-hover" href="/hosting" target="_blank">Hosting</a>
-    <a class="link link-hover" href="/software" target="_blank">Software</a>
-    <a class="link link-hover" href="/privacy" target="_blank">Privacy</a>
+    <span class="footer-title">{$t("footer.about")}</span>
+    <a class="link link-hover" href="/hosting" target="_blank"
+      >{$t("footer.hosting")}</a
+    >
+    <a class="link link-hover" href="/software" target="_blank"
+      >{$t("footer.software")}</a
+    >
+    <a class="link link-hover" href="/privacy" target="_blank"
+      >{$t("footer.privacy")}</a
+    >
   </div>
   <div>
-    <span class="footer-title">Socials</span>
+    <span class="footer-title">{$t("footer.socials")}</span>
     <a class="link link-hover" href="https://floss.social/@arth" target="_blank"
-      >Mastodon</a
+      >{$t("footer.mastodon")}</a
     >
     <a
       class="link link-hover"
       href="https://www.youtube.com/@arthmc"
-      target="_blank">Youtube</a
+      target="_blank">{$t("footer.youtube")}</a
     >
     <a
       class="link link-hover"
       href="https://discord.com/invite/bjY39AbK35"
-      target="_blank">Discord</a
+      target="_blank">{$t("footer.discord")}</a
     >
   </div>
 </footer>

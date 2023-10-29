@@ -1,6 +1,6 @@
 <script lang="ts">
   import { browser } from "$app/environment";
-  import { goto } from "$app/navigation";
+  import { t } from "$lib/scripts/i18n";
   import { onMount } from "svelte";
   let url: string;
   let link = "";
@@ -43,10 +43,9 @@
 <div class="modal" id="shareToMasto">
   <div class="modal-box">
     <a href="#" class="btn btn-sm btn-circle absolute right-2 top-2">✕</a>
-    <h3 class="font-bold text-lg">Share to Mastodon</h3>
+    <h3 class="font-bold text-lg">{$t("blog.masto.title")}</h3>
     <p class="py-4">
-      Mastodon is a decentralized social network, meaning there are different
-      instances or "servers" you can join. Enter your instance name below:
+      {$t("blog.masto.desc")}
     </p>
     <div class="flex">
       <div class="modal-action">
@@ -56,7 +55,9 @@
           id="instance"
           on:keyup={share}
         />
-        <a class="btn" href={link} target="_blank">share</a>
+        <a class="btn" href={link} target="_blank" rel="noreferrer noopener"
+          >{$t("button.share")}</a
+        >
       </div>
     </div>
   </div>

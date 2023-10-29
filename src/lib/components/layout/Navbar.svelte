@@ -32,7 +32,7 @@
             class="rounded-lg btn btn-outline flex bg-gradient-to-tr from-orange-500 to-pink-600 text-black -space-x-2 pr-1.5 pl-2.5 md:pr-3 md:pl-4"
             target="_blank"
             rel="noreferrer"
-            ><p>Servers</p>
+            ><p>{$t("servers")}</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
