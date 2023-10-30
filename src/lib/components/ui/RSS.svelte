@@ -1,14 +1,18 @@
 <script>
+  import { browser } from "$app/environment";
   import CopyClipboard from "$lib/components/ui/CopyClipboard.svelte";
   import { t } from "$lib/scripts/i18n";
   let link = "https://backend.arthmc.xyz/rss/";
 
   const copy = () => {
-    const app = new CopyClipboard({
-      target: document.getElementById("clipboard"),
-      props: { link },
-    });
-    app.$destroy();
+    if (browser) {
+      document.getElementById("copyButton").innerHTML = $t("copied");
+      const app = new CopyClipboard({
+        target: document.getElementById("clipboard"),
+        props: { link },
+      });
+      app.$destroy();
+    }
   };
 </script>
 
@@ -42,7 +46,9 @@
     </p>
     <div class="flex">
       <div class="modal-action">
-        <a class="btn" on:click={copy}>{$t("blog.RSS.button.copy")}</a>
+        <a id="copyButton" class="btn" on:click={copy}
+          >{$t("blog.RSS.button.copy")}</a
+        >
         <a
           class="btn"
           href="https://backend.arthmc.xyz/rss/arthblog.rss"

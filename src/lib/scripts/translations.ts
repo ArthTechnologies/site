@@ -103,7 +103,8 @@ export default {
     "blog.RSS.button.download": "Download File",
     "blog.masto.title": "Share to mastodon",
     "blog.masto.desc": "Mastodon is a decentralized social network, meaning there are different instances or \"servers\" you can join. Enter your instance name below:",  
-    "button.share": "Share"
+    "button.share": "Share",
+    copied: "Copied!"
 
   },
 	  "es-ES": {
@@ -210,6 +211,7 @@ export default {
     "blog.RSS.button.download": "Descargar archivo",  
     "blog.masto.title": "Compartir en mastodon",
     "blog.masto.desc": "Mastodon es una red social descentralizada, lo que significa que hay diferentes instancias o \"servidores\" a las que puedes unirte. Ingrese el nombre de su instancia a continuación:",
-    "button.share": "Compartir"
+    "button.share": "Compartir",
+    copied: "Copiado!"
   },
 };
