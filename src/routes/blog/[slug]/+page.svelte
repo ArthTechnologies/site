@@ -51,7 +51,7 @@
       width="50"
     />
     <div class="flex flex-col">
-      <a class="link" href={authorLink}>{author}</a>
+      <a class="text-primary hover:link" href={authorLink}>{author}</a>
       <p class="">{date}</p>
     </div>
     <div class="flex-row-reverse">
