@@ -14,6 +14,7 @@
     "@sveltejs/adapter-node": "^1.0.0-next.96",
     "@sveltejs/kit": "next",
     "autoprefixer": "^10.4.11",
+    "daisyui": "^4.4.2",
     "postcss": "^8.4.16",
     "prettier": "2.7.1",
     "svelte": "^3.44.0",
@@ -27,9 +28,10 @@
   "dependencies": {
     "@tailwindcss/typography": "^0.5.9",
     "appwrite": "^10.0.1",
-    "daisyui": "^2.46.1",
+    "lucide-svelte": "^0.292.0",
     "marked": "^4.2.12",
     "sass": "^1.54.9",
+    "svelte-qrcode-image": "^1.0.0-rc.2",
     "theme-change": "^2.2.0"
   }
 }

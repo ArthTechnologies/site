@@ -39,18 +39,20 @@
 
 <div class="modal" id="rss">
   <div class="modal-box">
-    <a href="#" class="btn btn-sm btn-circle absolute right-2 top-2">✕</a>
+    <a href="#" class="btn btn-neutral btn-sm btn-circle absolute right-2 top-2"
+      >✕</a
+    >
     <h3 class="font-bold text-lg">{$t("blog.RSS.title")}</h3>
     <p class="py-4">
       {$t("blog.RSS.desc")}
     </p>
     <div class="flex">
       <div class="modal-action">
-        <a id="copyButton" class="btn" on:click={copy}
+        <a id="copyButton" class="btn btn-neutral" on:click={copy}
           >{$t("blog.RSS.button.copy")}</a
         >
         <a
-          class="btn"
+          class="btn btn-neutral"
           href="https://backend.arthmc.xyz/rss/arthblog.rss"
           download="arthblog.rss">{$t("blog.RSS.button.download")}</a
         >

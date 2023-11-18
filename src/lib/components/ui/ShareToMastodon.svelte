@@ -42,7 +42,9 @@
 
 <div class="modal" id="shareToMasto">
   <div class="modal-box">
-    <a href="#" class="btn btn-sm btn-circle absolute right-2 top-2">✕</a>
+    <a href="#" class="btn btn-neutral btn-sm btn-circle absolute right-2 top-2"
+      >✕</a
+    >
     <h3 class="font-bold text-lg">{$t("blog.masto.title")}</h3>
     <p class="py-4">
       {$t("blog.masto.desc")}
@@ -55,8 +57,11 @@
           id="instance"
           on:keyup={share}
         />
-        <a class="btn" href={link} target="_blank" rel="noreferrer noopener"
-          >{$t("button.share")}</a
+        <a
+          class="btn btn-neutral"
+          href={link}
+          target="_blank"
+          rel="noreferrer noopener">{$t("button.share")}</a
         >
       </div>
     </div>

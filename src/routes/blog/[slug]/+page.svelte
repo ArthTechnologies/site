@@ -4,6 +4,8 @@
   import { onMount } from "svelte";
   import { marked } from "marked";
   import ShareToX from "$lib/components/ui/ShareToX.svelte";
+  import QrCode from "$lib/components/ui/QRCode.svelte";
+  import CopyLink from "$lib/components/ui/CopyLink.svelte";
   //set slug variable to the slug
   let slug;
   let title: string;
@@ -54,9 +56,10 @@
       <a class="text-primary hover:link" href={authorLink}>{author}</a>
       <p class="">{date}</p>
     </div>
-    <div class="flex-row-reverse">
+    <div class="flex">
       <ShareToMastodon />
       <ShareToX />
+      <CopyLink />
     </div>
   </div>
   <article class="space-y-1 mr-8 ml-8 text-lg prose max-w-none pb-36">

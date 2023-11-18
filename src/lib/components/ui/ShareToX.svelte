@@ -27,16 +27,13 @@
 </script>
 
 <a
-  href="https://twitter.com/intent?text={url}"
+  href="https://x.com/intent?text={url}"
   class="btn btn-circle btn-ghost"
   target="_blank"
   rel="noopener noreferrer"
 >
   <svg
     fill="currentColor"
-    xmlns="http://www.w3.org/2000/svg"
-    x="0px"
-    y="0px"
     viewBox="0 0 1668.56 1221.19"
     style="enable-background:new 0 0 1668.56 1221.19;"
     xml:space="preserve"

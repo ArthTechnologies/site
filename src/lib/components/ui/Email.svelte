@@ -22,9 +22,9 @@
     <p class="py-4">Get new blog posts sent to your inbox.</p>
     <div class="flex">
       <div class="modal-action">
-        <a class="btn">Copy Link</a>
-        <a class="btn">Download .rss file</a>
-        <a href="#" class="btn">Close</a>
+        <a class="btn btn-neutral">Copy Link</a>
+        <a class="btn btn-neutral">Download .rss file</a>
+        <a href="#" class="btn btn-neutral">Close</a>
       </div>
     </div>
   </div>
