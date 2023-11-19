@@ -62,11 +62,11 @@
 
   <div class="absolute">
     <div
-      class="rounded-xl w-[25rem] relative
+      class="rounded-xl w-[25rem] relative max-md:pt-16
        md:w-[45rem] h-[40rem] md:h-[33.3rem] lg:w-[60rem] p-8 bg-base-200
       flex flex-col items-center justify-start bg-opacity-95 backdrop-blur"
     >
-      <div class="px-3 py-2 top-0 left-0 flex absolute items-center">
+      <div class="px-2 md:px-3 py-2 top-0 left-0 flex absolute items-center">
         <ShareToMastodon /><ShareToX /><QRCode /><CopyLink />
       </div>
       <div role="tablist" class="tabs bg-base-300 tabs-boxed mb-3">
