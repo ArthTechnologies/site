@@ -38,8 +38,9 @@
         displayType="canvas"
       />
 
-      <button class="btn btn-primary btn-xs gap-2 mt-3" on:click={download}
-        ><Download size="16" />Download Image</button
+      <button class="btn btn-primary btn-xs flex mt-3" on:click={download}
+        ><Download size="16" />
+        <p class="ml-1.5">Download Image</p></button
       >
     </div>
   </div>
