@@ -38,9 +38,10 @@
       >
     </div>
     <div class="flex-1 md:flex-none navbar-end">
-      <div class="btn btn-ghost">
-        <a href="/" class="rounded-lg hidden md:flex">{$t("navbar.home")}</a>
-      </div>
+      <a href="/" class="rounded-lg hidden md:flex btn btn-ghost"
+        >{$t("navbar.home")}</a
+      >
+
       <div>
         <a
           href="https://servers.arthmc.xyz/signin"
@@ -66,15 +67,12 @@
         >
       </div>
       <div class="hidden sm:flex">
-        <div class="btn btn-ghost">
-          <a href="/blog" class="rounded-lg">Blog</a>
-        </div>
-        <div class="btn btn-ghost">
-          <a href="/docs/" class="rounded-lg">Docs</a>
-        </div>
+        <a href="/blog" class="rounded-lg btn btn-ghost">Blog</a>
+
+        <a href="/docs" class="rounded-lg btn btn-ghost">Docs</a>
       </div>
 
-      <div class="dropdown dropdown-end" id="dropdown">
+      <div class="dropdown dropdown-end z-50" id="dropdown">
         <label
           tabindex="0"
           class="btn btn-ghost btn-circle"
@@ -105,7 +103,7 @@
         </label>
         <ul
           tabindex="0"
-          class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-200 bg-opacity-95 bg-blur rounded-box w-52"
+          class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-200 bg-opacity-95 backdrop-blur rounded-box w-52"
         >
           <div class="block sm:hidden">
             <li>
@@ -115,7 +113,7 @@
               <a href="/blog" class="rounded-lg">Blog</a>
             </li>
             <li>
-              <a href="/docs/" class="rounded-lg">Docs</a>
+              <a href="/docs" class="rounded-lg">Docs</a>
             </li>
           </div>
           <li>
