@@ -15,7 +15,7 @@
 </script>
 
 <div
-  class="bg-black flex flex-col items-center min-h-screen text-white pb-48 px-5"
+  class="bg-black flex flex-col items-center min-h-screen text-[#efefef] pb-48 px-5"
 >
   <div class="text-5xl font-bold mt-24 text-center space-y-5">
     <span
