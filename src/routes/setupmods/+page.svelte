@@ -57,13 +57,13 @@
 <div class="relative flex flex-col items-center justify-center bg-[#535382]">
   <img
     src="/images/modSetupBackground.webp"
-    class="h-[90vh] 2xl:h-full object-cover"
+    class="h-[115vh] md:h-[90vh] 2xl:h-full object-cover"
   />
 
   <div class="absolute">
     <div
-      class="rounded-xl w-[26rem] relative max-md:pt-16
-       md:w-[45rem] h-[54.4rem] md:h-[48rem] lg:w-[60rem] p-8 bg-base-200
+      class="rounded-xl w-[24rem] relative max-md:pt-16 text-center
+       md:w-[45rem] h-[55.5rem] md:h-[48rem] lg:w-[60rem] p-8 bg-base-200
       flex flex-col items-center justify-start bg-opacity-95 backdrop-blur"
     >
       <div class="px-2 md:px-3 py-2 top-0 left-0 flex absolute items-center">
@@ -149,7 +149,7 @@
         </div>
         <div>
           2. Select "Minecraft", then click "Browse Modpacks".
-          <div class="flex space-x-2">
+          <div class="flex space-x-2 justify-center">
             <img
               class="h-[10rem] md:h-[12rem] mt-2 rounded-lg"
               src="images/Step2A.webp"
