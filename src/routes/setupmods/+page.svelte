@@ -7,6 +7,7 @@
   import { onMount } from "svelte";
 
   let tab = "windows";
+  let address = "";
   onMount(() => {
     //try to detect OS via user agent
     if (browser) {
@@ -22,6 +23,7 @@
         tab = "mac";
         mac();
       }
+      address = location.href.split("?address=")[1];
     }
   });
 
@@ -164,10 +166,12 @@
           3. Search for "Arthean Expansion" and click "Install".
           <img class="h-[12rem] mt-2 rounded-lg" src="images/Step3.webp" />
         </div>
-        <div class="flex flex-col items-center">
-          4. Add a server with this address:
-          <img class="h-[3.5rem] mt-2 rounded-lg" src="images/Step4.webp" />
-        </div>
+        {#if address != undefined}
+          <div class="flex flex-col items-center">
+            4. Add a server with the address "{address}".
+            <img class="h-[3.5rem] mt-2 rounded-lg" src="images/Step4.webp" />
+          </div>
+        {/if}
       </div>
     </div>
   </div>
