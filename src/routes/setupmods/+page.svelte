@@ -62,8 +62,8 @@
 
   <div class="absolute">
     <div
-      class="rounded-xl w-[25rem] relative max-md:pt-16
-       md:w-[45rem] h-[40rem] md:h-[33.3rem] lg:w-[60rem] p-8 bg-base-200
+      class="rounded-xl w-[26rem] relative max-md:pt-16
+       md:w-[45rem] h-[54.4rem] md:h-[48rem] lg:w-[60rem] p-8 bg-base-200
       flex flex-col items-center justify-start bg-opacity-95 backdrop-blur"
     >
       <div class="px-2 md:px-3 py-2 top-0 left-0 flex absolute items-center">
@@ -134,82 +134,41 @@
           </svg>Mac</a
         >
       </div>
-      {#if tab == "windows"}
-        <p class="text text-4xl font-bold mb-4">
-          How to setup <i>Arthean Expansion</i>:
-        </p>
-        <div class="flex flex-col items-center text-center gap-3 text-lg">
-          <div>
-            1. Install the <a
-              href="https://curseforge.com/download/app"
-              class="text-primary hover:link"
-              target="_blank"
-              rel="noreferrer">CurseForge App</a
-            >
-          </div>
-          <div class="flex flex-col items-center">
-            2. Search for "Arthean" and press "New Instance", then "Install".
+
+      <p class="text text-4xl font-bold mb-3">
+        How to setup <i>Arthean Expansion</i>:
+      </p>
+      <div class="flex flex-col items-center text-center gap-2.5 text-lg">
+        <div>
+          1. Install the <a
+            href="https://curseforge.com/download/app"
+            class="text-primary hover:link"
+            target="_blank"
+            rel="noreferrer">CurseForge App</a
+          >.
+        </div>
+        <div>
+          2. Select "Minecraft", then click "Browse Modpacks".
+          <div class="flex space-x-2">
             <img
-              class="h-[12rem] mt-2 rounded-lg"
-              src="images/Step2Linux.webp"
+              class="h-[10rem] md:h-[12rem] mt-2 rounded-lg"
+              src="images/Step2A.webp"
+            />
+            <img
+              class="h-[10rem] md:h-[12rem] mt-2 rounded-lg"
+              src="images/Step2B.webp"
             />
           </div>
-          <div class="flex flex-col items-center">
-            3. Add a server with "arthmc.xyz:25568" as the address.
-            <img class="h-[3rem] mt-2 rounded-lg" src="images/Step3.webp" />
-          </div>
         </div>
-      {:else if tab == "linux"}
-        <p class="text text-4xl font-bold mb-4">
-          How to setup <i>Arthean Expansion</i>:
-        </p>
-        <div class="flex flex-col items-center text-center gap-3 text-lg">
-          <div>
-            1. Install <a
-              href="https://prismlauncher.org/download/linux/"
-              class="text-primary hover:link"
-              target="_blank"
-              rel="noreferrer">ATLauncher</a
-            >
-          </div>
-          <div class="flex flex-col items-center">
-            2. Search for "Arthean" and press "New Instance", then "Install".
-            <img
-              class="h-[12rem] mt-2 rounded-lg"
-              src="images/Step2Linux.webp"
-            />
-          </div>
-          <div class="flex flex-col items-center">
-            3. Add a server with "arthmc.xyz:25568" as the address.
-            <img class="h-[3rem] mt-2 rounded-lg" src="images/Step3.webp" />
-          </div>
+        <div class="flex flex-col items-center">
+          3. Search for "Arthean Expansion" and click "Install".
+          <img class="h-[12rem] mt-2 rounded-lg" src="images/Step3.webp" />
         </div>
-      {:else if tab == "mac"}
-        <p class="text text-4xl font-bold mb-4">
-          How to setup <i>Arthean Expansion</i>:
-        </p>
-        <div class="flex flex-col items-center text-center gap-3 text-lg">
-          <div>
-            1. Install the <a
-              href="https://curseforge.com/download/app"
-              class="text-primary hover:link"
-              target="_blank"
-              rel="noreferrer">CurseForge App</a
-            >
-          </div>
-          <div class="flex flex-col items-center">
-            2. Search for "Arthean" and press "New Instance", then "Install".
-            <img
-              class="h-[12rem] mt-2 rounded-lg"
-              src="images/Step2Linux.webp"
-            />
-          </div>
-          <div class="flex flex-col items-center">
-            3. Add a server with "arthmc.xyz:25568" as the address.
-            <img class="h-[3rem] mt-2 rounded-lg" src="images/Step3.webp" />
-          </div>
+        <div class="flex flex-col items-center">
+          4. Add a server with this address:
+          <img class="h-[3.5rem] mt-2 rounded-lg" src="images/Step4.webp" />
         </div>
-      {/if}
+      </div>
     </div>
   </div>
 </div>
