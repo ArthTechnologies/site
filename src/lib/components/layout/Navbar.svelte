@@ -8,6 +8,7 @@
   export let navType: NavType;
   import { t, locale, locales } from "$lib/scripts/i18n";
   import { onMount } from "svelte";
+  import LanguageSwitcher from "../ui/LanguageSwitcher.svelte";
 
   //set locale to browser language if navigator is available
   if (typeof navigator !== "undefined") {
@@ -33,7 +34,7 @@
 {#if navType === "default"}
   <div class="navbar flex justify-between bg-base-300">
     <div class="flex-1">
-      <a class="btn btn-ghost normal-case text-xl w-24" href="/"
+      <a class="btn btn-ghost normal-case text-xl w-[6.1rem]" href="/"
         ><img src="/images/sitelogo.svg" alt="Arth" width="75" height="75" /></a
       >
     </div>
@@ -71,6 +72,7 @@
 
         <a href="/docs" class="rounded-lg btn btn-ghost">Docs</a>
       </div>
+      <LanguageSwitcher />
 
       <div class="dropdown dropdown-end z-50" id="dropdown">
         <label
