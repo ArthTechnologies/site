@@ -32,7 +32,7 @@
 </script>
 
 {#if navType === "default"}
-  <div class="navbar flex justify-between bg-base-300">
+  <div class="navbar flex justify-between bg-base-300 z-50">
     <div class="flex-1">
       <a class="btn btn-ghost normal-case text-xl w-[6.1rem]" href="/"
         ><img src="/images/sitelogo.svg" alt="Arth" width="75" height="75" /></a

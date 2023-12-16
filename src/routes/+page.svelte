@@ -5,6 +5,7 @@
   import { onMount } from "svelte";
 
   let isVisible = false;
+  let enableShootingStars = false;
 
   // Function to trigger the animation
   function showElement() {
@@ -15,52 +16,55 @@
   onMount(showElement);
 
   function createShootingStar() {
-    console.log("createShootingStar");
-    const container = document.getElementById("shootingStarsContainer");
+    if (enableShootingStars) {
+      console.log("createShootingStar");
+      const container = document.getElementById("shootingStarsContainer");
 
-    if (container) {
-      const star = document.createElement("div");
-      star.classList.add("shooting-star");
-      star.classList.add("absolute");
-      star.classList.add("w-1");
-      star.classList.add("h-10");
-      star.classList.add("bg-gradient-to-tr");
-      star.classList.add("from-orange-500");
-      star.classList.add("to-pink-600");
-      star.classList.add("rounded-full");
-      star.classList.add("z-[-1]");
-      star.classList.add("opacity-80");
+      if (container) {
+        const star = document.createElement("div");
+        star.classList.add("shooting-star");
+        star.classList.add("absolute");
+        star.classList.add("w-1");
+        star.classList.add("h-10");
+        star.classList.add("bg-gradient-to-tr");
+        star.classList.add("from-orange-500");
+        star.classList.add("to-pink-600");
+        star.classList.add("rounded-full");
+        star.classList.add("z-[-1]");
+        star.classList.add("opacity-80");
 
-      const randomX = Math.random() * 100;
-      const randomY = Math.random() * 5 - 5;
+        const randomX = Math.random() * 100;
+        const randomY = Math.random() * 5 - 5;
 
-      star.style.left = `${randomX}vw`;
-      star.style.top = `${randomY}vh`;
+        star.style.left = `${randomX}vw`;
+        star.style.top = `${randomY}vh`;
 
-      container.appendChild(star);
-      //play shooting star animation
-      star.animate(
-        [
-          { transform: "translateY(0) rotate(0deg)", opacity: 0 },
-          { opacity: 1 },
-          { transform: "translateY(300vh)", opacity: 0 },
-        ],
-        {
-          duration: 5000,
-          easing: "ease",
-          fill: "forwards",
-        },
-      );
-      setTimeout(() => {
-        star.remove();
-      }, 5000);
+        container.appendChild(star);
+        //play shooting star animation
+        star.animate(
+          [
+            { transform: "translateY(0) rotate(0deg)", opacity: 0 },
+            { opacity: 1 },
+            { transform: "translateY(300vh)", opacity: 0 },
+          ],
+          {
+            duration: 4500,
+            easing: "ease",
+            fill: "forwards",
+          }
+        );
+
+        setTimeout(() => {
+          star.remove();
+        }, 4500);
+      }
     }
   }
 
   if (browser) {
     //if the browser can handle the animation, this creates a shooting star every 750ms
     if (window.matchMedia("(prefers-reduced-motion: no-preference)").matches) {
-      setInterval(createShootingStar, 600);
+      setInterval(createShootingStar, 300);
     }
   }
 </script>
@@ -184,7 +188,16 @@
   ></div>
 </div>
 <!--vertical gradient from black to base 300-->
-<div class="h-48 bg-gradient-to-b from-black to-base-300" />
+<div class="h-48 bg-gradient-to-b from-black to-base-300 relative">
+  <button
+    class="absolute -bottom-[11.7rem] right-2 text-base-100 hover:link text-sm"
+    on:click={() => {
+      enableShootingStars = !enableShootingStars;
+    }}
+  >
+    Easter Egg
+  </button>
+</div>
 
 <style>
   .element-container {
