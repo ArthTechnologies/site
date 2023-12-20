@@ -2,17 +2,21 @@
   import RSS from "$lib/components/ui/RSS.svelte";
   import Email from "$lib/components/ui/Email.svelte";
   import { browser } from "$app/environment";
+  import { onMount } from "svelte";
   let lang = "en-US";
   if (browser) {
     lang = navigator.language;
     if (localStorage.getItem("lang") != null) {
       lang = localStorage.getItem("lang");
     }
-    if (lang == "en-US") {
-      document.getElementById("lang").value = "English";
-    } else if (lang == "es-ES") {
-      document.getElementById("lang").value = "Español";
-    }
+    onMount(() => {
+      if (lang == "en-US") {
+        document.getElementById("lang").value = "English";
+      } else if (lang == "es-ES") {
+        document.getElementById("lang").value = "Español";
+      }
+      get();
+    });
   }
   function get() {
     //get the top 10 posts
@@ -37,7 +41,6 @@
         });
     }
   }
-  get();
 
   function toggleLang() {
     if (browser) {
