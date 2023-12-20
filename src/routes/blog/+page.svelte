@@ -30,12 +30,12 @@
             posts.push({
               title: item.title,
               desc: item.desc,
-              slug: item.slug,
+              slug: lang + "*" + item.slug,
             });
           });
           document.getElementById("posts").innerHTML = posts
             .map((post) => {
-              return `<a href="/blog/${post.slug}"><div class="card shadow-lg bg-base-200 hover:bg-base-300 rounded-xl mb-10"><p class="text-4xl font-bold card-title text-left ml-8 md:text-center md:justify-center lg:ml-0 mt-10">${post.title}</p><div class="card-body  hero"><p class="text-xl">${post.desc}</p></div></div></a>`;
+              return `<a href="/blog/${post.slug}"><div class="card shadow-lg bg-base-200 hover:bg-base-300 rounded-xl mb-8"><p class="text-4xl font-bold card-title text-left ml-8 md:text-center md:justify-center lg:ml-0 mt-10">${post.title}</p><div class="card-body  hero"><p class="text-xl">${post.desc}</p></div></div></a>`;
             })
             .join("");
         });
