@@ -22,13 +22,12 @@
         .then((response) => response.json())
         .then((json) => {
           //take each item in the array, take the title and desc, and put them in posts
-          json.forEach((item) => {
-            if (item.lang == undefined || item.lang == lang)
-              posts.push({
-                title: item.title,
-                desc: item.desc,
-                slug: item.slug,
-              });
+          json[lang].forEach((item) => {
+            posts.push({
+              title: item.title,
+              desc: item.desc,
+              slug: item.slug,
+            });
           });
           document.getElementById("posts").innerHTML = posts
             .map((post) => {
