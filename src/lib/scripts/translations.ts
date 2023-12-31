@@ -8,7 +8,6 @@ export default {
     "label.worldgenmods": "worldgen mods",
     "label.memory": "memory",
     "label.crossplay": "crossplay",
-    "hosting.price": "For the rest of 2023",
     "none": "None",
     "yes": "Yes",
     "mo":"/mo",
@@ -18,8 +17,6 @@ export default {
     "hosting.arth.crossplay": "Bedrock & Java Edition players can play together.",
     "hosting.apex.crossplay": "Bedrock & Java Edition players can play together with extra setup.",
     "hosting.title": "Arth Hosting",
-    "hosting.desc":
-      "Offering Minecraft Servers with price, customizability, and ease of use that's unmatched. Plus, Java and Bedrock Edition players can play together, and it's only $3<small>/mo</small> for the rest of 2023.",
     "b.learnmore": "LEARN MORE",
     "badge.comingsoon": "Coming Soon",
     "network.title": "Arth Network",
@@ -104,7 +101,11 @@ export default {
     "blog.masto.title": "Share to mastodon",
     "blog.masto.desc": "Mastodon is a decentralized social network, meaning there are different instances or \"servers\" you can join. Enter your instance name below:",  
     "button.share": "Share",
-    copied: "Copied!"
+    copied: "Copied!",
+    signup: "Signup",
+    basic: "Basic",
+    modded: "Modded",
+
 
   },
 	  "es-ES": {
@@ -116,7 +117,6 @@ export default {
     "label.worldgenmods": "worldgen mods",
     "label.memory": "memoria",
     "label.crossplay": "crossplay",
-    "hosting.price": "Por el resto de 2023",
     "none": "Nada",
     "yes": "Sí",
     "mo":"/mes",
@@ -126,8 +126,6 @@ export default {
     "hosting.arth.crossplay": "Los jugadores de Bedrock & Java Edition pueden jugar juntos.",
     "hosting.apex.crossplay": "Los jugadores de Bedrock & Java pueden jugar juntos con un plugin.",
     "hosting.title": "Arth Hosting",
-    "hosting.desc":
-      "Servidores de Minecraft con precio, personalización y facilidad de uso incomparables. Jugadores de Java y Bedrock Edition pueden jugar juntos. ¡Solo $3/mes hasta finales de 2023!",
     "b.learnmore": "Aprende más",
     "badge.comingsoon": "Viniendo en el futuro",
     "network.title": "Arth Network",
@@ -212,6 +210,9 @@ export default {
     "blog.masto.title": "Compartir en mastodon",
     "blog.masto.desc": "Mastodon es una red social descentralizada, lo que significa que hay diferentes instancias o \"servidores\" a las que puedes unirte. Ingrese el nombre de su instancia a continuación:",
     "button.share": "Compartir",
-    copied: "Copiado!"
+    copied: "Copiado!",
+    signup: "Registrarse",
+    basic: "Básico",
+    modded: "Modded",
   },
 };

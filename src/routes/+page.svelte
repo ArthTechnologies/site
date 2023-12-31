@@ -129,42 +129,50 @@
     </div>
 
     <div class="md:flex items-center mt-24 space-y-2 md:space-x-8">
-      <div class="flex flex-col items-center">
-        <div>
-          <span class="text-[4rem] md:text-[10rem] font-bold"
-            ><s>$5</s><span
-              class=" h-20 text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-pink-600"
-              >$3</span
-            ><span class="text-[1rem]">{$t("mo")}</span>
-          </span>
+      <div>
+        <div class="flex space-x-4 items-center">
+          <div>
+            <p class="text-2xl -mt-4 md:-mt-8 font-bold">{$t("basic")}</p>
+            <span class="text-[4rem] md:text-[6rem] font-bold"
+              ><span class=" h-20 opacity-90">$4</span><span class="text-[1rem]"
+                >{$t("mo")}</span
+              >
+            </span>
+          </div>
+          <div class="divider divider-horizontal h-24 mt-7"></div>
+          <div>
+            <p class="text-2xl -mt-4 md:-mt-8 font-bold">{$t("modded")}</p>
+            <span class="text-[4rem] md:text-[6rem] font-bold"
+              ><span class=" h-20 opacity-90">$6</span><span class="text-[1rem]"
+                >{$t("mo")}</span
+              >
+            </span>
+          </div>
         </div>
-        <p class="text-2xl -mt-4 md:-mt-8 font-bold">
-          {$t("hosting.price")}
-        </p>
-      </div>
 
-      <a
-        href="https://servers.arthmc.xyz/signin"
-        class="-mb-2 flex flex-justify center rounded-lg btn btn-outline flex bg-gradient-to-tr from-orange-500 to-pink-600 text-black pr-3 pl-4 md:btn-lg border-2 border-gray-500 space-x-1"
-        target="_blank"
-        rel="noreferrer"
-        ><p>{$t("servers")}</p>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="feather feather-arrow-up-right"
-          ><line x1="7" y1="17" x2="17" y2="7" /><polyline
-            points="7 7 17 7 17 17"
-          /></svg
-        ></a
-      >
+        <a
+          href="https://servers.arthmc.xyz/signin"
+          class="-mb-2 flex flex-justify center rounded-lg btn btn-outline flex bg-gradient-to-tr from-orange-500 to-pink-600 text-black pr-3 pl-4 md:btn-lg border-2 border-gray-500 space-x-1"
+          target="_blank"
+          rel="noreferrer"
+          ><p>{$t("signup")}</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-arrow-up-right"
+            ><line x1="7" y1="17" x2="17" y2="7" /><polyline
+              points="7 7 17 7 17 17"
+            /></svg
+          ></a
+        >
+      </div>
     </div>
   {/if}
 
