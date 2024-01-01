@@ -28,7 +28,9 @@
       <li><a href="/docs/servers" on:click={load}>Servers</a></li>
       <li><a href="/docs/proxies" on:click={load}>Proxies</a></li>
       <li><a href="/docs/terminal" on:click={load}>Terminal</a></li>
-      <li><a href="/docs/settings" on:click={load}>Settings</a></li>
+      <li><a href="/docs/curseforge" on:click={load}>CurseForge</a></li>
+      <li><a href="/docs/translate" on:click={load}>Translate</a></li>
+      <li><a href="/docs/checkout" on:click={load}>Checkout</a></li>
       <li><a href="/docs/misc" on:click={load}>Misc</a></li>
     </ul>
   </div>
