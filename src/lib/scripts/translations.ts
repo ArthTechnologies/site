@@ -66,7 +66,7 @@ export default {
     "navbar.hosting": "Hosting",
     "navbar.software": "Software",
     "navbar.discord": "Discord",
-    "main.subtitle": "Minecraft Servers, Simplified.",
+    "main.subtitle": "Rethinking Minecraft Servers",
     "main.interface.title": "An interface built from the ground up.",
     "main.interface.desc":
       "Many leading hosting providers have old, complicated interfaces, so we started the open-source <a href='/software' class='text-accent hover:link'>Arth Panel</a> project, which reimagines the Minecraft Hosting experience.",
@@ -105,6 +105,7 @@ export default {
     signup: "Signup",
     basic: "Basic",
     modded: "Modded",
+    "main.regionsFootnote": "Arth Hosting is only intended for use in the United States and Mexico."
 
 
   },
@@ -175,7 +176,7 @@ export default {
     "navbar.hosting": "Hosting",
     "navbar.software": "Programas",
     "navbar.discord": "Discord",
-    "main.subtitle": "Servidores de Minecraft, Simplificados.",
+    "main.subtitle": "Repensado Servidores de Minecraft",
     "main.interface.title": "Una interfaz construida desde cero.",
     "main.interface.desc":
       "Muchos proveedores de alojamiento líderes tienen interfaces antiguas y complicadas, por lo que iniciamos el proyecto de código abierto <a href='/software' class='text-accent hover:link'>Arth Panel</a>, que reimagina la experiencia de alojamiento de Minecraft.",
@@ -214,5 +215,6 @@ export default {
     signup: "Registrarse",
     basic: "Básico",
     modded: "Modded",
+    "main.regionsFootnote": "Arth Hosting solo está destinado a su uso en Estados Unidos y México."
   },
 };

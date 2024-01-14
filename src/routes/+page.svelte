@@ -177,6 +177,9 @@
   {/if}
 
   <ul class="mt-48 w-[20rem] md:w-[50rem]" id="footnotes">
+    <li class="mb-1.5">
+      {$t("main.regionsFootnote")}
+    </li>
     <li>
       <sup>1</sup>{$t("main.footnote1")}
     </li>
