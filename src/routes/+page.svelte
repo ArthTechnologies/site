@@ -70,7 +70,7 @@
 </script>
 
 <div
-  class="bg-black flex flex-col items-center min-h-screen text-[#efefef] pb-48 px-5 mainArea"
+  class="bg-black flex flex-col items-center min-h-screen text-[#efefef] pb-32 px-5 mainArea"
 >
   <div class="text-5xl font-bold mt-24 text-center space-y-5">
     <span
@@ -199,7 +199,7 @@
   ></div>
 </div>
 <!--vertical gradient from black to base 300-->
-<div class="h-48 bg-gradient-to-b from-black to-base-300 relative">
+<div class="h-64 bg-gradient-to-b from-black to-neutral relative">
   <button
     class="absolute -bottom-[11.7rem] right-2 text-base-100 hover:link text-sm"
     on:click={() => {
