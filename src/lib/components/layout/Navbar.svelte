@@ -32,7 +32,7 @@
 </script>
 
 {#if navType === "default"}
-  <div class="navbar flex justify-between bg-base-300">
+  <div class="navbar flex justify-between bg-base-300 z-50">
     <div class="flex-1">
       <a class="btn btn-ghost normal-case text-xl w-[6.1rem]" href="/"
         ><img src="/images/sitelogo.svg" alt="Arth" width="75" height="75" /></a
@@ -49,7 +49,7 @@
           class="rounded-lg btn btn-outline flex bg-gradient-to-tr from-orange-500 to-pink-600 text-black -space-x-2 pr-1.5 pl-2.5 md:pr-3 md:pl-4"
           target="_blank"
           rel="noreferrer"
-          ><p class="mr-3">{$t("servers")}</p>
+          ><p class="mr-3">{$t("signup")}</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"

@@ -5,6 +5,7 @@
   import { onMount } from "svelte";
 
   let isVisible = false;
+  let enableShootingStars = false;
 
   // Function to trigger the animation
   function showElement() {
@@ -15,58 +16,61 @@
   onMount(showElement);
 
   function createShootingStar() {
-    console.log("createShootingStar");
-    const container = document.getElementById("shootingStarsContainer");
+    if (enableShootingStars) {
+      console.log("createShootingStar");
+      const container = document.getElementById("shootingStarsContainer");
 
-    if (container) {
-      const star = document.createElement("div");
-      star.classList.add("shooting-star");
-      star.classList.add("absolute");
-      star.classList.add("w-1");
-      star.classList.add("h-10");
-      star.classList.add("bg-gradient-to-tr");
-      star.classList.add("from-orange-500");
-      star.classList.add("to-pink-600");
-      star.classList.add("rounded-full");
-      star.classList.add("z-[-1]");
-      star.classList.add("opacity-80");
+      if (container) {
+        const star = document.createElement("div");
+        star.classList.add("shooting-star");
+        star.classList.add("absolute");
+        star.classList.add("w-1");
+        star.classList.add("h-10");
+        star.classList.add("bg-gradient-to-tr");
+        star.classList.add("from-orange-500");
+        star.classList.add("to-pink-600");
+        star.classList.add("rounded-full");
+        star.classList.add("z-[-1]");
+        star.classList.add("opacity-80");
 
-      const randomX = Math.random() * 100;
-      const randomY = Math.random() * 5 - 5;
+        const randomX = Math.random() * 100;
+        const randomY = Math.random() * 5 - 5;
 
-      star.style.left = `${randomX}vw`;
-      star.style.top = `${randomY}vh`;
+        star.style.left = `${randomX}vw`;
+        star.style.top = `${randomY}vh`;
 
-      container.appendChild(star);
-      //play shooting star animation
-      star.animate(
-        [
-          { transform: "translateY(0) rotate(0deg)", opacity: 0 },
-          { opacity: 1 },
-          { transform: "translateY(300vh)", opacity: 0 },
-        ],
-        {
-          duration: 5000,
-          easing: "ease",
-          fill: "forwards",
-        },
-      );
-      setTimeout(() => {
-        star.remove();
-      }, 5000);
+        container.appendChild(star);
+        //play shooting star animation
+        star.animate(
+          [
+            { transform: "translateY(0) rotate(0deg)", opacity: 0 },
+            { opacity: 1 },
+            { transform: "translateY(300vh)", opacity: 0 },
+          ],
+          {
+            duration: 4500,
+            easing: "ease",
+            fill: "forwards",
+          }
+        );
+
+        setTimeout(() => {
+          star.remove();
+        }, 4500);
+      }
     }
   }
 
   if (browser) {
     //if the browser can handle the animation, this creates a shooting star every 750ms
     if (window.matchMedia("(prefers-reduced-motion: no-preference)").matches) {
-      setInterval(createShootingStar, 600);
+      setInterval(createShootingStar, 300);
     }
   }
 </script>
 
 <div
-  class="bg-black flex flex-col items-center min-h-screen text-[#efefef] pb-48 px-5 mainArea"
+  class="bg-black flex flex-col items-center min-h-screen text-[#efefef] pb-32 px-5 mainArea"
 >
   <div class="text-5xl font-bold mt-24 text-center space-y-5">
     <span
@@ -125,46 +129,57 @@
     </div>
 
     <div class="md:flex items-center mt-24 space-y-2 md:space-x-8">
-      <div class="flex flex-col items-center">
-        <div>
-          <span class="text-[4rem] md:text-[10rem] font-bold"
-            ><s>$5</s><span
-              class=" h-20 text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-pink-600"
-              >$3</span
-            ><span class="text-[1rem]">{$t("mo")}</span>
-          </span>
+      <div>
+        <div class="flex space-x-4 items-center">
+          <div>
+            <p class="text-2xl -mt-4 md:-mt-8 font-bold">{$t("basic")}</p>
+            <span class="text-[4rem] md:text-[6rem] font-bold"
+              ><span class=" h-20 opacity-90">$4</span><span class="text-[1rem]"
+                >{$t("mo")}</span
+              >
+            </span>
+          </div>
+          <div class="divider divider-horizontal h-24 mt-7"></div>
+          <div>
+            <p class="text-2xl -mt-4 md:-mt-8 font-bold">{$t("modded")}</p>
+            <span class="text-[4rem] md:text-[6rem] font-bold"
+              ><span class=" h-20 opacity-90">$6</span><span class="text-[1rem]"
+                >{$t("mo")}</span
+              >
+            </span>
+          </div>
         </div>
-        <p class="text-2xl -mt-4 md:-mt-8 font-bold">
-          {$t("hosting.price")}
-        </p>
-      </div>
 
-      <a
-        href="https://servers.arthmc.xyz/signin"
-        class="-mb-2 flex flex-justify center rounded-lg btn btn-outline flex bg-gradient-to-tr from-orange-500 to-pink-600 text-black pr-3 pl-4 md:btn-lg border-2 border-gray-500 space-x-1"
-        target="_blank"
-        rel="noreferrer"
-        ><p>{$t("servers")}</p>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="feather feather-arrow-up-right"
-          ><line x1="7" y1="17" x2="17" y2="7" /><polyline
-            points="7 7 17 7 17 17"
-          /></svg
-        ></a
-      >
+        <a
+          href="https://servers.arthmc.xyz/signin"
+          class="-mb-2 flex flex-justify center rounded-lg btn btn-outline flex bg-gradient-to-tr from-orange-500 to-pink-600 text-black pr-3 pl-4 md:btn-lg border-2 border-gray-500 space-x-1"
+          target="_blank"
+          rel="noreferrer"
+          ><p>{$t("signup")}</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-arrow-up-right"
+            ><line x1="7" y1="17" x2="17" y2="7" /><polyline
+              points="7 7 17 7 17 17"
+            /></svg
+          ></a
+        >
+      </div>
     </div>
   {/if}
 
   <ul class="mt-48 w-[20rem] md:w-[50rem]" id="footnotes">
+    <li class="mb-1.5">
+      {$t("main.regionsFootnote")}
+    </li>
     <li>
       <sup>1</sup>{$t("main.footnote1")}
     </li>
@@ -184,7 +199,16 @@
   ></div>
 </div>
 <!--vertical gradient from black to base 300-->
-<div class="h-48 bg-gradient-to-b from-black to-base-300" />
+<div class="h-64 bg-gradient-to-b from-black to-neutral relative">
+  <button
+    class="absolute -bottom-[11.7rem] right-2 text-base-100 hover:link text-sm"
+    on:click={() => {
+      enableShootingStars = !enableShootingStars;
+    }}
+  >
+    Easter Egg
+  </button>
+</div>
 
 <style>
   .element-container {

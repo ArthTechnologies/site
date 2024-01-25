@@ -27,7 +27,7 @@
 </script>
 
 <a
-  href="https://x.com/intent?text={url}"
+  href="https://x.com/intent/tweet?text={url}"
   class="btn btn-circle btn-ghost"
   target="_blank"
   rel="noopener noreferrer"

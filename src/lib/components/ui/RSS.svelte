@@ -2,8 +2,16 @@
   import { browser } from "$app/environment";
   import CopyClipboard from "$lib/components/ui/CopyClipboard.svelte";
   import { t } from "$lib/scripts/i18n";
-  let link = "https://backend.arthmc.xyz/rss/";
 
+  let lang = "en-US";
+  let link = "https://backend.arthmc.xyz/rss/" + lang;
+  if (browser) {
+    lang = navigator.language;
+    if (localStorage.getItem("lang") != null) {
+      lang = localStorage.getItem("lang");
+    }
+    link = "https://backend.arthmc.xyz/rss/arthblog.rss?lang=" + lang;
+  }
   const copy = () => {
     if (browser) {
       document.getElementById("copyButton").innerHTML = $t("copied");
@@ -51,11 +59,9 @@
         <a id="copyButton" class="btn btn-neutral" on:click={copy}
           >{$t("blog.RSS.button.copy")}</a
         >
-        <a
-          class="btn btn-neutral"
-          href="https://backend.arthmc.xyz/rss/arthblog.rss"
-          download="arthblog.rss">{$t("blog.RSS.button.download")}</a
-        >
+        <a class="btn btn-neutral" href={link} download
+          >{$t("blog.RSS.button.download")}
+        </a>
       </div>
     </div>
   </div>
