@@ -28,6 +28,7 @@
           locale: navigator.language,
         }),
       });
+      console.log(navigator.platform);
     }
   }
   onMount(() => {
