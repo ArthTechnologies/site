@@ -14,6 +14,9 @@
   if (typeof navigator !== "undefined") {
     locale.set(navigator.language);
   }
+  if (navType === "dark") {
+    bgColor = "bg-base-300";
+  }
   onMount(() => {
     window.addEventListener("click", handleWindowClick);
   });
@@ -31,7 +34,7 @@
   }
 </script>
 
-{#if navType === "default"}
+{#if navType === "default" || navType === "dark"}
   <div class="navbar flex justify-between bg-base-300 z-50">
     <div class="flex-1">
       <a class="btn btn-ghost normal-case text-xl w-[6.1rem]" href="/"

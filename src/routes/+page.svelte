@@ -51,7 +51,7 @@
             duration: 4500,
             easing: "ease",
             fill: "forwards",
-          }
+          },
         );
 
         setTimeout(() => {
@@ -72,7 +72,7 @@
 <div
   class="bg-black flex flex-col items-center min-h-screen text-[#efefef] pb-32 px-5 mainArea"
 >
-  <div class="text-5xl font-bold mt-24 text-center space-y-5">
+  <div class="text-5xl font-bold mt-16 text-center space-y-5">
     <span
       class=" text-7xl h-20 text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-pink-600"
       >Arth Hosting</span
@@ -80,71 +80,71 @@
     <p class="">{$t("main.subtitle")}</p>
   </div>
   {#if isVisible}
-    <div
-      class="md:flex items-center mt-24 space-x-8 space-y-5 element-container"
-    >
-      <img
-        src="/images/ServerCard.webp"
-        alt="Server Card from our Interface"
-        class="z-20"
-        width="500px"
-      />
-
-      <div class="w-64">
-        <p class="text-xl font-bold">{$t("main.interface.title")}</p>
-        <p>
-          {@html $t("main.interface.desc")}
-        </p>
-      </div>
-    </div>
-    <div class="flex items-center mt-24 space-x-3 md:ml-48 element-container">
-      <div class="w-64">
-        <p class="text-xl font-bold">
-          {$t("main.crossplay.title")}<sup
-            ><a href="#footnotes" class="hover:link">1</a></sup
-          >
-        </p>
-        <p>
-          {@html $t("main.crossplay.desc")}
-        </p>
-      </div>
-      <img
-        src="/images/PhoneMinecraft.webp"
-        alt="Minecraft on a phone, looking at a java edition player."
-        class="w-[10rem] md:w-[30rem] -mb-8 z-20"
-      />
-    </div>
-    <div class="flex items-center mt-24 space-x-3 md:ml-48 element-container">
-      <img
-        src="/images/RyzenCPU.webp"
-        alt="AMD Ryzen CPU"
-        class="w-[10rem] md:w-[30rem] z-20"
-      />
+    <div class="flex items-center mt-14 space-x-3 md:ml-32 element-container">
       <div class="w-64">
         <p class="text-xl font-bold">{$t("main.performance.title")}</p>
         <p>
           {@html $t("main.performance.desc")}
         </p>
       </div>
+      <img
+        src="/images/PricePerRAM.webp"
+        alt="AMD Ryzen CPU"
+        class="w-[10rem] md:w-[30rem] z-20"
+      />
+    </div>
+
+    <div class="flex items-center mt-14 space-x-3 md:ml-48 element-container">
+      <img
+        src="/images/PhoneMinecraft.webp"
+        alt="Minecraft on a phone, looking at a java edition player."
+        class="w-[10rem] md:w-[30rem] -mb-8 z-20"
+      />
+      <div class="w-64">
+        <p class="text-xl font-bold">
+          {$t("main.crossplay.title")}<sup
+            ><a href="#footnotes" class="hover:link">2</a></sup
+          >
+        </p>
+        <p>
+          {@html $t("main.crossplay.desc")}
+        </p>
+      </div>
+    </div>
+    <div
+      class="md:flex items-center mt-16 space-x-8 space-y-5 element-container ml-36"
+    >
+      <div class="w-64">
+        <p class="text-xl font-bold">{$t("main.interface.title")}</p>
+        <p>
+          {@html $t("main.interface.desc")}
+        </p>
+      </div>
+      <img
+        src="/images/ServerCard.webp"
+        alt="Server Card from our Interface"
+        class="z-20"
+        width="500px"
+      />
     </div>
 
     <div class="md:flex items-center mt-24 space-y-2 md:space-x-8">
-      <div>
+      <div class="flex flex-col items-center">
         <div class="flex space-x-4 items-center">
           <div>
             <p class="text-2xl -mt-4 md:-mt-8 font-bold">{$t("basic")}</p>
-            <span class="text-[4rem] md:text-[6rem] font-bold"
-              ><span class=" h-20 opacity-90">$4</span><span class="text-[1rem]"
-                >{$t("mo")}</span
+            <span class="text-[4rem] md:text-[5.5rem] font-bold"
+              ><span class=" h-20 opacity-90">$3.49</span><span
+                class="text-[1rem]">{$t("mo")}</span
               >
             </span>
           </div>
           <div class="divider divider-horizontal h-24 mt-7"></div>
           <div>
             <p class="text-2xl -mt-4 md:-mt-8 font-bold">{$t("modded")}</p>
-            <span class="text-[4rem] md:text-[6rem] font-bold"
-              ><span class=" h-20 opacity-90">$6</span><span class="text-[1rem]"
-                >{$t("mo")}</span
+            <span class="text-[4rem] md:text-[5.5rem] font-bold"
+              ><span class=" h-20 opacity-90">$4.99</span><span
+                class="text-[1rem]">{$t("mo")}</span
               >
             </span>
           </div>
@@ -152,7 +152,7 @@
 
         <a
           href="https://servers.arthmc.xyz/signin"
-          class="-mb-2 flex flex-justify center rounded-lg btn btn-outline flex bg-gradient-to-tr from-orange-500 to-pink-600 text-black pr-3 pl-4 md:btn-lg border-2 border-gray-500 space-x-1"
+          class="-mb-1 flex rounded-lg btn btn-outline bg-gradient-to-tr from-orange-500 to-pink-600 text-black pr-3 pl-4 md:btn-lg border-2 border-gray-500 space-x-1 w-3/5"
           target="_blank"
           rel="noreferrer"
           ><p>{$t("signup")}</p>
@@ -188,9 +188,6 @@
     </li>
     <li>
       <sup>3</sup>{$t("main.footnote3")}
-    </li>
-    <li>
-      <sup>4</sup>{$t("main.footnote4")}
     </li>
   </ul>
   <div

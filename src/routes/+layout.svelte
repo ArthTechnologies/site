@@ -7,6 +7,7 @@
   import { themeChange } from "theme-change";
   import Footer from "$lib/components/layout/Footer.svelte";
   import { browser } from "$app/environment";
+
   //post request to http://localhost:5000/analytics/
   if (browser) {
     console.log(navigator.doNotTrack);
@@ -41,6 +42,7 @@
 <div class="flex flex-col h-screen justify-between">
   <div class="">
     <Navbar navType="default" />
+
     <slot />
   </div>
   <Footer />
