@@ -51,7 +51,7 @@
             duration: 4500,
             easing: "ease",
             fill: "forwards",
-          },
+          }
         );
 
         setTimeout(() => {
@@ -124,7 +124,7 @@
         src="/images/ServerCard.webp"
         alt="Server Card from our Interface"
         class="z-20"
-        width="500px"
+        width="450px"
       />
     </div>
 
