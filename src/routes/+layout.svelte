@@ -25,11 +25,10 @@
         },
         body: JSON.stringify({
           url: window.location.pathname,
-          platform: navigator.platform,
+          userAgent: navigator.userAgent,
           locale: navigator.language,
         }),
       });
-      console.log(navigator.platform);
     }
   }
   onMount(() => {
