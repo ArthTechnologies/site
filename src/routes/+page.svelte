@@ -125,26 +125,25 @@
       <img
         src="/images/ServerCard.webp"
         alt="Server Card from our Interface"
-        class="z-20"
-        width="450px"
+        class="z-20 w-[19rem] md:w-[28rem]"
       />
     </div>
 
     <div class="md:flex items-center mt-24 space-y-2 md:space-x-8">
       <div class="flex flex-col items-center">
-        <div class="flex space-x-4 items-center">
+        <div class="flex space-x-4 items-center max-md:mb-4">
           <div>
             <p class="text-2xl -mt-4 md:-mt-8 font-bold">{$t("basic")}</p>
-            <span class="text-[4rem] md:text-[5.5rem] font-bold"
+            <span class="text-5xl md:text-[4rem] md:text-[5.5rem] font-bold"
               ><span class=" h-20 opacity-90">$3.49</span><span
                 class="text-[1rem]">{$t("mo")}</span
               >
             </span>
           </div>
-          <div class="divider divider-horizontal h-24 mt-7"></div>
+          <div class="max-md:hidden divider divider-horizontal h-24 mt-7"></div>
           <div>
             <p class="text-2xl -mt-4 md:-mt-8 font-bold">{$t("modded")}</p>
-            <span class="text-[4rem] md:text-[5.5rem] font-bold"
+            <span class="text-5xl md:text-[4rem] md:text-[5.5rem] font-bold"
               ><span class=" h-20 opacity-90">$4.99</span><span
                 class="text-[1rem]">{$t("mo")}</span
               >
