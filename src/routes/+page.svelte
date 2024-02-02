@@ -80,7 +80,9 @@
     <p class="">{$t("main.subtitle")}</p>
   </div>
   {#if isVisible}
-    <div class="flex items-center mt-14 space-x-3 md:ml-32 element-container">
+    <div
+      class="md:flex items-center mt-14 space-x-3 md:ml-32 element-container"
+    >
       <div class="w-64">
         <p class="text-xl font-bold">{$t("main.performance.title")}</p>
         <p>
@@ -90,7 +92,7 @@
       <img
         src="/images/PricePerRAM.webp"
         alt="AMD Ryzen CPU"
-        class="w-[10rem] md:w-[30rem] z-20"
+        class="w-[30rem] z-20 max-md:mt-4"
       />
     </div>
 
@@ -112,7 +114,7 @@
       </div>
     </div>
     <div
-      class="md:flex items-center mt-16 space-x-8 space-y-5 element-container ml-36"
+      class="md:flex items-center mt-16 space-x-8 space-y-5 element-container md:ml-36"
     >
       <div class="w-64">
         <p class="text-xl font-bold">{$t("main.interface.title")}</p>
