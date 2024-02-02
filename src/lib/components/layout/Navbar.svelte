@@ -122,14 +122,6 @@
             </li>
           </div>
           <li>
-            <a
-              href="https://discord.com/invite/bjY39AbK35"
-              class="justify-between"
-            >
-              {$t("navbar.discord")}
-            </a>
-          </li>
-          <li>
             <a href="/software" class="justify-between">
               {$t("navbar.software")}
             </a>
