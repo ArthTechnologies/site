@@ -129,7 +129,7 @@
       />
     </div>
 
-    <div class="md:flex items-center mt-24 space-y-2 md:space-x-8">
+    <div class="md:flex items-center mt-28 space-y-2 md:space-x-8">
       <div class="flex flex-col items-center">
         <div class="flex space-x-4 items-center max-md:mb-4">
           <div>
@@ -140,7 +140,7 @@
               >
             </span>
           </div>
-          <div class="max-md:hidden divider divider-horizontal h-24 mt-7"></div>
+          <div class="max-md:hidden divider divider-horizontal h-20 mt-3"></div>
           <div>
             <p class="text-2xl -mt-4 md:-mt-8 font-bold">{$t("modded")}</p>
             <span class="text-5xl md:text-[4rem] md:text-[5.5rem] font-bold"
@@ -153,7 +153,7 @@
 
         <a
           href="https://servers.arthmc.xyz/signin"
-          class="-mb-1 flex rounded-lg btn btn-outline bg-gradient-to-tr from-orange-500 to-pink-600 text-black pr-3 pl-4 md:btn-lg border-2 border-gray-500 space-x-1 w-3/5"
+          class="mt-4 -mb-1 flex rounded-lg btn btn-outline bg-gradient-to-tr from-orange-500 to-pink-600 text-black pr-3 pl-4 md:btn-lg border-2 border-gray-500 space-x-1 w-3/5"
           target="_blank"
           rel="noreferrer"
           ><p>{$t("signup")}</p>
