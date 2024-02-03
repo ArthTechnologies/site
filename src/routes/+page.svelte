@@ -153,7 +153,7 @@
 
         <a
           href="https://servers.arthmc.xyz/signin"
-          class="mt-4 -mb-1 flex rounded-lg btn btn-outline bg-gradient-to-tr from-orange-500 to-pink-600 text-black pr-3 pl-4 md:btn-lg border-2 border-gray-500 space-x-1 w-3/5"
+          class="mt-4 -mb-1 flex rounded-lg btn btn-outline bg-gradient-to-tr from-orange-500 to-pink-600 text-black pr-3 pl-4 md:btn-lg border-2 border-gray-500 space-x-1 w-3/5 hover:opacity-90"
           target="_blank"
           rel="noreferrer"
           ><p>{$t("signup")}</p>
