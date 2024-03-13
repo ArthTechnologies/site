@@ -175,12 +175,12 @@ export default {
     "navbar.hosting": "Hosting",
     "navbar.software": "Programas",
     "navbar.discord": "Discord",
-    "main.subtitle": "Repensado Servidores de Minecraft",
+    "main.subtitle": "Reinventando los Servidores de Minecraft",
     "main.interface.title": "Una interfaz construida desde cero.",
     "main.interface.desc":
-      "Muchos de los principales proveedores de alojamiento tienen interfaces antiguas y complicadas, por lo que comenzamos el proyecto de código abierto <a href='/software' class='text-accent hover:link'>Arth Panel</a> para reimaginar la experiencia de alojamiento de Minecraft.",
-    "main.crossplay.title": "Juega con amigos en cualquier edición.",
-    "main.crossplay.desc":"Nuestros servidores tienen el software de juego cruzado Geyser™ integrado<sup><a href='#footnotes' class='hover:link'>3</a></sup>, que permite a los jugadores de Bedrock Edition unirse. Casi todos los complementos funcionarán para los jugadores de Bedrock también.",
+      "Muchos de los principales proveedores de alojamiento tienen interfaces antiguas y complicadas, por lo que comenzamos el proyecto de código abierto <a href='/software' class='text-accent hover:link'>Arth Panel</a> para reinventar la experiencia de alojamiento de Minecraft.",
+    "main.crossplay.title": "Juegue con amigos en cualquier edición.",
+    "main.crossplay.desc":"Nuestros servidores tienen el software de juego cruzado Geyser™ integrado<sup><a href='#footnotes' class='hover:link'>3</a></sup>, que permite a los jugadores de Bedrock Edition unirse. Casi todos los complementos funcionarán también para los jugadores de Bedrock.",
     "main.performance.title": "Rendimiento increíble.",
     "main.performance.desc": "Nuestros servidores están alimentados por procesadores AMD Ryzen™ 7 5700X<sup><a href='#footnotes' class='hover:link'>1</a></sup>, y tienen un mejor precio por rendimiento que todos los competidores líderes.",
     "main.footnote3": "Las ediciones de consola heredadas descontinuadas (Xbox One, Xbox 360, PS4, PS3, PlayStation Vita, Wii U y New Nintendo 3DS) y Raspberry PI no son compatibles.",
@@ -210,9 +210,9 @@ export default {
     "blog.masto.desc": "Mastodon es una red social descentralizada, lo que significa que hay diferentes instancias o \"servidores\" a las que puedes unirte. Ingrese el nombre de su instancia a continuación:",
     "button.share": "Compartir",
     copied: "Copiado!",
-    signup: "Registrarse",
+    signup: "Empezar",
     basic: "Básico",
     modded: "Modded",
-    "main.regionsFootnote": "Arth Hosting solo está destinado a su uso en Estados Unidos y México."
+    "main.regionsFootnote": "Arth Hosting solo está destinado para su uso en Estados Unidos y México."
   },
 };
