@@ -101,7 +101,7 @@ export default {
     "blog.masto.desc": "Mastodon is a decentralized social network, meaning there are different instances or \"servers\" you can join. Enter your instance name below:",  
     "button.share": "Share",
     copied: "Copied!",
-    signup: "Signup",
+    signup: "Get Started",
     basic: "Basic",
     modded: "Modded",
     "main.regionsFootnote": "Arth Hosting is only intended for use in the United States and Mexico."
