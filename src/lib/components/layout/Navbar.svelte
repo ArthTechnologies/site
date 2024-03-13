@@ -32,6 +32,17 @@
   function closeDropdown() {
     document.getElementById("dropdown").open = false;
   }
+
+  function getStartedClicked() {
+    if (browser) {
+      fetch("https://backend.arthmc.xyz/analytics/getStartedButtonClicked", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+    }
+  }
 </script>
 
 {#if navType === "default"}
@@ -54,6 +65,7 @@
           class="max-md:w-36 rounded-lg btn btn-outline flex bg-gradient-to-tr from-orange-500 to-pink-600 text-black -space-x-2 pr-1.5 pl-2.5 md:pr-3 md:pl-4 hover:opacity-90"
           target="_blank"
           rel="noreferrer"
+          on:click={getStartedClicked}
           ><p class="mr-3">{$t("signup")}</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -22,6 +22,8 @@
 
   let english;
   let spanish;
+
+  let getStartedButtonClicks;
   if (browser) {
     fetch("https://backend.arthmc.xyz/analytics")
       .then((response) => response.json())
@@ -49,6 +51,8 @@
 
         english = res.languages.english;
         spanish = res.languages.spanish;
+
+        getStartedButtonClicks = res.getStartedButtonClicks;
       });
   }
 </script>
@@ -137,6 +141,14 @@
   >
     <p class="text-left">Spanish: {spanish}</p>
     <p class="text-center">{Math.round((spanish / res.hits) * 100)}%</p>
+  </div>
+
+  <div
+    class="bg-base-200 w-3/4 md:w-1/4 rounded-xl shadow p-5 flex justify-between mb-3 mt-8"
+  >
+    <p class="text-left">
+      "Get Started" Button Clicks: {getStartedButtonClicks}
+    </p>
   </div>
 </div>
 

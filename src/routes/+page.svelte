@@ -67,6 +67,17 @@
       setInterval(createShootingStar, 300);
     }
   }
+
+  function getStartedClicked() {
+    if (browser) {
+      fetch("https://backend.arthmc.xyz/analytics/getStartedButtonClicked", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+    }
+  }
 </script>
 
 <!-- background for the navbar-->
@@ -162,6 +173,7 @@
           class="mt-4 -mb-1 flex rounded-lg btn btn-outline bg-gradient-to-tr from-orange-500 to-pink-600 text-black pr-3 pl-4 md:btn-lg border-2 border-gray-500 space-x-1 w-3/5 hover:opacity-90"
           target="_blank"
           rel="noreferrer"
+          on:click={getStartedClicked}
           ><p>{$t("signup")}</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
