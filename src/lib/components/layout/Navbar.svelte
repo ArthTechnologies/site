@@ -34,8 +34,10 @@
   }
 </script>
 
-{#if navType === "default" || navType === "dark"}
-  <div class="navbar flex justify-between bg-base-300 z-50">
+{#if navType === "default"}
+  <div
+    class="navbar flex justify-between bg-base-300 z-50 bg-opacity-60 backgrop-blur bg-neutral"
+  >
     <div class="flex-1">
       <a class="btn btn-ghost normal-case text-xl w-[6.1rem]" href="/"
         ><img src="/images/sitelogo.svg" alt="Arth" width="75" height="75" /></a

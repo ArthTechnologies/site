@@ -8,8 +8,10 @@
   import Footer from "$lib/components/layout/Footer.svelte";
   import { browser } from "$app/environment";
 
+  let onMainPage = false;
   //post request to http://localhost:5000/analytics/
   if (browser) {
+    onMainPage = window.location.pathname === "/";
     console.log(navigator.doNotTrack);
     if (
       navigator.doNotTrack == "1" ||
@@ -38,11 +40,14 @@
   // will break if not used here
 </script>
 
-<div class="flex flex-col h-screen justify-between">
-  <div class="">
+<div class="flex flex-col min-h-screen justify-between relative">
+  <div class="absolute top-0 w-full">
     <Navbar navType="default" />
-
+  </div>
+  <div class="mb-[40rem] md:mb-48 mt-16">
     <slot />
   </div>
-  <Footer />
+  <div class="absolute bottom-0 w-full">
+    <Footer />
+  </div>
 </div>

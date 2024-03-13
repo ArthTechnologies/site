@@ -69,8 +69,12 @@
   }
 </script>
 
+<!-- background for the navbar-->
 <div
-  class="bg-black flex flex-col items-center min-h-screen text-[#efefef] pb-32 px-5 mainArea"
+  class="absolute z-[-1] top-0 w-full h-16 bg-gradient bg-gradient-to-r from-[#171212] to-[#0c0400]"
+></div>
+<div
+  class="bg-gradient-to-tr from-[#170800] to-black flex flex-col items-center min-h-screen text-[#efefef] pb-40 px-5 mainArea"
 >
   <div class="text-5xl font-bold mt-16 text-center space-y-5">
     <span
@@ -92,11 +96,13 @@
       <img
         src="/images/PricePerRAM.webp"
         alt="AMD Ryzen CPU"
-        class="w-[30rem] z-20 max-md:mt-4"
+        class="w-[30.5rem] z-20 max-md:mt-4"
       />
     </div>
 
-    <div class="flex items-center mt-14 space-x-3 md:ml-48 element-container">
+    <div
+      class="flex items-center mt-14 space-x-3 md:ml-48 element-container brightness-95"
+    >
       <img
         src="/images/PhoneMinecraft.webp"
         alt="Minecraft on a phone, looking at a java edition player."
@@ -125,7 +131,7 @@
       <img
         src="/images/ServerCard.webp"
         alt="Server Card from our Interface"
-        class="z-20 w-[19rem] md:w-[28rem]"
+        class="z-20 w-[19rem] md:w-[28rem] brightness-[.55]"
       />
     </div>
 
@@ -196,17 +202,19 @@
     id="shootingStarsContainer"
   ></div>
 </div>
-<!--vertical gradient from black to base 300-->
-<div class="h-64 bg-gradient-to-b from-black to-neutral relative">
-  <button
-    class="absolute -bottom-[11.7rem] right-2 text-base-100 hover:link text-sm"
-    on:click={() => {
-      enableShootingStars = !enableShootingStars;
-    }}
-  >
-    Easter Egg
-  </button>
-</div>
+<!-- background for the footer-->
+<div
+  class="absolute bottom-0 w-full h-[40rem] md:h-48 bg-gradient bg-gradient-to-r from-[#171212] to-[#0c0400]"
+></div>
+
+<!--<button
+  class="absolute -bottom-[11.7rem] right-2 text-base-100 hover:link text-sm"
+  on:click={() => {
+    enableShootingStars = !enableShootingStars;
+  }}
+>
+  Easter Egg
+</button>-->
 
 <style>
   .element-container {

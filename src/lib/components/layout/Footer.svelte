@@ -3,7 +3,9 @@
   let Webname = "Arth Panel";
 </script>
 
-<footer class="footer p-10 bg-neutral text-base-content">
+<footer
+  class="footer p-10 bg-neutral bg-opacity-50 backdrop-blur text-base-content"
+>
   <div>
     <img src="/images/sitelogo.webp" width="100px" />
     <p>Arth Technologies<br />© 2022-{new Date().getFullYear()}</p>
