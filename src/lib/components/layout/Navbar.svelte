@@ -51,7 +51,7 @@
       <div>
         <a
           href="https://servers.arthmc.xyz/signin"
-          class="rounded-lg btn btn-outline flex bg-gradient-to-tr from-orange-500 to-pink-600 text-black -space-x-2 pr-1.5 pl-2.5 md:pr-3 md:pl-4 hover:opacity-90"
+          class="max-md:w-36 rounded-lg btn btn-outline flex bg-gradient-to-tr from-orange-500 to-pink-600 text-black -space-x-2 pr-1.5 pl-2.5 md:pr-3 md:pl-4 hover:opacity-90"
           target="_blank"
           rel="noreferrer"
           ><p class="mr-3">{$t("signup")}</p>

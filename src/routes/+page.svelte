@@ -78,10 +78,10 @@
 >
   <div class="text-5xl font-bold mt-16 text-center space-y-5">
     <span
-      class=" text-7xl h-20 text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-pink-600"
+      class=" text-5xl md:text-7xl h-20 text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-pink-600"
       >Arth Hosting</span
     >
-    <p class="">{$t("main.subtitle")}</p>
+    <p class="max-md:text-3xl text-gray-100">{$t("main.subtitle")}</p>
   </div>
   {#if isVisible}
     <div
