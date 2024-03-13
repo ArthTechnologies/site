@@ -9,6 +9,7 @@
   import { t, locale, locales } from "$lib/scripts/i18n";
   import { onMount } from "svelte";
   import LanguageSwitcher from "../ui/LanguageSwitcher.svelte";
+  import { browser } from "$app/environment";
 
   //set locale to browser language if navigator is available
   if (typeof navigator !== "undefined") {
