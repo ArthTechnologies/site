@@ -19,6 +19,9 @@
   let android;
   let ios;
   let unknown;
+
+  let english;
+  let spanish;
   if (browser) {
     fetch("https://backend.arthmc.xyz/analytics")
       .then((response) => response.json())
@@ -43,6 +46,9 @@
         android = res.devices.android;
         ios = res.devices.iOS;
         unknown = res.devices.unknown;
+
+        english = res.languages.english;
+        spanish = res.languages.spanish;
       });
   }
 </script>
@@ -118,6 +124,19 @@
   >
     <p class="text-left">Unknown: {unknown}</p>
     <p class="text-center">{Math.round((unknown / res.hits) * 100)}%</p>
+  </div>
+  <p class="text-lg font-bold mt-3 ml-8 mb-3">Hits by language</p>
+  <div
+    class="bg-base-200 w-3/4 md:w-1/4 rounded-xl shadow p-5 flex justify-between mb-3"
+  >
+    <p class="text-left">English: {english}</p>
+    <p class="text-center">{Math.round((english / res.hits) * 100)}%</p>
+  </div>
+  <div
+    class="bg-base-200 w-3/4 md:w-1/4 rounded-xl shadow p-5 flex justify-between mb-3"
+  >
+    <p class="text-left">Spanish: {spanish}</p>
+    <p class="text-center">{Math.round((spanish / res.hits) * 100)}%</p>
   </div>
 </div>
 
