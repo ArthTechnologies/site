@@ -1,11 +1,15 @@
 <script lang="ts">
   import { browser } from "$app/environment";
   import { t } from "$lib/scripts/i18n";
+  import { UtensilsIcon } from "lucide-svelte";
 
   import { onMount } from "svelte";
 
   let isVisible = false;
   let enableShootingStars = false;
+
+  let basicPrice = "$3.49";
+  let moddedPrice = "$4.99";
 
   // Function to trigger the animation
   function showElement() {
@@ -13,7 +17,15 @@
   }
 
   // Trigger the animation when the component is mounted
-  onMount(showElement);
+  onMount(() => {
+    showElement();
+    getBasicPrice().then((price) => {
+      basicPrice = price;
+    });
+    getModdedPrice().then((price) => {
+      moddedPrice = price;
+    });
+  });
 
   function createShootingStar() {
     if (enableShootingStars) {
@@ -77,6 +89,30 @@
         },
       });
     }
+  }
+
+  function getBasicPrice() {
+    return fetch("https://ip2c.org/s")
+      .then((response) => response.text())
+      .then((data) => {
+        if (data.split(";")[1] == "MX") {
+          return "$60";
+        } else {
+          return "$3.49";
+        }
+      });
+  }
+
+  function getModdedPrice() {
+    return fetch("https://ip2c.org/s")
+      .then((response) => response.text())
+      .then((data) => {
+        if (data.split(";")[1] == "MX") {
+          return "$80";
+        } else {
+          return "$4.99";
+        }
+      });
   }
 </script>
 
@@ -152,7 +188,7 @@
           <div>
             <p class="text-2xl -mt-4 md:-mt-8 font-bold">{$t("basic")}</p>
             <span class="text-5xl md:text-[4rem] md:text-[5.5rem] font-bold"
-              ><span class=" h-20 opacity-90">$3.49</span><span
+              ><span class=" h-20 opacity-90">{basicPrice}</span><span
                 class="text-[1rem]">{$t("mo")}</span
               >
             </span>
@@ -161,7 +197,7 @@
           <div>
             <p class="text-2xl -mt-4 md:-mt-8 font-bold">{$t("modded")}</p>
             <span class="text-5xl md:text-[4rem] md:text-[5.5rem] font-bold"
-              ><span class=" h-20 opacity-90">$4.99</span><span
+              ><span class=" h-20 opacity-90">{moddedPrice}</span><span
                 class="text-[1rem]">{$t("mo")}</span
               >
             </span>
