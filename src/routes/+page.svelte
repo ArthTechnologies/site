@@ -63,7 +63,7 @@
             duration: 4500,
             easing: "ease",
             fill: "forwards",
-          }
+          },
         );
 
         setTimeout(() => {
@@ -82,12 +82,14 @@
 
   function getStartedClicked() {
     if (browser) {
-      fetch("https://backend.arthmc.xyz/analytics/getStartedButtonClicked", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      if (localStorage.getItem("allowAnalytics") == "true") {
+        fetch("https://backend.arthmc.xyz/analytics/getStartedButtonClicked", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+      }
     }
   }
 
