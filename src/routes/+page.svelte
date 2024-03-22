@@ -97,6 +97,7 @@
     return fetch("https://ip2c.org/s")
       .then((response) => response.text())
       .then((data) => {
+        console.log("country detected: ", data.split(";")[1]);
         if (data.split(";")[1] == "MX") {
           return "$60";
         } else {
