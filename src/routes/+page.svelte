@@ -10,6 +10,19 @@
 
   let basicPrice = "$3.49";
   let moddedPrice = "$4.99";
+  let locale;
+
+  if (browser) {
+    if (localStorage.getItem("lang") == null) locale = navigator.language;
+    else locale = localStorage.getItem("lang");
+    if (locale.includes("_")) {
+      locale = locale.split("_")[0];
+    }
+    if (locale.includes("-")) {
+      locale = locale.split("-")[0];
+    }
+    locale = locale.toUpperCase();
+  }
 
   // Function to trigger the animation
   function showElement() {
@@ -158,7 +171,7 @@
         </p>
       </div>
       <img
-        src="/images/PricePerRAM.webp"
+        src="/images/PricePerRAM_{locale}.webp"
         alt="AMD Ryzen CPU"
         class="w-[30.5rem] z-20 max-md:mt-4"
       />
