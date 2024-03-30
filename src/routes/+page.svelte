@@ -99,6 +99,14 @@
       .then((data) => {
         console.log("country detected: ", data.split(";")[1]);
         if (data.split(";")[1] == "MX") {
+          const usd = document.getElementById("usd");
+          const mxn = document.getElementById("mxn");
+          usd?.classList.remove("btn-neutral");
+          usd?.classList.remove("hover:bg-base-100");
+          usd?.classList.add("pointer-events-none");
+          mxn?.classList.add("btn-neutral");
+          mxn?.classList.add("hover:bg-base-100");
+          mxn?.classList.remove("pointer-events-none");
           return "$60";
         } else {
           return "$3.49";
@@ -187,7 +195,47 @@
 
     <div class="md:flex items-center mt-28 space-y-2 md:space-x-8">
       <div class="flex flex-col items-center">
-        <div class="flex space-x-4 items-center max-md:mb-4">
+        <div class="flex space-x-1 justify-start w-full">
+          <button
+            id="usd"
+            class="btn btn-sm pointer-events-none"
+            on:click={() => {
+              if (browser) {
+                const usd = document.getElementById("usd");
+                const mxn = document.getElementById("mxn");
+                usd?.classList.remove("btn-neutral");
+                usd?.classList.remove("hover:bg-base-100");
+                usd?.classList.add("pointer-events-none");
+                mxn?.classList.add("btn-neutral");
+                mxn?.classList.add("hover:bg-base-100");
+                mxn?.classList.remove("pointer-events-none");
+
+                basicPrice = "$3.49";
+                moddedPrice = "$4.99";
+              }
+            }}>$</button
+          >
+          <button
+            id="mxn"
+            class="btn btn-neutral btn-sm hover:bg-base-100"
+            on:click={() => {
+              if (browser) {
+                const usd = document.getElementById("usd");
+                const mxn = document.getElementById("mxn");
+                usd?.classList.add("btn-neutral");
+                usd?.classList.add("hover:bg-base-100");
+                usd?.classList.remove("pointer-events-none");
+                mxn?.classList.remove("btn-neutral");
+                mxn?.classList.remove("hover:bg-base-100");
+                mxn?.classList.add("pointer-events-none");
+
+                basicPrice = "$60";
+                moddedPrice = "$80";
+              }
+            }}>MX$</button
+          >
+        </div>
+        <div class="flex space-x-4 items-center max-md:mb-4 mt-12">
           <div>
             <p class="text-2xl -mt-4 md:-mt-8 font-bold">{$t("basic")}</p>
             <span class="text-5xl md:text-[4rem] md:text-[5.5rem] font-bold"
