@@ -19,7 +19,6 @@
     ) {
       localStorage.setItem("allowAnalytics", "false");
     } else {
-      localStorage.setItem("allowAnalytics", "true");
       fetch("https://backend.arthmc.xyz/analytics/", {
         method: "POST",
         headers: {
@@ -29,8 +28,10 @@
           url: window.location.pathname,
           userAgent: navigator.userAgent,
           locale: navigator.language,
+          returning: localStorage.getItem("allowAnalytics") == "true",
         }),
       });
+      localStorage.setItem("allowAnalytics", "true");
     }
   }
   onMount(() => {
