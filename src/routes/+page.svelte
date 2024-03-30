@@ -63,7 +63,7 @@
             duration: 4500,
             easing: "ease",
             fill: "forwards",
-          },
+          }
         );
 
         setTimeout(() => {
@@ -98,7 +98,7 @@
       .then((response) => response.text())
       .then((data) => {
         console.log("country detected: ", data.split(";")[1]);
-        if (data.split(";")[1] == "MX") {
+        if (data.split(";")[1].toUpperCase() == "MX") {
           const usd = document.getElementById("usd");
           const mxn = document.getElementById("mxn");
           usd?.classList.remove("btn-neutral");
@@ -109,6 +109,12 @@
           mxn?.classList.remove("pointer-events-none");
           return "$60";
         } else {
+          const usd = document.getElementById("usd");
+          const mxn = document.getElementById("mxn");
+          //hide the currency switcher
+          usd?.classList.add("hidden");
+          mxn?.classList.add("hidden");
+
           return "$3.49";
         }
       });
@@ -118,7 +124,7 @@
     return fetch("https://ip2c.org/s")
       .then((response) => response.text())
       .then((data) => {
-        if (data.split(";")[1] == "MX") {
+        if (data.split(";")[1].toUpperCase() == "MX") {
           return "$80";
         } else {
           return "$4.99";
