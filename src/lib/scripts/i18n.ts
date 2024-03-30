@@ -11,6 +11,7 @@ function translate(locale: string, key: string, vars: string) {
 
   if (browser) if (localStorage.getItem("lang") != null) locale = localStorage.getItem("lang");
 
+
   let text;
   if (Object.keys(translations).includes(locale)) {
     text = translations[locale][key]; 
@@ -19,12 +20,12 @@ function translate(locale: string, key: string, vars: string) {
     //take the first 2 letters of the locale, see if something in the
     //translations starts with that, and if so, use that
     const shortLocale = locale.split("-")[0];
-
-    if (Object.keys(translations).includes(shortLocale)) {
+    if (Object.keys(translations).toString().includes(shortLocale)) {
       //search for a key that starts with the short locale
       const matchingKey = Object.keys(translations).find((k) =>
         k.startsWith(shortLocale)
       );
+
       if (matchingKey) {
         text = translations[matchingKey][key];
         foundSimilarLocale = true;

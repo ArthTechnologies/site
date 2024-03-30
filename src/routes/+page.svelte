@@ -63,7 +63,7 @@
             duration: 4500,
             easing: "ease",
             fill: "forwards",
-          }
+          },
         );
 
         setTimeout(() => {
@@ -82,12 +82,14 @@
 
   function getStartedClicked() {
     if (browser) {
-      fetch("https://backend.arthmc.xyz/analytics/getStartedButtonClicked", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      if (localStorage.getItem("allowAnalytics") == "true") {
+        fetch("https://backend.arthmc.xyz/analytics/getStartedButtonClicked", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+      }
     }
   }
 
@@ -95,6 +97,7 @@
     return fetch("https://ip2c.org/s")
       .then((response) => response.text())
       .then((data) => {
+        console.log("country detected: ", data.split(";")[1]);
         if (data.split(";")[1] == "MX") {
           return "$60";
         } else {
