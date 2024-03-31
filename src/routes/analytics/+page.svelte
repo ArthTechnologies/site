@@ -150,6 +150,22 @@
       "Get Started" Button Clicks: {getStartedButtonClicks}
     </p>
   </div>
+  <div
+    class="bg-base-200 w-3/4 md:w-1/4 rounded-xl shadow p-5 flex justify-between mb-3 mt-8"
+  >
+    <p class="text-left">
+      First Time Visitors: {res.initial}
+    </p>
+    <p class="text-center">{Math.round((res.initial / res.hits) * 100)}%</p>
+  </div>
+  <div
+    class="bg-base-200 w-3/4 md:w-1/4 rounded-xl shadow p-5 flex justify-between mb-3"
+  >
+    <p class="text-left">
+      Returning Visitors: {res.returning}
+    </p>
+    <p class="text-center">{Math.round((res.returning / res.hits) * 100)}%</p>
+  </div>
 </div>
 
 <style>
