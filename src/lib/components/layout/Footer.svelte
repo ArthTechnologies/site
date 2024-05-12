@@ -44,10 +44,8 @@
       href="https://www.youtube.com/@arthmc"
       target="_blank">{$t("footer.youtube")}</a
     >
-    <a
-      class="link link-hover"
-      href="https://discord.com/invite/bjY39AbK35"
-      target="_blank">{$t("footer.discord")}</a
+    <a class="link link-hover" href="https://x.com/arthhosting" target="_blank"
+      >Twitter / X</a
     >
   </div>
 </footer>
