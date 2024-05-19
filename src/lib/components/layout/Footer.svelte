@@ -36,16 +36,20 @@
   </div>
   <div>
     <span class="footer-title">{$t("footer.socials")}</span>
-    <a class="link link-hover" href="https://floss.social/@arth" target="_blank"
-      >{$t("footer.mastodon")}</a
+    <a class="link link-hover" href="https://x.com/arthhosting" target="_blank"
+      >Twitter / X</a
     >
+
     <a
       class="link link-hover"
       href="https://www.youtube.com/@arthmc"
       target="_blank">{$t("footer.youtube")}</a
     >
-    <a class="link link-hover" href="https://x.com/arthhosting" target="_blank"
-      >Twitter / X</a
+
+    <a
+      class="link link-hover"
+      href="https://discord.com/invite/bjY39AbK35"
+      target="_blank">{$t("footer.discord")}</a
     >
   </div>
 </footer>
