@@ -20,18 +20,27 @@
   let ios;
   let unknown;
 
-  let english;
-  let spanish;
+  let languages = [];
+  let promise;
 
   let getStartedButtonClicks;
   if (browser) {
-    fetch("https://backend.arthmc.xyz/analytics")
+    promise = fetch("https://backend.arthmc.xyz/analytics")
       .then((response) => response.json())
       .then((json) => {
         res = json;
         console.log(json);
         hits = json.hits;
         platforms = json.devices;
+        for (let i = 0; i < Object.keys(json.languages).length; i++) {
+          let lang = {
+            name: Object.keys(json.languages)[i],
+            hits: json.languages[Object.keys(json.languages)[i]],
+          };
+          console.log(lang);
+          languages.push(lang);
+        }
+
         for (let i = res.day - 30; i <= res.day; i++) {
           if (res.days[i] == undefined) {
             y1.push(100);
@@ -48,9 +57,6 @@
         android = res.devices.android;
         ios = res.devices.iOS;
         unknown = res.devices.unknown;
-
-        english = res.languages.english;
-        spanish = res.languages.spanish;
 
         getStartedButtonClicks = res.getStartedButtonClicks;
       });
@@ -94,64 +100,67 @@
 <div class="flex flex-col items-center pb-36">
   <p class="text-lg font-bold mt-3 ml-8 mb-3">Hits by platform</p>
   <div
-    class="bg-base-200 w-3/4 md:w-1/4 rounded-xl shadow p-5 flex justify-between mb-3"
+    class="bg-base-200 w-[24.75rem] rounded-xl shadow p-5 flex justify-between mb-3"
   >
     <p class="text-left">Windows: {windows}</p>
     <p class="text-center">{Math.round((windows / res.hits) * 100)}%</p>
   </div>
   <div
-    class="bg-base-200 w-3/4 md:w-1/4 rounded-xl shadow p-5 flex justify-between mb-3"
+    class="bg-base-200 w-[24.75rem] rounded-xl shadow p-5 flex justify-between mb-3"
   >
     <p class="text-left">Linux: {linux}</p>
     <p class="text-center">{Math.round((linux / res.hits) * 100)}%</p>
   </div>
   <div
-    class="bg-base-200 w-3/4 md:w-1/4 rounded-xl shadow p-5 flex justify-between mb-3"
+    class="bg-base-200 w-[24.75rem] rounded-xl shadow p-5 flex justify-between mb-3"
   >
     <p class="text-left">Mac: {macos}</p>
     <p class="text-center">{Math.round((macos / res.hits) * 100)}%</p>
   </div>
   <div
-    class="bg-base-200 w-3/4 md:w-1/4 rounded-xl shadow p-5 flex justify-between mb-3"
+    class="bg-base-200 w-[24.75rem] rounded-xl shadow p-5 flex justify-between mb-3"
   >
     <p class="text-left">iOS: {ios}</p>
     <p class="text-center">{Math.round((ios / res.hits) * 100)}%</p>
   </div>
   <div
-    class="bg-base-200 w-3/4 md:w-1/4 rounded-xl shadow p-5 flex justify-between mb-3"
+    class="bg-base-200 w-[24.75rem] rounded-xl shadow p-5 flex justify-between mb-3"
   >
     <p class="text-left">Android: {android}</p>
     <p class="text-center">{Math.round((android / res.hits) * 100)}%</p>
   </div>
   <div
-    class="bg-base-200 w-3/4 md:w-1/4 rounded-xl shadow p-5 flex justify-between mb-3"
+    class="bg-base-200 w-[24.75rem] rounded-xl shadow p-5 flex justify-between mb-3"
   >
     <p class="text-left">Unknown: {unknown}</p>
     <p class="text-center">{Math.round((unknown / res.hits) * 100)}%</p>
   </div>
   <p class="text-lg font-bold mt-3 ml-8 mb-3">Hits by language</p>
-  <div
-    class="bg-base-200 w-3/4 md:w-1/4 rounded-xl shadow p-5 flex justify-between mb-3"
-  >
-    <p class="text-left">English: {english}</p>
-    <p class="text-center">{Math.round((english / res.hits) * 100)}%</p>
-  </div>
-  <div
-    class="bg-base-200 w-3/4 md:w-1/4 rounded-xl shadow p-5 flex justify-between mb-3"
-  >
-    <p class="text-left">Spanish: {spanish}</p>
-    <p class="text-center">{Math.round((spanish / res.hits) * 100)}%</p>
+  <div class="grid grid-cols-4 grid-flow-col gap-4 w-[24.75rem]">
+    {#await promise then}
+      {#each languages as language, index}
+        <div
+          class="bg-base-200 h-16 rounded-xl shadow p-2 pl-2.5 justify-between mb-3 text-sm"
+        >
+          <p class="mt-1">
+            <span class="font-bold uppercase">{language.name}:</span>
+            {Math.round((language.hits / res.initial) * 100)}%
+          </p>
+          <p>{language.hits} Hits</p>
+        </div>
+      {/each}
+    {/await}
   </div>
 
   <div
-    class="bg-base-200 w-3/4 md:w-1/4 rounded-xl shadow p-5 flex justify-between mb-3 mt-8"
+    class="bg-base-200 w-[24.75rem] rounded-xl shadow p-5 flex justify-between mb-3 mt-8"
   >
     <p class="text-left">
       "Get Started" Button Clicks: {getStartedButtonClicks}
     </p>
   </div>
   <div
-    class="bg-base-200 w-3/4 md:w-1/4 rounded-xl shadow p-5 flex justify-between mb-3 mt-8"
+    class="bg-base-200 w-[24.75rem] rounded-xl shadow p-5 flex justify-between mb-3 mt-8"
   >
     <p class="text-left">
       First Time Visitors: {res.initial}
@@ -159,7 +168,7 @@
     <p class="text-center">{Math.round((res.initial / res.hits) * 100)}%</p>
   </div>
   <div
-    class="bg-base-200 w-3/4 md:w-1/4 rounded-xl shadow p-5 flex justify-between mb-3"
+    class="bg-base-200 w-[24.75rem] rounded-xl shadow p-5 flex justify-between mb-3"
   >
     <p class="text-left">
       Returning Visitors: {res.returning}
