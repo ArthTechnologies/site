@@ -59,7 +59,7 @@ export default {
       "• <strong>If both java & bedrock players can join, how do things like combat work?</strong> The experience for java players will be the same, and most things like player heads & modern combat will work as they do on java for Bedock Players.",
     "panel.title": "Arth Panel",
     "panel.desc":
-      "The free and open-source software behind Arth Hosting! If you have access to server computer(s) to run arth panel, you can make your own hosting service with ease.",
+      "The free and open-source software behind Arth Hosting! If you have a server computer running Linux, you can self-host a minecraft server with ease.",
     "panel.frontend": "View frontend",
     "panel.backend": "View backend",
     "navbar.home": "Home",
@@ -168,9 +168,9 @@ export default {
       "• Si tanto los jugadores de Java como los de Bedrock pueden unirse, ¿cómo funcionan las cosas como el combate? La experiencia para los jugadores de Java será la misma, y la mayoría de las cosas, como las cabezas de los jugadores y el combate moderno, funcionarán como lo hacen en Java para los jugadores de Bedock.",
     "panel.title": "Arth Panel",
     "panel.desc":
-      "The free and open-source software behind Arth Hosting! If you have access to server computer(s) to run arth panel, you can make your own hosting service with ease.",
-    "panel.frontend": "View frontend",
-    "panel.backend": "View backend",
+      "¡El software gratuito y de código abierto detrás de Arth Hosting! Si tiene una computadora de servidor que ejecuta Linux, puede alojar un servidor de minecraft con facilidad.",
+    "panel.frontend": "Ver frontend",
+    "panel.backend": "Ver backend",
     "navbar.home": "Inicio",
     "navbar.hosting": "Hosting",
     "navbar.software": "Programas",
