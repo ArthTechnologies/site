@@ -32,14 +32,32 @@
         console.log(json);
         hits = json.hits;
         platforms = json.devices;
-        for (let i = 0; i < Object.keys(json.languages).length; i++) {
+        let langsTemp = [];
+        //get the top 12 languages
+        for (let i = 0; i < 9; i++) {
           let lang = {
             name: Object.keys(json.languages)[i],
             hits: json.languages[Object.keys(json.languages)[i]],
           };
           console.log(lang);
-          languages.push(lang);
+          langsTemp.push(lang);
         }
+        //sort the languages by hits
+        languages = langsTemp.sort((a, b) => b.hits - a.hits);
+        console.log(languages);
+
+        //move data to appear as columns,
+        //as there is a visual bug with the grid on column mode
+        languages = [
+          languages[0],
+          languages[4],
+          languages[1],
+          languages[5],
+          languages[2],
+          languages[6],
+          languages[3],
+          languages[7],
+        ];
 
         for (let i = res.day - 30; i <= res.day; i++) {
           if (res.days[i] == undefined) {
@@ -136,18 +154,20 @@
     <p class="text-center">{Math.round((unknown / res.hits) * 100)}%</p>
   </div>
   <p class="text-lg font-bold mt-3 ml-8 mb-3">Hits by language</p>
-  <div class="grid grid-cols-4 grid-flow-col gap-4 w-[24.75rem]">
+  <div class="grid grid-rows-2 grid-flow-col gap-4 w-[24.75rem]">
     {#await promise then}
       {#each languages as language, index}
-        <div
-          class="bg-base-200 h-16 rounded-xl shadow p-2 pl-2.5 justify-between mb-3 text-sm"
-        >
-          <p class="mt-1">
-            <span class="font-bold uppercase">{language.name}:</span>
-            {Math.round((language.hits / res.initial) * 100)}%
-          </p>
-          <p>{language.hits} Hits</p>
-        </div>
+        {#if language.hits != null}
+          <div
+            class="bg-base-200 h-16 rounded-xl shadow p-2 pl-2.5 justify-between mb-3 text-sm"
+          >
+            <p class="mt-1">
+              <span class="font-bold uppercase">{language.name}:</span>
+              {Math.round((language.hits / res.initial) * 100)}%
+            </p>
+            <p>{language.hits} Hits</p>
+          </div>
+        {/if}
       {/each}
     {/await}
   </div>
