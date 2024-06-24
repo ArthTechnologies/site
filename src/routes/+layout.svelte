@@ -34,7 +34,7 @@
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ object }),
+        body: JSON.stringify(object),
       });
       localStorage.setItem("allowAnalytics", "true");
     }
