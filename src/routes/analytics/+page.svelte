@@ -21,6 +21,8 @@
   let unknown;
 
   let languages = [];
+  let referrers = [];
+  let pages = [];
   let promise;
 
   let getStartedButtonClicks;
@@ -57,6 +59,56 @@
           languages[6],
           languages[3],
           languages[7],
+        ];
+
+        let refTemp = [];
+        //get the top 12 referrers
+        for (let i = 0; i < 9; i++) {
+          let ref = {
+            name: Object.keys(json.referrers)[i],
+            hits: json.referrers[Object.keys(json.referrers)[i]],
+          };
+          refTemp.push(ref);
+        }
+        //sort the referrers by hits
+        referrers = refTemp.sort((a, b) => b.hits - a.hits);
+
+        //move data to appear as columns,
+        //as there is a visual bug with the grid on column mode
+        referrers = [
+          referrers[0],
+          referrers[4],
+          referrers[1],
+          referrers[5],
+          referrers[2],
+          referrers[6],
+          referrers[3],
+          referrers[7],
+        ];
+
+        let pageTemp = [];
+        //get the top 12 pages
+        for (let i = 0; i < 9; i++) {
+          let page = {
+            name: Object.keys(json.pages)[i],
+            hits: json.pages[Object.keys(json.pages)[i]],
+          };
+          pageTemp.push(page);
+        }
+        //sort the pages by hits
+        pages = pageTemp.sort((a, b) => b.hits - a.hits);
+
+        //move data to appear as columns,
+        //as there is a visual bug with the grid on column mode
+        pages = [
+          pages[0],
+          pages[4],
+          pages[1],
+          pages[5],
+          pages[2],
+          pages[6],
+          pages[3],
+          pages[7],
         ];
 
         for (let i = res.day - 30; i <= res.day; i++) {
@@ -172,15 +224,53 @@
     {/await}
   </div>
 
+  <p class="text-lg font-bold mt-3 ml-8 mb-3">Hits by referrer</p>
+  <div class="grid grid-rows-2 grid-flow-col gap-4 w-[24.75rem]">
+    {#await promise then}
+      {#each referrers as referrer, index}
+        {#if referrer.hits != null}
+          <div
+            class="bg-base-200 h-16 rounded-xl shadow p-2 pl-2.5 justify-between mb-3 text-sm"
+          >
+            <p class="mt-1">
+              <span class="font-bold capitalize">{referrer.name}:</span>
+              {Math.round((referrer.hits / res.initial) * 100)}%
+            </p>
+            <p>{referrer.hits} Hits</p>
+          </div>
+        {/if}
+      {/each}
+    {/await}
+  </div>
+
+  <p class="text-lg font-bold mt-3 ml-8 mb-3">Hits by page</p>
+  <div class="grid grid-rows-2 grid-flow-col gap-4 w-[24.75rem]">
+    {#await promise then}
+      {#each pages as page, index}
+        {#if page.hits != null}
+          <div
+            class="bg-base-200 h-16 rounded-xl shadow p-2 pl-2.5 justify-between mb-3 text-sm"
+          >
+            <p class="mt-1">
+              <span class="font-bold capitalize">{page.name}:</span>
+              {Math.round((page.hits / res.initial) * 100)}%
+            </p>
+            <p>{page.hits} Hits</p>
+          </div>
+        {/if}
+      {/each}
+    {/await}
+  </div>
+
   <div
-    class="bg-base-200 w-[24.75rem] rounded-xl shadow p-5 flex justify-between mb-3 mt-8"
+    class="bg-base-200 w-[24.75rem] rounded-xl shadow p-4 flex justify-between mb-3 mt-8 h-12 text-sm"
   >
     <p class="text-left">
-      "Get Started" Button Clicks: {getStartedButtonClicks}
+      "Get Started" Clicks: {getStartedButtonClicks}
     </p>
   </div>
   <div
-    class="bg-base-200 w-[24.75rem] rounded-xl shadow p-5 flex justify-between mb-3 mt-8"
+    class="bg-base-200 w-[24.75rem] rounded-xl shadow p-4 flex justify-between mb-3 h-12 text-sm"
   >
     <p class="text-left">
       First Time Visitors: {res.initial}
@@ -188,7 +278,7 @@
     <p class="text-center">{Math.round((res.initial / res.hits) * 100)}%</p>
   </div>
   <div
-    class="bg-base-200 w-[24.75rem] rounded-xl shadow p-5 flex justify-between mb-3"
+    class="bg-base-200 w-[24.75rem] rounded-xl shadow p-4 flex justify-between mb-3 h-12 text-sm"
   >
     <p class="text-left">
       Returning Visitors: {res.returning}
