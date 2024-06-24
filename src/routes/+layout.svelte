@@ -13,23 +13,28 @@
   if (browser) {
     onMainPage = window.location.pathname === "/";
     console.log(navigator.doNotTrack);
+    let object = {
+      url: window.location.pathname,
+      userAgent: navigator.userAgent,
+      locale: navigator.language,
+      returning: localStorage.getItem("allowAnalytics") == "true",
+      referrer: document.referrer,
+    };
+    console.log(object);
     if (
       navigator.doNotTrack == "1" ||
       localStorage.getItem("allowAnalytics") == "false"
     ) {
       localStorage.setItem("allowAnalytics", "false");
     } else {
+      console.log("sending analytics...");
+
       fetch("https://backend.arthmc.xyz/analytics/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          url: window.location.pathname,
-          userAgent: navigator.userAgent,
-          locale: navigator.language,
-          returning: localStorage.getItem("allowAnalytics") == "true",
-        }),
+        body: JSON.stringify({ object }),
       });
       localStorage.setItem("allowAnalytics", "true");
     }
