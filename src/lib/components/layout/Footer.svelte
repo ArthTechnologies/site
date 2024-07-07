@@ -48,7 +48,7 @@
 
     <a
       class="link link-hover"
-      href="https://discord.com/invite/bjY39AbK35"
+      href="https://discord.com/invite/jUeNm7UvKy"
       target="_blank">{$t("footer.discord")}</a
     >
   </div>
