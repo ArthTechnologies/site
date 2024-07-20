@@ -74,7 +74,7 @@
     <option>Español</option>
   </select>
 </div>
-<div id="posts" class="grid grid-cols-1 gap-6 md:grid-cols-2 p-5 mb-24">
+<div id="posts" class="grid grid-cols-1 gap-6 md:grid-cols-2 p-5 mb-32 mt-4">
   {#await promise}
     {#each Array(8) as _}
       <div class="flex gap-5 shadow bg-base-200 rounded-xl p-6 h-[15rem]">
