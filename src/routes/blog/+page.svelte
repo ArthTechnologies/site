@@ -96,13 +96,16 @@
     {#each posts as post}
       <a href="/blog/{post.slug}"
         ><div
-          class=" flex gap-5 shadow bg-base-200 hover:bg-base-300 rounded-xl p-6 h-[15rem]"
+          class="items-center flex gap-5 shadow bg-base-200 hover:bg-base-300 rounded-xl p-6 h-[15rem]"
         >
           <div class="flex flex-col gap-2 w-[11rem]">
-            <img
-              src={post.image}
-              class="rounded-xl w-60 shadow-xl border-solid border-[0.13rem] border-slate-500"
-            />
+            <div class="h-24 overflow-hidden">
+              <img
+                src={post.image}
+                class="h-full w-full object-cover object-top rounded-xl w-60 shadow-xl border-solid border-[0.13rem] border-slate-500"
+              />
+            </div>
+
             <div class="flex space-x-2">
               <img
                 alt="{post.author}'s Icon"
