@@ -75,11 +75,28 @@
   </select>
 </div>
 <div id="posts" class="grid grid-cols-1 gap-6 md:grid-cols-2 p-5 mb-24">
-  {#await promise then}
+  {#await promise}
+    {#each Array(8) as _}
+      <div class="flex gap-5 shadow bg-base-200 rounded-xl p-6 h-[15rem]">
+        <div class="flex flex-col gap-2">
+          <div class="bg-base-100 animate-pulse rounded-xl h-28 w-48"></div>
+          <div class="flex gap-2">
+            <div
+              class="bg-base-100 animate-pulse mask mask-squircle h-10 w-10"
+            ></div>
+            <div class="flex flex-col gap-2 mt-0.5">
+              <div class="bg-base-100 animate-pulse h-4 w-20 rounded"></div>
+              <div class="bg-base-100 animate-pulse h-3 w-10 rounded"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {/each}
+  {:then}
     {#each posts as post}
       <a href="/blog/{post.slug}"
         ><div
-          class=" flex gap-5 shadow bg-base-200 hover:bg-base-300 rounded-xl p-6"
+          class=" flex gap-5 shadow bg-base-200 hover:bg-base-300 rounded-xl p-6 h-[15rem]"
         >
           <div class="flex flex-col gap-2 w-[11rem]">
             <img
