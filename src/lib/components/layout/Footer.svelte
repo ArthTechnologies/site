@@ -27,8 +27,8 @@
     <a class="link link-hover" href="/hosting" target="_blank"
       >{$t("footer.hosting")}</a
     >
-    <a class="link link-hover" href="/software" target="_blank"
-      >{$t("footer.software")}</a
+    <a class="link link-hover" href="/terms-of-service" target="_blank"
+      >{$t("footer.tos")}</a
     >
     <a class="link link-hover" href="/privacy" target="_blank"
       >{$t("footer.privacy")}</a
@@ -37,7 +37,7 @@
   <div>
     <span class="footer-title">{$t("footer.socials")}</span>
     <a class="link link-hover" href="https://x.com/arthhosting" target="_blank"
-      >Twitter / X</a
+      >X (Twitter)</a
     >
 
     <a

@@ -139,8 +139,8 @@
             </li>
           </div>
           <li>
-            <a href="/software" class="justify-between">
-              {$t("navbar.software")}
+            <a href="/terms-of-service" class="justify-between">
+              {$t("navbar.tos")}
             </a>
           </li>
           <li>
