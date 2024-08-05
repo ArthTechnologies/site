@@ -2,13 +2,13 @@
   import { browser } from "$app/environment";
   import { t } from "$lib/scripts/i18n";
 
-  let network;
-  let hosting;
-  let quartz;
-  let observer;
+  let network = $t("status.offline");
+  let hosting = $t("status.offline");
+  let quartz = $t("status.offline");
+  let observer = $t("status.offline");
   let frontend = $t("status.online");
-  let backend;
-  let website;
+  let backend = $t("status.offline");
+  let website = $t("status.offline");
 
   const response = fetch("https://backend.arthmc.xyz/status")
     .then((response) => response.json())
