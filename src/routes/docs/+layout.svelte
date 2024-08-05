@@ -16,6 +16,10 @@
         <a href="/docs/how-to-join-servers" on:click={load}
           >How to Join Minecraft Servers</a
         >
+        <a href="/docs/using-dynmap" on:click={load}>Using Dynmap</a>
+        <a href="/docs/using-simple-voice-chat" on:click={load}
+          >Using Simple Voice Chat</a
+        >
       </li>
     </ul>
     <ul
