@@ -7,8 +7,13 @@
 >
   <div class="space-y-3">
     <ul
-      class="menu p-4 w-80 bg-base-300 shadow-xl text-base-content rounded-lg"
+      class="menu px-4 py-2 w-80 bg-neutral shadow-xl text-base-content rounded-lg"
     >
+      <li>
+        <a href="/docs/" on:click={load}>Software</a>
+      </li>
+    </ul>
+    <ul class="menu p-4 w-80 bg-neutral shadow-xl text-base-content rounded-lg">
       <p class="font-mono text-center font-bold">Tutorials</p>
       <!-- Sidebar content here -->
 
@@ -22,12 +27,15 @@
         >
       </li>
     </ul>
-    <ul
-      class="menu p-4 w-80 bg-base-300 shadow-xl text-base-content rounded-lg"
-    >
+    <ul class="menu p-4 w-80 bg-neutral shadow-xl text-base-content rounded-lg">
       <p class="font-mono text-center font-bold">Arth Panel</p>
       <!-- Sidebar content here -->
-      <a class="divider link-hover" href="/docs">Quartz API Routes</a>
+      <p class="divider">Quartz API</p>
+      <li>
+        <a href="/docs/home" class="font-bold" on:click={load}
+          >Universal Header Parameters</a
+        >
+      </li>
       <li><a href="/docs/accounts" on:click={load}>Account</a></li>
       <li><a href="/docs/servers" on:click={load}>Servers</a></li>
       <li><a href="/docs/proxies" on:click={load}>Proxies</a></li>

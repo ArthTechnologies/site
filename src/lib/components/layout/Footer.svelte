@@ -18,7 +18,7 @@
     <a class="link link-hover" href="/blog" target="_blank"
       >{$t("footer.blog")}</a
     >
-    <a class="link link-hover" href="/docs" target="_blank"
+    <a class="link link-hover" href="/software" target="_blank"
       >{$t("footer.docs")}</a
     >
   </div>

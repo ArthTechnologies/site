@@ -90,7 +90,7 @@
       <div class="hidden sm:flex">
         <a href="/blog" class="rounded-lg btn btn-ghost">Blog</a>
 
-        <a href="/docs" class="rounded-lg btn btn-ghost">Docs</a>
+        <a href="/software" class="rounded-lg btn btn-ghost">Software</a>
       </div>
       <LanguageSwitcher />
 
@@ -135,7 +135,7 @@
               <a href="/blog" class="rounded-lg">Blog</a>
             </li>
             <li>
-              <a href="/docs" class="rounded-lg">Docs</a>
+              <a href="/software" class="rounded-lg">Docs</a>
             </li>
           </div>
           <li>
