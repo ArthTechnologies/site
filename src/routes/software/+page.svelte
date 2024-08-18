@@ -7,13 +7,6 @@
   import { onMount } from "svelte";
 
   load("home");
-
-  if (browser) {
-    // Trigger the animation when the component is mounted
-    onMount(() => {
-      showElement();
-    });
-  }
 </script>
 
 <div
