@@ -24,12 +24,12 @@
   };
 </script>
 
-<a href="#rss" class="btn btn-outline">
+<a href="#rss" class="btn btn-outline btn-sm ml-5">
   {$t("blog.button.RSS")}
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
+    width="20"
+    height="20"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
@@ -67,4 +67,4 @@
   </div>
 </div>
 
-<div id="clipboard" />
+<div id="clipboard" class="hidden" />

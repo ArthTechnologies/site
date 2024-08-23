@@ -3,9 +3,12 @@
   import Email from "$lib/components/ui/Email.svelte";
   import { browser } from "$app/environment";
   import { onMount } from "svelte";
+  import { t } from "$lib/scripts/i18n";
+  import { ExternalLink, Star, StarIcon } from "lucide-svelte";
   let lang = "en-US";
   let posts = [];
   let promise;
+  let featuredpost = {};
   if (browser) {
     lang = navigator.language;
     if (localStorage.getItem("lang") != null) {
@@ -38,6 +41,17 @@
               imageurl: item.imageurl,
               author: item.author,
             });
+            if (item.title.includes("Privacy")) {
+              featuredpost = {
+                title: item.title,
+                desc: item.desc,
+                slug: lang + "*" + item.slug,
+                image: item.image,
+                date: item.date,
+                imageurl: item.imageurl,
+                author: item.author,
+              };
+            }
           });
         });
     }
@@ -66,15 +80,77 @@
   }*/
 </script>
 
-<p class="text-center text-5xl font-bold mt-10 mb-5">Blog</p>
-<div class="flex place-content-center gap-1.5">
+<p class="text-center text-5xl font-bold my-10">
+  {$t("footer.blog")}
+</p>
+<div class="flex w-full gap-16">
+  <div
+    class="items-center flex gap-5 shadow bg-base-300 bg-opacity-90 rounded-xl p-6 w-1/2 ml-5"
+  >
+    <div class="flex flex-col gap-2 w-96">
+      <div class="h-64 overflow-hidden">
+        <img
+          src={featuredpost.image}
+          class="h-full w-full object-cover object-top rounded-xl w-60 shadow-xl"
+        />
+      </div>
+
+      <div class="flex space-x-2">
+        <img
+          alt="{featuredpost.author}'s Icon"
+          class="bg-slate-400 mask mask-squircle"
+          width="35"
+          src="https://cdn.masto.host/floss/accounts/avatars/109/207/881/612/624/574/original/6516bdc6b0ff0203.jpeg"
+        />
+        <div class="flex flex-col">
+          <a
+            class=" hover:link text-sm font-bold"
+            href={featuredpost.imageauthor}
+            >{featuredpost.author}
+          </a>
+          <p class="text-xs">{featuredpost.date}</p>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col gap-2 w-[18rem] justify-start h-[16rem]">
+      <span class="flex gap-1 items-center font-bold mb-1"
+        ><Star size="18" />Featured Blog Post</span
+      >
+      <p class="text-4xl font-bold">{featuredpost.title}</p>
+      <p>{featuredpost.desc}</p>
+      <a
+        href="/blog/{featuredpost.slug}"
+        rel="noopener noreferrer"
+        target="_blank"
+        class="w-fit"
+        ><button class="btn btn-neutral mt-2 btn-sm flex"
+          ><ExternalLink size="18" class="mr-1.5" />Read Article</button
+        ></a
+      >
+    </div>
+  </div>
+  <div class="grid grid-cols-2">
+    <ul class="list-disc">
+      <li>rfr</li>
+      <li>hi</li>
+    </ul>
+  </div>
+</div>
+
+<div class="ml-8 flex gap-3 items-center -mb-1 mt-16">
+  <p class="text-2xl font-bold">All Posts</p>
+
   <RSS />
-  <select class="select select-bordered" id="lang" on:change={toggleLang}>
+  <select
+    class="select select-bordered select-sm"
+    id="lang"
+    on:change={toggleLang}
+  >
     <option>English</option>
     <option>Español</option>
   </select>
 </div>
-<div id="posts" class="grid grid-cols-1 gap-6 md:grid-cols-2 p-5 mb-32 mt-4">
+<div id="posts" class="grid grid-cols-1 gap-6 md:grid-cols-2 p-5 mb-32">
   {#await promise}
     {#each Array(8) as _}
       <div class="flex gap-5 shadow bg-base-200 rounded-xl p-6 h-[15rem]">

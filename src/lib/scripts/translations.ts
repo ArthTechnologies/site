@@ -79,7 +79,7 @@ export default {
     "main.footnote1": "Each server is allotted one core, and doesn't have access to all eight cores of the processor, because Minecraft can only utilize one core.",
     "footer.resources": "Resources",
     "footer.codeberg": "Codeberg",
-    "footer.blog": "Blog",
+    "footer.blog": "Articles",
     "footer.docs": "Software",
     "footer.about": "About",
     "footer.hosting": "Hosting",
@@ -104,7 +104,8 @@ export default {
     signup: "Get Started",
     basic: "Basic",
     modded: "Modded",
-    "main.regionsFootnote": "Arth Hosting is only intended for use in the United States and Mexico."
+    "main.regionsFootnote": "Arth Hosting is only intended for use in the United States and Mexico.",
+    "tutorials": "Tutorials",
 
 
   },
@@ -188,7 +189,7 @@ export default {
     "main.footnote1": "A cada servidor se le asigna un núcleo. No se tiene acceso a los ocho núcleos del procesador porque Minecraft solo puede usar un núcleo.",
     "footer.resources": "Recursos",
     "footer.codeberg": "Codeberg",
-    "footer.blog": "Blog",
+    "footer.blog": "Artículos",
     "footer.docs": "Software",
     "footer.about": "Sobre",
     "footer.hosting": "Hosting",
@@ -213,6 +214,7 @@ export default {
     signup: "Empezar",
     basic: "Básico",
     modded: "Modded",
-    "main.regionsFootnote": "Arth Hosting solo está destinado para uso en Estados Unidos y México."
+    "main.regionsFootnote": "Arth Hosting solo está destinado para uso en Estados Unidos y México.",
+    "tutorials": "Tutoriales",
   },
 };
