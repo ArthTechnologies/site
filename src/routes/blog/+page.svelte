@@ -11,6 +11,7 @@
     Star,
     StarIcon,
   } from "lucide-svelte";
+  import { load } from "$lib/scripts/docs";
   let lang = "en-US";
   let posts = [];
   let promise;
@@ -143,10 +144,13 @@
       <!-- Sidebar content here -->
 
       <li>
-        <a href="/software/how-to-join-servers">How to Join Minecraft Servers</a
+        <a on:click={load} href="/software/how-to-join-servers"
+          >How to Join Minecraft Servers</a
         >
-        <a href="/software/using-dynmap">Using Dynmap</a>
-        <a href="/software/using-simple-voice-chat">Using Simple Voice Chat</a>
+        <a on:click={load} href="/software/using-dynmap">Using Dynmap</a>
+        <a on:click={load} href="/software/using-simple-voice-chat"
+          >Using Simple Voice Chat</a
+        >
       </li>
     </ul>
   </div>
