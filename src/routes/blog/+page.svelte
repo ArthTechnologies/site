@@ -4,7 +4,13 @@
   import { browser } from "$app/environment";
   import { onMount } from "svelte";
   import { t } from "$lib/scripts/i18n";
-  import { ExternalLink, Star, StarIcon } from "lucide-svelte";
+  import {
+    BrainCircuit,
+    ExternalLink,
+    Puzzle,
+    Star,
+    StarIcon,
+  } from "lucide-svelte";
   let lang = "en-US";
   let posts = [];
   let promise;
@@ -83,7 +89,7 @@
 <p class="text-center text-5xl font-bold my-10">
   {$t("footer.blog")}
 </p>
-<div class="flex w-full gap-16">
+<div class="flex w-full gap-8">
   <div
     class="items-center flex gap-5 shadow bg-base-300 bg-opacity-90 rounded-xl p-6 w-1/2 ml-5"
   >
@@ -129,10 +135,19 @@
       >
     </div>
   </div>
-  <div class="grid grid-cols-2">
-    <ul class="list-disc">
-      <li>rfr</li>
-      <li>hi</li>
+  <div class="w-1/2">
+    <p class="font-bold text-2xl mb-1 ml-3 font-mono flex gap-1.5">
+      <BrainCircuit class="mt-0.5" />Knowledge Base
+    </p>
+    <ul class="menu p-0 w-80 text-base-content rounded-lg">
+      <!-- Sidebar content here -->
+
+      <li>
+        <a href="/software/how-to-join-servers">How to Join Minecraft Servers</a
+        >
+        <a href="/software/using-dynmap">Using Dynmap</a>
+        <a href="/software/using-simple-voice-chat">Using Simple Voice Chat</a>
+      </li>
     </ul>
   </div>
 </div>
