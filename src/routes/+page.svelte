@@ -146,6 +146,12 @@
   }
 </script>
 
+<head>
+  <meta
+    name="description"
+    content="Rethinking Minecraft Servers. Arth Hosting was built from the ground up to have the best price, features, and convenience in the market. Basic plan available for only $3.49"
+  />
+</head>
 <!-- background for the navbar-->
 <div
   class="absolute z-[-1] top-0 w-full h-16 bg-gradient bg-gradient-to-r from-[#171212] to-[#0c0400]"
