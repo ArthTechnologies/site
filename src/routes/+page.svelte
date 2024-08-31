@@ -154,11 +154,15 @@
 </head>
 <!-- background for the navbar-->
 <div
-  class="absolute z-[-1] top-0 w-full h-16 bg-gradient bg-gradient-to-r from-[#171212] to-[#0c0400]"
+  class="absolute z-[-1] top-0 w-full h-16 bg-gradient bg-gradient-to-r from-[#331200] to-[#0c0400]"
 ></div>
 <div
-  class="bg-gradient-to-tr from-[#170800] to-black flex flex-col items-center min-h-screen text-[#efefef] pb-40 px-5 mainArea"
+  style="background-size: cover;"
+  class="relative bg-[url('images/Vector.svg')] object-fit flex flex-col items-center min-h-screen text-[#efefef] pb-40 px-5 mainArea relative"
 >
+  <div
+    class="absolute h-[60rem] w-full bg-gradient bg-gradient-to-tr from-[#280E00] to-[#000000] z-[-1]"
+  ></div>
   <div class="text-5xl font-bold mt-16 text-center space-y-5">
     <span
       class=" text-5xl md:text-7xl h-20 text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-pink-600"
@@ -189,7 +193,7 @@
       <img
         src="/images/PhoneMinecraft.webp"
         alt="Minecraft on a phone, looking at a java edition player."
-        class="w-[10rem] md:w-[30rem] -mb-8 z-20"
+        class="w-[10rem] md:w-[30rem] -mb-8 z-20 mt-12 m"
       />
       <div class="w-64">
         <p class="text-xl font-bold">
@@ -214,10 +218,16 @@
       <img
         src="/images/ServerCard.webp"
         alt="Server Card from our Interface"
-        class="z-20 w-[19rem] md:w-[28rem] brightness-[.55]"
+        class="z-20 w-[19rem] md:w-[28rem] brightness-[.70]"
       />
     </div>
-
+    <div
+      class="relative h-4 rotate-[5deg] mt-24 w-[120%] bg-gradient bg-gradient-to-r from-orange-500 to-pink-600"
+    >
+      <div
+        class="absolute blur-lg h-4 w-full bg-gradient bg-gradient-to-r from-orange-500 to-pink-600"
+      ></div>
+    </div>
     <div class="md:flex items-center mt-28 space-y-2 md:space-x-8">
       <div class="flex flex-col items-center">
         <div class="flex space-x-1 justify-start w-full">
@@ -260,49 +270,45 @@
             }}>MX$</button
           >
         </div>
+        <p class="text-2xl -mt-4 md:-mt-8 font-bold">Plans</p>
         <div class="flex space-x-4 items-center max-md:mb-4 mt-12">
-          <div>
-            <p class="text-2xl -mt-4 md:-mt-8 font-bold">{$t("basic")}</p>
-            <span class="text-5xl md:text-[4rem] md:text-[5.5rem] font-bold"
-              ><span class=" h-20 opacity-90">{basicPrice}</span><span
-                class="text-[1rem]">{$t("mo")}</span
-              >
-            </span>
+          <div class="card bg-base-100 w-96 shadow-xl">
+            <div class="card-body">
+              <h2 class="card-title">Shoes!</h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+            </div>
+            <figure>
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Shoes"
+              />
+            </figure>
           </div>
-          <div class="max-md:hidden divider divider-horizontal h-20 mt-3"></div>
-          <div>
-            <p class="text-2xl -mt-4 md:-mt-8 font-bold">{$t("modded")}</p>
-            <span class="text-5xl md:text-[4rem] md:text-[5.5rem] font-bold"
-              ><span class=" h-20 opacity-90">{moddedPrice}</span><span
-                class="text-[1rem]">{$t("mo")}</span
-              >
-            </span>
+          <div class="card bg-base-100 w-96 shadow-xl">
+            <div class="card-body">
+              <h2 class="card-title">Shoes!</h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+            </div>
+            <figure>
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Shoes"
+              />
+            </figure>
+          </div>
+          <div class="card bg-base-100 w-96 shadow-xl">
+            <div class="card-body">
+              <h2 class="card-title">Shoes!</h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+            </div>
+            <figure>
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Shoes"
+              />
+            </figure>
           </div>
         </div>
-
-        <a
-          href="https://servers.arthmc.xyz/signin"
-          class="mt-4 -mb-1 flex rounded-lg btn btn-outline bg-gradient-to-tr from-orange-500 to-pink-600 text-black pr-3 pl-4 md:btn-lg border-2 border-gray-500 space-x-1 w-3/5 hover:opacity-90"
-          target="_blank"
-          rel="noreferrer"
-          on:click={getStartedClicked}
-          ><p>{$t("signup")}</p>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="feather feather-arrow-up-right"
-            ><line x1="7" y1="17" x2="17" y2="7" /><polyline
-              points="7 7 17 7 17 17"
-            /></svg
-          ></a
-        >
       </div>
     </div>
   {/if}
@@ -380,5 +386,10 @@
       transform: translateY(100vh) rotate(720deg);
       opacity: 0;
     }
+  }
+  .mask1 {
+    -webkit-mask-image: url("Vector.svg");
+    mask-image: url("Vector.svg");
+    mask-repeat: no-repeat;
   }
 </style>

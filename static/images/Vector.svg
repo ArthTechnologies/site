@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="1047" height="1480" viewBox="0 0 1047 1480" fill="none" stroke="none" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path id="path_1" d="M1047 0L1047 0L1047 1480L0 1480L0 0L1047 0Z" />
+    <rect id="rect_2" x="0" y="0" width="1047" height="1480" />
+    <clipPath id="clip_path_3">
+      <use xlink:href="#rect_2" />
+    </clipPath>
+    <linearGradient id="gradient_4" gradientUnits="userSpaceOnUse" x1="574" y1="115.66" x2="432" y2="907.191">
+      <stop offset="0" stop-color="#0C0C0C" />
+      <stop offset="1" stop-color="#100400" />
+    </linearGradient>
+  </defs>
+  <g id="Frame" opacity="1" clip-path="url(#clip_path_3)">
+    <g>
+      <use xlink:href="#path_1" style="mix-blend-mode:normal;" />
+      <g>
+        <path id="Vector" d="M0.500001 2.64948C0.500001 2.64948 40.9126 -8.49629 128.5 14.9331C216.087 38.3625 239 93.4346 239 93.4346C239 93.4346 274.126 163.571 340.501 186.822C406.877 210.072 523.002 165.321 523.002 165.321C523.002 165.321 585.356 136.446 649.981 141.821C714.606 147.196 781.503 186.822 781.503 186.822C781.503 186.822 812.24 204.887 836.503 237.322C860.765 269.756 936.504 245.822 936.504 245.822C936.504 245.822 984.748 222.186 1017 245.822C1049.26 269.459 1047 319.822 1047 319.822L1047 351.821L0 351.821L0.500001 2.64948Z" style="fill:#0C0C0C;fill-rule:evenodd;mix-blend-mode:normal;" transform="translate(0 222)" />
+        <rect id="Rectangle" width="1047" height="906" style="fill:url(#gradient_4);fill-rule:evenodd;mix-blend-mode:normal;" transform="translate(0 574)" />
+      </g>
+    </g>
+  </g>
+</svg>
