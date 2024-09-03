@@ -163,7 +163,7 @@
 ></div>
 <div
   style="background-size: cover;"
-  class="relative bg-[url('images/Vector.svg')] object-fit flex flex-col items-center min-h-screen text-[#efefef] pb-40 px-5 mainArea relative"
+  class="relative bg-[url('/images/landingbg.svg')] object-fit flex flex-col items-center min-h-screen text-[#efefef] pb-40 px-5 mainArea relative"
 >
   <div
     class="absolute h-[60rem] w-full bg-gradient bg-gradient-to-tr from-[#280E00] to-[#000000] z-[-1]"
