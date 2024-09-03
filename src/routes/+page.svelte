@@ -81,7 +81,7 @@
             duration: 4500,
             easing: "ease",
             fill: "forwards",
-          }
+          },
         );
 
         setTimeout(() => {
@@ -166,7 +166,7 @@
   class="relative bg-[url('/images/landingbg.svg')] object-fit flex flex-col items-center min-h-screen text-[#efefef] pb-40 px-5 mainArea relative"
 >
   <div
-    class="absolute h-[60rem] w-full bg-gradient bg-gradient-to-tr from-[#280E00] to-[#000000] z-[-1]"
+    class="absolute h-[60rem] w-full bg-gradient bg-gradient-to-tr from-[#2f0c00] to-[#000000] z-[-1]"
   ></div>
   <div class="text-5xl font-bold mt-16 text-center space-y-5">
     <span
@@ -191,248 +191,246 @@
         class="w-[30.5rem] z-20 max-sm:mt-32 max-md:mt-4"
       />
     </div>
+  {/if}
 
-    <div
-      class="flex items-center mt-14 space-x-3 md:ml-48 element-container brightness-95"
-    >
-      <img
-        src="/images/PhoneMinecraft.webp"
-        alt="Minecraft on a phone, looking at a java edition player."
-        class="w-[10rem] md:w-[30rem] -mb-8 z-20 mt-12 m"
-      />
-      <div class="w-64">
-        <p class="text-xl font-bold">
-          {$t("main.crossplay.title")}<sup
-            ><a href="#footnotes" class="hover:link">2</a></sup
-          >
-        </p>
-        <p>
-          {@html $t("main.crossplay.desc")}
-        </p>
-      </div>
+  <div class="flex items-center mt-14 space-x-3 md:ml-48 brightness-95">
+    <img
+      src="/images/PhoneMinecraft.webp"
+      alt="Minecraft on a phone, looking at a java edition player."
+      class="w-[10rem] md:w-[30rem] -mb-8 z-20 mt-12 m"
+    />
+    <div class="w-64">
+      <p class="text-xl font-bold">
+        {$t("main.crossplay.title")}<sup
+          ><a href="#footnotes" class="hover:link">2</a></sup
+        >
+      </p>
+      <p>
+        {@html $t("main.crossplay.desc")}
+      </p>
     </div>
-    <div
-      class="md:flex items-center mt-16 space-x-8 space-y-5 element-container md:ml-36"
-    >
-      <div class="w-64">
-        <p class="text-xl font-bold">{$t("main.interface.title")}</p>
-        <p>
-          {@html $t("main.interface.desc")}
-        </p>
-      </div>
-      <img
-        src="/images/ServerCard.webp"
-        alt="Server Card from our Interface"
-        class="z-20 w-[19rem] md:w-[28rem] brightness-[.70]"
-      />
+  </div>
+  <div class="md:flex items-center mt-16 space-x-8 space-y-5 md:ml-36">
+    <div class="w-64">
+      <p class="text-xl font-bold">{$t("main.interface.title")}</p>
+      <p>
+        {@html $t("main.interface.desc")}
+      </p>
     </div>
-    <div class="w-screen overflow-x-hidden overflow-y-visible h-64">
+    <img
+      src="/images/ServerCard.webp"
+      alt="Server Card from our Interface"
+      class="z-20 w-[19rem] md:w-[28rem] brightness-[.70]"
+    />
+  </div>
+
+  <div
+    class="relative h-4 rotate-[5deg] mt-24 w-[120%] bg-gradient bg-gradient-to-r from-orange-500 to-pink-600"
+  >
+    <div
+      class="absolute blur-lg h-4 w-full bg-gradient bg-gradient-to-r from-orange-500 to-pink-600"
+    ></div>
+  </div>
+
+  <div class="md:flex items-center mt-28 space-y-2 md:space-x-8">
+    <div class="flex flex-col items-center">
+      <div class="flex space-x-1 justify-start w-full">
+        <button
+          id="usd"
+          class="btn btn-sm pointer-events-none"
+          on:click={() => {
+            if (browser) {
+              const usd = document.getElementById("usd");
+              const mxn = document.getElementById("mxn");
+              usd?.classList.remove("btn-neutral");
+              usd?.classList.remove("hover:bg-base-100");
+              usd?.classList.add("pointer-events-none");
+              mxn?.classList.add("btn-neutral");
+              mxn?.classList.add("hover:bg-base-100");
+              mxn?.classList.remove("pointer-events-none");
+
+              basicPrice = "$3.49";
+              moddedPrice = "$4.99";
+            }
+          }}>$</button
+        >
+        <button
+          id="mxn"
+          class="btn btn-neutral btn-sm hover:bg-base-100"
+          on:click={() => {
+            if (browser) {
+              const usd = document.getElementById("usd");
+              const mxn = document.getElementById("mxn");
+              usd?.classList.add("btn-neutral");
+              usd?.classList.add("hover:bg-base-100");
+              usd?.classList.remove("pointer-events-none");
+              mxn?.classList.remove("btn-neutral");
+              mxn?.classList.remove("hover:bg-base-100");
+              mxn?.classList.add("pointer-events-none");
+
+              basicPrice = "$60";
+              moddedPrice = "$80";
+            }
+          }}>MX$</button
+        >
+      </div>
+      <p class="text-2xl -mt-4 md:-mt-8 font-bold">Plans</p>
       <div
-        class="relative h-4 rotate-[5deg] mt-24 w-[120%] bg-gradient bg-gradient-to-r from-orange-500 to-pink-600"
+        class=" max-lg:scale-95 flex max-md:flex-col gap-4 items-center max-md:mb-4 mt-12"
       >
         <div
-          class="absolute blur-lg h-4 w-full bg-gradient bg-gradient-to-r from-orange-500 to-pink-600"
-        ></div>
-      </div>
-    </div>
-    <div class="md:flex items-center mt-28 space-y-2 md:space-x-8">
-      <div class="flex flex-col items-center">
-        <div class="flex space-x-1 justify-start w-full">
-          <button
-            id="usd"
-            class="btn btn-sm pointer-events-none"
-            on:click={() => {
-              if (browser) {
-                const usd = document.getElementById("usd");
-                const mxn = document.getElementById("mxn");
-                usd?.classList.remove("btn-neutral");
-                usd?.classList.remove("hover:bg-base-100");
-                usd?.classList.add("pointer-events-none");
-                mxn?.classList.add("btn-neutral");
-                mxn?.classList.add("hover:bg-base-100");
-                mxn?.classList.remove("pointer-events-none");
+          class="rounded-xl bg-base-200 w-96 shadow-2xl shadow-orange-500/20 p-6"
+        >
+          <div class="flex gap-5 items-center">
+            <img
+              src="/images/basicPlan.webp"
+              class="rounded-xl h-[5.75rem] w-[9.5rem]"
+            />
+            <div>
+              <h2 class=" mb-1">
+                <span>Basic</span>
+                <span class="text-gray-500 ml-[0.1rem]">• 3GB Ram</span>
+              </h2>
+              <div class="flex gap-2">
+                <p class="text-accent-content text-4xl font-bold">$3.49</p>
 
-                basicPrice = "$3.49";
-                moddedPrice = "$4.99";
-              }
-            }}>$</button
-          >
-          <button
-            id="mxn"
-            class="btn btn-neutral btn-sm hover:bg-base-100"
-            on:click={() => {
-              if (browser) {
-                const usd = document.getElementById("usd");
-                const mxn = document.getElementById("mxn");
-                usd?.classList.add("btn-neutral");
-                usd?.classList.add("hover:bg-base-100");
-                usd?.classList.remove("pointer-events-none");
-                mxn?.classList.remove("btn-neutral");
-                mxn?.classList.remove("hover:bg-base-100");
-                mxn?.classList.add("pointer-events-none");
-
-                basicPrice = "$60";
-                moddedPrice = "$80";
-              }
-            }}>MX$</button
-          >
+                <p class="w-5 text-sm text-gray-400">per month</p>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 justify-between text-gray-300 mt-0.5">
+            <p
+              class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[9.5rem]"
+            >
+              <Check size="16" class="shrink-0" />
+              Geyser Built-In
+            </p>
+            <p
+              class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[9.5rem]"
+            >
+              <Check size="16" class="shrink-0" />
+              One-Click Worldgen Mods
+            </p>
+            <p
+              class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[9.5rem]"
+            >
+              <Check size="16" class="shrink-0" />
+              Modrinth Plugins
+            </p>
+          </div>
         </div>
-        <p class="text-2xl -mt-4 md:-mt-8 font-bold">Plans</p>
+
         <div
-          class=" max-lg:scale-95 flex max-md:flex-col gap-4 items-center max-md:mb-4 mt-12"
+          class="rounded-xl bg-base-200 w-96 shadow-2xl shadow-rose-400/30 p-6"
         >
-          <div
-            class="rounded-xl bg-base-200 w-96 shadow-2xl shadow-orange-500/20 p-6"
-          >
-            <div class="flex gap-5 items-center">
-              <img
-                src="/images/basicPlan.webp"
-                class="rounded-xl h-[5.75rem] w-[9.5rem]"
-              />
-              <div>
-                <h2 class=" mb-1">
-                  <span>Basic</span>
-                  <span class="text-gray-500 ml-[0.1rem]">• 3GB Ram</span>
-                </h2>
-                <div class="flex gap-2">
-                  <p class="text-accent-content text-4xl font-bold">$3.49</p>
+          <div class="flex gap-5 items-center">
+            <img
+              src="/images/moddedPlan.webp"
+              class="rounded-xl h-[5.75rem] w-[9.5rem]"
+            />
+            <div>
+              <h2 class=" mb-1">
+                <span>Modded</span>
+                <span class="text-gray-500 ml-[0.1rem]">• 4GB Ram</span>
+              </h2>
+              <div class="flex gap-2">
+                <p class="text-accent-content text-4xl font-bold">$4.99</p>
 
-                  <p class="w-5 text-sm text-gray-400">per month</p>
-                </div>
+                <p class="w-5 text-sm text-gray-400">per month</p>
               </div>
             </div>
-            <div class="grid grid-cols-2 justify-between text-gray-300 mt-0.5">
-              <p
-                class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[9.5rem]"
-              >
-                <Check size="16" class="shrink-0" />
-                Geyser Built-In
-              </p>
-              <p
-                class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[9.5rem]"
-              >
-                <Check size="16" class="shrink-0" />
-                One-Click Worldgen Mods
-              </p>
-              <p
-                class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[9.5rem]"
-              >
-                <Check size="16" class="shrink-0" />
-                Modrinth Plugins
+          </div>
+          <div class="grid grid-cols-2 justify-between text-gray-300 mt-0.5">
+            <p
+              class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[9.5rem]"
+            >
+              <Check size="16" class="shrink-0" />
+              10,000+ Mods
+            </p>
+            <p
+              class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[9.5rem]"
+            >
+              <Check size="16" class="shrink-0" />
+              Forge, Fabric & Quilt Support
+            </p>
+            <p
+              class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[11rem]"
+            >
+              <Check size="16" class="shrink-0" />
+              CF & Modrinth
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="sm:flex items-center gap-3 mt-16 lg:px-48 xl:px-64 justify-center"
+  >
+    <div class="sm:w-[80%] mb-7">
+      <p class="ml-1 font-bold mb-1">Add-Ons</p>
+      <div class="flex gap-2">
+        <div
+          class="rounded-xl bg-gradient-to-tr from-[#050505] to-orange-950 p-2 px-3 shadow-2xl h-fit"
+        >
+          <div class="flex justify-between">
+            <div>
+              <div class="flex gap-2 font-bold max-md:text-sm">
+                <MemoryStick size="24" class="shrink-0" />
+                RAM Boost
+              </div>
+              <p class="text-[.93rem] 2xl:w-52">
+                8GB of RAM for only $7.99/month.
               </p>
             </div>
           </div>
-
-          <div
-            class="rounded-xl bg-base-200 w-96 shadow-2xl shadow-pink-400/30 p-6"
-          >
-            <div class="flex gap-5 items-center">
-              <img
-                src="/images/moddedPlan.webp"
-                class="rounded-xl h-[5.75rem] w-[9.5rem]"
-              />
-              <div>
-                <h2 class=" mb-1">
-                  <span>Modded</span>
-                  <span class="text-gray-500 ml-[0.1rem]">• 4GB Ram</span>
-                </h2>
-                <div class="flex gap-2">
-                  <p class="text-accent-content text-4xl font-bold">$4.99</p>
-
-                  <p class="w-5 text-sm text-gray-400">per month</p>
-                </div>
+        </div>
+        <div
+          class="rounded-xl bg-gradient-to-tr from-[#010101] to-[#001606] p-2 px-3 shadow-2xl h-fit"
+        >
+          <div class="flex justify-between">
+            <div>
+              <div class="flex gap-2 font-bold max-md:text-sm">
+                <BadgeDollarSign size="24" class="shrink-0" />
+                Bill Quarterly
               </div>
-            </div>
-            <div class="grid grid-cols-2 justify-between text-gray-300 mt-0.5">
-              <p
-                class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[9.5rem]"
-              >
-                <Check size="16" class="shrink-0" />
-                10,000+ Mods
-              </p>
-              <p
-                class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[9.5rem]"
-              >
-                <Check size="16" class="shrink-0" />
-                Forge, Fabric & Quilt Support
-              </p>
-              <p
-                class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[11rem]"
-              >
-                <Check size="16" class="shrink-0" />
-                CF & Modrinth
+              <p class="text-[.93rem] 2xl:w-48 mt-0.5">
+                Pay every 3 months instead of 1 and save.
               </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="sm:flex items-center gap-3 mt-16 lg:px-64 justify-center">
-      <div class="sm:w-[80%] mb-7">
-        <p class="ml-1 font-bold mb-1">Add-Ons</p>
-        <div class="flex gap-2">
-          <div
-            class="rounded-xl bg-gradient-to-tr from-[#050505] to-orange-950 p-2 px-3 shadow-2xl h-fit"
-          >
-            <div class="flex justify-between">
-              <div>
-                <div class="flex gap-2 font-bold max-md:text-sm">
-                  <MemoryStick size="24" class="shrink-0" />
-                  RAM Boost
-                </div>
-                <p class="text-[.93rem] 2xl:w-52">
-                  8GB of RAM for only $7.99/month.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            class="rounded-xl bg-gradient-to-tr from-[#010101] to-[#001606] p-2 px-3 shadow-2xl h-fit"
-          >
-            <div class="flex justify-between">
-              <div>
-                <div class="flex gap-2 font-bold max-md:text-sm">
-                  <BadgeDollarSign size="24" class="shrink-0" />
-                  Bill Quarterly
-                </div>
-                <p class="text-[.93rem] 2xl:w-48 mt-0.5">
-                  Pay every 3 months instead of 1 and save.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="w-0.5 h-16 bg-gray-500 opacity-10 mx-1.5 md:mx-3 max-sm:hidden"
-      ></div>
-      <div class="max-sm:w-full flex max-sm:justify-center">
-        <a
-          href="https://servers.arthmc.xyz/signin"
-          class=" max-sm:w-1/2 rounded-lg btn btn-outline flex bg-gradient-to-tr from-orange-500 to-pink-600 text-black -space-x-2 pr-1.5 pl-2.5 md:pr-3 md:pl-4 hover:opacity-90"
-          target="_blank"
-          rel="noreferrer"
-          on:click={getStartedClicked}
-          ><p class="mr-3">{$t("signup")}</p>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="feather feather-arrow-up-right"
-            ><line x1="7" y1="17" x2="17" y2="7" /><polyline
-              points="7 7 17 7 17 17"
-            /></svg
-          ></a
-        >
-      </div>
+    <div
+      class="w-0.5 h-16 bg-gray-500 opacity-10 mx-1.5 md:mx-3 max-sm:hidden"
+    ></div>
+    <div class="max-sm:w-full flex max-sm:justify-center">
+      <a
+        href="https://servers.arthmc.xyz/signin"
+        class=" max-sm:w-1/2 rounded-lg btn btn-outline flex bg-gradient-to-tr from-orange-500 to-pink-600 text-black -space-x-2 pr-1.5 pl-2.5 md:pr-3 md:pl-4 hover:opacity-90"
+        target="_blank"
+        rel="noreferrer"
+        on:click={getStartedClicked}
+        ><p class="mr-3">{$t("signup")}</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather feather-arrow-up-right"
+          ><line x1="7" y1="17" x2="17" y2="7" /><polyline
+            points="7 7 17 7 17 17"
+          /></svg
+        ></a
+      >
     </div>
-  {/if}
+  </div>
 
   <ul class="mt-48 w-[20rem] md:w-[50rem]" id="footnotes">
     <li class="mb-1.5">
@@ -458,15 +456,6 @@
   class="absolute bottom-0 w-full h-[40rem] md:h-48 bg-gradient bg-gradient-to-r from-[#171212] to-[#0c0400]"
 ></div>
 
-<!--<button
-  class="absolute -bottom-[11.7rem] right-2 text-base-100 hover:link text-sm"
-  on:click={() => {
-    enableShootingStars = !enableShootingStars;
-  }}
->
-  Easter Egg
-</button>-->
-
 <style>
   .element-container {
     position: relative;
@@ -483,34 +472,5 @@
       opacity: 1;
       transform: translateY(0);
     }
-  }
-
-  .shooting-stars-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 10; /* Adjust the z-index as needed */
-  }
-
-  @keyframes shootingStarAnimation {
-    0% {
-      transform: translateY(0) rotate(0deg);
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(100vh) rotate(720deg);
-      opacity: 0;
-    }
-  }
-  .mask1 {
-    -webkit-mask-image: url("Vector.svg");
-    mask-image: url("Vector.svg");
-    mask-repeat: no-repeat;
   }
 </style>
