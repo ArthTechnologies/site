@@ -226,12 +226,14 @@
         class="z-20 w-[19rem] md:w-[28rem] brightness-[.70]"
       />
     </div>
-    <div
-      class="relative h-4 rotate-[5deg] mt-24 w-[120%] bg-gradient bg-gradient-to-r from-orange-500 to-pink-600"
-    >
+    <div class="w-screen overflow-x-hidden overflow-y-visible h-64">
       <div
-        class="absolute blur-lg h-4 w-full bg-gradient bg-gradient-to-r from-orange-500 to-pink-600"
-      ></div>
+        class="relative h-4 rotate-[5deg] mt-24 w-[120%] bg-gradient bg-gradient-to-r from-orange-500 to-pink-600"
+      >
+        <div
+          class="absolute blur-lg h-4 w-full bg-gradient bg-gradient-to-r from-orange-500 to-pink-600"
+        ></div>
+      </div>
     </div>
     <div class="md:flex items-center mt-28 space-y-2 md:space-x-8">
       <div class="flex flex-col items-center">
@@ -322,7 +324,7 @@
           </div>
 
           <div
-            class="rounded-xl bg-base-200 w-96 shadow-2xl shadow-blue-500/30 p-6"
+            class="rounded-xl bg-base-200 w-96 shadow-2xl shadow-pink-400/30 p-6"
           >
             <div class="flex gap-5 items-center">
               <img
