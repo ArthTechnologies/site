@@ -188,12 +188,14 @@
       <img
         src="/images/PricePerRAM_{locale}.webp"
         alt="AMD Ryzen CPU"
-        class="w-[30.5rem] z-20 max-sm:mt-32 max-md:mt-4"
+        class="w-[30.5rem] z-20 max-sm:mt-48 max-md:mt-4"
       />
     </div>
   {/if}
 
-  <div class="flex items-center mt-14 space-x-3 md:ml-48 brightness-95">
+  <div
+    class="flex items-center max-sm:mt-24 max-sm: mb-14 mt-14 space-x-3 min-[768px]:max-[846px]:ml-20 md:ml-48 brightness-95"
+  >
     <img
       src="/images/PhoneMinecraft.webp"
       alt="Minecraft on a phone, looking at a java edition player."
@@ -210,7 +212,9 @@
       </p>
     </div>
   </div>
-  <div class="md:flex items-center mt-16 space-x-8 space-y-5 md:ml-36">
+  <div
+    class="md:flex items-center mt-16 md:-mt-24 min-[827px]:-mt-0 space-x-8 space-y-5 ml-36 min-[768px]:max-[846px]:ml-20"
+  >
     <div class="w-64">
       <p class="text-xl font-bold">{$t("main.interface.title")}</p>
       <p>
@@ -224,7 +228,9 @@
     />
   </div>
 
-  <div class="md:flex items-center mt-56 space-y-2 md:space-x-8">
+  <div
+    class="md:flex items-center mt-96 md:mt-56 2xl:mt-[20rem] space-y-2 md:space-x-8"
+  >
     <div class="flex flex-col items-center">
       <div class="flex space-x-1 justify-start w-full">
         <button
