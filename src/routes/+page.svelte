@@ -81,7 +81,7 @@
             duration: 4500,
             easing: "ease",
             fill: "forwards",
-          }
+          },
         );
 
         setTimeout(() => {
@@ -272,7 +272,7 @@
           }}>MX$</button
         >
       </div>
-      <p class="text-2xl -mt-4 md:-mt-8 font-bold">Plans</p>
+      <p class="text-2xl -mt-4 md:-mt-8 font-bold">{$t("plans")}</p>
       <div
         class=" max-lg:scale-95 flex max-md:flex-col gap-4 items-center max-md:mb-4 mt-12"
       >
@@ -286,13 +286,13 @@
             />
             <div>
               <h2 class=" mb-1">
-                <span>Basic</span>
+                <span>{$t("basic")}</span>
                 <span class="text-gray-500 ml-[0.1rem]">• 3GB Ram</span>
               </h2>
               <div class="flex gap-2">
                 <p class="text-accent-content text-4xl font-bold">$3.49</p>
 
-                <p class="w-5 text-sm text-gray-400">per month</p>
+                <p class="w-5 text-sm text-gray-400">{$t("perMonth")}</p>
               </div>
             </div>
           </div>
@@ -301,19 +301,19 @@
               class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[9.5rem]"
             >
               <Check size="16" class="shrink-0" />
-              Geyser Built-In
+              {$t("basic.1")}
             </p>
             <p
               class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[9.5rem]"
             >
               <Check size="16" class="shrink-0" />
-              One-Click Worldgen Mods
+              {$t("basic.2")}
             </p>
             <p
               class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[9.5rem]"
             >
               <Check size="16" class="shrink-0" />
-              Modrinth Plugins
+              {$t("basic.3")}
             </p>
           </div>
         </div>
@@ -328,13 +328,13 @@
             />
             <div>
               <h2 class=" mb-1">
-                <span>Modded</span>
+                <span>{$t("modded")}</span>
                 <span class="text-gray-500 ml-[0.1rem]">• 4GB Ram</span>
               </h2>
               <div class="flex gap-2">
                 <p class="text-accent-content text-4xl font-bold">$4.99</p>
 
-                <p class="w-5 text-sm text-gray-400">per month</p>
+                <p class="w-5 text-sm text-gray-400">{$t("perMonth")}</p>
               </div>
             </div>
           </div>
@@ -343,19 +343,19 @@
               class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[9.5rem]"
             >
               <Check size="16" class="shrink-0" />
-              10,000+ Mods
+              {$t("modded.1")}
             </p>
             <p
               class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[9.5rem]"
             >
               <Check size="16" class="shrink-0" />
-              Forge, Fabric & Quilt Support
+              {$t("modded.2")}
             </p>
             <p
               class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[11rem]"
             >
               <Check size="16" class="shrink-0" />
-              CF & Modrinth
+              {$t("modded.3")}
             </p>
           </div>
         </div>
@@ -366,7 +366,7 @@
     class="sm:flex items-center gap-3 mt-16 lg:px-48 xl:px-64 justify-center"
   >
     <div class="sm:w-[80%] mb-7">
-      <p class="ml-1 font-bold mb-1">Add-Ons</p>
+      <p class="ml-1 font-bold mb-1">{$t("addons")}</p>
       <div class="flex gap-2">
         <div
           class="rounded-xl bg-gradient-to-tr from-[#050505] to-orange-950 p-2 px-3 shadow-2xl h-fit"
@@ -375,10 +375,10 @@
             <div>
               <div class="flex gap-2 font-bold max-md:text-sm">
                 <MemoryStick size="24" class="shrink-0" />
-                RAM Boost
+                {$t("addons.ramboost")}
               </div>
               <p class="text-[.93rem] 2xl:w-52">
-                8GB of RAM for only $7.99/month.
+                {$t("addons.ramboost.desc")}
               </p>
             </div>
           </div>
@@ -390,10 +390,10 @@
             <div>
               <div class="flex gap-2 font-bold max-md:text-sm">
                 <BadgeDollarSign size="24" class="shrink-0" />
-                Bill Quarterly
+                {$t("addons.quarterly")}
               </div>
               <p class="text-[.93rem] 2xl:w-48 mt-0.5">
-                Pay every 3 months instead of 1 and save.
+                {$t("addons.quarterly.desc")}
               </p>
             </div>
           </div>
