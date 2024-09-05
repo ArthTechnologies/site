@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="523" height="1480" viewBox="0 0 523 1480" fill="none" stroke="none" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path id="path_1" d="M523 0L523 0L523 1480L0 1480L0 0L523 0Z" />
+    <rect id="rect_2" x="0" y="0" width="523" height="1480" />
+    <clipPath id="clip_path_3">
+      <use xlink:href="#rect_2" />
+    </clipPath>
+    <linearGradient id="gradient_4" gradientUnits="userSpaceOnUse" x1="3.892" y1="4.123" x2="520.825" y2="3.209">
+      <stop offset="0" stop-color="#F76E1E" />
+      <stop offset="1" stop-color="#DD2D6F" />
+    </linearGradient>
+    <filter color-interpolation-filters="sRGB" x="-527.299" y="-7.165" width="529.299" height="9.165" id="filter_5">
+      <feFlood flood-opacity="0" result="BackgroundImageFix_1" />
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix_1" result="Shape_2" />
+      <feGaussianBlur stdDeviation="30" />
+    </filter>
+    <linearGradient id="gradient_6" gradientUnits="userSpaceOnUse" x1="310.5" y1="0" x2="310.5" y2="783.5">
+      <stop offset="0" stop-color="#090605" />
+      <stop offset="1" stop-color="#160600" />
+    </linearGradient>
+  </defs>
+  <g id="Frame" opacity="1" clip-path="url(#clip_path_3)">
+    <g>
+      <use xlink:href="#path_1" style="mix-blend-mode:normal;" />
+      <g>
+        <path id="Path" d="M0.500001 2.64948C0.500001 2.64948 40.9126 -8.49629 128.5 14.9331C216.087 38.3625 239 93.4346 239 93.4346C239 93.4346 274.126 163.571 340.501 186.822C406.877 210.072 523.002 165.321 523.002 165.321L523 351.82L0 351.821L0.500001 2.64948Z" style="fill:#0E0E0E;fill-rule:evenodd;mix-blend-mode:normal;" transform="translate(0 222)" />
+        <rect id="Rectangle" width="523" height="907" style="fill:#0E0E0E;fill-rule:evenodd;mix-blend-mode:normal;" transform="translate(0 573)" />
+        <path id="Rectangle" d="M0 0L529.299 0.000915527L529.299 9.16479L0.45105 9.164L0 0Z" style="fill:url(#gradient_4);fill-rule:evenodd;filter:url(#filter_5);mix-blend-mode:normal;" transform="matrix(0.996 0.087 -0.087 0.996 0 781)" />
+        <path id="Path" d="M98 0L621 46.5001L621 771.134L0 783.5L98 0Z" style="fill:url(#gradient_6);fill-rule:evenodd;mix-blend-mode:normal;" transform="translate(-98 790)" />
+        <path id="Rectangle" d="M0 0L529.299 0.000915527L529.299 9.16473L0.45105 9.16394L0 0Z" style="fill:url(#gradient_4);fill-rule:evenodd;mix-blend-mode:normal;" transform="matrix(0.996 0.087 -0.087 0.996 -0.088 781)" />
+      </g>
+    </g>
+  </g>
+</svg>
