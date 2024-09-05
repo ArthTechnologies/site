@@ -163,12 +163,12 @@
 ></div>
 <div
   style="background-size: cover;"
-  class="relative bg-[url('/images/landingbg.svg')] object-fit flex flex-col items-center min-h-screen text-[#efefef] pb-40 px-5 mainArea relative"
+  class="relative bg-[url('/images/landingbg.svg')] max-md:bg-[url('/images/landingbg_mobile.svg')] object-fit flex flex-col items-center min-h-screen text-[#efefef] pb-40 px-5 mainArea relative"
 >
   <div
     class="absolute h-[60rem] w-full bg-gradient bg-gradient-to-tr from-[#2f0c00] to-[#000000] z-[-1]"
   ></div>
-  <div class="text-5xl font-bold mt-16 text-center space-y-5">
+  <div class="text-5xl font-bold mt-8 md:mt-16 text-center space-y-5">
     <span
       class=" text-5xl md:text-7xl h-20 text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-pink-600"
       >Arth Hosting</span
@@ -177,9 +177,9 @@
   </div>
   {#if isVisible}
     <div
-      class="md:flex items-center mt-14 space-x-3 md:ml-32 element-container"
+      class="flex max-md:flex-col-reverse items-center md:mt-14 space-x-3 md:ml-32 element-container"
     >
-      <div class="w-64">
+      <div class="w-64 text-right max-md:ml-20">
         <p class="text-xl font-bold">{$t("main.performance.title")}</p>
         <p>
           {@html $t("main.performance.desc")}
@@ -188,18 +188,18 @@
       <img
         src="/images/PricePerRAM_{locale}.webp"
         alt="AMD Ryzen CPU"
-        class="w-[30.5rem] z-20 max-sm:mt-48 max-md:mt-4"
+        class="w-[30.5rem] z-20 max-md:scale-90"
       />
     </div>
   {/if}
 
   <div
-    class="flex items-center max-sm:mt-24 max-sm: mb-14 mt-14 space-x-3 min-[768px]:max-[846px]:ml-20 md:ml-48 brightness-95"
+    class="flex max-md:flex-col max-md:gap-6 items-center max-sm:mt-24 max-sm: mb-14 mt-14 space-x-3 min-[768px]:max-[846px]:ml-20 md:ml-48 brightness-95"
   >
     <img
       src="/images/PhoneMinecraft.webp"
       alt="Minecraft on a phone, looking at a java edition player."
-      class="w-[10rem] md:w-[30rem] -mb-8 z-20 mt-12 m"
+      class="w-[19rem] md:w-[30rem] -mb-8 z-20 mt-12 m"
     />
     <div class="w-64">
       <p class="text-xl font-bold">
@@ -213,7 +213,7 @@
     </div>
   </div>
   <div
-    class="md:flex items-center mt-16 md:-mt-24 min-[827px]:-mt-0 space-x-8 space-y-5 ml-36 min-[768px]:max-[846px]:ml-20"
+    class="flex max-md:flex-col-reverse max-md:gap-6 items-center mt-16 md:-mt-24 min-[827px]:-mt-0 space-x-8 space-y-5 sm:ml-36 min-[768px]:max-[846px]:ml-20"
   >
     <div class="w-64">
       <p class="text-xl font-bold">{$t("main.interface.title")}</p>
@@ -277,7 +277,7 @@
         class=" max-lg:scale-95 flex max-md:flex-col gap-4 items-center max-md:mb-4 mt-12"
       >
         <div
-          class="rounded-xl bg-base-200 w-96 shadow-2xl shadow-orange-950/20 p-6"
+          class=" rounded-xl bg-base-200 w-[110%] md:w-96 shadow-2xl shadow-orange-950/20 p-6"
         >
           <div class="flex gap-5 items-center">
             <img
@@ -319,7 +319,7 @@
         </div>
 
         <div
-          class="rounded-xl bg-base-200 w-96 shadow-2xl shadow-orange-900/20 p-6"
+          class="rounded-xl bg-base-200 w-[110%] md:w-96 shadow-2xl shadow-orange-900/20 p-6"
         >
           <div class="flex gap-5 items-center">
             <img
