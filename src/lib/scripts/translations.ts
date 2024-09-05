@@ -232,7 +232,7 @@ export default {
     "plans": "Planes",
     "perMonth": "por mes",
     "basic.1":"Geyser integrado",
-    "basic.2":"Mods de Worldgen con un clic",
+    "basic.2":"Worldgen Mods con un clic",
     "basic.3":"Plugins de Modrinth",
     "modded.1":"10,000+ Mods",
     "modded.2":"Soporte para Forge, Fabric & Quilt",
