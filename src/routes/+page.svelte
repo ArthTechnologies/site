@@ -228,9 +228,7 @@
     />
   </div>
 
-  <div
-    class="md:flex items-center mt-96 md:mt-56 2xl:mt-[20rem] space-y-2 md:space-x-8"
-  >
+  <div class="md:flex items-center mt-56 2xl:mt-[20rem] space-y-2 md:space-x-8">
     <div class="flex flex-col items-center">
       <div class="flex space-x-1 justify-start w-full">
         <button
