@@ -213,7 +213,7 @@
     </div>
   </div>
   <div
-    class="flex max-md:flex-col-reverse max-md:gap-6 items-center mt-16 md:-mt-24 min-[827px]:-mt-0 space-x-8 space-y-5 sm:ml-36 min-[768px]:max-[846px]:ml-20"
+    class="flex max-md:flex-col-reverse max-md:gap-6 items-center mt-16 md:-mt-16 min-[858px]:-mt-8 min-[1000px]:mt-0 space-x-8 space-y-5 sm:ml-36 min-[768px]:max-[846px]:ml-20 min-[768px]:max-[846px]:scale-[97%]"
   >
     <div class="w-64">
       <p class="text-xl font-bold">{$t("main.interface.title")}</p>
@@ -224,7 +224,7 @@
     <img
       src="/images/ServerCard.webp"
       alt="Server Card from our Interface"
-      class="z-20 w-[19rem] md:w-[28rem] brightness-[.70]"
+      class="z-20 w-[19rem] min-[900px]:w-[28rem] brightness-[.70]"
     />
   </div>
 
