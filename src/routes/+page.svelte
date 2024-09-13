@@ -357,6 +357,47 @@
             </p>
           </div>
         </div>
+        <div
+          class=" rounded-xl bg-base-200 w-[110%] md:w-96 shadow-2xl shadow-orange-950/20 p-6"
+        >
+          <div class="flex gap-5 items-center">
+            <img
+              src="/images/premiumPlan.webp"
+              class="rounded-xl h-[5.75rem] w-[9.5rem]"
+            />
+            <div>
+              <h2 class=" mb-1">
+                <span>Premium</span>
+                <span class="text-gray-500 ml-[0.1rem]">• 8GB Ram</span>
+              </h2>
+              <div class="flex gap-2">
+                <p class="text-accent-content text-4xl font-bold">$7.99</p>
+
+                <p class="w-5 text-sm text-gray-400">{$t("perMonth")}</p>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 justify-between text-gray-300 mt-0.5">
+            <p
+              class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[9.5rem]"
+            >
+              <Check size="16" class="shrink-0" />
+              {$t("basic.1")}
+            </p>
+            <p
+              class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[9.5rem]"
+            >
+              <Check size="16" class="shrink-0" />
+              {$t("basic.2")}
+            </p>
+            <p
+              class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[9.5rem]"
+            >
+              <Check size="16" class="shrink-0" />
+              {$t("basic.3")}
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
