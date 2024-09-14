@@ -5,7 +5,9 @@
     BadgeDollarSign,
     Check,
     MemoryStick,
-    UtensilsIcon,
+    Cpu,
+    Plug,
+    ExternalLink,
   } from "lucide-svelte";
 
   import { onMount } from "svelte";
@@ -272,10 +274,10 @@
       </div>
       <p class="text-2xl -mt-4 md:-mt-8 font-bold">{$t("plans")}</p>
       <div
-        class=" max-lg:scale-95 flex max-md:flex-col gap-4 items-center max-md:mb-4 mt-12"
+        class="max-lg:scale-95 flex max-md:flex-col gap-4 items-center max-md:mb-4 mt-12"
       >
         <div
-          class=" rounded-xl bg-base-200 w-[110%] md:w-96 shadow-2xl shadow-orange-950/20 p-6"
+          class="bg-opacity-75 transition duration-150 ease-in-out rounded-xl bg-base-200 w-[110%] md:w-96 shadow-2xl shadow-orange-950/20 hover:shadow-orange-950/40 p-6"
         >
           <div class="flex gap-5 items-center">
             <img
@@ -285,7 +287,6 @@
             <div>
               <h2 class=" mb-1">
                 <span>{$t("basic")}</span>
-                <span class="text-gray-500 ml-[0.1rem]">• 3GB Ram</span>
               </h2>
               <div class="flex gap-2">
                 <p class="text-accent-content text-4xl font-bold">$3.49</p>
@@ -294,30 +295,35 @@
               </div>
             </div>
           </div>
-          <div class="grid grid-cols-2 justify-between text-gray-300 mt-0.5">
-            <p
-              class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[9.5rem]"
-            >
-              <Check size="16" class="shrink-0" />
-              {$t("basic.1")}
+          <div class="flex gap-2 text-sm text-gray-300 mt-2.5">
+            <p class="flex items-center gap-1">
+              <Cpu size="16" class="shrink-0" />
+              Ryzen 7
             </p>
-            <p
-              class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[9.5rem]"
-            >
-              <Check size="16" class="shrink-0" />
-              {$t("basic.2")}
+            <p class="flex items-center gap-1">
+              <MemoryStick size="16" class="shrink-0" />
+              3GB RAM
             </p>
-            <p
-              class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[9.5rem]"
-            >
-              <Check size="16" class="shrink-0" />
-              {$t("basic.3")}
+            <p class="flex items-center gap-1">
+              <Plug size="16" class="shrink-0" />Geyser Built-In
             </p>
           </div>
+          <a
+            class="btn2 btn-sm mt-4 px-4 flex gap-1.5 items-center w-fit"
+            href="https://servers.arthmc.xyz/signin"
+            target="_blank"
+            rel="noreferrer"
+            on:click={getStartedClicked}
+          >
+            Get Started<ExternalLink
+              size="18"
+              class="shrink-0 -mr-1 mb-0.5"
+            /></a
+          >
         </div>
 
         <div
-          class="rounded-xl bg-base-200 w-[110%] md:w-96 shadow-2xl shadow-orange-900/20 p-6"
+          class="bg-opacity-75 transition duration-150 ease-in-out rounded-xl bg-base-200 w-[110%] md:w-96 shadow-2xl shadow-orange-950/20 hover:shadow-orange-950/40 p-6"
         >
           <div class="flex gap-5 items-center">
             <img
@@ -327,7 +333,6 @@
             <div>
               <h2 class=" mb-1">
                 <span>{$t("modded")}</span>
-                <span class="text-gray-500 ml-[0.1rem]">• 4GB Ram</span>
               </h2>
               <div class="flex gap-2">
                 <p class="text-accent-content text-4xl font-bold">$4.99</p>
@@ -336,29 +341,34 @@
               </div>
             </div>
           </div>
-          <div class="grid grid-cols-2 justify-between text-gray-300 mt-0.5">
-            <p
-              class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[9.5rem]"
-            >
-              <Check size="16" class="shrink-0" />
-              {$t("modded.1")}
+          <div class="flex gap-2 text-sm text-gray-300 mt-2.5">
+            <p class="flex items-center gap-1">
+              <Cpu size="16" class="shrink-0" />
+              Ryzen 7
             </p>
-            <p
-              class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[9.5rem]"
-            >
-              <Check size="16" class="shrink-0" />
-              {$t("modded.2")}
+            <p class="flex items-center gap-1">
+              <MemoryStick size="16" class="shrink-0" />
+              4GB RAM
             </p>
-            <p
-              class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[11rem]"
-            >
-              <Check size="16" class="shrink-0" />
-              {$t("modded.3")}
+            <p class="flex items-center gap-1">
+              <Plug size="16" class="shrink-0" />Forge, Fabric & Quilt
             </p>
           </div>
+          <a
+            class="btn2 btn-sm mt-4 px-4 flex gap-1.5 items-center w-fit"
+            href="https://servers.arthmc.xyz/signin"
+            target="_blank"
+            rel="noreferrer"
+            on:click={getStartedClicked}
+          >
+            Get Started<ExternalLink
+              size="18"
+              class="shrink-0 -mr-1 mb-0.5"
+            /></a
+          >
         </div>
         <div
-          class=" rounded-xl bg-base-200 w-[110%] md:w-96 shadow-2xl shadow-orange-950/20 p-6"
+          class="bg-opacity-75 transition duration-150 ease-in-out rounded-xl bg-base-200 w-[110%] md:w-96 shadow-2xl shadow-orange-950/20 hover:shadow-orange-950/40 p-6"
         >
           <div class="flex gap-5 items-center">
             <img
@@ -377,99 +387,37 @@
               </div>
             </div>
           </div>
-          <div class="grid grid-cols-2 justify-between text-gray-300 mt-0.5">
-            <p
-              class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[9.5rem]"
-            >
-              <Check size="16" class="shrink-0" />
-              {$t("basic.1")}
+          <div class="flex gap-2 text-sm text-gray-300 mt-2.5">
+            <p class="flex items-center gap-1">
+              <Cpu size="16" class="shrink-0" />
+              Ryzen 7
             </p>
-            <p
-              class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[9.5rem]"
-            >
-              <Check size="16" class="shrink-0" />
-              {$t("basic.2")}
+            <p class="flex items-center gap-1">
+              <MemoryStick size="16" class="shrink-0" />
+              8GB RAM
             </p>
-            <p
-              class="flex items-center gap-2 text-sm xl:text-[.95rem] w-[9.5rem]"
-            >
-              <Check size="16" class="shrink-0" />
-              {$t("basic.3")}
+            <p class="flex items-center gap-1">
+              <Plug size="16" class="shrink-0" />Premium Support
             </p>
           </div>
+          <a
+            class="btn2 btn-sm mt-4 px-4 flex gap-1.5 items-center w-fit"
+            href="https://servers.arthmc.xyz/signin"
+            target="_blank"
+            rel="noreferrer"
+            on:click={getStartedClicked}
+          >
+            Get Started<ExternalLink
+              size="18"
+              class="shrink-0 -mr-1 mb-0.5"
+            /></a
+          >
         </div>
       </div>
-    </div>
-  </div>
-  <div
-    class="sm:flex items-center gap-3 mt-16 lg:px-48 xl:px-64 justify-center"
-  >
-    <div class="sm:w-[80%] mb-7">
-      <p class="ml-1 font-bold mb-1">{$t("addons")}</p>
-      <div class="flex gap-2">
-        <div
-          class="rounded-xl bg-gradient-to-tr from-[#050505] to-orange-950 p-2 px-3 shadow-2xl h-fit"
-        >
-          <div class="flex justify-between">
-            <div>
-              <div class="flex gap-2 font-bold max-md:text-sm">
-                <MemoryStick size="24" class="shrink-0" />
-                {$t("addons.ramboost")}
-              </div>
-              <p class="text-[.93rem] 2xl:w-52">
-                {$t("addons.ramboost.desc")}
-              </p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="rounded-xl bg-gradient-to-tr from-[#010101] to-[#001606] p-2 px-3 shadow-2xl h-fit"
-        >
-          <div class="flex justify-between">
-            <div>
-              <div class="flex gap-2 font-bold max-md:text-sm">
-                <BadgeDollarSign size="24" class="shrink-0" />
-                {$t("addons.quarterly")}
-              </div>
-              <p class="text-[.93rem] 2xl:w-48 mt-0.5">
-                {$t("addons.quarterly.desc")}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="w-0.5 h-16 bg-gray-500 opacity-10 mx-1.5 md:mx-3 max-sm:hidden"
-    ></div>
-    <div class="max-sm:w-full flex max-sm:justify-center">
-      <a
-        href="https://servers.arthmc.xyz/signin"
-        class=" max-sm:w-1/2 rounded-lg btn btn-outline flex bg-gradient-to-tr from-orange-500 to-pink-600 text-black -space-x-2 pr-1.5 pl-2.5 md:pr-3 md:pl-4 hover:opacity-90"
-        target="_blank"
-        rel="noreferrer"
-        on:click={getStartedClicked}
-        ><p class="mr-3">{$t("signup")}</p>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="feather feather-arrow-up-right"
-          ><line x1="7" y1="17" x2="17" y2="7" /><polyline
-            points="7 7 17 7 17 17"
-          /></svg
-        ></a
-      >
     </div>
   </div>
 
-  <ul class="mt-48 w-[20rem] md:w-[50rem]" id="footnotes">
+  <ul class="mt-48 w-full px-56 text-gray-300" id="footnotes">
     <li class="mb-1.5">
       {$t("main.regionsFootnote")}
     </li>
@@ -509,5 +457,44 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+  .btn2 {
+    font-weight: 600;
+    text-transform: uppercase;
+
+    border-radius: 0.5rem;
+
+    border: calc(0.1rem) solid transparent;
+    position: relative;
+    color: #dfdfdf;
+
+    background: linear-gradient(#15181e, #15181e),
+      linear-gradient(
+        #15181e 50%,
+        rgba(18, 18, 19, 0.6) 80%,
+        rgba(18, 18, 19, 0)
+      ),
+      linear-gradient(90deg, var(--orange), var(--pink));
+    background-origin: border-box;
+    background-clip: padding-box, border-box, border-box;
+    background-size: 150%;
+  }
+  .btn2:hover {
+    background: linear-gradient(#131518, #131518),
+      linear-gradient(
+        #131518 50%,
+        rgba(18, 18, 19, 0.6) 80%,
+        rgba(18, 18, 19, 0)
+      ),
+      linear-gradient(90deg, var(--orange), var(--pink));
+    background-origin: border-box;
+    background-clip: padding-box, border-box, border-box;
+    background-size: 150%;
+  }
+
+  :root {
+    --pink: #ff64f9;
+
+    --orange: #ff6d1b;
   }
 </style>
