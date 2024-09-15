@@ -1,5 +1,6 @@
 <script lang="ts">
   import { load } from "$lib/scripts/docs";
+  import { t } from "$lib/scripts/i18n";
 </script>
 
 <div
@@ -14,7 +15,7 @@
       </li>
     </ul>
     <ul class="menu p-4 w-80 bg-neutral shadow-xl text-base-content rounded-lg">
-      <p class="font-mono text-center font-bold">Tutorials</p>
+      <p class="font-mono text-center font-bold">{$t("tutorials")}</p>
       <!-- Sidebar content here -->
 
       <li>

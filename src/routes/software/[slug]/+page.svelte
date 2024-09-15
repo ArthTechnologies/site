@@ -3,7 +3,13 @@
   import { browser } from "$app/environment";
   import { onMount } from "svelte";
   import { load } from "$lib/scripts/docs";
-  load();
+  onMount(() => {
+    if (browser) {
+      let slug = window.location.pathname.split("/")[2];
+      console.log(slug);
+      load(slug);
+    }
+  });
 </script>
 
 <article id="text" class="prose max-w-screen text-lg px-1 md:px-5 pt-5 pb-36" />

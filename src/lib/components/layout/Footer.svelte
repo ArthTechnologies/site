@@ -15,7 +15,7 @@
     <a class="link link-hover" href="https://codeberg.org/arth/" target="_blank"
       >{$t("footer.codeberg")}</a
     >
-    <a class="link link-hover" href="/blog" target="_blank"
+    <a class="link link-hover" href="/articles" target="_blank"
       >{$t("footer.blog")}</a
     >
     <a class="link link-hover" href="/software" target="_blank"

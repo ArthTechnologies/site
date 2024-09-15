@@ -11,7 +11,7 @@
     Star,
     StarIcon,
   } from "lucide-svelte";
-  import { load } from "$lib/scripts/docs";
+
   let lang = "en-US";
   let posts = [];
   let promise;
@@ -121,12 +121,12 @@
     </div>
     <div class="flex flex-col gap-2 w-[18rem] justify-start h-[16rem]">
       <span class="flex gap-1 items-center font-bold mb-1"
-        ><Star size="18" />Featured Blog Post</span
+        ><Star size="18" />Featured Post</span
       >
       <p class="text-4xl font-bold">{featuredpost.title}</p>
       <p>{featuredpost.desc}</p>
       <a
-        href="/blog/{featuredpost.slug}"
+        href="/articles/{featuredpost.slug}"
         rel="noopener noreferrer"
         target="_blank"
         class="w-fit"
@@ -144,13 +144,10 @@
       <!-- Sidebar content here -->
 
       <li>
-        <a on:click={load} href="/software/how-to-join-servers"
-          >How to Join Minecraft Servers</a
+        <a href="/software/how-to-join-servers">How to Join Minecraft Servers</a
         >
-        <a on:click={load} href="/software/using-dynmap">Using Dynmap</a>
-        <a on:click={load} href="/software/using-simple-voice-chat"
-          >Using Simple Voice Chat</a
-        >
+        <a href="/software/using-dynmap">Using Dynmap</a>
+        <a href="/software/using-simple-voice-chat">Using Simple Voice Chat</a>
       </li>
     </ul>
   </div>
@@ -189,7 +186,7 @@
     {/each}
   {:then}
     {#each posts as post}
-      <a href="/blog/{post.slug}"
+      <a href="/articles/{post.slug}"
         ><div
           class="items-center flex gap-5 shadow bg-base-200 hover:bg-base-300 rounded-xl p-6 h-[15rem]"
         >

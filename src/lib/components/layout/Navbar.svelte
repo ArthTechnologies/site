@@ -88,7 +88,9 @@
         >
       </div>
       <div class="hidden sm:flex">
-        <a href="/blog" class="rounded-lg btn btn-ghost">{$t("footer.blog")}</a>
+        <a href="/articles" class="rounded-lg btn btn-ghost"
+          >{$t("footer.blog")}</a
+        >
 
         <a href="/software" class="rounded-lg btn btn-ghost">Software</a>
       </div>
@@ -132,7 +134,7 @@
               <a href="/" class="rounded-lg">{$t("navbar.home")}</a>
             </li>
             <li>
-              <a href="/blog" class="rounded-lg">{$t("footer.blog")}</a>
+              <a href="/articles" class="rounded-lg">{$t("footer.blog")}</a>
             </li>
             <li>
               <a href="/software" class="rounded-lg">Docs</a>

@@ -4,7 +4,7 @@
 <description>
 Your gateway to running your own Minecraft servers.
 </description>
-<link>https://arthmc.xyz/blog</link>
+<link>https://arthmc.xyz/articles</link>
 
 <lastBuildDate>Sun, 8 Jan 2023 16:30:05 +0000</lastBuildDate>
 <pubDate>Sun, 08 Jan 2023 02:00:00 +0000</pubDate>
@@ -18,7 +18,7 @@ Your gateway to running your own Minecraft servers.
 https://arthmc.xyz/favicon.png
 </url>
 <title>Arth Blog</title>
-<link>https://arthmc.xyz/blog/</link>
+<link>https://arthmc.xyz/articles/</link>
 </image>
 <language>en-us</language>
 <item>
@@ -27,8 +27,8 @@ https://arthmc.xyz/favicon.png
 Your gateway to running your own Minecraft servers.
 </description>
 
-<link>https://arthmc.xyz/blog/introducing-arth-panel</link>
-<guid isPermaLink="true">https://arthmc.xyz/blog/introducing-arth-panel</guid>
+<link>https://arthmc.xyz/articles/introducing-arth-panel</link>
+<guid isPermaLink="true">https://arthmc.xyz/articles/introducing-arth-panel</guid>
 <pubDate>Sun, 08 Jan 2023 12:00:00 +0000</pubDate>
 
 

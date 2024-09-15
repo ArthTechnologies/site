@@ -8,11 +8,14 @@ export function load(slug) {
 setTimeout(() => {
     let t = "";
     if (browser) {
+
             
-        if (slug != "home") {
+        if (slug != "home" && slug == undefined) {
             slug = window.location.pathname.split("/").pop();
         }
-        fetch("https://backend.arthmc.xyz/file/docs/"+slug+".md")
+        let url = "https://backend.arthmc.xyz/file/docs/"+slug+".md";
+
+        fetch(url)
   .then((response) => response.text())
   .then((text) => {
 
