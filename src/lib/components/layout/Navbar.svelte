@@ -64,7 +64,7 @@
 
       <div>
         <a
-          href="https://servers.arthmc.xyz/signin"
+          href="https://servers.arthmc.xyz/signin?plan=premium"
           class="max-md:w-36 rounded-lg btn2 btn-md flex items-center w-fit -space-x-2 pr-1.5 pl-2.5 md:pr-3 md:pl-4"
           target="_blank"
           rel="noreferrer"
