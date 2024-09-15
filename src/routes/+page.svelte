@@ -303,14 +303,14 @@
           <div class="flex gap-2 text-sm text-gray-300 mt-2.5">
             <p class="flex items-center gap-1">
               <Cpu size="16" class="shrink-0" />
-              Ryzen 7
+              {$t("basic.1")}
             </p>
             <p class="flex items-center gap-1">
               <MemoryStick size="16" class="shrink-0" />
-              3GB RAM
+              {$t("basic.2")}
             </p>
             <p class="flex items-center gap-1">
-              <Plug size="16" class="shrink-0" />Geyser Built-In
+              <Plug size="16" class="shrink-0" />{$t("basic.3")}
             </p>
           </div>
           <a
@@ -320,7 +320,7 @@
             rel="noreferrer"
             on:click={getStartedClicked}
           >
-            Get Started<ExternalLink
+            {$t("signup")}<ExternalLink
               size="18"
               class="shrink-0 -mr-1 mb-0.5"
             /></a
@@ -349,14 +349,14 @@
           <div class="flex gap-2 text-sm text-gray-300 mt-2.5">
             <p class="flex items-center gap-1">
               <Cpu size="16" class="shrink-0" />
-              Ryzen 7
+              {$t("modded.1")}
             </p>
             <p class="flex items-center gap-1">
               <MemoryStick size="16" class="shrink-0" />
-              4GB RAM
+              {$t("modded.2")}
             </p>
             <p class="flex items-center gap-1">
-              <Plug size="16" class="shrink-0" />Forge, Fabric & Quilt
+              <Plug size="16" class="shrink-0" />{$t("modded.3")}
             </p>
           </div>
           <a
@@ -366,7 +366,7 @@
             rel="noreferrer"
             on:click={getStartedClicked}
           >
-            Get Started<ExternalLink
+            {$t("signup")}<ExternalLink
               size="18"
               class="shrink-0 -mr-1 mb-0.5"
             /></a
@@ -395,14 +395,14 @@
             <div class="flex gap-2 text-sm text-gray-300 mt-2.5">
               <p class="flex items-center gap-1">
                 <Cpu size="16" class="shrink-0" />
-                Ryzen 7
+                {$t("premium.1")}
               </p>
               <p class="flex items-center gap-1">
                 <MemoryStick size="16" class="shrink-0" />
-                8GB RAM
+                {$t("premium.2")}
               </p>
               <p class="flex items-center gap-1">
-                <Plug size="16" class="shrink-0" />Premium Support
+                <Plug size="16" class="shrink-0" />{$t("premium.3")}
               </p>
             </div>
             <a
@@ -412,7 +412,7 @@
               rel="noreferrer"
               on:click={getStartedClicked}
             >
-              Get Started<ExternalLink
+              {$t("signup")}<ExternalLink
                 size="18"
                 class="shrink-0 -mr-1 mb-0.5"
               /></a

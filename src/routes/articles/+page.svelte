@@ -48,7 +48,7 @@
               imageurl: item.imageurl,
               author: item.author,
             });
-            if (item.title.includes("Privacy")) {
+            if (item.title.includes("Privac")) {
               featuredpost = {
                 title: item.title,
                 desc: item.desc,
