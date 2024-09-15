@@ -168,8 +168,9 @@
   class="relative bg-[url('/images/landingbg.svg')] max-md:bg-[url('/images/landingbg_mobile.svg')] object-fit flex flex-col items-center min-h-screen text-[#efefef] pb-40 px-5 mainArea relative"
 >
   <div
-    class="absolute h-[60rem] w-full bg-gradient bg-gradient-to-tr from-[#2f0c00] to-[#000000] z-[-1]"
+    class="absolute h-[60rem] 2xl:h-[80rem] w-full bg-gradient bg-gradient-to-tr from-[#2f0c00] to-[#000000] z-[-1]"
   ></div>
+
   <div class="text-5xl font-bold mt-8 md:mt-16 text-center space-y-5">
     <span
       class=" text-5xl md:text-7xl h-20 text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-pink-600"
@@ -272,12 +273,14 @@
           }}>MX$</button
         >
       </div>
-      <p class="text-2xl -mt-4 md:-mt-8 font-bold">{$t("plans")}</p>
+      <p class="text-2xl -mt-4 md:-mt-8 font-bold min-[1600px]:mt-[35rem]">
+        {$t("plans")}
+      </p>
       <div
-        class="max-lg:scale-95 flex max-md:flex-col gap-4 items-center max-md:mb-4 mt-12"
+        class="max-[820px]:-mx-5 max-[820px]:scale-90 grid md:grid-cols-2 min-[1200px]:grid-cols-3 gap-4 items-center max-md:mb-4 mt-12"
       >
         <div
-          class="bg-opacity-75 transition duration-150 ease-in-out rounded-xl bg-base-200 w-[110%] md:w-96 shadow-2xl shadow-orange-950/20 hover:shadow-orange-950/40 p-6"
+          class="bg-opacity-75 transition duration-200 hover:-translate-y-0.5 ease-in-out rounded-xl bg-base-200 w-[110%] w-[24rem] shadow-2xl shadow-orange-950/20 hover:shadow-orange-950/40 p-6"
         >
           <div class="flex gap-5 items-center">
             <img
@@ -323,7 +326,7 @@
         </div>
 
         <div
-          class="bg-opacity-75 transition duration-150 ease-in-out rounded-xl bg-base-200 w-[110%] md:w-96 shadow-2xl shadow-orange-950/20 hover:shadow-orange-950/40 p-6"
+          class="bg-opacity-75 transition duration-200 hover:-translate-y-0.5 ease-in-out rounded-xl bg-base-200 w-[110%] w-[24rem] shadow-2xl shadow-orange-950/20 hover:shadow-orange-950/40 p-6"
         >
           <div class="flex gap-5 items-center">
             <img
@@ -367,57 +370,58 @@
             /></a
           >
         </div>
-        <div
-          class="bg-opacity-75 transition duration-150 ease-in-out rounded-xl bg-base-200 w-[110%] md:w-96 shadow-2xl shadow-orange-950/20 hover:shadow-orange-950/40 p-6"
-        >
-          <div class="flex gap-5 items-center">
-            <img
-              src="/images/premiumPlan.webp"
-              class="rounded-xl h-[5.75rem] w-[9.5rem]"
-            />
-            <div>
-              <h2 class=" mb-1">
-                <span>Premium</span>
-                <span class="text-gray-500 ml-[0.1rem]">• 8GB Ram</span>
-              </h2>
-              <div class="flex gap-2">
-                <p class="text-accent-content text-4xl font-bold">$7.99</p>
+        <div class="md:max-[1200px]:col-span-2 w-full flex justify-center">
+          <div
+            class="bg-opacity-75 transition duration-200 hover:-translate-y-0.5 ease-in-out rounded-xl bg-base-200 w-[24rem] w-[110%] shadow-2xl shadow-orange-950/20 hover:shadow-orange-950/40 p-6"
+          >
+            <div class="flex gap-5 items-center">
+              <img
+                src="/images/premiumPlan.webp"
+                class="rounded-xl h-[5.75rem] w-[9.5rem]"
+              />
+              <div>
+                <h2 class=" mb-1">
+                  <span>Premium</span>
+                </h2>
+                <div class="flex gap-2">
+                  <p class="text-accent-content text-4xl font-bold">$7.99</p>
 
-                <p class="w-5 text-sm text-gray-400">{$t("perMonth")}</p>
+                  <p class="w-5 text-sm text-gray-400">{$t("perMonth")}</p>
+                </div>
               </div>
             </div>
+            <div class="flex gap-2 text-sm text-gray-300 mt-2.5">
+              <p class="flex items-center gap-1">
+                <Cpu size="16" class="shrink-0" />
+                Ryzen 7
+              </p>
+              <p class="flex items-center gap-1">
+                <MemoryStick size="16" class="shrink-0" />
+                8GB RAM
+              </p>
+              <p class="flex items-center gap-1">
+                <Plug size="16" class="shrink-0" />Premium Support
+              </p>
+            </div>
+            <a
+              class="btn2 btn-sm mt-4 px-4 flex gap-1.5 items-center w-fit"
+              href="https://servers.arthmc.xyz/signin"
+              target="_blank"
+              rel="noreferrer"
+              on:click={getStartedClicked}
+            >
+              Get Started<ExternalLink
+                size="18"
+                class="shrink-0 -mr-1 mb-0.5"
+              /></a
+            >
           </div>
-          <div class="flex gap-2 text-sm text-gray-300 mt-2.5">
-            <p class="flex items-center gap-1">
-              <Cpu size="16" class="shrink-0" />
-              Ryzen 7
-            </p>
-            <p class="flex items-center gap-1">
-              <MemoryStick size="16" class="shrink-0" />
-              8GB RAM
-            </p>
-            <p class="flex items-center gap-1">
-              <Plug size="16" class="shrink-0" />Premium Support
-            </p>
-          </div>
-          <a
-            class="btn2 btn-sm mt-4 px-4 flex gap-1.5 items-center w-fit"
-            href="https://servers.arthmc.xyz/signin"
-            target="_blank"
-            rel="noreferrer"
-            on:click={getStartedClicked}
-          >
-            Get Started<ExternalLink
-              size="18"
-              class="shrink-0 -mr-1 mb-0.5"
-            /></a
-          >
         </div>
       </div>
     </div>
   </div>
 
-  <ul class="mt-48 w-full px-56 text-gray-300" id="footnotes">
+  <ul class="mt-48 w-full md:px-56 text-gray-300" id="footnotes">
     <li class="mb-1.5">
       {$t("main.regionsFootnote")}
     </li>
