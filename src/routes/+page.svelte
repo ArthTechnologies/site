@@ -197,7 +197,7 @@
   {/if}
 
   <div
-    class="flex max-md:flex-col max-md:gap-6 items-center max-sm:mt-24 max-sm: mb-14 mt-14 space-x-3 min-[768px]:max-[846px]:ml-20 md:ml-48 brightness-95"
+    class="flex max-md:flex-col max-md:gap-6 items-center max-sm:mt-24 max-sm: mb-14 mt-14 min-[1950px]:mt-64 space-x-3 min-[768px]:max-[846px]:ml-20 md:ml-48 brightness-95"
   >
     <img
       src="/images/PhoneMinecraft.webp"
@@ -273,14 +273,16 @@
           }}>MX$</button
         >
       </div>
-      <p class="text-2xl -mt-4 md:-mt-8 font-bold min-[1600px]:mt-[35rem]">
+      <p
+        class="text-2xl -mt-4 md:-mt-8 font-bold min-[1950px]min-[1950px]:mt-[35rem]"
+      >
         {$t("plans")}
       </p>
       <div
-        class="max-[820px]:-mx-5 max-[820px]:scale-90 grid md:grid-cols-2 min-[1200px]:grid-cols-3 gap-4 items-center max-md:mb-4 mt-12"
+        class="max-[820px]:-mx-5 max-[500px]:scale-90 grid md:grid-cols-2 min-[1200px]:grid-cols-3 gap-4 items-center max-md:mb-4 mt-12"
       >
         <div
-          class="bg-opacity-75 transition duration-200 hover:-translate-y-0.5 ease-in-out rounded-xl bg-base-200 w-[110%] w-[24rem] shadow-2xl shadow-orange-950/20 hover:shadow-orange-950/40 p-6"
+          class="backdrop-blur-xl bg-opacity-75 transition duration-200 hover:-translate-y-0.5 ease-in-out rounded-xl bg-base-200 w-[110%] w-[24rem] shadow-2xl shadow-orange-950/20 hover:shadow-orange-950/40 p-6"
         >
           <div class="flex gap-5 items-center">
             <img
@@ -326,7 +328,7 @@
         </div>
 
         <div
-          class="bg-opacity-75 transition duration-200 hover:-translate-y-0.5 ease-in-out rounded-xl bg-base-200 w-[110%] w-[24rem] shadow-2xl shadow-orange-950/20 hover:shadow-orange-950/40 p-6"
+          class="backdrop-blur-xl bg-opacity-75 transition duration-200 hover:-translate-y-0.5 ease-in-out rounded-xl bg-base-200 w-[110%] w-[24rem] shadow-2xl shadow-orange-950/20 hover:shadow-orange-950/40 p-6"
         >
           <div class="flex gap-5 items-center">
             <img
@@ -372,7 +374,7 @@
         </div>
         <div class="md:max-[1200px]:col-span-2 w-full flex justify-center">
           <div
-            class="bg-opacity-75 transition duration-200 hover:-translate-y-0.5 ease-in-out rounded-xl bg-base-200 w-[24rem] w-[110%] shadow-2xl shadow-orange-950/20 hover:shadow-orange-950/40 p-6"
+            class="backdrop-blur-xl bg-opacity-75 transition duration-200 hover:-translate-y-0.5 ease-in-out rounded-xl bg-base-200 w-[24rem] w-[110%] shadow-2xl shadow-orange-950/20 hover:shadow-orange-950/40 p-6"
           >
             <div class="flex gap-5 items-center">
               <img

@@ -65,7 +65,7 @@
       <div>
         <a
           href="https://servers.arthmc.xyz/signin"
-          class="max-md:w-36 rounded-lg btn btn-outline flex bg-gradient-to-tr from-orange-500 to-pink-600 text-black -space-x-2 pr-1.5 pl-2.5 md:pr-3 md:pl-4 hover:opacity-90"
+          class="max-md:w-36 rounded-lg btn2 btn-md flex items-center w-fit -space-x-2 pr-1.5 pl-2.5 md:pr-3 md:pl-4"
           target="_blank"
           rel="noreferrer"
           on:click={getStartedClicked}
@@ -156,3 +156,46 @@
     <ThemeToggle />
   </div>
 {/if}
+
+<style>
+  .btn2 {
+    font-weight: 600;
+    text-transform: uppercase;
+
+    border-radius: 0.5rem;
+
+    border: calc(0.1rem) solid transparent;
+    position: relative;
+    color: #dfdfdf;
+
+    background: linear-gradient(#15181e, #15181e),
+      linear-gradient(
+        #15181e 50%,
+        rgba(18, 18, 19, 0.6) 80%,
+        rgba(18, 18, 19, 0)
+      ),
+      linear-gradient(90deg, var(--orange), var(--pink));
+    background-origin: border-box;
+    background-clip: padding-box, border-box, border-box;
+    background-size: 150%;
+  }
+  .btn2:hover {
+    color: #cfcfcf;
+    background: linear-gradient(#131518, #131518),
+      linear-gradient(
+        #131518 50%,
+        rgba(18, 18, 19, 0.6) 80%,
+        rgba(18, 18, 19, 0)
+      ),
+      linear-gradient(90deg, var(--orange), var(--pink));
+    background-origin: border-box;
+    background-clip: padding-box, border-box, border-box;
+    background-size: 150%;
+  }
+
+  :root {
+    --pink: #ff64f9;
+
+    --orange: #ff6d1b;
+  }
+</style>
