@@ -10,7 +10,7 @@ setTimeout(() => {
     if (browser) {
 
             
-        if (slug != "home" && slug == undefined) {
+        if (slug != "home" && typeof slug != "string") {
             slug = window.location.pathname.split("/").pop();
         }
         let url = "https://backend.arthmc.xyz/file/docs/"+slug+".md";
