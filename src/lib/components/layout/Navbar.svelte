@@ -97,11 +97,7 @@
       <LanguageSwitcher />
 
       <div class="dropdown dropdown-end z-50" id="dropdown">
-        <label
-          tabindex="0"
-          class="btn btn-ghost btn-circle"
-          on:click={closeDropdown}
-        >
+        <summary tabindex="0" class="btn btn-ghost btn-circle">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -124,7 +120,7 @@
           /><path
             d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
           />
-        </label>
+        </summary>
         <ul
           tabindex="0"
           class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-200 bg-opacity-95 backdrop-blur rounded-box w-52"
@@ -142,7 +138,12 @@
           </div>
           <li>
             <a href="/terms-of-service" class="justify-between">
-              {$t("navbar.tos")}
+              Terms of Service
+            </a>
+          </li>
+          <li>
+            <a href="/terms-of-service" class="justify-between">
+              Privacy Policy
             </a>
           </li>
           <li>
