@@ -168,7 +168,7 @@
 
     border: calc(0.1rem) solid transparent;
     position: relative;
-    color: #dfdfdf;
+    color: #dddbdb;
 
     background: linear-gradient(#15181e, #15181e),
       linear-gradient(
@@ -183,9 +183,9 @@
   }
   .btn2:hover {
     color: #cfcfcf;
-    background: linear-gradient(#131518, #131518),
+    background: linear-gradient(#14161b, #14161b),
       linear-gradient(
-        #131518 50%,
+        #14161b 50%,
         rgba(18, 18, 19, 0.6) 80%,
         rgba(18, 18, 19, 0)
       ),
