@@ -144,10 +144,13 @@
       <!-- Sidebar content here -->
 
       <li>
-        <a href="/software/how-to-join-servers">How to Join Minecraft Servers</a
+        <a href="/knowledgebase/how-to-join-servers"
+          >How to Join Minecraft Servers</a
         >
-        <a href="/software/using-dynmap">Using Dynmap</a>
-        <a href="/software/using-simple-voice-chat">Using Simple Voice Chat</a>
+        <a href="/knowledgebase/using-dynmap">Using Dynmap</a>
+        <a href="/knowledgebase/using-simple-voice-chat"
+          >Using Simple Voice Chat</a
+        >
       </li>
     </ul>
   </div>

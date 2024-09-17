@@ -106,7 +106,7 @@ export default {
     basic: "Basic",
     modded: "Modded",
     "main.regionsFootnote": "Arth Hosting is only intended for use in the United States and Mexico.",
-    "tutorials": "Knowledge Base",
+    "tutorials": "Knowledgebase",
     "plans": "Plans",
     "perMonth": "per month",
     "basic.1":"Ryzen 7",
