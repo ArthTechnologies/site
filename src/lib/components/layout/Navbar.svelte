@@ -57,7 +57,7 @@
         ><img src="/images/sitelogo.svg" alt="Arth" width="75" height="75" /></a
       >
     </div>
-    <div class="flex-1 md:flex-none navbar-end">
+    <div class="flex-1 md:flex-none navbar-end w-[55%]">
       <a href="/" class="rounded-lg hidden md:flex btn btn-ghost"
         >{$t("navbar.home")}</a
       >

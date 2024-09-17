@@ -123,8 +123,30 @@ export default {
     "addons.ramboost.desc": "8GB of RAM for only $7.99/month.",
     "addons.quarterly": "Bill Quarterly",
     "addons.quarterly.desc": "Pay every 3 months instead of 1 and save.",
-
-
+    "faq.t": "Frequently Asked Questions",
+    "faq.1.a": "Which plan do I need?",
+    "faq.1.b": `If your server will be vanilla and have only a few friends playing on
+          it, the basic plan has more than enough RAM for your needs. <b
+            >If you're expecting many players on at once</b
+          >, you'll likely need the extra RAM that the premium plan provides.
+          Likewise, many modpacks will run well with the modded plan as long as
+          you don't have too many players. However,
+          <b>if your modpack reccomends more than 4GB of RAM</b> or you're planning
+          on having more than a few players, you'll need the premium plan.`,
+    "faq.2.a": "Are Dynmap and Simple Voice Chat supported?",
+    "faq.2.b": `          Yes. Not only do we support Dynmap and Simple Voice Chat, but we're
+          also one of the few hosts that offer <b>automatic setup</b>. All you
+          have to do is add the plugin, restart the server, and you're good to
+          go!`,
+    "faq.3.a": "What is Geyser and why is it important?",
+    "faq.3.b": ` Tens of millions of people play on each major edition of Minecraft-
+          Java and Bedrock. In 2019 developers in the Minecraft community
+          created the Geyser program which allows Bedrock players to join Java
+          Edition servers. It's now used all across the industry, but most
+          competitors still require some setup that could be confusing for
+          beginners. There's a good chance many of your potential players are on
+          Bedrock Edition, so it's important to have Geyser support.`
+    
   },
 	  "es-ES": {
     "status": "Estado",
@@ -249,6 +271,16 @@ export default {
     "addons.ramboost.desc": "8GB de RAM por solo $7.99/mes.",
     "addons.quarterly": "Facturación trimestral",
     "addons.quarterly.desc": "Pague cada 3 meses en lugar de 1 y ahorre.",
+    "faq.t": "Preguntas frecuentes",
+    "faq.1.a": "¿Qué plan necesito?",
+    "faq.1.b": `Si su servidor será vanilla y solo tendrán unos pocos amigos jugando en él, el plan básico tiene más que suficiente RAM para sus necesidades. <b
+            >Si espera muchos jugadores a la vez</b
+          >, es probable que necesite la RAM adicional que proporciona el plan premium. Del mismo modo, muchos modpacks funcionarán bien con el plan modded siempre que no tenga demasiados jugadores. Sin embargo,
+          <b>si su modpack recomienda más de 4GB de RAM</b> o planea tener más de unos pocos jugadores, necesitará el plan premium.`,
+    "faq.2.a": "¿Se admiten Dynmap y Simple Voice Chat?",
+    "faq.2.b": `          Sí. No solo admitimos Dynmap y Simple Voice Chat, sino que también somos uno de los pocos hosts que ofrecen <b>configuración automática</b>. ¡Todo lo que tienes que hacer es agregar el complemento, reiniciar el servidor y listo!`,
+    "faq.3.a": "¿Qué es Geyser y por qué es importante?",
+    "faq.3.b": ` Decenas de millones de personas juegan en cada edición principal de Minecraft: Java y Bedrock. En 2019, los desarrolladores de la comunidad de Minecraft crearon el programa Geyser que permite a los jugadores de Bedrock unirse a los servidores de Java Edition. Ahora se usa en toda la industria, pero la mayoría de los competidores aún requieren alguna configuración que podría ser confusa para los principiantes. Es muy probable que muchos de sus posibles jugadores estén en Bedrock Edition, por lo que es importante tener soporte de Geyser.`
     
   },
 };

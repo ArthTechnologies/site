@@ -83,7 +83,7 @@
             duration: 4500,
             easing: "ease",
             fill: "forwards",
-          }
+          },
         );
 
         setTimeout(() => {
@@ -273,9 +273,7 @@
           }}>MX$</button
         >
       </div>
-      <p
-        class="text-2xl -mt-4 md:-mt-8 font-bold min-[1950px]min-[1950px]:mt-[35rem]"
-      >
+      <p class="text-2xl -mt-4 md:-mt-8 font-bold min-[1950px]:mt-[35rem]">
         {$t("plans")}
       </p>
       <div
@@ -422,21 +420,50 @@
       </div>
     </div>
   </div>
+  <div class="w-full px-4 mt-32">
+    <p class="text-3xl font-bold text-gray-200">{$t("faq.t")}</p>
+    <div class="flex flex-col gap-1 w-[90%] md:w-[75%] lg:w-1/2">
+      <div>
+        <p class="text-xl font-bold mt-4 text-gray-100">
+          {$t("faq.1.a")}
+        </p>
+        <p class="text-gray-200">
+          {@html $t("faq.1.b")}
+        </p>
+      </div>
+      <div>
+        <p class="text-xl font-bold mt-4 text-gray-100">
+          {$t("faq.2.a")}
+        </p>
+        <p class="text-gray-200">
+          {@html $t("faq.2.b")}
+        </p>
+      </div>
+      <div>
+        <p class="text-xl font-bold mt-4 text-gray-100">
+          {$t("faq.3.a")}
+        </p>
+        <p class="text-gray-200">
+          {@html $t("faq.3.b")}
+        </p>
+      </div>
+      <ul class="mt-48 w-full text-sm text-gray-400" id="footnotes">
+        <li class="mb-1.5">
+          {$t("main.regionsFootnote")}
+        </li>
+        <li>
+          <sup>1</sup>{$t("main.footnote1")}
+        </li>
+        <li>
+          <sup>2</sup>{$t("main.footnote2")}
+        </li>
+        <li>
+          <sup>3</sup>{$t("main.footnote3")}
+        </li>
+      </ul>
+    </div>
+  </div>
 
-  <ul class="mt-48 w-full md:px-56 text-gray-300" id="footnotes">
-    <li class="mb-1.5">
-      {$t("main.regionsFootnote")}
-    </li>
-    <li>
-      <sup>1</sup>{$t("main.footnote1")}
-    </li>
-    <li>
-      <sup>2</sup>{$t("main.footnote2")}
-    </li>
-    <li>
-      <sup>3</sup>{$t("main.footnote3")}
-    </li>
-  </ul>
   <div
     class="shooting-stars-container relative"
     id="shootingStarsContainer"
