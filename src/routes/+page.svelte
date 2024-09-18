@@ -83,7 +83,7 @@
             duration: 4500,
             easing: "ease",
             fill: "forwards",
-          },
+          }
         );
 
         setTimeout(() => {
@@ -420,7 +420,7 @@
       </div>
     </div>
   </div>
-  <div class="w-full px-4 mt-32">
+  <div class="w-full px-4 lg:px-32 mt-32">
     <p class="text-3xl font-bold text-gray-200">{$t("faq.t")}</p>
     <div class="flex flex-col gap-1 w-[90%] md:w-[75%] lg:w-1/2">
       <div>
