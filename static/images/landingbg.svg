@@ -1,34 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg width="1047" height="1480" viewBox="0 0 1047 1480" fill="none" stroke="none" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+<svg width="1047" height="1436" viewBox="0 0 1047 1436" fill="none" stroke="none" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <path id="path_1" d="M1047 0L1047 0L1047 1480L0 1480L0 0L1047 0Z" />
-    <rect id="rect_2" x="0" y="0" width="1047" height="1480" />
+    <path id="path_1" d="M1047 0L1047 0L1047 1436L0 1436L0 0L1047 0Z" />
+    <rect id="rect_2" x="0" y="0" width="1047" height="1436" />
     <clipPath id="clip_path_3">
       <use xlink:href="#rect_2" />
     </clipPath>
-    <linearGradient id="gradient_4" gradientUnits="userSpaceOnUse" x1="7.913" y1="4.377" x2="1058.773" y2="3.407">
+    <linearGradient id="gradient_4" gradientUnits="userSpaceOnUse" x1="7.889" y1="46.547" x2="1055.578" y2="36.229">
       <stop offset="0" stop-color="#F76E1E" />
       <stop offset="1" stop-color="#DD2D6F" />
     </linearGradient>
-    <filter color-interpolation-filters="sRGB" x="-1074" y="-7.73" width="1076" height="9.73" id="filter_5">
+    <filter color-interpolation-filters="sRGB" x="-1070.753" y="-101.473" width="1072.753" height="103.473" id="filter_5">
       <feFlood flood-opacity="0" result="BackgroundImageFix_1" />
       <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix_1" result="Shape_2" />
       <feGaussianBlur stdDeviation="30" />
     </filter>
-    <linearGradient id="gradient_6" gradientUnits="userSpaceOnUse" x1="602.25" y1="0" x2="602.25" y2="783.5">
+    <linearGradient id="gradient_6" gradientUnits="userSpaceOnUse" x1="7.767" y1="3.597" x2="1039.256" y2="2.8">
+      <stop offset="0" stop-color="#F76E1E" />
+      <stop offset="0.545" stop-color="#DD2D6F" />
+    </linearGradient>
+    <linearGradient id="gradient_7" gradientUnits="userSpaceOnUse" x1="577.5" y1="0" x2="577.5" y2="808">
       <stop offset="0" stop-color="#090605" />
-      <stop offset="1" stop-color="#160600" />
+      <stop offset="1" stop-color="#110500" />
     </linearGradient>
   </defs>
   <g id="Frame" opacity="1" clip-path="url(#clip_path_3)">
     <g>
       <use xlink:href="#path_1" style="mix-blend-mode:normal;" />
       <g>
-        <path id="Path" d="M0.500001 2.64948C0.500001 2.64948 40.9126 -8.49629 128.5 14.9331C216.087 38.3625 239 93.4346 239 93.4346C239 93.4346 274.126 163.571 340.501 186.822C406.877 210.072 523.002 165.321 523.002 165.321C523.002 165.321 585.356 136.446 649.981 141.821C714.606 147.196 781.503 186.822 781.503 186.822C781.503 186.822 812.24 204.887 836.503 237.322C860.765 269.756 936.504 245.822 936.504 245.822C936.504 245.822 984.748 222.186 1017 245.822C1049.26 269.459 1047 319.822 1047 319.822L1047 351.821L0 351.821L0.500001 2.64948Z" style="fill:#0E0E0E;fill-rule:evenodd;mix-blend-mode:normal;" transform="translate(0 222)" />
-        <rect id="Rectangle" width="1047" height="907" style="fill:#0E0E0E;fill-rule:evenodd;mix-blend-mode:normal;" transform="translate(0 573)" />
-        <path id="Rectangle" d="M0 0L1076 6.10352e-05L1076 9.73035L0 9.73029L0 0Z" style="fill:url(#gradient_4);fill-rule:evenodd;filter:url(#filter_5);mix-blend-mode:normal;" transform="matrix(0.996 0.087 -0.087 0.996 -7.809 780)" />
-        <path id="Vector" d="M98 0L1146 92.5L1204.5 758.5L0 783.5L98 0Z" style="fill:url(#gradient_6);fill-rule:evenodd;mix-blend-mode:normal;" transform="translate(-98 790)" />
-        <path id="Rectangle" d="M0 0L1068.05 0.000915527L1068.05 9.73132L0.910149 9.73047L0 0Z" style="fill:url(#gradient_4);fill-rule:evenodd;mix-blend-mode:normal;" transform="matrix(0.996 0.087 -0.087 0.996 -0.088 781)" />
+        <path id="Path" d="M0.478516 2.64966C0.478516 2.64966 40.8911 -8.49648 128.479 14.9329C216.066 38.3623 239 77.4355 239 77.4355C239 77.4355 274.126 147.572 340.501 170.823C406.877 194.073 523.002 149.322 523.002 149.322C523.002 149.322 585.356 120.447 649.981 125.822C714.606 131.197 781.503 170.823 781.503 170.823C781.503 170.823 812.24 188.888 836.503 221.322C860.765 253.757 936.504 229.823 936.504 229.823C936.504 229.823 984.748 206.186 1017 229.823C1049.26 253.46 1047 303.823 1047 303.823L1047 335.822L0 335.822L0.478516 2.64966Z" style="fill:#0E0E0E;fill-rule:evenodd;mix-blend-mode:normal;" transform="translate(0 209.999)" />
+        <rect id="Rectangle" width="1047" height="907" style="fill:#0E0E0E;fill-rule:evenodd;mix-blend-mode:normal;" transform="translate(0 545)" />
+        <path id="Rectangle" d="M0.848061 0L1072.75 93.7801L1071.91 103.473L0 9.6933L0.848061 0Z" style="fill:url(#gradient_4);fill-rule:evenodd;filter:url(#filter_5);mix-blend-mode:normal;" transform="translate(-14 634)" />
+        <path id="Rectangle" d="M0 0L1056.17 0.000793457L1056.17 7.99628L0.900028 7.99554L0 0Z" style="fill:url(#gradient_6);fill-rule:evenodd;mix-blend-mode:normal;" transform="matrix(0.996 0.087 -0.087 0.996 -0.828 637.544)" />
+        <path id="Path" d="M85.0001 0L1138 93L1155 808L0 792L85.0001 0Z" style="fill:url(#gradient_7);fill-rule:evenodd;mix-blend-mode:normal;" transform="translate(-91 644)" />
       </g>
     </g>
   </g>

@@ -168,7 +168,7 @@
   class="relative bg-[url('/images/landingbg.svg')] max-md:bg-[url('/images/landingbg_mobile.svg')] object-fit flex flex-col items-center min-h-screen text-[#efefef] pb-40 px-5 mainArea relative"
 >
   <div
-    class="absolute h-[60rem] 2xl:h-[80rem] w-full bg-gradient bg-gradient-to-tr from-[#2f0c00] to-[#000000] z-[-1]"
+    class="absolute h-[60rem] min-[1000px]:h-[80rem] w-full bg-gradient bg-gradient-to-tr from-[#2f0c00] to-[#000000] z-[-1]"
   ></div>
 
   <div class="text-5xl font-bold mt-8 md:mt-16 text-center space-y-5">
@@ -197,7 +197,7 @@
   {/if}
 
   <div
-    class="flex max-md:flex-col max-md:gap-6 items-center max-sm:mt-24 max-sm: mb-14 mt-14 min-[1950px]:mt-64 space-x-3 min-[768px]:max-[846px]:ml-20 md:ml-48 brightness-95"
+    class="flex max-md:flex-col max-md:gap-6 items-center max-sm:mt-24 max-sm: mb-14 mt-14 space-x-3 min-[768px]:max-[846px]:ml-20 md:ml-48 brightness-95"
   >
     <img
       src="/images/PhoneMinecraft.webp"
@@ -273,7 +273,7 @@
           }}>MX$</button
         >
       </div>
-      <p class="text-2xl -mt-4 md:-mt-8 font-bold min-[1950px]:mt-[35rem]">
+      <p class="text-2xl mt-16 font-bold min-[1000px]:max-[1200px]:mt-96">
         {$t("plans")}
       </p>
       <div
