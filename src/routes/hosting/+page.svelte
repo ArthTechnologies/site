@@ -104,12 +104,15 @@
   function getStartedClicked() {
     if (browser) {
       if (localStorage.getItem("allowAnalytics") == "true") {
-        fetch("https://backend.arthmc.xyz/analytics/getStartedButtonClicked", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
+        fetch(
+          "https://backend.arthmc.xyz/analytics/getStartedButtonClicked?bpage=true",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
       }
     }
   }
