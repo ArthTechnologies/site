@@ -530,7 +530,7 @@
   }
 
   :root {
-    --pink: #45ffa8;
+    --pink: #b340ff;
 
     --orange: #ff6d1b;
   }
