@@ -7,10 +7,19 @@
   import { themeChange } from "theme-change";
   import Footer from "$lib/components/layout/Footer.svelte";
   import { browser } from "$app/environment";
+  import { goto } from "$app/navigation";
 
   let onMainPage = false;
   //post request to http://localhost:5000/analytics/
   if (browser) {
+    //a-b test
+    /*if (browser) {
+      let x = Math.floor(Math.random() * 2) == 0;
+      if (x) {
+        console.log("redricting...");
+        goto("/hosting");
+      }
+    }*/
     onMainPage = window.location.pathname === "/";
     console.log(navigator.doNotTrack);
     let object = {

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { browser } from "$app/environment";
+  import { goto } from "$app/navigation";
   import { t } from "$lib/scripts/i18n";
   import {
     BadgeDollarSign,
