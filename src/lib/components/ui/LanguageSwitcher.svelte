@@ -35,7 +35,7 @@
   class="dropdown dropdown-end pointer-events-auto"
 >
   <summary class="btn btn-ghost btn-circle">
-    <Languages />
+    <Languages size="18" />
   </summary>
   <ul
     class="p-2 shadow menu dropdown-content z-[1] bg-base-200 rounded-box w-52"

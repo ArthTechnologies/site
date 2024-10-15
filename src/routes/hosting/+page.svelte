@@ -104,15 +104,12 @@
   function getStartedClicked() {
     if (browser) {
       if (localStorage.getItem("allowAnalytics") == "true") {
-        fetch(
-          "https://backend.arthmc.xyz/analytics/getStartedButtonClicked?bpage=true",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        );
+        fetch("https://backend.arthmc.xyz/analytics/getStartedButtonClicked", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
       }
     }
   }
@@ -163,16 +160,13 @@
     content="Rethinking Minecraft Servers. Arth Hosting was built from the ground up to have the best price, features, and convenience in the market. Basic plan available for only $3.49"
   />
 </head>
-<!-- background for the navbar-->
-<div
-  class="absolute z-[-1] top-0 w-full h-16 bg-gradient bg-gradient-to-r from-[#331200] to-[#0c0400]"
-></div>
+
 <div
   style="background-size: cover;"
   class="relative bg-[url('/images/landingbg.svg')] max-md:bg-[url('/images/landingbg_mobile.svg')] object-fit flex flex-col items-center min-h-screen text-[#efefef] pb-40 px-5 mainArea relative"
 >
   <div
-    class="absolute h-[60rem] min-[1000px]:h-[80rem] w-full bg-gradient bg-gradient-to-tr from-[#2f0c00] to-[#000000] z-[-1]"
+    class="-mt-16 absolute h-[60rem] min-[1000px]:h-[80rem] w-full bg-gradient bg-gradient-to-tr from-[#2f0c00] to-[#000000] z-[-1]"
   ></div>
 
   <div class="text-5xl font-bold mt-8 md:mt-16 text-center space-y-5">
@@ -530,7 +524,7 @@
   }
 
   :root {
-    --pink: #b340ff;
+    --pink: #ff64f9;
 
     --orange: #ff6d1b;
   }

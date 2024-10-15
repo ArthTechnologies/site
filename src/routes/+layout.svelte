@@ -13,7 +13,8 @@
   //post request to http://localhost:5000/analytics/
   if (browser) {
     //a-b test
-    if (browser) {
+    let slug = window.location.pathname;
+    if (slug === "/") {
       let x = Math.floor(Math.random() * 2) == 0;
       if (x) {
         console.log("redricting...");
