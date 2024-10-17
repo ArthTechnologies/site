@@ -3,7 +3,7 @@
 </script>
 
 <div
-  class=" relative flex md:gap-5 overflow-x-scroll w-screen md:justify-center mt-10"
+  class=" relative flex md:gap-5 max-md:overflow-x-scroll w-screen md:justify-center mt-10"
 >
   <div
     class="max-md:scale-90 flex flex-col items-center gap-2.5 bg-base-300 bg-opacity-80 rounded-2xl px-3 md:px-6 py-5 grayGradientStroke"
