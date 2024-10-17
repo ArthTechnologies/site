@@ -51,28 +51,20 @@
 
 <div class=" h-[92px] w-full flex items-center justify-center font-poppins">
   <div
-    class=" h-[58px] w-[85%] xl:w-[1128px] flex justify-between items-center z-10 text-white"
+    class=" h-[58px] max-sm:scale-90 w-full sm:w-[85%] xl:w-[1200px] flex justify-between items-center z-10 text-white"
   >
     <a href="/" class="btn px-2 btn-ghost btn-lg">
       <img src="/images/hosting-logo.svg" class="h-10" />
     </a>
-    <div class="flex gap-3 items-center">
+    <div class="flex gap-1 sm:gap-3 items-center">
       <a href="/"
         ><button class="max-md:hidden px-2 py-1 btn-ghost rounded-lg"
           >Home</button
         >
-        <button class="max-sm:hidden md:hidden btn btn-ghost btn-circle">
-          <Home size="18" />
-        </button></a
-      >
+      </a>
       <a href="/articles"
         ><button class=" px-2 py-1 btn-ghost rounded-lg max-sm:hidden"
           >Articles</button
-        ></a
-      >
-      <a href="/software"
-        ><button class=" px-2 py-1 btn-ghost rounded-lg max-md:hidden"
-          >Docs</button
         ></a
       >
 
@@ -82,14 +74,17 @@
           role="button"
           class=" px-2 py-1 btn-ghost rounded-lg flex items-center gap-1"
         >
-          More<ChevronDown size="16" class="mt-0.5" />
+          <p class="max-md:hidden">More</p>
+          <p class="md:hidden">Pages</p>
+          <ChevronDown size="16" class="mt-0.5" />
         </div>
 
         <ul
           tabindex="0"
-          class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow bg-opacity-75 backdrop-blur"
+          class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow bg-opacity-75 backdrop-blur mt-1"
         >
-          <li><a href="/terms-of-service">Terms of Service</a></li>
+          <li><a class="sm:hidden" href="/articles">Articles</a></li>
+          <li><a href="/software">Software</a></li>
           <li><a href="/privacy">Privacy Policy</a></li>
           <li><a href="/status">Status</a></li>
         </ul>
@@ -102,7 +97,7 @@
         rel="noreferrer"
       >
         <div
-          class="max-lg:hidden h-12 mx-2 px-4 cursor-pointer flex items-center bg-white hover:bg-gray-300 rounded-full text-black border-0"
+          class="max-lg:hidden h-12 mx-2 px-5 cursor-pointer flex items-center bg-white hover:bg-gray-300 rounded-full text-black border-0"
         >
           Log In
         </div></a
@@ -113,9 +108,9 @@
         rel="noreferrer"
       >
         <div
-          class=" h-12 px-4 cursor-pointer flex items-center bg-gradient-to-b from-[#E93843] to-[#F56922] hover:opacity-90 rounded-full text-black whiteGradientStroke"
+          class="h-12 px-5 cursor-pointer flex items-center bg-gradient-to-b from-[#E93843] to-[#F56922] hover:brightness-90 rounded-full text-white whiteGradientStroke font-poppins-bold"
         >
-          Get Started
+          <p>Get Started</p>
         </div>
       </a>
     </div>
@@ -126,18 +121,17 @@
   .whiteGradientStroke {
     position: relative;
 
-    border: 2px solid transparent; /* Invisible border for spacing */
-
     z-index: 1;
   }
 
   .whiteGradientStroke::before {
     content: "";
     position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
+    top: 0px;
+
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
     border-radius: inherit; /* Inherits button's border-radius */
     padding: 2px; /* Space between button and border */
     background: linear-gradient(180deg, #ffffff, #ffffff00);
@@ -147,13 +141,5 @@
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
     z-index: -1;
-  }
-  @font-face {
-    font-family: "Poppins";
-    src: url("/fonts/Poppins-Regular.ttf");
-  }
-
-  .font-poppins {
-    font-family: "Poppins";
   }
 </style>

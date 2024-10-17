@@ -1,8 +1,9 @@
 <script lang="ts">
   import { browser } from "$app/environment";
   import { goto } from "$app/navigation";
+  import Plans from "$lib/components/ui/landing/Plans.svelte";
   import { t } from "$lib/scripts/i18n";
-  import { BadgeCheck } from "lucide-svelte";
+  import { BadgeCheck, MemoryStick, CpuIcon } from "lucide-svelte";
 
   import { onMount } from "svelte";
 
@@ -156,32 +157,36 @@
 
 <div
   style="background-size: cover;"
-  class="relative -mt-16 bg-[url('/images/hostingbg.webp')] object-fit flex flex-col items-center min-h-screen text-[#efefef] pb-40 px-5 mainArea relative"
+  class="relative -mt-16 bg-[url('/images/hostingbg.webp')] flex flex-col items-center xl:h-[120vh] text-[#efefef] pb-40 px-5 mainArea relative"
 >
   <div
-    class="-mt-16 absolute h-[60rem] min-[1000px]:h-[80rem] w-full bg-gradient bg-gradient-to-tr from-[#2f0c00] to-[#000000] z-[-1]"
+    class="-mt-16 absolute h-[60rem] min-[1000px]:h-[80rem] w-full bg-[#66582f] z-[-1]"
   ></div>
 
   <div
-    class="mt-40 px-4 py-2 bg-green-600 rounded-full text-white font-semibold text-sm flex items-center gap-2"
+    class="max-md:hidden mt-40 px-4 py-2 bg-green-600 rounded-full text-white font-semibold text-sm flex items-center gap-2"
   >
-    <BadgeCheck size="16" />
+    <BadgeCheck size="16" class="shrink-0" />
     Experience unmatched price for performance and exclusive features on every plan.
   </div>
-  <b class="mt-8 font-bold text-7xl w-[65rem] text-center font-poppins-bold">
+  <b
+    class="leading-tight mt-40 mb-20 md:mt-6 font-bold text-4xl md:text-6xl lg:text-7xl lg:w-[65rem] text-center font-poppins-bold"
+  >
     Quality Minecraft Hosting at Affordable Prices
   </b>
+  <p
+    class="font-poppins-bold text-left w-full md:w-[800px] text-xl -mb-12 md:hidden"
+  >
+    Plans
+  </p>
+  <Plans />
 </div>
 <div
   style="background-size: cover;"
-  class="relative -mt-60 bg-[url('/images/hostingbg2.svg')] object-fit flex flex-col items-center min-h-screen text-[#efefef] pb-40 px-5 mainArea relative"
+  class="relative -mt-60 sm:-mt-40 xl:-mt-96 bg-[url('/images/hostingbg2.svg')] object-fit flex flex-col items-center min-h-screen text-[#efefef] pb-96 px-5 mainArea relative"
 >
-  <div class="md:flex gap-5 mt-60 ml-24">
-    <img
-      src="/images/Panel.webp"
-      class="z-10 h-64 md:h-[17rem]"
-      style="image-rendering: -moz-crisp-edges;"
-    />
+  <div class="md:flex gap-5 mt-60 sm:ml-24">
+    <img src="/images/Panel.webp" class="z-10 h-56 sm:h-64 md:h-[17rem]" />
     <img
       src="/images/Panel2.svg"
       class="absolute left-0 -top-10 blur-2xl opacity-90"
@@ -192,46 +197,35 @@
       </p>
       <p class="font-poppins w-[90%]">
         Most leading hosting providers base their panels off of the exact same
-        software, so we started the open-source Arth Panel project to reimagine
-        the user experience with countless ease of use features not seen on any
-        other hosting service.
+        software, so we started the open-source <a
+          target="_blank"
+          rel="noreferrer"
+          href="/software"
+          class="text-accent hover:link">Arth Panel</a
+        > project to reimagine the user experience with countless ease of use features
+        not seen on any other hosting service.
       </p>
     </div>
   </div>
-  <div class="flex gap-5 mt-32 justify-end mr-32">
-    <div class="w-1/3 z-10 text-right flex flex-col items-end">
+  <div
+    class="flex max-md:flex-col-reverse gap-5 mt-32 justify-end md:mr-32 mb-16"
+  >
+    <div class="md:w-1/3 z-10 text-right flex flex-col items-end">
       <p class="text-4xl font-poppins-bold mt-12 mb-6">Insane Performance.</p>
       <p class="font-poppins w-[90%]">
-        Most leading hosting providers base their panels off of the exact same
-        software, so we started the open-source Arth Panel project to reimagine
-        the user experience with countless ease of use features not seen on any
-        other hosting service.
+        Our servers are powered by AMD Ryzen™ 7 5700X processors, and have a
+        better price for performance than all of the leading competitors.
       </p>
     </div>
-    <img src="/images/PricePerRAM_EN.webp" class="z-10 h-80" />
+    <img src="/images/PricePerRAM_EN.webp" class="z-10 h-60 md:h-80" />
   </div>
+  <p class="font-pippins font-bold text-left w-full md:w-[800px] text-xl -mb-7">
+    All Plans
+  </p>
+  <Plans />
 </div>
 
 <!-- background for the footer-->
 <div
   class="absolute bottom-0 w-full h-[40rem] md:h-48 bg-gradient bg-gradient-to-r from-blue-950 to-sky-950"
 ></div>
-
-<style>
-  @font-face {
-    font-family: "Poppins";
-    src: url("/fonts/Poppins-Regular.ttf");
-  }
-  @font-face {
-    font-family: "PoppinsBold";
-    src: url("/fonts/Poppins-Bold.ttf");
-  }
-
-  .font-poppins {
-    font-family: "Poppins";
-  }
-
-  .font-poppins-bold {
-    font-family: "PoppinsBold";
-  }
-</style>

@@ -7,7 +7,7 @@
   class="footer p-10 bg-neutral bg-opacity-50 backdrop-blur text-base-content"
 >
   <div>
-    <img src="/images/sitelogo.webp" width="100px" />
+    <img src="/images/arthlogo-footer.svg" width="150px" />
     <p>Arth Technologies<br />© 2022-{new Date().getFullYear()}</p>
   </div>
   <div>

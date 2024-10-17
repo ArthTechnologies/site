@@ -90,9 +90,9 @@
 <p class="text-center text-5xl font-bold my-10">
   {$t("footer.blog")}
 </p>
-<div class="flex w-full gap-8">
+<div class="max-md:flex-col flex w-full gap-8">
   <div
-    class="items-center flex gap-5 shadow bg-base-300 bg-opacity-90 rounded-xl p-6 w-1/2 ml-5"
+    class="items-center flex gap-5 shadow bg-base-300 bg-opacity-90 rounded-xl p-6 w-[90%] md:w-1/2 ml-5"
   >
     <div class="flex flex-col gap-2 w-96">
       <div class="h-64 overflow-hidden">
@@ -136,7 +136,7 @@
       >
     </div>
   </div>
-  <div class="w-1/2">
+  <div class="md:w-1/2">
     <p class="font-bold text-2xl mb-1 ml-3 font-mono flex gap-1.5">
       <BrainCircuit class="mt-0.5" />Knowledge Base
     </p>

@@ -38,7 +38,7 @@
     <Languages size="18" />
   </summary>
   <ul
-    class="p-2 shadow menu dropdown-content z-[1] bg-base-200 rounded-box w-52"
+    class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52 bg-opacity-75 backdrop-blur"
   >
     <li on:click={en}><a>English</a></li>
     <li on:click={es}><a>Español</a></li>
