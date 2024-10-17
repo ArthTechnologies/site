@@ -2,14 +2,7 @@
   import { browser } from "$app/environment";
   import { goto } from "$app/navigation";
   import { t } from "$lib/scripts/i18n";
-  import {
-    BadgeDollarSign,
-    Check,
-    MemoryStick,
-    Cpu,
-    Plug,
-    ExternalLink,
-  } from "lucide-svelte";
+  import { BadgeCheck } from "lucide-svelte";
 
   import { onMount } from "svelte";
 
@@ -163,369 +156,82 @@
 
 <div
   style="background-size: cover;"
-  class="relative bg-[url('/images/landingbg.svg')] max-md:bg-[url('/images/landingbg_mobile.svg')] object-fit flex flex-col items-center min-h-screen text-[#efefef] pb-40 px-5 mainArea relative"
+  class="relative -mt-16 bg-[url('/images/hostingbg.webp')] object-fit flex flex-col items-center min-h-screen text-[#efefef] pb-40 px-5 mainArea relative"
 >
   <div
     class="-mt-16 absolute h-[60rem] min-[1000px]:h-[80rem] w-full bg-gradient bg-gradient-to-tr from-[#2f0c00] to-[#000000] z-[-1]"
   ></div>
 
-  <div class="text-5xl font-bold mt-8 md:mt-16 text-center space-y-5">
-    <span
-      class=" text-5xl md:text-7xl h-20 text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-pink-600"
-      >Arth Hosting</span
-    >
-    <p class="max-md:text-3xl text-gray-100">{$t("main.subtitle")}</p>
-  </div>
-  {#if isVisible}
-    <div
-      class="flex max-md:flex-col-reverse items-center md:mt-14 space-x-3 md:ml-32 element-container"
-    >
-      <div class="w-64 text-right max-md:ml-20">
-        <p class="text-xl font-bold">{$t("main.performance.title")}</p>
-        <p>
-          {@html $t("main.performance.desc")}
-        </p>
-      </div>
-      <img
-        src="/images/PricePerRAM_{locale}.webp"
-        alt="AMD Ryzen CPU"
-        class="w-[30.5rem] z-20 max-md:scale-90"
-      />
-    </div>
-  {/if}
-
   <div
-    class="flex max-md:flex-col max-md:gap-6 items-center max-sm:mt-24 max-sm: mb-14 mt-14 space-x-3 min-[768px]:max-[846px]:ml-20 md:ml-48 brightness-95"
+    class="mt-40 px-4 py-2 bg-green-600 rounded-full text-white font-semibold text-sm flex items-center gap-2"
   >
-    <img
-      src="/images/PhoneMinecraft.webp"
-      alt="Minecraft on a phone, looking at a java edition player."
-      class="w-[19rem] md:w-[30rem] -mb-8 z-20 mt-12 m"
-    />
-    <div class="w-64">
-      <p class="text-xl font-bold">
-        {$t("main.crossplay.title")}<sup
-          ><a href="#footnotes" class="hover:link">2</a></sup
-        >
-      </p>
-      <p>
-        {@html $t("main.crossplay.desc")}
-      </p>
-    </div>
+    <BadgeCheck size="16" />
+    Experience unmatched price for performance and exclusive features on every plan.
   </div>
-  <div
-    class="flex max-md:flex-col-reverse max-md:gap-6 items-center mt-16 md:-mt-16 min-[858px]:-mt-8 min-[1000px]:mt-0 space-x-8 space-y-5 sm:ml-36 min-[768px]:max-[846px]:ml-20 min-[768px]:max-[846px]:scale-[97%]"
-  >
-    <div class="w-64">
-      <p class="text-xl font-bold">{$t("main.interface.title")}</p>
-      <p>
-        {@html $t("main.interface.desc")}
-      </p>
-    </div>
-    <img
-      src="/images/ServerCard.webp"
-      alt="Server Card from our Interface"
-      class="z-20 w-[19rem] min-[900px]:w-[28rem] brightness-[.70]"
-    />
-  </div>
-
-  <div class="md:flex items-center mt-64 2xl:mt-[20rem] space-y-2 md:space-x-8">
-    <div class="flex flex-col items-center">
-      <div class="flex space-x-1 justify-start w-full">
-        <button
-          id="usd"
-          class="btn btn-sm pointer-events-none"
-          on:click={() => {
-            if (browser) {
-              const usd = document.getElementById("usd");
-              const mxn = document.getElementById("mxn");
-              usd?.classList.remove("btn-neutral");
-              usd?.classList.remove("hover:bg-base-100");
-              usd?.classList.add("pointer-events-none");
-              mxn?.classList.add("btn-neutral");
-              mxn?.classList.add("hover:bg-base-100");
-              mxn?.classList.remove("pointer-events-none");
-
-              basicPrice = "$3.49";
-              moddedPrice = "$4.99";
-            }
-          }}>$</button
-        >
-        <button
-          id="mxn"
-          class="btn btn-neutral btn-sm hover:bg-base-100"
-          on:click={() => {
-            if (browser) {
-              const usd = document.getElementById("usd");
-              const mxn = document.getElementById("mxn");
-              usd?.classList.add("btn-neutral");
-              usd?.classList.add("hover:bg-base-100");
-              usd?.classList.remove("pointer-events-none");
-              mxn?.classList.remove("btn-neutral");
-              mxn?.classList.remove("hover:bg-base-100");
-              mxn?.classList.add("pointer-events-none");
-
-              basicPrice = "$60";
-              moddedPrice = "$80";
-            }
-          }}>MX$</button
-        >
-      </div>
-      <p class="text-2xl mt-16 font-bold min-[1000px]:max-[1200px]:mt-96">
-        {$t("plans")}
-      </p>
-      <div
-        class="max-[820px]:-mx-5 max-[500px]:scale-90 grid md:grid-cols-2 min-[1200px]:grid-cols-3 gap-4 items-center max-md:mb-4 mt-12"
-      >
-        <div
-          class="backdrop-blur-xl bg-opacity-75 transition duration-200 hover:-translate-y-0.5 ease-in-out rounded-xl bg-base-200 w-[110%] w-[24rem] shadow-2xl shadow-orange-950/20 hover:shadow-orange-950/40 p-6"
-        >
-          <div class="flex gap-5 items-center">
-            <img
-              src="/images/basicPlan.webp"
-              class="rounded-xl h-[5.75rem] w-[9.5rem]"
-            />
-            <div>
-              <h2 class=" mb-1">
-                <span>{$t("basic")}</span>
-              </h2>
-              <div class="flex gap-2">
-                <p class="text-accent-content text-4xl font-bold">$3.49</p>
-
-                <p class="w-5 text-sm text-gray-400">{$t("perMonth")}</p>
-              </div>
-            </div>
-          </div>
-          <div class="flex gap-2 text-sm text-gray-300 mt-2.5">
-            <p class="flex items-center gap-1">
-              <Cpu size="16" class="shrink-0" />
-              {$t("basic.1")}
-            </p>
-            <p class="flex items-center gap-1">
-              <MemoryStick size="16" class="shrink-0" />
-              {$t("basic.2")}
-            </p>
-            <p class="flex items-center gap-1">
-              <Plug size="16" class="shrink-0" />{$t("basic.3")}
-            </p>
-          </div>
-          <a
-            class="btn2 btn-sm mt-4 px-4 flex gap-1.5 items-center w-fit"
-            href="https://servers.arthmc.xyz/signin?plan=basic"
-            target="_blank"
-            rel="noreferrer"
-            on:click={getStartedClicked}
-          >
-            {$t("signup")}<ExternalLink
-              size="18"
-              class="shrink-0 -mr-1 mb-0.5"
-            /></a
-          >
-        </div>
-
-        <div
-          class="backdrop-blur-xl bg-opacity-75 transition duration-200 hover:-translate-y-0.5 ease-in-out rounded-xl bg-base-200 w-[110%] w-[24rem] shadow-2xl shadow-orange-950/20 hover:shadow-orange-950/40 p-6"
-        >
-          <div class="flex gap-5 items-center">
-            <img
-              src="/images/moddedPlan.webp"
-              class="rounded-xl h-[5.75rem] w-[9.5rem]"
-            />
-            <div>
-              <h2 class=" mb-1">
-                <span>{$t("modded")}</span>
-              </h2>
-              <div class="flex gap-2">
-                <p class="text-accent-content text-4xl font-bold">$4.99</p>
-
-                <p class="w-5 text-sm text-gray-400">{$t("perMonth")}</p>
-              </div>
-            </div>
-          </div>
-          <div class="flex gap-2 text-sm text-gray-300 mt-2.5">
-            <p class="flex items-center gap-1">
-              <Cpu size="16" class="shrink-0" />
-              {$t("modded.1")}
-            </p>
-            <p class="flex items-center gap-1">
-              <MemoryStick size="16" class="shrink-0" />
-              {$t("modded.2")}
-            </p>
-            <p class="flex items-center gap-1">
-              <Plug size="16" class="shrink-0" />{$t("modded.3")}
-            </p>
-          </div>
-          <a
-            class="btn2 btn-sm mt-4 px-4 flex gap-1.5 items-center w-fit"
-            href="https://servers.arthmc.xyz/signin?plan=modded"
-            target="_blank"
-            rel="noreferrer"
-            on:click={getStartedClicked}
-          >
-            {$t("signup")}<ExternalLink
-              size="18"
-              class="shrink-0 -mr-1 mb-0.5"
-            /></a
-          >
-        </div>
-        <div class="md:max-[1200px]:col-span-2 w-full flex justify-center">
-          <div
-            class="backdrop-blur-xl bg-opacity-75 transition duration-200 hover:-translate-y-0.5 ease-in-out rounded-xl bg-base-200 w-[24rem] w-[110%] shadow-2xl shadow-orange-950/20 hover:shadow-orange-950/40 p-6"
-          >
-            <div class="flex gap-5 items-center">
-              <img
-                src="/images/premiumPlan.webp"
-                class="rounded-xl h-[5.75rem] w-[9.5rem]"
-              />
-              <div>
-                <h2 class=" mb-1">
-                  <span>Premium</span>
-                </h2>
-                <div class="flex gap-2">
-                  <p class="text-accent-content text-4xl font-bold">$7.99</p>
-
-                  <p class="w-5 text-sm text-gray-400">{$t("perMonth")}</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex gap-2 text-sm text-gray-300 mt-2.5">
-              <p class="flex items-center gap-1">
-                <Cpu size="16" class="shrink-0" />
-                {$t("premium.1")}
-              </p>
-              <p class="flex items-center gap-1">
-                <MemoryStick size="16" class="shrink-0" />
-                {$t("premium.2")}
-              </p>
-              <p class="flex items-center gap-1">
-                <Plug size="16" class="shrink-0" />{$t("premium.3")}
-              </p>
-            </div>
-            <a
-              class="btn2 btn-sm mt-4 px-4 flex gap-1.5 items-center w-fit"
-              href="https://servers.arthmc.xyz/signin?plan=modded"
-              target="_blank"
-              rel="noreferrer"
-              on:click={getStartedClicked}
-            >
-              {$t("signup")}<ExternalLink
-                size="18"
-                class="shrink-0 -mr-1 mb-0.5"
-              /></a
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="w-full px-4 lg:px-32 mt-32">
-    <p class="text-3xl font-bold text-gray-200">{$t("faq.t")}</p>
-    <div class="flex flex-col gap-1 w-[90%] md:w-[75%] lg:w-1/2">
-      <div>
-        <p class="text-xl font-bold mt-4 text-gray-100">
-          {$t("faq.1.a")}
-        </p>
-        <p class="text-gray-200">
-          {@html $t("faq.1.b")}
-        </p>
-      </div>
-      <div>
-        <p class="text-xl font-bold mt-4 text-gray-100">
-          {$t("faq.2.a")}
-        </p>
-        <p class="text-gray-200">
-          {@html $t("faq.2.b")}
-        </p>
-      </div>
-      <div>
-        <p class="text-xl font-bold mt-4 text-gray-100">
-          {$t("faq.3.a")}
-        </p>
-        <p class="text-gray-200">
-          {@html $t("faq.3.b")}
-        </p>
-      </div>
-      <ul class="mt-48 w-full text-sm text-gray-400" id="footnotes">
-        <li class="mb-1.5">
-          {$t("main.regionsFootnote")}
-        </li>
-        <li>
-          <sup>1</sup>{$t("main.footnote1")}
-        </li>
-        <li>
-          <sup>2</sup>{$t("main.footnote2")}
-        </li>
-        <li>
-          <sup>3</sup>{$t("main.footnote3")}
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div
-    class="shooting-stars-container relative"
-    id="shootingStarsContainer"
-  ></div>
+  <b class="mt-8 font-bold text-7xl w-[65rem] text-center font-poppins-bold">
+    Quality Minecraft Hosting at Affordable Prices
+  </b>
 </div>
+<div
+  style="background-size: cover;"
+  class="relative -mt-60 bg-[url('/images/hostingbg2.svg')] object-fit flex flex-col items-center min-h-screen text-[#efefef] pb-40 px-5 mainArea relative"
+>
+  <div class="md:flex gap-5 mt-60 ml-24">
+    <img
+      src="/images/Panel.webp"
+      class="z-10 h-64 md:h-[17rem]"
+      style="image-rendering: -moz-crisp-edges;"
+    />
+    <img
+      src="/images/Panel2.svg"
+      class="absolute left-0 -top-10 blur-2xl opacity-90"
+    />
+    <div class="w-[85%] md:w-1/3 z-10">
+      <p class="text-4xl font-poppins-bold mt-12 mb-6">
+        An experience built from the ground up.
+      </p>
+      <p class="font-poppins w-[90%]">
+        Most leading hosting providers base their panels off of the exact same
+        software, so we started the open-source Arth Panel project to reimagine
+        the user experience with countless ease of use features not seen on any
+        other hosting service.
+      </p>
+    </div>
+  </div>
+  <div class="flex gap-5 mt-32 justify-end mr-32">
+    <div class="w-1/3 z-10 text-right flex flex-col items-end">
+      <p class="text-4xl font-poppins-bold mt-12 mb-6">Insane Performance.</p>
+      <p class="font-poppins w-[90%]">
+        Most leading hosting providers base their panels off of the exact same
+        software, so we started the open-source Arth Panel project to reimagine
+        the user experience with countless ease of use features not seen on any
+        other hosting service.
+      </p>
+    </div>
+    <img src="/images/PricePerRAM_EN.webp" class="z-10 h-80" />
+  </div>
+</div>
+
 <!-- background for the footer-->
 <div
-  class="absolute bottom-0 w-full h-[40rem] md:h-48 bg-gradient bg-gradient-to-r from-[#281818] to-[#0c0400]"
+  class="absolute bottom-0 w-full h-[40rem] md:h-48 bg-gradient bg-gradient-to-r from-blue-950 to-sky-950"
 ></div>
 
 <style>
-  .element-container {
-    position: relative;
-    animation: dropInFadeIn 2s ease;
-    opacity: 1;
+  @font-face {
+    font-family: "Poppins";
+    src: url("/fonts/Poppins-Regular.ttf");
+  }
+  @font-face {
+    font-family: "PoppinsBold";
+    src: url("/fonts/Poppins-Bold.ttf");
   }
 
-  @keyframes dropInFadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(-70px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  .btn2 {
-    font-weight: 600;
-    text-transform: uppercase;
-
-    border-radius: 0.5rem;
-
-    border: calc(0.1rem) solid transparent;
-    position: relative;
-    color: #dfdfdf;
-
-    background: linear-gradient(#15181e, #15181e),
-      linear-gradient(
-        #15181e 50%,
-        rgba(18, 18, 19, 0.6) 80%,
-        rgba(18, 18, 19, 0)
-      ),
-      linear-gradient(90deg, var(--orange), var(--pink));
-    background-origin: border-box;
-    background-clip: padding-box, border-box, border-box;
-    background-size: 150%;
-  }
-  .btn2:hover {
-    background: linear-gradient(#131518, #131518),
-      linear-gradient(
-        #131518 50%,
-        rgba(18, 18, 19, 0.6) 80%,
-        rgba(18, 18, 19, 0)
-      ),
-      linear-gradient(90deg, var(--orange), var(--pink));
-    background-origin: border-box;
-    background-clip: padding-box, border-box, border-box;
-    background-size: 150%;
+  .font-poppins {
+    font-family: "Poppins";
   }
 
-  :root {
-    --pink: #ff64f9;
-
-    --orange: #ff6d1b;
+  .font-poppins-bold {
+    font-family: "PoppinsBold";
   }
 </style>

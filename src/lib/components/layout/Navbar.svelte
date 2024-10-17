@@ -10,7 +10,7 @@
   import { onMount } from "svelte";
   import LanguageSwitcher from "../ui/LanguageSwitcher.svelte";
   import { browser } from "$app/environment";
-  import { ChevronDown } from "lucide-svelte";
+  import { ChevronDown, Home } from "lucide-svelte";
 
   //set locale to browser language if navigator is available
   if (typeof navigator !== "undefined") {
@@ -51,18 +51,29 @@
 
 <div class=" h-[92px] w-full flex items-center justify-center font-poppins">
   <div
-    class=" bg-opacity-10 h-[58px] w-[1128px] flex justify-between items-center"
+    class=" h-[58px] w-[85%] xl:w-[1128px] flex justify-between items-center z-10 text-white"
   >
-    <img src="/images/hosting-logo.svg" class="h-10" />
+    <a href="/" class="btn px-2 btn-ghost btn-lg">
+      <img src="/images/hosting-logo.svg" class="h-10" />
+    </a>
     <div class="flex gap-3 items-center">
       <a href="/"
-        ><button class=" px-2 py-1 btn-ghost rounded-lg">Home</button></a
+        ><button class="max-md:hidden px-2 py-1 btn-ghost rounded-lg"
+          >Home</button
+        >
+        <button class="max-sm:hidden md:hidden btn btn-ghost btn-circle">
+          <Home size="18" />
+        </button></a
       >
       <a href="/articles"
-        ><button class=" px-2 py-1 btn-ghost rounded-lg">Articles</button></a
+        ><button class=" px-2 py-1 btn-ghost rounded-lg max-sm:hidden"
+          >Articles</button
+        ></a
       >
       <a href="/software"
-        ><button class=" px-2 py-1 btn-ghost rounded-lg">Docs</button></a
+        ><button class=" px-2 py-1 btn-ghost rounded-lg max-md:hidden"
+          >Docs</button
+        ></a
       >
 
       <div class="dropdown dropdown-end">
@@ -91,7 +102,7 @@
         rel="noreferrer"
       >
         <div
-          class="h-12 mx-2 px-4 cursor-pointer flex items-center bg-white hover:bg-gray-300 rounded-full text-black border-0"
+          class="max-lg:hidden h-12 mx-2 px-4 cursor-pointer flex items-center bg-white hover:bg-gray-300 rounded-full text-black border-0"
         >
           Log In
         </div></a
