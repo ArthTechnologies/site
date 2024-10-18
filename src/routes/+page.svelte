@@ -78,7 +78,7 @@
             duration: 4500,
             easing: "ease",
             fill: "forwards",
-          }
+          },
         );
 
         setTimeout(() => {
@@ -160,17 +160,17 @@
   class="relative -mt-16 bg-[url('/images/hostingbg.webp')] flex flex-col items-center xl:h-[120vh] text-[#efefef] pb-40 px-5 mainArea relative"
 >
   <div
-    class="-mt-16 absolute h-[60rem] min-[1000px]:h-[80rem] w-full bg-[#66582f] z-[-1]"
+    class="-mt-16 absolute h-[60rem] min-[1000px]:h-[80rem] w-full bg-gradient-to-b from-[#483b4d] to-[#66582f] z-[-1]"
   ></div>
 
   <div
-    class="max-md:hidden mt-40 px-4 py-2 bg-green-600 rounded-full text-white font-semibold text-sm flex items-center gap-2"
+    class="max-md:hidden mt-40 xl:mt-32 px-4 py-2 bg-green-600 rounded-full text-white font-semibold text-sm flex items-center gap-2"
   >
     <BadgeCheck size="16" class="shrink-0" />
     {$t("landing.subtitle")}
   </div>
   <b
-    class="leading-tight mt-40 mb-20 md:mt-6 font-bold text-4xl md:text-6xl lg:text-7xl lg:w-[65rem] text-center font-poppins-bold"
+    class="leading-tight mt-40 mb-10 xl:mb-5 md:mt-6 font-bold text-4xl md:text-6xl lg:text-7xl lg:w-[65rem] text-center font-poppins-bold"
   >
     {$t("landing.title")}
   </b>
@@ -183,7 +183,7 @@
 </div>
 <div
   style="background-size: cover;"
-  class="relative -mt-60 sm:-mt-40 xl:-mt-96 bg-[url('/images/hostingbg2.svg')] object-fit flex flex-col items-center min-h-screen text-[#efefef] pb-96 px-5 mainArea relative"
+  class="relative -mt-60 sm:-mt-40 xl:-mt-60 2xl:-mt-96 bg-[url('/images/hostingbg2.svg')] object-fit flex flex-col items-center min-h-screen text-[#efefef] pb-96 px-5 mainArea relative"
 >
   <div class="md:flex gap-5 mt-60 sm:ml-24">
     <img src="/images/Panel.webp" class="z-10 h-56 sm:h-64 md:h-[17rem]" />
