@@ -59,12 +59,12 @@
     <div class="flex gap-1 sm:gap-3 items-center">
       <a href="/"
         ><button class="max-md:hidden px-2 py-1 btn-ghost rounded-lg"
-          >Home</button
+          >{$t("navbar.home")}</button
         >
       </a>
       <a href="/articles"
         ><button class=" px-2 py-1 btn-ghost rounded-lg max-sm:hidden"
-          >Articles</button
+          >{$t("navbar.articles")}</button
         ></a
       >
 
@@ -74,8 +74,8 @@
           role="button"
           class=" px-2 py-1 btn-ghost rounded-lg flex items-center gap-1"
         >
-          <p class="max-md:hidden">More</p>
-          <p class="md:hidden">Pages</p>
+          <p class="max-md:hidden">{$t("navbar.more")}</p>
+          <p class="md:hidden">{$t("navbar.pages")}</p>
           <ChevronDown size="16" class="mt-0.5" />
         </div>
 
@@ -83,10 +83,12 @@
           tabindex="0"
           class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow bg-opacity-75 backdrop-blur mt-1"
         >
-          <li><a class="sm:hidden" href="/articles">Articles</a></li>
-          <li><a href="/software">Software</a></li>
-          <li><a href="/privacy">Privacy Policy</a></li>
-          <li><a href="/status">Status</a></li>
+          <li>
+            <a class="sm:hidden" href="/articles">{$t("navbar.articles")}</a>
+          </li>
+          <li><a href="/software">{$t("navbar.software")}</a></li>
+          <li><a href="/privacy">{$t("navbar.privacyPolicy")}</a></li>
+          <li><a href="/status">{$t("navbar.status")}</a></li>
         </ul>
       </div>
 
@@ -99,7 +101,7 @@
         <div
           class="max-lg:hidden h-12 mx-2 px-5 cursor-pointer flex items-center bg-white hover:bg-gray-300 rounded-full text-black border-0"
         >
-          Log In
+          {$t("navbar.login")}
         </div></a
       >
       <a
@@ -110,7 +112,7 @@
         <div
           class="h-12 px-5 cursor-pointer flex items-center bg-gradient-to-b from-[#E93843] to-[#F56922] hover:brightness-90 rounded-full text-white whiteGradientStroke font-poppins-bold"
         >
-          <p>Get Started</p>
+          <p>{$t("navbar.getStarted")}</p>
         </div>
       </a>
     </div>

@@ -1,5 +1,14 @@
 export default {
   "en-US": {
+    "navbar.home": "Home",
+    "navbar.articles": "Articles",
+    "navbar.more": "More",
+    "navbar.pages": "Pages",
+    "navbar.software": "Software",
+    "navbar.privacyPolicy": "Privacy Policy",
+    "navbar.status": "Status",
+    "navbar.login": "Log In",
+    "navbar.getStarted": "Get Started",
     "landing.subtitle": "Experience unmatched price for performance and exclusive features on every plan.",
     "landing.title": "Quality Minecraft Hosting at Affordable Prices",
     "landing.plans.title": "Plans",
@@ -74,10 +83,6 @@ export default {
       "The free and open-source software behind Arth Hosting! If you have a server computer running Linux, you can self-host a minecraft server with ease.",
     "panel.frontend": "View frontend",
     "panel.backend": "View backend",
-    "navbar.home": "Home",
-    "navbar.hosting": "Hosting",
-    "navbar.tos": "Terms",
-    "navbar.discord": "Discord",
     "main.subtitle": "Rethinking Minecraft Servers",
     "main.interface.title": "An interface built from the ground up.",
     "main.interface.desc":
@@ -162,6 +167,17 @@ export default {
     
   },
 	  "es-ES": {
+    "navbar.home": "Inicio",
+    "navbar.articles": "Artículos",
+    "navbar.more": "Más",
+
+    "navbar.pages": "Páginas",
+    "navbar.software": "Software",
+    "navbar.privacyPolicy": "Política de privacidad",
+    "navbar.status": "Estado",
+    "navbar.login": "Iniciar sesión",
+    "navbar.getStarted": "Empezar", 
+
     "landing.subtitle": "Experimenta un rendimiento sin igual y características exclusivas en cada plan.",
     "landing.title": "Hosting de Minecraft de calidad a precios asequibles",
     "landing.plans.title": "Planes",
@@ -240,10 +256,7 @@ export default {
       "¡El software gratuito y de código abierto detrás de Arth Hosting! Si tiene una computadora de servidor que ejecuta Linux, puede alojar un servidor de minecraft con facilidad.",
     "panel.frontend": "Ver frontend",
     "panel.backend": "Ver backend",
-    "navbar.home": "Inicio",
-    "navbar.hosting": "Hosting",
-    "navbar.tos": "Términos de servicio",
-    "navbar.discord": "Discord",
+    
     "main.subtitle": "Reinventando los Servidores de Minecraft",
     "main.interface.title": "Una interfaz construida desde cero.",
     "main.interface.desc":
