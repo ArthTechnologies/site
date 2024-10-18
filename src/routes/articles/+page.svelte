@@ -87,7 +87,7 @@
   }*/
 </script>
 
-<p class="text-center text-5xl font-bold my-10">
+<p class="text-center text-5xl font-bold my-10 font-poppins-bold">
   {$t("footer.blog")}
 </p>
 <div class="max-md:flex-col flex w-full gap-8">
@@ -123,7 +123,7 @@
       <span class="flex gap-1 items-center font-bold mb-1"
         ><Star size="18" />Featured Post</span
       >
-      <p class="text-4xl font-bold">{featuredpost.title}</p>
+      <p class="text-4xl font-poppins-bold">{featuredpost.title}</p>
       <p>{featuredpost.desc}</p>
       <a
         href="/articles/{featuredpost.slug}"
@@ -217,7 +217,7 @@
             </div>
           </div>
           <div class="flex flex-col gap-2 w-[18rem]">
-            <p class="text-4xl font-bold">{post.title}</p>
+            <p class="text-4xl font-poppins-bold">{post.title}</p>
             <p>{post.desc}</p>
           </div>
         </div>
