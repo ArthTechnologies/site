@@ -78,7 +78,7 @@
             duration: 4500,
             easing: "ease",
             fill: "forwards",
-          },
+          }
         );
 
         setTimeout(() => {
@@ -157,20 +157,20 @@
 
 <div
   style="background-size: cover;"
-  class="relative -mt-16 bg-[url('/images/hostingbg.webp')] flex flex-col items-center xl:h-[120vh] text-[#efefef] pb-40 px-5 mainArea relative"
+  class="relative -mt-16 bg-[url('/images/hostingbg.webp')] flex flex-col items-center sm:h-[57rem] xl:h-[67rem] text-[#efefef] pb-40 px-5 mainArea relative"
 >
   <div
     class="-mt-16 absolute h-[60rem] min-[1000px]:h-[80rem] w-full bg-gradient-to-b from-[#483b4d] to-[#66582f] z-[-1]"
   ></div>
 
   <div
-    class="max-md:hidden mt-40 xl:mt-32 px-4 py-2 bg-green-600 rounded-full text-white font-semibold text-sm flex items-center gap-2"
+    class="max-md:hidden mt-36 xl:mt-32 px-4 py-2 bg-green-600 rounded-full text-white font-semibold text-sm flex items-center gap-2"
   >
     <BadgeCheck size="16" class="shrink-0" />
     {$t("landing.subtitle")}
   </div>
   <b
-    class="leading-tight mt-40 mb-10 xl:mb-5 md:mt-6 font-bold text-4xl md:text-6xl lg:text-7xl lg:w-[65rem] text-center font-poppins-bold"
+    class="leading-tight mt-40 max-md:mb-10 mb-1.5 xl:mb-6 md:mt-5 font-bold text-4xl md:text-6xl lg:text-7xl lg:w-[65rem] text-center font-poppins-bold"
   >
     {$t("landing.title")}
   </b>
@@ -181,12 +181,13 @@
   </p>
   <Plans />
 </div>
+
 <div
   style="background-size: cover;"
-  class="relative -mt-60 sm:-mt-40 xl:-mt-60 2xl:-mt-96 bg-[url('/images/hostingbg2.svg')] object-fit flex flex-col items-center min-h-screen text-[#efefef] pb-96 px-5 mainArea relative"
+  class="relative -mt-72 sm:-mt-64 lg:-mt-56 xl:-mt-72 2xl:-mt-80 bg-[url('/images/hostingbg2.svg')] object-fit flex flex-col items-center min-h-screen text-[#efefef] pb-96 px-5 mainArea relative"
 >
-  <div class="md:flex gap-5 mt-60 sm:ml-24">
-    <img src="/images/Panel.webp" class="z-10 h-56 sm:h-64 md:h-[17rem]" />
+  <div class="md:flex gap-5 mt-60 lg:ml-24">
+    <img src="/images/Panel.webp" class="z-10 h-48 sm:h-64 lg:h-[17rem]" />
     <img
       src="/images/Panel2.svg"
       class="absolute left-0 -top-10 blur-2xl opacity-90"
@@ -201,7 +202,7 @@
     </div>
   </div>
   <div
-    class="flex max-md:flex-col-reverse gap-5 mt-32 justify-end md:mr-32 mb-16"
+    class="flex max-md:flex-col-reverse gap-5 mt-32 justify-end lg:mr-32 mb-16 max-lg:items-end"
   >
     <div class="md:w-1/3 z-10 text-right flex flex-col items-end">
       <p class="text-4xl font-poppins-bold mt-12 mb-6">
@@ -211,12 +212,53 @@
         {$t("landing.performance.desc")}
       </p>
     </div>
-    <img src="/images/PricePerRAM_EN.webp" class="z-10 h-60 md:h-80" />
+    <img
+      src="/images/PricePerRAM_EN.webp"
+      class="z-10 w-[85%] sm:w-[75%] md:w-fit md:h-64 lg:h-80"
+    />
   </div>
   <p class="font-pippins font-bold text-left w-full md:w-[800px] text-xl -mb-7">
     {$t("landing.plans.title2")}
   </p>
   <Plans />
+  <p class="font-pippins font-bold text-left w-[85%] text-xl mt-32">
+    {$t("landing.faq.title")}
+  </p>
+  <div class="max-lg:text-sm flex flex-col gap-2 mt-2.5 w-[85%]">
+    <div
+      tabindex="0"
+      class="md:w-2/3 collapse collapse-arrow border-base-300 bg-base-200 border"
+    >
+      <div class="collapse-title text-lg font-medium">
+        {@html $t("landing.faq.1.title")}
+      </div>
+      <div class="collapse-content">
+        <p>{@html $t("landing.faq.1.desc")}</p>
+      </div>
+    </div>
+    <div
+      tabindex="0"
+      class="md:w-2/3 collapse collapse-arrow border-base-300 bg-base-200 border"
+    >
+      <div class="collapse-title text-xl font-medium">
+        {@html $t("landing.faq.2.title")}
+      </div>
+      <div class="collapse-content">
+        <p>{@html $t("landing.faq.2.desc")}</p>
+      </div>
+    </div>
+    <div
+      tabindex="0"
+      class="md:w-2/3 collapse collapse-arrow border-base-300 bg-base-200 border"
+    >
+      <div class="collapse-title text-xl font-medium">
+        {$t("landing.faq.3.title")}
+      </div>
+      <div class="collapse-content">
+        <p>{$t("landing.faq.3.desc")}</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- background for the footer-->
