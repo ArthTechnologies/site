@@ -44,7 +44,17 @@ export default {
           competitors still require some setup that could be confusing for
           beginners. There's a good chance many of your potential players are on
           Bedrock Edition, so it's important to have Geyser support.`,
-          "misc.month": "month",
+          "articles.title": "Articles",
+          "articles.featuredPost": "Featured Post",
+          "articles.featuredPost.button": "Read Article",
+          "articles.knowledgeBase": "Knowledge Base",
+          "articles.allPosts": "All Posts",
+          "modal.rss.button": "Subscribe via RSS",
+          "modal.rss.desc": "RSS is a way to get updates from websites all in one place. Download an RSS app to get started.",
+    "modal.rss.copyLink": "Copy Link",
+    "modal.rss.downloadFile": "Download File",
+          
+
     "status": "Status",
     "hosting.onlyplan": "Only Plan",
     "hosting.cheapestplan": "Cheapest Plan",
@@ -134,11 +144,7 @@ export default {
     "status.online": "Online",
     "status.offline": "Offline",
     "status.advancedInfo": "Advanced Info:",
-    "blog.button.RSS": "Subscribe via RSS",
-    "blog.RSS.title": "Subscribe to our RSS feed",
-    "blog.RSS.desc": "RSS is a way to get updates from websites all in one place. Download an RSS app to get started.",
-    "blog.RSS.button.copy": "Copy Link",
-    "blog.RSS.button.download": "Download File",
+    
     "blog.masto.title": "Share to mastodon",
     "blog.masto.desc": "Mastodon is a decentralized social network, meaning there are different instances or \"servers\" you can join. Enter your instance name below:",  
     "button.share": "Share",
@@ -164,6 +170,8 @@ export default {
     "addons.ramboost.desc": "8GB of RAM for only $7.99/month.",
     "addons.quarterly": "Bill Quarterly",
     "addons.quarterly.desc": "Pay every 3 months instead of 1 and save.",
+    "misc.month": "month",
+    "misc.copied": "Copied!"
 
     
   },
@@ -201,6 +209,16 @@ export default {
     "landing.faq.2.desc": `Sí. No solo admitimos Dynmap y Simple Voice Chat, sino que también somos uno de los pocos hosts que ofrecen <b>configuración automática</b>. ¡Todo lo que tiene que hacer es agregar el complemento, reiniciar el servidor y listo!`,
     "landing.faq.3.title": "¿Qué es Geyser y por qué es importante?",
     "landing.faq.3.desc": `Decenas de millones de personas juegan en cada edición principal de Minecraft: Java y Bedrock. En 2019, los desarrolladores de la comunidad de Minecraft crearon el programa Geyser que permite a los jugadores de Bedrock unirse a servidores de Java Edition. Ahora se usa en toda la industria, pero la mayoría de los competidores aún requieren alguna configuración que podría ser confusa para los principiantes. Es muy probable que muchos de sus posibles jugadores estén en Bedrock Edition, por lo que es importante tener soporte de Geyser.`,
+    "articles.title": "Artículos",
+    "articles.featuredPost": "Publicación destacada",
+    "articles.featuredPost.button": "Leer artículo",
+    "articles.knowledgeBase": "Base de conocimientos",
+    "articles.allPosts": "Todos los artículos",
+    "modal.rss.button": "Suscríbete a través de RSS",
+    "modal.rss.desc": "RSS es una forma de obtener actualizaciones de sitios web en un solo lugar. Descargue una aplicación RSS para comenzar.",
+    "modal.rss.copyLink": "Copiar enlace",
+    "modal.rss.downloadFile": "Descargar archivo",
+    
 
     "status": "Estado",
     "hosting.onlyplan": "Solo este plan",
@@ -322,5 +340,6 @@ export default {
     "addons.quarterly": "Facturación trimestral",
     "addons.quarterly.desc": "Pague cada 3 meses en lugar de 1 y ahorre.",
     "misc.month": "mes",
+    "misc.copied": "Copiado!"
   },
 };

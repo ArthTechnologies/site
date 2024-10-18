@@ -121,8 +121,8 @@
     </div>
     <div class="flex flex-col gap-2 w-[18rem] justify-start h-[16rem]">
       <span class="flex gap-1 items-center font-bold mb-1"
-        ><Star size="18" />Featured Post</span
-      >
+        ><Star size="18" />{$t("articles.featuredPost")}
+      </span>
       <p class="text-4xl font-poppins-bold">{featuredpost.title}</p>
       <p>{featuredpost.desc}</p>
       <a
@@ -131,14 +131,16 @@
         target="_blank"
         class="w-fit"
         ><button class="btn btn-neutral mt-2 btn-sm flex"
-          ><ExternalLink size="18" class="mr-1.5" />Read Article</button
-        ></a
+          ><ExternalLink size="18" class="mr-1.5" />{$t(
+            "articles.featuredPost.button"
+          )}
+        </button></a
       >
     </div>
   </div>
   <div class="md:w-1/2">
     <p class="font-bold text-2xl mb-1 ml-3 font-mono flex gap-1.5">
-      <BrainCircuit class="mt-0.5" />Knowledge Base
+      <BrainCircuit class="mt-0.5" />{$t("articles.knowledgeBase")}
     </p>
     <ul class="menu p-0 w-80 text-base-content rounded-lg">
       <!-- Sidebar content here -->
@@ -157,7 +159,7 @@
 </div>
 
 <div class="ml-8 flex gap-3 items-center -mb-1 mt-16">
-  <p class="text-2xl font-bold">All Posts</p>
+  <p class="text-2xl font-bold">{$t("articles.allPosts")}</p>
 
   <RSS />
   <select

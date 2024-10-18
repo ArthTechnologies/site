@@ -14,7 +14,7 @@
   }
   const copy = () => {
     if (browser) {
-      document.getElementById("copyButton").innerHTML = $t("copied");
+      document.getElementById("copyButton").innerHTML = $t("misc.copied");
       const app = new CopyClipboard({
         target: document.getElementById("clipboard"),
         props: { link },
@@ -25,7 +25,7 @@
 </script>
 
 <a href="#rss" class="btn btn-outline btn-sm ml-5">
-  {$t("blog.button.RSS")}
+  {$t("modal.rss.button")}
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="20"
@@ -50,17 +50,17 @@
     <a href="#" class="btn btn-neutral btn-sm btn-circle absolute right-2 top-2"
       >✕</a
     >
-    <h3 class="font-bold text-lg">{$t("blog.RSS.title")}</h3>
+    <h3 class="font-bold text-lg">{$t("modal.rss.button")}</h3>
     <p class="py-4">
-      {$t("blog.RSS.desc")}
+      {$t("modal.rss.desc")}
     </p>
     <div class="flex">
       <div class="modal-action">
         <a id="copyButton" class="btn btn-neutral" on:click={copy}
-          >{$t("blog.RSS.button.copy")}</a
+          >{$t("modal.rss.copyLink")}</a
         >
         <a class="btn btn-neutral" href={link} download
-          >{$t("blog.RSS.button.download")}
+          >{$t("modal.rss.downloadFile")}
         </a>
       </div>
     </div>
