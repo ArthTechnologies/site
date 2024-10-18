@@ -167,17 +167,17 @@
     class="max-md:hidden mt-40 px-4 py-2 bg-green-600 rounded-full text-white font-semibold text-sm flex items-center gap-2"
   >
     <BadgeCheck size="16" class="shrink-0" />
-    Experience unmatched price for performance and exclusive features on every plan.
+    {$t("landing.subtitle")}
   </div>
   <b
     class="leading-tight mt-40 mb-20 md:mt-6 font-bold text-4xl md:text-6xl lg:text-7xl lg:w-[65rem] text-center font-poppins-bold"
   >
-    Quality Minecraft Hosting at Affordable Prices
+    {$t("landing.title")}
   </b>
   <p
     class="font-poppins-bold text-left w-full md:w-[800px] text-xl -mb-12 md:hidden"
   >
-    Plans
+    {$t("landing.plans.title")}
   </p>
   <Plans />
 </div>
@@ -193,17 +193,10 @@
     />
     <div class="w-[85%] md:w-1/3 z-10">
       <p class="text-4xl font-poppins-bold mt-12 mb-6">
-        An experience built from the ground up.
+        {$t("landing.panel.title")}
       </p>
       <p class="font-poppins w-[90%]">
-        Most leading hosting providers base their panels off of the exact same
-        software, so we started the open-source <a
-          target="_blank"
-          rel="noreferrer"
-          href="/software"
-          class="text-accent hover:link">Arth Panel</a
-        > project to reimagine the user experience with countless ease of use features
-        not seen on any other hosting service.
+        {@html $t("landing.panel.desc")}
       </p>
     </div>
   </div>
@@ -211,16 +204,17 @@
     class="flex max-md:flex-col-reverse gap-5 mt-32 justify-end md:mr-32 mb-16"
   >
     <div class="md:w-1/3 z-10 text-right flex flex-col items-end">
-      <p class="text-4xl font-poppins-bold mt-12 mb-6">Insane Performance.</p>
+      <p class="text-4xl font-poppins-bold mt-12 mb-6">
+        {$t("landing.performance.title")}
+      </p>
       <p class="font-poppins w-[90%]">
-        Our servers are powered by AMD Ryzen™ 7 5700X processors, and have a
-        better price for performance than all of the leading competitors.
+        {$t("landing.performance.desc")}
       </p>
     </div>
     <img src="/images/PricePerRAM_EN.webp" class="z-10 h-60 md:h-80" />
   </div>
   <p class="font-pippins font-bold text-left w-full md:w-[800px] text-xl -mb-7">
-    All Plans
+    {$t("landing.plans.title2")}
   </p>
   <Plans />
 </div>

@@ -1,5 +1,17 @@
 export default {
   "en-US": {
+    "landing.subtitle": "Experience unmatched price for performance and exclusive features on every plan.",
+    "landing.title": "Quality Minecraft Hosting at Affordable Prices",
+    "landing.plans.title": "Plans",
+    "landing.plans.title2": "All Plans",
+    "landing.plans.basic.title": "Basic",
+    "landing.plans.modded.title": "Modded",
+    "landing.plans.premium.title": "Premium",
+    "landing.plans.button": "Order Now",
+    "landing.panel.title": "An experience built from the ground up.",
+    "landing.panel.desc": "Most leading hosting providers base their panels off of the exact same software, so we started the open-source <a href='/software' class='text-accent hover:link'>Arth Panel</a> project to reimagine the user experience with countless ease of use features not seen on any other hosting service.",
+    "landing.performance.title": "Insane performance.",
+    "landing.performance.desc": "Our servers are powered by AMD Ryzen™ 7 5700X processors, and have a better price for performance than all of the leading competitors.",
     "status": "Status",
     "hosting.onlyplan": "Only Plan",
     "hosting.cheapestplan": "Cheapest Plan",
@@ -145,10 +157,27 @@ export default {
           Edition servers. It's now used all across the industry, but most
           competitors still require some setup that could be confusing for
           beginners. There's a good chance many of your potential players are on
-          Bedrock Edition, so it's important to have Geyser support.`
+          Bedrock Edition, so it's important to have Geyser support.`,
+          "misc.month": "month",
     
   },
 	  "es-ES": {
+    "landing.subtitle": "Experimenta un rendimiento sin igual y características exclusivas en cada plan.",
+    "landing.title": "Hosting de Minecraft de calidad a precios asequibles",
+    "landing.plans.title": "Planes",
+    "landing.plans.title2": "Todos los planes",
+    "landing.plans.basic.title": "Básico",
+    "landing.plans.modded.title": "Modded",
+
+
+    "landing.plans.premium.title": "Premium",
+    "landing.plans.button": "Ordenar ahora",
+
+    "landing.panel.title": "Una experiencia construida desde cero.",
+    "landing.panel.desc": "La mayoría de los principales proveedores de hosting basan sus paneles en el mismo software, por lo que comenzamos el proyecto de código abierto <a href='/software' class='text-accent hover:link'>Arth Panel</a> para reinventar la experiencia del usuario con innumerables funciones de facilidad de uso no vistas en ningún otro servicio de hosting.",
+    "landing.performance.title": "Rendimiento increíble.",
+    "landing.performance.desc": "Nuestros servidores están alimentados por procesadores AMD Ryzen™ 7 5700X, y tienen un mejor precio por rendimiento que todos los competidores principales.",
+
     "status": "Estado",
     "hosting.onlyplan": "Solo este plan",
     "hosting.cheapestplan": "El plan más barato",
@@ -280,7 +309,7 @@ export default {
     "faq.2.a": "¿Se admiten Dynmap y Simple Voice Chat?",
     "faq.2.b": `          Sí. No solo admitimos Dynmap y Simple Voice Chat, sino que también somos uno de los pocos hosts que ofrecen <b>configuración automática</b>. ¡Todo lo que tienes que hacer es agregar el complemento, reiniciar el servidor y listo!`,
     "faq.3.a": "¿Qué es Geyser y por qué es importante?",
-    "faq.3.b": ` Decenas de millones de personas juegan en cada edición principal de Minecraft: Java y Bedrock. En 2019, los desarrolladores de la comunidad de Minecraft crearon el programa Geyser que permite a los jugadores de Bedrock unirse a los servidores de Java Edition. Ahora se usa en toda la industria, pero la mayoría de los competidores aún requieren alguna configuración que podría ser confusa para los principiantes. Es muy probable que muchos de sus posibles jugadores estén en Bedrock Edition, por lo que es importante tener soporte de Geyser.`
-    
+    "faq.3.b": ` Decenas de millones de personas juegan en cada edición principal de Minecraft: Java y Bedrock. En 2019, los desarrolladores de la comunidad de Minecraft crearon el programa Geyser que permite a los jugadores de Bedrock unirse a los servidores de Java Edition. Ahora se usa en toda la industria, pero la mayoría de los competidores aún requieren alguna configuración que podría ser confusa para los principiantes. Es muy probable que muchos de sus posibles jugadores estén en Bedrock Edition, por lo que es importante tener soporte de Geyser.`,
+    "misc.month": "mes",
   },
 };

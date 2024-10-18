@@ -1,4 +1,5 @@
 <script>
+  import { t } from "$lib/scripts/i18n";
   import { CpuIcon, MemoryStick } from "lucide-svelte";
 </script>
 
@@ -8,7 +9,9 @@
   <div
     class="max-md:scale-90 flex flex-col items-center gap-2.5 bg-base-300 bg-opacity-80 rounded-2xl px-3 md:px-6 py-5 grayGradientStroke"
   >
-    <p class="font-poppins-bold text-3xl text-center mb-1.5 md:mb-3">Basic</p>
+    <p class="font-poppins-bold text-3xl text-center mb-1.5 md:mb-3">
+      {$t("landing.plans.basic.title")}
+    </p>
     <!-- Small Plan Specs-->
     <div class="md:hidden flex gap-5 mb-3 w-64 justify-center">
       <div
@@ -43,7 +46,7 @@
       </div>
     </div>
     <p class="font-poppins-bold text-5xl text-center">
-      $3.49<span class="text-sm">/month</span>
+      $3.49<span class="text-sm">/{$t("misc.month")}</span>
     </p>
     <a
       href="https://servers.arthmc.xyz/signin"
@@ -53,14 +56,16 @@
       <div
         class="w-fit h-12 px-5 cursor-pointer flex items-center bg-gradient-to-b from-[#E93843] to-[#F56922] hover:brightness-90 rounded-full text-white whiteGradientStroke font-poppins-bold"
       >
-        Order Now
+        {$t("landing.plans.button")}
       </div>
     </a>
   </div>
   <div
     class="max-md:scale-90 flex flex-col items-center gap-2.5 bg-base-300 bg-opacity-80 rounded-2xl px-3 md:px-6 py-5 grayGradientStroke"
   >
-    <p class="font-poppins-bold text-3xl text-center mb-1.5 md:mb-3">Modded</p>
+    <p class="font-poppins-bold text-3xl text-center mb-1.5 md:mb-3">
+      {$t("landing.plans.modded.title")}
+    </p>
     <!-- Small Plan Specs-->
     <div class="md:hidden flex gap-5 mb-3 w-64 justify-center">
       <div
@@ -95,7 +100,7 @@
       </div>
     </div>
     <p class="font-poppins-bold text-5xl text-center">
-      $4.99<span class="text-sm">/month</span>
+      $4.99<span class="text-sm">/{$t("misc.month")}</span>
     </p>
     <a
       href="https://servers.arthmc.xyz/signin"
@@ -105,14 +110,16 @@
       <div
         class="w-fit h-12 px-5 cursor-pointer flex items-center bg-gradient-to-b from-[#E93843] to-[#F56922] hover:brightness-90 rounded-full text-white whiteGradientStroke font-poppins-bold"
       >
-        Order Now
+        {$t("landing.plans.button")}
       </div>
     </a>
   </div>
   <div
     class="max-md:scale-90 flex flex-col items-center gap-2.5 bg-base-300 bg-opacity-80 rounded-2xl px-3 md:px-6 py-5 grayGradientStroke"
   >
-    <p class="font-poppins-bold text-3xl text-center mb-1.5 md:mb-3">Premium</p>
+    <p class="font-poppins-bold text-3xl text-center mb-1.5 md:mb-3">
+      {$t("landing.plans.premium.title")}
+    </p>
     <!-- Small Plan Specs-->
     <div class="md:hidden flex gap-5 mb-3 w-64 justify-center">
       <div
@@ -147,7 +154,7 @@
       </div>
     </div>
     <p class="font-poppins-bold text-5xl text-center">
-      $7.99<span class="text-sm">/month</span>
+      $7.99<span class="text-sm">/{$t("misc.month")}</span>
     </p>
     <a
       href="https://servers.arthmc.xyz/signin"
@@ -157,7 +164,7 @@
       <div
         class="w-fit h-12 px-5 cursor-pointer flex items-center bg-gradient-to-b from-[#E93843] to-[#F56922] hover:brightness-90 rounded-full text-white whiteGradientStroke font-poppins-bold"
       >
-        Order Now
+        {$t("landing.plans.button")}
       </div>
     </a>
   </div>
