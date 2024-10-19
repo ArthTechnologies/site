@@ -47,7 +47,7 @@
             headers: {
               "Content-Type": "application/json",
             },
-          },
+          }
         );
       }
     }
@@ -114,12 +114,12 @@
         </div></a
       >
       <a
+        on:click={getStartedClicked}
         href="https://servers.arthmc.xyz/signin"
         target="_blank"
         rel="noreferrer"
       >
         <div
-          on:click={getStartedClicked}
           class="h-12 px-5 cursor-pointer flex items-center bg-gradient-to-b from-[#E93843] to-[#F56922] hover:brightness-90 rounded-full text-white whiteGradientStroke font-poppins-bold"
         >
           <p>{$t("navbar.getStarted")}</p>

@@ -1,6 +1,25 @@
 <script>
+  import { browser } from "$app/environment";
   import { t } from "$lib/scripts/i18n";
   import { CpuIcon, MemoryStick } from "lucide-svelte";
+
+  function getStartedClicked() {
+    if (browser) {
+      if (localStorage.getItem("allowAnalytics") == "true") {
+        let page = localStorage.getItem("ab_NewLandingPage");
+        fetch(
+          "https://backend.arthmc.xyz/analytics/getStartedButtonClicked?bpage=" +
+            page,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+      }
+    }
+  }
 </script>
 
 <div
@@ -49,6 +68,7 @@
       $3.49<span class="text-sm">/{$t("misc.month")}</span>
     </p>
     <a
+      on:click={getStartedClicked}
       href="https://servers.arthmc.xyz/signin"
       target="_blank"
       rel="noreferrer"
@@ -103,6 +123,7 @@
       $4.99<span class="text-sm">/{$t("misc.month")}</span>
     </p>
     <a
+      on:click={getStartedClicked}
       href="https://servers.arthmc.xyz/signin"
       target="_blank"
       rel="noreferrer"
@@ -157,6 +178,7 @@
       $7.99<span class="text-sm">/{$t("misc.month")}</span>
     </p>
     <a
+      on:click={getStartedClicked}
       href="https://servers.arthmc.xyz/signin"
       target="_blank"
       rel="noreferrer"
