@@ -17,10 +17,13 @@
     if (slug === "/") {
       if (localStorage.getItem("ab_NewLandingPage") == null) {
         let x = Math.floor(Math.random() * 2) == 0;
-        if (x) {
+        console.log("x is..." + x);
+        if (!x) {
+          console.log("x is false");
           localStorage.setItem("ab_NewLandingPage", "false");
           goto("/hosting");
         } else {
+          console.log("x is true");
           localStorage.setItem("ab_NewLandingPage", "true");
         }
       } else {
