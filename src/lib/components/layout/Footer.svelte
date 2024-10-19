@@ -4,7 +4,7 @@
 </script>
 
 <footer
-  class="footer p-10 bg-base-200 bg-opacity-75 backdrop-blur text-base-content"
+  class="footer p-10 bg-base-200 bg-opacity-75 backdrop-blur text-base-content font-poppins"
 >
   <div>
     <img src="/images/arthlogo-footer.svg" width="150px" />
