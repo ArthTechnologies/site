@@ -7,7 +7,7 @@
   class="footer p-10 bg-base-200 bg-opacity-75 backdrop-blur text-base-content font-poppins"
 >
   <div>
-    <img src="/images/arthlogo-footer.svg" width="150px" />
+    <img src="/images/arthlogo.svg" width="150px" />
     <p>Arth Technologies<br />© 2022-{new Date().getFullYear()}</p>
   </div>
   <div>

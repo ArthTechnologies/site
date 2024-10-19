@@ -224,7 +224,7 @@
   <p class="font-pippins font-bold text-left w-[85%] text-xl mt-32">
     {$t("landing.faq.title")}
   </p>
-  <div class="max-lg:text-sm flex flex-col gap-2 mt-2.5 w-[85%]">
+  <div class="max-lg:text-sm flex flex-col gap-2 mt-2.5 scale-90 w-[95%]">
     <div
       tabindex="0"
       class="md:w-2/3 collapse collapse-arrow border-base-300 bg-base-200 border"
