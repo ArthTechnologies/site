@@ -15,10 +15,18 @@
     //a-b test
     let slug = window.location.pathname;
     if (slug === "/") {
-      let x = Math.floor(Math.random() * 2) == 0;
-      if (x) {
-        console.log("redricting...");
-        goto("/hosting");
+      if (localStorage.getItem("ab_NewLandingPage") == null) {
+        let x = Math.floor(Math.random() * 2) == 0;
+        if (x) {
+          localStorage.setItem("ab_NewLandingPage", "false");
+          goto("/hosting");
+        } else {
+          localStorage.setItem("ab_NewLandingPage", "true");
+        }
+      } else {
+        if (localStorage.getItem("ab_NewLandingPage") == "false") {
+          goto("/hosting");
+        }
       }
     }
     onMainPage = window.location.pathname === "/";
