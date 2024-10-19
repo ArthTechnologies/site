@@ -45,9 +45,9 @@
     <a href="#" class="btn btn-neutral btn-sm btn-circle absolute right-2 top-2"
       >✕</a
     >
-    <h3 class="font-bold text-lg">{$t("blog.masto.title")}</h3>
+    <h3 class="font-bold text-lg">{$t("modal.masto.title")}</h3>
     <p class="py-4">
-      {$t("blog.masto.desc")}
+      {$t("modal.masto.desc")}
     </p>
     <div class="flex">
       <div class="modal-action">
@@ -61,7 +61,7 @@
           class="btn btn-neutral"
           href={link}
           target="_blank"
-          rel="noreferrer noopener">{$t("button.share")}</a
+          rel="noreferrer noopener">{$t("misc.share")}</a
         >
       </div>
     </div>

@@ -419,30 +419,30 @@
     </div>
   </div>
   <div class="w-full px-4 lg:px-32 mt-32">
-    <p class="text-3xl font-bold text-gray-200">{$t("faq.t")}</p>
+    <p class="text-3xl font-bold text-gray-200">{$t("landing.faq.title")}</p>
     <div class="flex flex-col gap-1 w-[90%] md:w-[75%] lg:w-1/2">
       <div>
         <p class="text-xl font-bold mt-4 text-gray-100">
-          {$t("faq.1.a")}
+          {$t("landing.faq.1.title")}
         </p>
         <p class="text-gray-200">
-          {@html $t("faq.1.b")}
+          {@html $t("landing.faq.1.desc")}
         </p>
       </div>
       <div>
         <p class="text-xl font-bold mt-4 text-gray-100">
-          {$t("faq.2.a")}
+          {$t("landing.faq.2.title")}
         </p>
         <p class="text-gray-200">
-          {@html $t("faq.2.b")}
+          {@html $t("landing.faq.2.desc")}
         </p>
       </div>
       <div>
         <p class="text-xl font-bold mt-4 text-gray-100">
-          {$t("faq.3.a")}
+          {$t("landing.faq.3.title")}
         </p>
         <p class="text-gray-200">
-          {@html $t("faq.3.b")}
+          {@html $t("landing.faq.3.desc")}
         </p>
       </div>
       <ul class="mt-48 w-full text-sm text-gray-400" id="footnotes">

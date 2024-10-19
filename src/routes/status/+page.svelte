@@ -18,9 +18,8 @@
       } else {
         backend = $t("status.offline");
       }
-      network = json.arthnetwork;
-      observer = json.observer;
-      quartz = json.quartz;
+      if (json.observer == "Online") observer = $t("status.online");
+      if (json.quartz == "Online") quartz = $t("status.online");
       if (quartz == $t("status.online") && observer == $t("status.online")) {
         hosting = $t("status.online");
       } else {
@@ -35,7 +34,7 @@
     });
 </script>
 
-<p class="text-center text-5xl font-bold mt-10">{$t("status")}</p>
+<p class="text-center text-5xl font-bold mt-10">{$t("status.title")}</p>
 <div class="p-4 space-y-5 pb-36">
   <div class="h-22 w-80 bg-base-200 rounded-xl p-2">
     <p class="font-bold text-2xl">Arth Hosting</p>
