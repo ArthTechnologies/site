@@ -287,7 +287,7 @@
             />
             <div>
               <h2 class=" mb-1">
-                <span>{$t("basic")}</span>
+                <span>{$t("landing.plans.basic.title")}</span>
               </h2>
               <div class="flex gap-2">
                 <p class="text-accent-content text-4xl font-bold">$3.49</p>
@@ -316,7 +316,7 @@
             rel="noreferrer"
             on:click={getStartedClicked}
           >
-            {$t("signup")}<ExternalLink
+            {$t("landing.plans.button")}<ExternalLink
               size="18"
               class="shrink-0 -mr-1 mb-0.5"
             /></a
@@ -333,7 +333,7 @@
             />
             <div>
               <h2 class=" mb-1">
-                <span>{$t("modded")}</span>
+                <span>{$t("landing.plans.modded.title")}</span>
               </h2>
               <div class="flex gap-2">
                 <p class="text-accent-content text-4xl font-bold">$4.99</p>
@@ -362,7 +362,7 @@
             rel="noreferrer"
             on:click={getStartedClicked}
           >
-            {$t("signup")}<ExternalLink
+            {$t("landing.plans.button")}<ExternalLink
               size="18"
               class="shrink-0 -mr-1 mb-0.5"
             /></a
@@ -408,7 +408,7 @@
               rel="noreferrer"
               on:click={getStartedClicked}
             >
-              {$t("signup")}<ExternalLink
+              {$t("landing.plans.button")}<ExternalLink
                 size="18"
                 class="shrink-0 -mr-1 mb-0.5"
               /></a
