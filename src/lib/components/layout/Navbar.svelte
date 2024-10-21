@@ -59,7 +59,7 @@
     class=" h-[58px] max-sm:scale-90 w-full sm:w-[85%] xl:w-[1200px] flex justify-between items-center z-10 text-white"
   >
     <a href="/" class="btn px-2 btn-ghost">
-      <img src="/images/arthhostinglogo.svg" class="max-xl:hidden h-[1.5rem]" />
+      <img src="/brand/hosting-full.svg" class="max-xl:hidden h-[1.5rem]" />
       <img
         src="/images/hosting-logo.svg"
         class="xl:hidden h-[1.5rem] scale-150"
