@@ -23,14 +23,14 @@
           localStorage.setItem("ab_NewLandingPage", "false");
           goto("/hosting");
         } else {*/
-          console.log("x is true");
-          localStorage.setItem("ab_NewLandingPage", "true");
-        }
-      }// else {
-        if (localStorage.getItem("ab_NewLandingPage") == "false") {
-          goto("/hosting");
-        }
-     // }
+        console.log("x is true");
+        localStorage.setItem("ab_NewLandingPage", "true");
+        //}
+      } // else {
+      if (localStorage.getItem("ab_NewLandingPage") == "false") {
+        goto("/hosting");
+      }
+      // }
     }
     onMainPage = window.location.pathname === "/";
     console.log(navigator.doNotTrack);
