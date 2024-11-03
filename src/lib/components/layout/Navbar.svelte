@@ -103,7 +103,7 @@
 
       <LanguageSwitcher />
       <a
-        href="https://servers.arthmc.xyz/signin"
+        href="https://servers.arthmc.xyz/login"
         target="_blank"
         rel="noreferrer"
       >
@@ -115,7 +115,7 @@
       >
       <a
         on:click={getStartedClicked}
-        href="https://servers.arthmc.xyz/signin"
+        href="https://servers.arthmc.xyz/signup"
         target="_blank"
         rel="noreferrer"
       >
