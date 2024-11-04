@@ -24,7 +24,7 @@
   </div>
   <div>
     <span class="footer-title">{$t("footer.about")}</span>
-    <a class="link link-hover" href="/hosting" target="_blank"
+    <a class="link link-hover" href="/" target="_blank"
       >{$t("footer.hosting")}</a
     >
     <a class="link link-hover" href="/terms-of-service" target="_blank"

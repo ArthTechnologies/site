@@ -69,7 +69,7 @@
     </p>
     <a
       on:click={getStartedClicked}
-      href="https://servers.arthmc.xyz/signup"
+      href="https://servers.arthmc.xyz/signup?plan=basic"
       target="_blank"
       rel="noreferrer"
     >
@@ -124,7 +124,7 @@
     </p>
     <a
       on:click={getStartedClicked}
-      href="https://servers.arthmc.xyz/signup"
+      href="https://servers.arthmc.xyz/signup?plan=modded"
       target="_blank"
       rel="noreferrer"
     >
@@ -179,7 +179,7 @@
     </p>
     <a
       on:click={getStartedClicked}
-      href="https://servers.arthmc.xyz/signup"
+      href="https://servers.arthmc.xyz/signup?plan=premium"
       target="_blank"
       rel="noreferrer"
     >
