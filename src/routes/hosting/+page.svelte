@@ -311,7 +311,7 @@
           </div>
           <a
             class="btn2 btn-sm mt-4 px-4 flex gap-1.5 items-center w-fit"
-            href="https://servers.arthmc.xyz/signin?plan=basic"
+            href="https://servers.arthmc.xyz/signup?plan=basic"
             target="_blank"
             rel="noreferrer"
             on:click={getStartedClicked}
@@ -357,7 +357,7 @@
           </div>
           <a
             class="btn2 btn-sm mt-4 px-4 flex gap-1.5 items-center w-fit"
-            href="https://servers.arthmc.xyz/signin?plan=modded"
+            href="https://servers.arthmc.xyz/signup?plan=modded"
             target="_blank"
             rel="noreferrer"
             on:click={getStartedClicked}
@@ -403,7 +403,7 @@
             </div>
             <a
               class="btn2 btn-sm mt-4 px-4 flex gap-1.5 items-center w-fit"
-              href="https://servers.arthmc.xyz/signin?plan=modded"
+              href="https://servers.arthmc.xyz/signup?plan=modded"
               target="_blank"
               rel="noreferrer"
               on:click={getStartedClicked}
