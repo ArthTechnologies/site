@@ -47,7 +47,7 @@
       localStorage.getItem("allowAnalytics") == "false"
     ) {
       localStorage.setItem("allowAnalytics", "false");
-    } else {
+    } else if (localStorage.getItem("allowAnalytics") == null) {
       console.log("sending analytics...");
 
       fetch("https://backend.arthmc.xyz/analytics/", {
