@@ -24,14 +24,15 @@
   </div>
   <div>
     <span class="footer-title">{$t("footer.about")}</span>
-    <a class="link link-hover" href="/" target="_blank"
-      >{$t("footer.hosting")}</a
-    >
+
     <a class="link link-hover" href="/terms-of-service" target="_blank"
       >{$t("footer.tos")}</a
     >
     <a class="link link-hover" href="/privacy" target="_blank"
       >{$t("footer.privacy")}</a
+    >
+    <a class="link link-hover" href="https://status.arthmc.xyz/" target="_blank"
+      >{$t("navbar.status")}</a
     >
   </div>
   <div>

@@ -97,7 +97,9 @@
           </li>
           <li><a href="/software">{$t("navbar.software")}</a></li>
           <li><a href="/privacy">{$t("navbar.privacyPolicy")}</a></li>
-          <li><a href="/status">{$t("navbar.status")}</a></li>
+          <li>
+            <a href="https://status.arthmc.xyz/">{$t("navbar.status")}</a>
+          </li>
         </ul>
       </div>
 
