@@ -11,7 +11,7 @@
   let enableShootingStars = false;
 
   let basicPrice = "$3.49";
-  let moddedPrice = "$4.99";
+  let plusPrice = "$4.99";
   let locale;
 
   if (browser) {
@@ -37,8 +37,8 @@
     getBasicPrice().then((price) => {
       basicPrice = price;
     });
-    getModdedPrice().then((price) => {
-      moddedPrice = price;
+    getPlusPrice().then((price) => {
+      plusPrice = price;
     });
   });
 
@@ -135,7 +135,7 @@
       });
   }
 
-  function getModdedPrice() {
+  function getPlusPrice() {
     return fetch("https://ip2c.org/s")
       .then((response) => response.text())
       .then((data) => {

@@ -17,7 +17,7 @@
   let enableShootingStars = false;
 
   let basicPrice = "$3.49";
-  let moddedPrice = "$4.99";
+  let plusPrice = "$4.99";
   let locale;
 
   if (browser) {
@@ -43,8 +43,8 @@
     getBasicPrice().then((price) => {
       basicPrice = price;
     });
-    getModdedPrice().then((price) => {
-      moddedPrice = price;
+    getPlusPrice().then((price) => {
+      plusPrice = price;
     });
   });
 
@@ -141,7 +141,7 @@
       });
   }
 
-  function getModdedPrice() {
+  function getPlusPrice() {
     return fetch("https://ip2c.org/s")
       .then((response) => response.text())
       .then((data) => {
@@ -247,7 +247,7 @@
               mxn?.classList.remove("pointer-events-none");
 
               basicPrice = "$3.49";
-              moddedPrice = "$4.99";
+              plusPrice = "$4.99";
             }
           }}>$</button
         >
@@ -266,7 +266,7 @@
               mxn?.classList.add("pointer-events-none");
 
               basicPrice = "$60";
-              moddedPrice = "$80";
+              plusPrice = "$80";
             }
           }}>MX$</button
         >
@@ -328,12 +328,12 @@
         >
           <div class="flex gap-5 items-center">
             <img
-              src="/images/moddedPlan.webp"
+              src="/images/plusPlan.webp"
               class="rounded-xl h-[5.75rem] w-[9.5rem]"
             />
             <div>
               <h2 class=" mb-1">
-                <span>{$t("landing.plans.modded.title")}</span>
+                <span>{$t("landing.plans.plus.title")}</span>
               </h2>
               <div class="flex gap-2">
                 <p class="text-accent-content text-4xl font-bold">$4.99</p>
@@ -345,19 +345,19 @@
           <div class="flex gap-2 text-sm text-gray-300 mt-2.5">
             <p class="flex items-center gap-1">
               <Cpu size="16" class="shrink-0" />
-              {$t("modded.1")}
+              {$t("plus.1")}
             </p>
             <p class="flex items-center gap-1">
               <MemoryStick size="16" class="shrink-0" />
-              {$t("modded.2")}
+              {$t("plus.2")}
             </p>
             <p class="flex items-center gap-1">
-              <Plug size="16" class="shrink-0" />{$t("modded.3")}
+              <Plug size="16" class="shrink-0" />{$t("plus.3")}
             </p>
           </div>
           <a
             class="btn2 btn-sm mt-4 px-4 flex gap-1.5 items-center w-fit"
-            href="https://servers.arthmc.xyz/signup?plan=modded"
+            href="https://servers.arthmc.xyz/signup?plan=plus"
             target="_blank"
             rel="noreferrer"
             on:click={getStartedClicked}
@@ -403,7 +403,7 @@
             </div>
             <a
               class="btn2 btn-sm mt-4 px-4 flex gap-1.5 items-center w-fit"
-              href="https://servers.arthmc.xyz/signup?plan=modded"
+              href="https://servers.arthmc.xyz/signup?plan=plus"
               target="_blank"
               rel="noreferrer"
               on:click={getStartedClicked}

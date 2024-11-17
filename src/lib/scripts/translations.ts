@@ -14,7 +14,7 @@ export default {
     "landing.plans.title": "Plans",
     "landing.plans.title2": "All Plans",
     "landing.plans.basic.title": "Basic",
-    "landing.plans.modded.title": "Modded",
+    "landing.plans.plus.title": "Plus",
     "landing.plans.premium.title": "Premium",
     "landing.plans.button": "Order Now",
     "landing.panel.title": "An experience built from the ground up.",
@@ -27,7 +27,7 @@ export default {
           it, the basic plan has more than enough RAM for your needs. <b
             >If you're expecting many players on at once</b
           >, you'll likely need the extra RAM that the premium plan provides.
-          Likewise, many modpacks will run well with the modded plan as long as
+          Likewise, many modpacks will run well with the plus plan as long as
           you don't have too many players. However,
           <b>if your modpack reccomends more than 4GB of RAM</b> or you're planning
           on having more than a few players, you'll need the premium plan.`,
@@ -90,9 +90,9 @@ export default {
     "basic.1":"Ryzen 7",
     "basic.2":"3GB RAM",
     "basic.3":"Geyser Built-In",
-    "modded.1":"Ryzen 7",
-    "modded.2":"4GB",
-    "modded.3":"Forge, Fabric & Quilt",
+    "plus.1":"Ryzen 7",
+    "plus.2":"4GB",
+    "plus.3":"Forge, Fabric & Quilt",
     "premium.1":"Ryzen 7",
     "premium.2":"8GB",
     "premium.3":"Premium Support",
@@ -124,7 +124,7 @@ export default {
     "landing.plans.title": "Planes",
     "landing.plans.title2": "Todos los planes",
     "landing.plans.basic.title": "Básico",
-    "landing.plans.modded.title": "Modded",
+    "landing.plans.plus.title": "Plus",
 
 
     "landing.plans.premium.title": "Premium",
@@ -136,7 +136,7 @@ export default {
     "landing.performance.desc": "Nuestros servidores están alimentados por procesadores AMD Ryzen™ 7 5700X, y tienen un mejor precio por rendimiento que todos los competidores principales.",
     "landing.faq.title": "Preguntas frecuentes",
     "landing.faq.1.title": "¿Qué plan necesito?",
-    "landing.faq.1.desc": `Si su servidor será vanilla y solo tendrán unos pocos amigos jugando en él, el plan básico tiene más que suficiente RAM para sus necesidades. <b>Si espera muchos jugadores a la vez</b>, probablemente necesitará la RAM adicional que proporciona el plan premium. Del mismo modo, muchos modpacks funcionarán bien con el plan modded siempre que no tenga demasiados jugadores. Sin embargo, <b>si su modpack recomienda más de 4GB de RAM</b> o planea tener más de unos pocos jugadores, necesitará el plan premium.`,
+    "landing.faq.1.desc": `Si su servidor será vanilla y solo tendrán unos pocos amigos jugando en él, el plan básico tiene más que suficiente RAM para sus necesidades. <b>Si espera muchos jugadores a la vez</b>, probablemente necesitará la RAM adicional que proporciona el plan premium. Del mismo modo, muchos modpacks funcionarán bien con el plan plus siempre que no tenga demasiados jugadores. Sin embargo, <b>si su modpack recomienda más de 4GB de RAM</b> o planea tener más de unos pocos jugadores, necesitará el plan premium.`,
     "landing.faq.2.title": "¿Se admiten Dynmap y Simple Voice Chat?",
     "landing.faq.2.desc": `Sí. No solo admitimos Dynmap y Simple Voice Chat, sino que también somos uno de los pocos hosts que ofrecen <b>configuración automática</b>. ¡Todo lo que tiene que hacer es agregar el complemento, reiniciar el servidor y listo!`,
     "landing.faq.3.title": "¿Qué es Geyser y por qué es importante?",
@@ -193,9 +193,9 @@ export default {
     "basic.1":"Ryzen 7",
     "basic.2":"3GB RAM",
     "basic.3":"Geyser Integrado",
-    "modded.1":"Ryzen 7",
-    "modded.2":"4GB",
-    "modded.3":"Forge, Fabric y Quilt",
+    "plus.1":"Ryzen 7",
+    "plus.2":"4GB",
+    "plus.3":"Forge, Fabric y Quilt",
     "premium.1":"Ryzen 7",
     "premium.2":"8GB",
     "premium.3":"Soporte Premium",

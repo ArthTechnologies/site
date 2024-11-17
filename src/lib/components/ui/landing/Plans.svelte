@@ -84,7 +84,7 @@
     class="max-md:scale-90 flex flex-col items-center gap-2.5 bg-base-300 bg-opacity-80 rounded-2xl px-3 md:px-6 py-5 grayGradientStroke"
   >
     <p class="font-poppins-bold text-3xl text-center mb-1.5 md:mb-3">
-      {$t("landing.plans.modded.title")}
+      {$t("landing.plans.plus.title")}
     </p>
     <!-- Small Plan Specs-->
     <div class="md:hidden flex gap-5 mb-3 w-64 justify-center">
@@ -124,7 +124,7 @@
     </p>
     <a
       on:click={getStartedClicked}
-      href="https://servers.arthmc.xyz/signup?plan=modded"
+      href="https://servers.arthmc.xyz/signup?plan=plus"
       target="_blank"
       rel="noreferrer"
     >
