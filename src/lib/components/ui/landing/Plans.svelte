@@ -91,7 +91,7 @@
       <div
         class=" flex font-poppins font-bold items-center gap-1 justify-center"
       >
-        <MemoryStick size="20" />4GB RAM
+        <MemoryStick size="20" />5GB RAM
       </div>
 
       <div
@@ -103,7 +103,7 @@
     <!-- Medium+ Plan Specs-->
     <div class="max-md:hidden flex gap-5 mb-6">
       <div class="w-24 outline p-2 rounded">
-        <p class="text-center font-poppins-bold text-xl">4GB</p>
+        <p class="text-center font-poppins-bold text-xl">5GB</p>
         <div
           class="flex font-poppins font-bold items-center gap-1 justify-center"
         >
