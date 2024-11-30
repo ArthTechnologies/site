@@ -120,7 +120,7 @@ export default {
     "navbar.getStarted": "Empezar", 
 
     "landing.subtitle": "Experimenta un rendimiento sin igual y características exclusivas en cada plan.",
-    "landing.title": "Hosting de Minecraft de calidad a precios asequibles",
+    "landing.title": "Minecraft Hosting de calidad a precios asequibles",
     "landing.plans.title": "Planes",
     "landing.plans.title2": "Todos los planes",
     "landing.plans.basic.title": "Básico",
@@ -131,9 +131,9 @@ export default {
     "landing.plans.button": "Ordenar ahora",
 
     "landing.panel.title": "Una experiencia construida desde cero.",
-    "landing.panel.desc": "La mayoría de los principales proveedores de hosting basan sus paneles en el mismo software, por lo que comenzamos el proyecto de código abierto <a href='/software' class='text-accent hover:link'>Arth Panel</a> para reinventar la experiencia del usuario con innumerables funciones de facilidad de uso no vistas en ningún otro servicio de hosting.",
+    "landing.panel.desc": "Los principales proveedores de hosting usan el mismo software para sus paneles de administración, por eso comenzamos el proyecto de código abierto <a href='/software' class='text-accent hover:link'>Arth Panel</a>, para reinventar la experiencia del usuario, haciéndola más sencilla de usar y con innumerables funciones no vistas en ningún otro servicio de hosting.",
     "landing.performance.title": "Rendimiento increíble.",
-    "landing.performance.desc": "Nuestros servidores están alimentados por procesadores AMD Ryzen™ 7 5700X, y tienen un mejor precio por rendimiento que todos los competidores principales.",
+    "landing.performance.desc": "Nuestros servidores funcionan con procesadores AMD Ryzen™ 7 5700X, y ofrecen una mejor relación precio/rendimiento que todos los competidores principales.",
     "landing.faq.title": "Preguntas frecuentes",
     "landing.faq.1.title": "¿Qué plan necesito?",
     "landing.faq.1.desc": `Si su servidor será vanilla y solo tendrán unos pocos amigos jugando en él, el plan básico tiene más que suficiente RAM para sus necesidades. <b>Si espera muchos jugadores a la vez</b>, probablemente necesitará la RAM adicional que proporciona el plan premium. Del mismo modo, muchos modpacks funcionarán bien con el plan plus siempre que no tenga demasiados jugadores. Sin embargo, <b>si su modpack recomienda más de 4GB de RAM</b> o planea tener más de unos pocos jugadores, necesitará el plan premium.`,
@@ -159,7 +159,7 @@ export default {
     "main.subtitle": "Reinventando los Servidores de Minecraft",
     "main.interface.title": "Una interfaz construida desde cero.",
     "main.interface.desc":
-      "Muchos de los principales proveedores de hosting tienen interfaces antiguas y complicadas. por lo que comenzamos el proyecto de código abierto <a href='/software' class='text-accent hover:link'>Arth Panel</a> para reinventar la experiencia de hosting de Minecraft.",
+      "Muchos de los principales proveedores de hosting tienen interfaces antiguas y complicadas. por lo que comenzamos el proyecto de código abierto <a href='/software' class='text-accent hover:link'>Arth Panel</a> para reinventar la experiencia de Minecraft Hosting.",
     "main.crossplay.title": "Juega con amigos en cualquier edición.",
     "main.crossplay.desc":"Nuestros servidores tienen el software de juego cruzado Geyser™ integrado<sup><a href='#footnotes' class='hover:link'>3</a></sup>, que permite que los jugadores de Bedrock Edition se unan. Casi todos los complementos funcionarán también para los jugadores de Bedrock.",
     "main.performance.title": "Rendimiento increíble.",
