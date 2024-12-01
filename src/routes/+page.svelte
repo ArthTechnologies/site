@@ -184,7 +184,7 @@
 
 <div
   style="background-size: cover;"
-  class="relative -mt-72 sm:-mt-64 lg:-mt-56 xl:-mt-72 2xl:-mt-80 bg-[url('/images/hostingbg2.svg')] object-fit flex flex-col items-center min-h-screen text-[#efefef] pb-96 px-5 mainArea relative"
+  class="relative -mt-72 sm:-mt-64 lg:-mt-56 xl:-mt-[22rem] 2xl:-mt-96 bg-[url('/images/hostingbg2.svg')] object-fit flex flex-col items-center min-h-screen text-[#efefef] pb-96 px-5 mainArea relative"
 >
   <div class="md:flex gap-12 mt-64 lg:ml-16">
     <img src="/images/Panel.webp" class="z-10 h-48 sm:h-64 lg:h-[26rem]" />
