@@ -18,7 +18,7 @@ export default {
     "landing.plans.premium.title": "Premium",
     "landing.plans.button": "Order Now",
     "landing.panel.title": "An experience built from the ground up.",
-    "landing.panel.desc": "Most leading hosting providers base their panels off of the exact same software, so we started the open-source <a href='/software' class='text-accent hover:link'>Arth Panel</a> project to reimagine the user experience with countless ease of use features not seen on any other hosting service.",
+    "landing.panel.desc": "Most leading hosting providers base their panels off of the same Pterodactyl software, so we started the open-source <a href='/software' class='text-accent hover:link'>Arth Panel</a> project to reimagine the user experience.",
     "landing.performance.title": "Insane performance.",
     "landing.performance.desc": "Our servers are powered by AMD Ryzen™ 7 5700X processors, and have a better price for performance than all of the leading competitors.",
     "landing.faq.title": "Frequently Asked Questions",
@@ -131,7 +131,7 @@ export default {
     "landing.plans.button": "Ordenar ahora",
 
     "landing.panel.title": "Una experiencia construida desde cero.",
-    "landing.panel.desc": "Los principales proveedores de hosting usan el mismo software para sus paneles de administración, por eso comenzamos el proyecto de código abierto <a href='/software' class='text-accent hover:link'>Arth Panel</a>, para reinventar la experiencia del usuario, haciéndola más sencilla de usar y con innumerables funciones no vistas en ningún otro servicio de hosting.",
+    "landing.panel.desc": "Los principales proveedores de hosting usan el mismo software para sus paneles de administración, por eso comenzamos el proyecto de código abierto <a href='/software' class='text-accent hover:link'>Arth Panel</a>, para reinventar la experiencia del usuario.",
     "landing.performance.title": "Rendimiento increíble.",
     "landing.performance.desc": "Nuestros servidores funcionan con procesadores AMD Ryzen™ 7 5700X, y ofrecen una mejor relación precio/rendimiento que todos los competidores principales.",
     "landing.faq.title": "Preguntas frecuentes",

@@ -186,23 +186,26 @@
   style="background-size: cover;"
   class="relative -mt-72 sm:-mt-64 lg:-mt-56 xl:-mt-72 2xl:-mt-80 bg-[url('/images/hostingbg2.svg')] object-fit flex flex-col items-center min-h-screen text-[#efefef] pb-96 px-5 mainArea relative"
 >
-  <div class="md:flex gap-5 mt-60 lg:ml-24">
-    <img src="/images/Panel.webp" class="z-10 h-48 sm:h-64 lg:h-[17rem]" />
+  <div class="md:flex gap-12 mt-64 lg:ml-16">
+    <img src="/images/Panel.webp" class="z-10 h-48 sm:h-64 lg:h-[26rem]" />
     <img
       src="/images/Panel2.svg"
-      class="absolute left-0 -top-10 blur-2xl opacity-90"
+      class="absolute -left-10 -top-10 blur-3xl opacity-75"
     />
-    <div class="w-[85%] md:w-1/3 z-10">
-      <p class="text-4xl font-poppins-bold mt-12 mb-6">
-        {$t("landing.panel.title")}
-      </p>
-      <p class="font-poppins w-[90%]">
-        {@html $t("landing.panel.desc")}
-      </p>
+    <div class="w-[85%] md:w-1/3 z-10 flex flex-col justify-between">
+<div>
+  <p class="text-4xl font-poppins-bold mt-2 mb-6 leading-[2.8rem]">
+    {$t("landing.panel.title")}
+  </p>
+  <p class="font-poppins w-[90%]">
+    {@html $t("landing.panel.desc")}
+  </p>
+</div>
+      <img src="/images/Panel3.svg" class="scale-110 ml-5 mb-1.5" />
     </div>
   </div>
   <div
-    class="flex max-md:flex-col-reverse gap-5 mt-32 justify-end lg:mr-32 mb-16 max-lg:items-end"
+    class="flex max-md:flex-col-reverse gap-5 mt-24 justify-end lg:mr-24 mb-16 max-lg:items-end"
   >
     <div class="md:w-1/3 z-10 text-right flex flex-col items-end">
       <p class="text-4xl font-poppins-bold mt-12 mb-6">
@@ -213,7 +216,7 @@
       </p>
     </div>
     <img
-      src="/images/PricePerRAM_EN.webp"
+      src="/images/PricePerRAM.svg"
       class="z-10 w-[85%] sm:w-[75%] md:w-fit md:h-64 lg:h-80"
     />
   </div>
