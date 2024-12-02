@@ -228,7 +228,7 @@
   <div class="-ml-5">
     <Plans />
   </div>
-  <p class="font-pippins font-bold text-left w-[85%] text-xl mt-32">
+  <p class="font-pippins font-bold text-left flex scale-90 w-[95%] text-xl mt-32">
     {$t("landing.faq.title")}
   </p>
   <div class="max-lg:text-sm flex flex-col gap-2 mt-2.5 scale-90 w-[95%]">
