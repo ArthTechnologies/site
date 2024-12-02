@@ -180,12 +180,12 @@
 
 <div
   style="background-size: cover;"
-  class="relative -mt-72 sm:-mt-64 lg:-mt-56 xl:-mt-[22rem] 2xl:-mt-96 bg-[url('/images/hostingbg2.svg')] object-fit max-md:bg-center flex flex-col  min-h-screen text-[#efefef] pb-96 px-5 mainArea relative"
+  class="relative -mt-72 sm:-mt-64 lg:-mt-56 xl:-mt-[22rem] 2xl:-mt-96 bg-[url('/images/hostingbg2.svg?v=2')] object-fit max-md:bg-center flex flex-col  min-h-screen text-[#efefef] pb-96 px-5 mainArea relative"
 >
   <div class="flex max-md:flex-col gap-6 md:gap-12 mt-80 md:mt-64 lg:ml-16 md:h-[25rem] justify-start">
     <img src="/images/Panel.webp" class="z-10 h-[64vw] sm:h-[58vw] md:h-[30vw] lg:h-[31.3vw] xl:h-[25rem]" />
     <img
-      src="/images/Panel2.svg"
+      src="/images/Panel2.svg?v=2"
       class="absolute -left-10 -top-10 blur-3xl opacity-75"
     />
     <div class=" z-10 flex flex-col justify-between">
@@ -197,7 +197,7 @@
     {@html $t("landing.panel.desc")}
   </p>
 </div>
-      <img src="/images/Panel3.svg" class="w-[25rem] xl:w-[27rem] max-md:mt-4" />
+      <img src="/images/Panel3.svg?v=2" class="w-[25rem] xl:w-[27rem] max-md:mt-4" />
     </div>
   </div>
   <div
@@ -213,12 +213,12 @@
   </p>
 </div>
       <img
-      src="/images/Performance2.svg"
+      src="/images/Performance2.svg?v=2"
       class="z-10  h-[4.5rem] mt-7"
     />
     </div>
     <img
-      src="/images/Performance1.svg"
+      src="/images/Performance1.svg?v=2"
       class="z-10  sm:w-[75%] md:w-fit md:h-64 lg:h-80"
     />
   </div>
