@@ -164,7 +164,7 @@
   ></div>
 
   <div
-    class="max-md:hidden mt-36 xl:mt-32 px-4 py-2 bg-green-600 rounded-full text-gray-300 font-semibold text-sm flex items-center gap-2"
+    class="text-white max-md:hidden mt-36 xl:mt-32 px-4 py-2 bg-green-600 rounded-full text-gray-300 font-semibold text-sm flex items-center gap-2"
   >
     <BadgeCheck size="16" class="shrink-0" />
     {$t("landing.subtitle")}
