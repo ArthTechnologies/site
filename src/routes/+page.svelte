@@ -222,7 +222,7 @@
       class="z-10  sm:w-[75%] md:w-fit md:h-64 lg:h-80"
     />
   </div>
-  <p class="font-pippins font-bold text-center w-full  text-xl -mb-7">
+  <p class="font-pippins font-bold text-center w-full  text-xl -mb-7 mt-24">
     {$t("landing.plans.title2")}
   </p>
   <div class="-ml-5">

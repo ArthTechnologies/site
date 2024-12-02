@@ -58,7 +58,7 @@
         </div>
       </div>
     </div>
-    <p class="font-poppins-bold text-3xl md:text-5xl text-center flex flex-col">
+    <p class="font-poppins-bold text-3xl md:text-5xl text-center max-md:flex flex-col">
       $3.49<span class="text-sm">/{$t("misc.month")}</span>
     </p>
     <a
@@ -107,7 +107,7 @@
         </div>
       </div>
     </div>
-    <p class="font-poppins-bold text-3xl md:text-5xl text-center flex flex-col">
+    <p class="font-poppins-bold text-3xl md:text-5xl text-center max-md:flex flex-col">
       $4.99<span class="text-sm">/{$t("misc.month")}</span>
     </p>
     <a
@@ -156,7 +156,7 @@
         </div>
       </div>
     </div>
-    <p class="font-poppins-bold text-3xl md:text-5xl text-center flex flex-col">
+    <p class="font-poppins-bold text-3xl md:text-5xl text-center max-md:flex flex-col">
       $7.99<span class="text-sm">/{$t("misc.month")}</span>
     </p>
     <a
