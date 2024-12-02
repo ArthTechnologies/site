@@ -174,56 +174,60 @@
   >
     {$t("landing.title")}
   </b>
-  <p
-    class="font-poppins-bold text-left w-full md:w-[800px] text-xl -mb-12 md:hidden"
-  >
-    {$t("landing.plans.title")}
-  </p>
+
   <Plans />
 </div>
 
 <div
   style="background-size: cover;"
-  class="relative -mt-72 sm:-mt-64 lg:-mt-56 xl:-mt-[22rem] 2xl:-mt-96 bg-[url('/images/hostingbg2.svg')] object-fit flex flex-col items-center min-h-screen text-[#efefef] pb-96 px-5 mainArea relative"
+  class="relative -mt-72 sm:-mt-64 lg:-mt-56 xl:-mt-[22rem] 2xl:-mt-96 bg-[url('/images/hostingbg2.svg')] object-fit max-md:bg-center flex flex-col  min-h-screen text-[#efefef] pb-96 px-5 mainArea relative"
 >
-  <div class="md:flex gap-12 mt-64 lg:ml-16">
-    <img src="/images/Panel.webp" class="z-10 h-48 sm:h-64 lg:h-[26rem]" />
+  <div class="flex max-md:flex-col gap-6 md:gap-12 mt-80 md:mt-64 lg:ml-16 md:h-[25rem] justify-start">
+    <img src="/images/Panel.webp" class="z-10 h-[64vw] sm:h-[58vw] md:h-[30vw] lg:h-[31.3vw] xl:h-[25rem]" />
     <img
       src="/images/Panel2.svg"
       class="absolute -left-10 -top-10 blur-3xl opacity-75"
     />
-    <div class="w-[85%] md:w-1/3 z-10 flex flex-col justify-between">
-<div>
-  <p class="text-4xl font-poppins-bold mt-2 mb-6 leading-[2.8rem]">
+    <div class=" z-10 flex flex-col justify-between">
+<div class=" sm:w-2/3 md:w-[20rem] lg:w-[23rem] xl:w-[27rem]">
+  <p class="text-3xl lg:text-[2rem] xl:text-4xl font-poppins-bold mt-2 mb-6 md:leading-[2.8rem]">
     {$t("landing.panel.title")}
   </p>
-  <p class="font-poppins w-[90%]">
+  <p class="font-poppins w-[90%] text-[.95rem] lg:text-base">
     {@html $t("landing.panel.desc")}
   </p>
 </div>
-      <img src="/images/Panel3.svg" class="scale-110 ml-5 mb-1.5" />
+      <img src="/images/Panel3.svg" class="w-[25rem] xl:w-[27rem] max-md:mt-4" />
     </div>
   </div>
   <div
     class="flex max-md:flex-col-reverse gap-5 mt-24 justify-end lg:mr-24 mb-16 max-lg:items-end"
   >
-    <div class="md:w-1/3 z-10 text-right flex flex-col items-end">
-      <p class="text-4xl font-poppins-bold mt-12 mb-6">
-        {$t("landing.performance.title")}
-      </p>
-      <p class="font-poppins w-[90%]">
-        {$t("landing.performance.desc")}
-      </p>
+    <div class="md:w-1/3 z-10 text-right flex flex-col items-end max-md:flex-col-reverse">
+<div class="flex flex-col items-end">
+  <p class="text-3xl lg:text-[2rem] xl:text-4xl font-poppins-bold mt-12 mb-6">
+    {$t("landing.performance.title")}
+  </p>
+  <p class="font-poppins w-[90%]">
+    {$t("landing.performance.desc")}
+  </p>
+</div>
+      <img
+      src="/images/Performance2.svg"
+      class="z-10  h-[4.5rem] mt-7"
+    />
     </div>
     <img
-      src="/images/PricePerRAM.svg"
-      class="z-10 w-[85%] sm:w-[75%] md:w-fit md:h-64 lg:h-80"
+      src="/images/Performance1.svg"
+      class="z-10  sm:w-[75%] md:w-fit md:h-64 lg:h-80"
     />
   </div>
-  <p class="font-pippins font-bold text-left w-full md:w-[800px] text-xl -mb-7">
+  <p class="font-pippins font-bold text-center w-full  text-xl -mb-7">
     {$t("landing.plans.title2")}
   </p>
-  <Plans />
+  <div class="-ml-5">
+    <Plans />
+  </div>
   <p class="font-pippins font-bold text-left w-[85%] text-xl mt-32">
     {$t("landing.faq.title")}
   </p>
