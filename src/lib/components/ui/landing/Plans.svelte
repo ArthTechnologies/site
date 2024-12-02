@@ -68,7 +68,7 @@
       rel="noreferrer"
     >
       <div
-        class="text-sm w-fit h-12 px-5 cursor-pointer flex items-center bg-gradient-to-b from-[#E93843] to-[#F56922] hover:brightness-90 rounded-full text-white whiteGradientStroke font-poppins-bold"
+        class="text-sm w-fit h-12 px-5 cursor-pointer flex items-center bg-gradient-to-b from-[#E93843] to-[#F56922] hover:brightness-90 rounded-full text-gray-300 whiteGradientStroke font-poppins-bold"
       >
         {$t("landing.plans.button")}
       </div>
@@ -117,7 +117,7 @@
       rel="noreferrer"
     >
       <div
-        class="text-sm w-fit h-12 px-5 cursor-pointer flex items-center bg-gradient-to-b from-[#E93843] to-[#F56922] hover:brightness-90 rounded-full text-white whiteGradientStroke font-poppins-bold"
+        class="text-sm w-fit h-12 px-5 cursor-pointer flex items-center bg-gradient-to-b from-[#E93843] to-[#F56922] hover:brightness-90 rounded-full text-gray-300 whiteGradientStroke font-poppins-bold"
       >
         {$t("landing.plans.button")}
       </div>
@@ -166,7 +166,7 @@
       rel="noreferrer"
     >
       <div
-        class="text-sm w-fit h-12 px-5 cursor-pointer flex items-center bg-gradient-to-b from-[#E93843] to-[#F56922] hover:brightness-90 rounded-full text-white whiteGradientStroke font-poppins-bold"
+        class="text-sm w-fit h-12 px-5 cursor-pointer flex items-center bg-gradient-to-b from-[#E93843] to-[#F56922] hover:brightness-90 rounded-full text-gray-300 whiteGradientStroke font-poppins-bold"
       >
         {$t("landing.plans.button")}
       </div>

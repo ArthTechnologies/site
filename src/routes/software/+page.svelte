@@ -15,7 +15,7 @@
 
 <div class="flex flex-col md:w-[60%] lg:w-[70%] pr-3">
   <p class=" text-3xl xl:text-4xl font-bold mt-10 pl-5 pr-9">
-    <span class="text-white">Arth Panel</span> was created to make managing your
+    <span class="text-gray-300">Arth Panel</span> was created to make managing your
     servers as simple as possible. It's both the software powering Arth Hosting
     and an open-source software that you can run yourself if you have server
     computers running Linux.<br /><br />Having both of these use cases during

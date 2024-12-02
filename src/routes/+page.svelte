@@ -164,13 +164,13 @@
   ></div>
 
   <div
-    class="max-md:hidden mt-36 xl:mt-32 px-4 py-2 bg-green-600 rounded-full text-white font-semibold text-sm flex items-center gap-2"
+    class="max-md:hidden mt-36 xl:mt-32 px-4 py-2 bg-green-600 rounded-full text-gray-300 font-semibold text-sm flex items-center gap-2"
   >
     <BadgeCheck size="16" class="shrink-0" />
     {$t("landing.subtitle")}
   </div>
   <b
-    class="leading-tight mt-40 max-md:mb-10 mb-1.5 xl:mb-6 md:mt-5 font-bold text-4xl md:text-6xl lg:text-7xl lg:w-[65rem] text-center font-poppins-bold"
+    class="text-white leading-tight mt-40 max-md:mb-10 mb-1.5 xl:mb-6 md:mt-5 font-bold text-4xl md:text-6xl lg:text-7xl lg:w-[65rem] text-center font-poppins-bold"
   >
     {$t("landing.title")}
   </b>
