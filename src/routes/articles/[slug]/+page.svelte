@@ -15,13 +15,18 @@
   let authorLink;
   let authorImage;
   let t;
-  if (browser) {
-    slug = window.location.pathname.split("/").pop();
-  }
+
 
   onMount(() => {
     //set text to the contents of "/posts" + slug + ".md"
     if (browser) {
+      slug = window.location.pathname;
+      //if last char is / remove it
+      if (slug[slug.length - 1] == "/") {
+        slug = slug.slice(0, -1);
+      }
+      slug = slug.split("/").pop();
+      
       fetch("https://backend.arthmc.xyz/file/posts/" + slug + ".md")
         .then((response) => response.text())
         .then((text) => {
