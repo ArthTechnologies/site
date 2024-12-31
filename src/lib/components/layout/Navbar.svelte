@@ -117,7 +117,7 @@
       >
       <a
         on:click={getStartedClicked}
-        href="https://servers.arthmc.xyz/signup"
+        href="https://servers.arthmc.xyz/findNode"
         target="_blank"
         rel="noreferrer"
       >
