@@ -15,6 +15,9 @@
         <a href="/knowledgebase/how-to-join-servers" on:click={load}
           >How to Join Minecraft Servers</a
         >
+        <a href="/knowledgebase/let-friends-access-panel" on:click={load}
+        >How to Let Others Access your Server Panel</a
+      >
         <a href="/knowledgebase/using-dynmap" on:click={load}>Using Dynmap</a>
         <a href="/knowledgebase/using-bluemap" on:click={load}>Using BlueMap</a>
         <a href="/knowledgebase/using-simple-voice-chat" on:click={load}

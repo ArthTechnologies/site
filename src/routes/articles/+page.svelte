@@ -149,6 +149,9 @@
         <a href="/knowledgebase/how-to-join-servers"
           >How to Join Minecraft Servers</a
         >
+        <a href="/knowledgebase/let-friends-access-panel"
+        >Letting Friends Access your Server Panel</a
+      >
         <a href="/knowledgebase/using-dynmap">Using Dynmap</a>
         <a href="/knowledgebase/using-bluemap">Using BlueMap</a>
         <a href="/knowledgebase/using-simple-voice-chat"
