@@ -16,6 +16,7 @@
           >How to Join Minecraft Servers</a
         >
         <a href="/knowledgebase/using-dynmap" on:click={load}>Using Dynmap</a>
+        <a href="/knowledgebase/using-bluemap" on:click={load}>Using BlueMap</a>
         <a href="/knowledgebase/using-simple-voice-chat" on:click={load}
           >Using Simple Voice Chat</a
         >
