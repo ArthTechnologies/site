@@ -150,6 +150,7 @@
           >How to Join Minecraft Servers</a
         >
         <a href="/knowledgebase/using-dynmap">Using Dynmap</a>
+        <a href="/knowledgebase/using-bluemap">Using BlueMap</a>
         <a href="/knowledgebase/using-simple-voice-chat"
           >Using Simple Voice Chat</a
         >
