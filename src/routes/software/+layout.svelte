@@ -16,7 +16,7 @@
     </ul>
 
     <ul class="menu p-4 w-80 bg-neutral shadow-xl text-base-content rounded-lg">
-      <p class="font-mono text-center font-bold">Arth Panel Documentation</p>
+      <p class="font-mono text-center font-bold">Developer Documentation (WIP)</p>
       <!-- Sidebar content here -->
       <p class="divider">Quartz API</p>
       <li>

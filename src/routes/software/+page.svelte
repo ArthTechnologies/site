@@ -13,22 +13,20 @@
   class="w-full h-full bg-gradient-to-b from-base-300 to-sky-900 absolute z-[-1] top-0 -left-3"
 ></div>
 
-<div class="flex flex-col md:w-[60%] lg:w-[70%] pr-3">
-  <p class=" text-3xl xl:text-4xl font-bold mt-10 pl-5 pr-9">
+<div class="flex flex-col md:w-[60%] lg:w-[50%] pr-3">
+  <p class=" text-3xl font-bold mt-10 pl-5 pr-9">
     <span class="text-gray-300">Arth Panel</span> was created to make managing your
     servers as simple as possible. It's both the software powering Arth Hosting
     and an open-source software that you can run yourself if you have server
-    computers running Linux.<br /><br />Having both of these use cases during
-    the development process has led to a panel with unprecedented flexibility,
-    transparency and power.
+    computers running Linux.<br /><br />We don't consider Arth Panel suitable for self-hosting yet, but if you're a developer you can check out and/or contribute to the repos below.
   </p>
-  <div class="lg:ml-8 xl:ml-24 2xl:ml-32 element-container">
-    <p class="text-3xl text-center font-bold mt-16 mb-6 2xl:w-[62rem]">
+  <div class="lg:ml-8 xl:ml-24 2xl:ml-32 element-container flex flex-col items-center">
+    <p class="text-3xl text-center font-bold mt-16 mb-6">
       Components
     </p>
-    <div class="flex gap-5 mb-24 max-md:flex-col">
+    <div class="flex gap-5 mb-24 max-md:flex-col w-fit">
       <div
-        class="card bg-neutral bg-opacity-70 backdrop-blur-xl w-80 shadow-xl text-center shadow-teal-700/50"
+        class="card bg-neutral bg-opacity-70 backdrop-blur-xl w-80 shadow-xl text-center shadow-teal-700/30"
       >
         <div class="card-body">
           <h2 class="card-title justify-center">Observer</h2>
@@ -51,7 +49,7 @@
         </div>
       </div>
       <div
-        class="card bg-neutral bg-opacity-70 backdrop-blur-xl w-80 shadow-xl text-center shadow-sky-200/50"
+        class="card bg-neutral bg-opacity-70 backdrop-blur-xl w-80 shadow-xl text-center shadow-orange-700/30"
       >
         <div class="card-body">
           <h2 class="card-title justify-center">Quartz</h2>
@@ -62,27 +60,6 @@
           </p>
           <a
             href="https://codeberg.org/arth/quartz"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button class="btn bg-[#6eb7de] text-black hover:bg-sky-600"
-              >View Repo <ExternalLink class="ml-1.5" /></button
-            ></a
-          >
-        </div>
-      </div>
-      <div
-        class="card bg-neutral bg-opacity-70 backdrop-blur-xl w-80 shadow-xl text-center shadow-indigo-700/50"
-      >
-        <div class="card-body">
-          <h2 class="card-title justify-center">JarsMC</h2>
-          <p>
-            A special backend with the purpose of storing and updating all the
-            jars for all the versions and softwares you want. Plus, it has
-            support for Geyser, Terralith and more.
-          </p>
-          <a
-            href="https://codeberg.org/arth/jarsmc.xyz"
             target="_blank"
             rel="noopener noreferrer"
           >
