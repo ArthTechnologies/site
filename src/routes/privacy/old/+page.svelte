@@ -8,7 +8,7 @@
   let effective;
 
   if (browser) {
-    fetch("https://backend.arthmc.xyz/file/docs/privacy_old.md")
+    fetch("https://ocelot.arthmc.xyz/file/docs/privacy_old.md")
       .then((response) => response.text())
       .then((text) => {
         const lines = text.split("\n");

@@ -4,13 +4,13 @@
   import { t } from "$lib/scripts/i18n";
 
   let lang = "en-US";
-  let link = "https://backend.arthmc.xyz/rss/" + lang;
+  let link = "https://ocelot.arthmc.xyz/rss/" + lang;
   if (browser) {
     lang = navigator.language;
     if (localStorage.getItem("lang") != null) {
       lang = localStorage.getItem("lang");
     }
-    link = "https://backend.arthmc.xyz/rss/arthblog.rss?lang=" + lang;
+    link = "https://ocelot.arthmc.xyz/rss/arthblog.rss?lang=" + lang;
   }
   const copy = () => {
     if (browser) {

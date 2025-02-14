@@ -8,7 +8,7 @@
       if (localStorage.getItem("allowAnalytics") == "true") {
         let page = localStorage.getItem("ab_NewLandingPage");
         fetch(
-          "https://backend.arthmc.xyz/analytics/getStartedButtonClicked?bpage=" +
+          "https://ocelot.arthmc.xyz/analytics/getStartedButtonClicked?bpage=" +
             page,
           {
             method: "POST",

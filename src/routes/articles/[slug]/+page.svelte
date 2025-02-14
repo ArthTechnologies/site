@@ -27,7 +27,7 @@
       }
       slug = slug.split("/").pop();
       
-      fetch("https://backend.arthmc.xyz/file/posts/" + slug + ".md")
+      fetch("https://ocelot.arthmc.xyz/file/posts/" + slug + ".md")
         .then((response) => response.text())
         .then((text) => {
           //turn everything before line 7 into a variable and remove the from text

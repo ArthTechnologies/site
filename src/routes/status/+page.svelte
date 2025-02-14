@@ -10,7 +10,7 @@
   let backend = $t("status.offline");
   let website = $t("status.offline");
 
-  const response = fetch("https://backend.arthmc.xyz/status")
+  const response = fetch("https://ocelot.arthmc.xyz/status")
     .then((response) => response.json())
     .then((json) => {
       if (json != undefined) {

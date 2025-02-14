@@ -8,7 +8,7 @@
   let effective;
 
   if (browser) {
-    fetch("https://backend.arthmc.xyz/file/docs/sponsor-kit.md")
+    fetch("https://ocelot.arthmc.xyz/file/docs/sponsor-kit.md")
       .then((response) => response.text())
       .then((text) => {
         t = marked(text);

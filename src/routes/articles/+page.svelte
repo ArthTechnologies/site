@@ -34,7 +34,7 @@
     //get the top 10 posts
 
     if (browser) {
-      promise = fetch("https://backend.arthmc.xyz/index/posts")
+      promise = fetch("https://ocelot.arthmc.xyz/index/posts")
         .then((response) => response.json())
         .then((json) => {
           //take each item in the array, take the title and desc, and put them in posts

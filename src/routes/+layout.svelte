@@ -50,7 +50,7 @@
     } else if (localStorage.getItem("allowAnalytics") == null) {
       console.log("sending analytics...");
 
-      fetch("https://backend.arthmc.xyz/analytics/", {
+      fetch("https://ocelot.arthmc.xyz/analytics/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

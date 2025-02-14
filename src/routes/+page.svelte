@@ -98,7 +98,7 @@
   function getStartedClicked() {
     if (browser) {
       if (localStorage.getItem("allowAnalytics") == "true") {
-        fetch("https://backend.arthmc.xyz/analytics/getStartedButtonClicked", {
+        fetch("https://ocelot.arthmc.xyz/analytics/getStartedButtonClicked", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

@@ -22,7 +22,7 @@ setTimeout(() => {
             slug = slug.split("/")[slug.split("/").length-1];
         }
 
-        let url = "https://backend.arthmc.xyz/file/docs/"+slug+".md";
+        let url = "https://ocelot.arthmc.xyz/file/docs/"+slug+".md";
         console.log(slug)
 
         fetch(url)
