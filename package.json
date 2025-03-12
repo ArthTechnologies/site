@@ -28,6 +28,7 @@
   "dependencies": {
     "@tailwindcss/typography": "^0.5.9",
     "appwrite": "^10.0.1",
+    "chart.js": "^4.4.8",
     "lucide-svelte": "^0.292.0",
     "marked": "^4.2.12",
     "sass": "^1.54.9",
