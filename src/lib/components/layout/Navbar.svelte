@@ -96,6 +96,7 @@
             <a class="sm:hidden" href="/articles">{$t("navbar.articles")}</a>
           </li>
           <li><a href="/software">{$t("navbar.software")}</a></li>
+          <li><a href="/infrastructure">Infrastructure</a></li>
           <li><a href="/privacy">{$t("navbar.privacyPolicy")}</a></li>
           <li>
             <a href="https://status.arthmc.xyz/">{$t("navbar.status")}</a>
