@@ -32,7 +32,7 @@
         let container = document.createElement('div');
         container.classList.add('chart-container');
         container.classList.add('relative'); // Establishes a positioning context
-        container.classList.add('w-[13rem]');
+        container.classList.add('w-[11rem]');
 
         // Create the canvas element
         let canvas = document.createElement('canvas');
@@ -65,7 +65,18 @@
         text2.classList.add('top-2'); // Adjust as needed
         text2.classList.add('right-3'); // Adjust as needed
         text2.innerHTML = `${threadValues[threadValues.length - 1]}%`;
+                //append a bar at the top behind the text that bulurs whats behind it.
+                let bar = document.createElement('div');
+        bar.classList.add('absolute', 'top-0', 'left-0', 'w-[92%]', 'h-12', 'bg-gradient-to-t', 'from-[#142134]', 'to-[#152436]' ,'rounded-t-xl');
+        bar.style.opacity = '0.6';
+        bar.style.filter = 'blur(3px)';
 
+        let bar2 = document.createElement('div');
+        bar2.classList.add('absolute', 'top-0', 'left-0', 'w-[92%]', 'h-4', 'bg-gradient-to-t', 'from-[#142134]', 'to-[#152436]' ,'rounded-t-xl');
+        bar2.style.opacity = '0.7';
+        bar2.style.filter = 'blur(3px)';
+        container.appendChild(bar);
+        container.appendChild(bar2);
 
         // Append the canvas and text to the container
         container.appendChild(canvas);
@@ -119,7 +130,7 @@
                
             }
         },
-        aspectRatio: 1.2,
+        aspectRatio: 1.4,
     }
 });
 
@@ -138,4 +149,4 @@
    
 </style>
 
-<div id="chartsContainer" class=" rounded p-4 w-full h-auto"></div>
+<div id="chartsContainer" class=" rounded p-4 w-fit h-auto"></div>
