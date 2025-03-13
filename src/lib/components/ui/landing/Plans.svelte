@@ -34,7 +34,7 @@
 
     <div class=" flex gap-5 md:mb-6">
       <div class="max-md:hidden w-24 outline p-2 rounded">
-        <p class="text-center font-poppins-bold text-xl">3GB</p>
+        <p class="text-center font-poppins-bold text-xl">4GB</p>
         <div
           class="flex font-poppins font-bold items-center gap-1 justify-center"
         >
@@ -46,7 +46,7 @@
         <div
           class="flex font-poppins font-bold items-center gap-1 justify-center"
         >
-          <MemoryStick size="20" />3GB
+          <MemoryStick size="20" />4GB
         </div>
       </div>
       <div class="w-24 outline p-2 rounded max-md:hidden">
@@ -59,7 +59,7 @@
       </div>
     </div>
     <p class="font-poppins-bold text-3xl md:text-5xl text-center max-md:flex flex-col">
-      $3.49<span class="text-sm">/{$t("misc.month")}</span>
+      $3.99<span class="text-sm">/{$t("misc.month")}</span>
     </p>
     <a
       on:click={getStartedClicked}
@@ -83,7 +83,7 @@
 
     <div class=" flex gap-5 md:mb-6">
       <div class="max-md:hidden w-24 outline p-2 rounded">
-        <p class="text-center font-poppins-bold text-xl">5GB</p>
+        <p class="text-center font-poppins-bold text-xl">6GB</p>
         <div
           class="flex font-poppins font-bold items-center gap-1 justify-center"
         >
@@ -95,7 +95,7 @@
         <div
           class="flex font-poppins font-bold items-center gap-1 justify-center"
         >
-          <MemoryStick size="20" />5GB
+          <MemoryStick size="20" />6GB
         </div>
       </div>
       <div class="w-24 outline p-2 rounded max-md:hidden">
@@ -108,7 +108,7 @@
       </div>
     </div>
     <p class="font-poppins-bold text-3xl md:text-5xl text-center max-md:flex flex-col">
-      $4.99<span class="text-sm">/{$t("misc.month")}</span>
+      $5.99<span class="text-sm">/{$t("misc.month")}</span>
     </p>
     <a
       on:click={getStartedClicked}
