@@ -8,7 +8,6 @@ export function load(slug) {
 setTimeout(() => {
     let t = "";
     if (browser) {
-
             
         if (slug != "home" && (typeof slug != "string" || slug == "")) { 
             slug = window.location.pathname;
