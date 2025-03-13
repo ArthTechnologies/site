@@ -148,7 +148,7 @@
 
    
 
-<div class="max-lg:scale-95 -ml-6">
+<div class="max-lg:scale-95 max-lg:-ml-6">
     <ThreadCharts {performance} />
 </div>
 </div>
