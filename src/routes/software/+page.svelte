@@ -37,7 +37,7 @@
           </p>
           <div class="card-actions justify-center">
             <a
-              href="https://codeberg.org/arth/observer"
+              href="https://github.com/ArthTechnologies/observer"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -59,7 +59,7 @@
             setup needed can be done in one unified config file.
           </p>
           <a
-            href="https://codeberg.org/arth/quartz"
+            href="https://github.com/ArthTechnologies/quartz"
             target="_blank"
             rel="noopener noreferrer"
           >
