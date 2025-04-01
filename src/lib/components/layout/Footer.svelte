@@ -12,8 +12,8 @@
   </div>
   <div>
     <span class="footer-title">{$t("footer.resources")}</span>
-    <a class="link link-hover" href="https://codeberg.org/arth/" target="_blank"
-      >{$t("footer.codeberg")}</a
+    <a class="link link-hover" href="https://github.com/ArthTechnologies/" target="_blank"
+      >GitHub</a
     >
     <a class="link link-hover" href="/articles" target="_blank"
       >{$t("footer.blog")}</a
