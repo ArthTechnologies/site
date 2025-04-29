@@ -1,56 +1,74 @@
-import { derived, writable } from "svelte/store";
-import translations from "./translations";
-import { browser } from "$app/environment";
+import { writable, get } from 'svelte/store';
+import { browser } from '$app/environment';
 
-export const locale = writable("en-US");
-export const locales = Object.keys(translations);
+export const locale = writable('en-US');
+export const loadedLocales: Record<string, Record<string, string>> = {};
+const translationCache: Record<string, string> = {};
 
-function translate(locale: string, key: string, vars: string) {
-  if (!key) throw new Error("no key provided to $t()");
-  if (!locale) throw new Error(`no translation for key "${key}"`);
-
-  if (browser) if (localStorage.getItem("lang") != null) locale = localStorage.getItem("lang");
-
-
-  let text;
-  if (Object.keys(translations).includes(locale)) {
-    text = translations[locale][key]; 
-  } else {
-    let foundSimilarLocale = false;
-    //take the first 2 letters of the locale, see if something in the
-    //translations starts with that, and if so, use that
-    const shortLocale = locale.split("-")[0];
-    if (Object.keys(translations).toString().includes(shortLocale)) {
-      //search for a key that starts with the short locale
-      const matchingKey = Object.keys(translations).find((k) =>
-        k.startsWith(shortLocale)
-      );
-
-      if (matchingKey) {
-        text = translations[matchingKey][key];
-        foundSimilarLocale = true;
-      }
+// core loader
+async function loadLocale(lang: string): Promise<Record<string, string>> {
+  if (loadedLocales[lang]) return loadedLocales[lang];
+  try {
+    const module = await import(`./locales/${lang}.json`);
+    loadedLocales[lang] = module.default || {};
+  } catch {
+    if (lang !== 'en-US') {
+      return loadLocale('en-US');
     }
-    if (!foundSimilarLocale) {
-      text = translations["en-US"][key];
-    }
+    loadedLocales[lang] = {};
   }
+  return loadedLocales[lang];
+}
 
-
-  if (!text) console.error(`no translation found for ${locale}.${key}`);
-
-  Object.keys(vars).map((k) => {
-    const regex = new RegExp(`{{${k}}}`, "g");
-    text = text.replace(regex, vars[k]);
+// internal async lookup
+async function fetchTranslation(lang: string, key: string, vars: Record<string, string>) {
+  const msgs = await loadLocale(lang);
+  let text = msgs[key] || '';
+  // fallback by short code
+  if (!text) {
+    const short = lang.split('-')[0];
+    const fallback = Object.keys(loadedLocales).find((k) => k.startsWith(short));
+    text = fallback ? loadedLocales[fallback][key] : '';
+  }
+  // last fallback
+  if (!text) {
+    const en = await loadLocale('en-US');
+    text = en[key] || key;
+  }
+  // variable substitution
+  Object.entries(vars).forEach(([k, v]) => {
+    text = text.replace(`{{${k}}}`, v);
   });
-
   return text;
-} 
+}
 
+// factory to produce the translator fn
+function makeTranslator() {
+  return (key: string, vars: Record<string,string> = {}) => {
+    // if we’ve already fetched it, return cached
+    if (translationCache[key]) {
+      return translationCache[key];
+    }
+    // otherwise, kick off loading...
+    const lang = browser && localStorage.getItem('lang')
+      ? localStorage.getItem('lang')!
+      : get(locale);
+    fetchTranslation(lang, key, vars)
+      .then((txt) => {
+        translationCache[key] = txt;
+        // trigger store update so Svelte re-runs {$t("key")}
+        t.set(makeTranslator());
+      })
+      .catch(() => {
+        translationCache[key] = key;
+        t.set(makeTranslator());
+      });
+    // in the meantime, render the key itself
+    return key;
+  };
+}
 
-export const t = derived(
-  locale,
-  ($locale) =>
-    (key: string, vars = {}) =>
-      translate($locale, key, vars)
+// the store holds _our_ translator function
+export const t = writable<(key:string,vars?:Record<string,string>)=>string>(
+  makeTranslator()
 );
