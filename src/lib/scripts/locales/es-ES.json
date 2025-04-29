@@ -54,7 +54,7 @@
   "footer.about": "Sobre",
   "footer.privacy": "Privacidad",
   "footer.socials": "Redes sociales",
-  "footer.youtube": "YouTube",
+  "footer.youtube": "Youtube",
   "footer.discord": "Discord",
   "tutorials": "Base de conocimientos",
   "plans": "Planes",
@@ -71,5 +71,5 @@
   },
   "footer.articles": "Artículos",
   "footer.terms": "Términos de servicio",
-  "footer.github": "GitHub"
+  "footer.github": ""
 }
