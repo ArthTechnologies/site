@@ -26,7 +26,7 @@
   class=" relative flex gap-1 md:gap-5 max-md:overflow-x-scroll w-screen justify-center mt-10"
 >
   <div
-    class="max-md:w-48 flex flex-col items-center gap-2.5 bg-base-300 bg-opacity-80 rounded-2xl px-3 md:px-6 py-5 grayGradientStroke"
+    class="max-md:w-48 flex flex-col items-center gap-2.5 bg-base-300 bg-opacity-[85%] backdrop-blur-[1px] rounded-2xl px-3 md:px-6 py-5 grayGradientStroke"
   >
     <p class="font-poppins-bold text-[1.25rem] md:text-3xl text-center -mb-3 md:mb-3">
       {$t("landing.plans.basic.title")}
@@ -75,7 +75,7 @@
     </a>
   </div>
   <div
-    class="max-md:w-48 flex flex-col items-center gap-2.5 bg-base-300 bg-opacity-80 rounded-2xl px-3 md:px-6 py-5 grayGradientStroke"
+    class="max-md:w-48 flex flex-col items-center gap-2.5 bg-base-300 bg-opacity-[85%] backdrop-blur-[1px] rounded-2xl px-3 md:px-6 py-5 grayGradientStroke"
   >
     <p class="font-poppins-bold text-[1.25rem] md:text-3xl text-center -mb-3 md:mb-3">
       {$t("landing.plans.plus.title")}
@@ -124,7 +124,7 @@
     </a>
   </div>
   <div
-    class="max-md:w-48 flex flex-col items-center gap-2.5 bg-base-300 bg-opacity-80 rounded-2xl px-3 md:px-6 py-5 grayGradientStroke"
+    class="max-md:w-48 flex flex-col items-center gap-2.5 bg-base-300 bg-opacity-[85%] backdrop-blur-[1px] rounded-2xl px-3 md:px-6 py-5 grayGradientStroke"
   >
     <p class="font-poppins-bold text-[1.25rem] md:text-3xl text-center -mb-3 md:mb-3">
       {$t("landing.plans.premium.title")}
