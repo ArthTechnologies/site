@@ -82,7 +82,7 @@
     </p>
     <div class=" flex gap-4 -mb-3.5 md:mb-3.5">
       <div class="max-md:hidden w-20 outline p-2 rounded">
-        <p class="text-center font-poppins-bold text-xl ">8GB</p>
+        <p class="text-center font-poppins-bold text-xl ">6GB</p>
         <div
           class="flex font-poppins font-bold items-center gap-1 justify-center text-sm"
         >
