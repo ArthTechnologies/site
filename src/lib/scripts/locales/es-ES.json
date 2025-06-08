@@ -63,6 +63,7 @@
   "basic.2": "3GB RAM",
   "basic.3": "Geyser Integrado",
   "misc.month": "mes",
+  "misc.monthShort": "mes",
   "misc.copied": "Copiado!",
   "misc.share": "Compartir",
   "navbar": {
