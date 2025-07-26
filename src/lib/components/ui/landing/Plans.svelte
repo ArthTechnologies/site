@@ -117,7 +117,7 @@
       </div>
     </div>
     <p class="font-poppins font-bold text-xl  text-center max-md:flex flex-col mb-0.5">
-      $3.99<span class="text-sm">/{$t("misc.month")}</span>
+      $5.99<span class="text-sm">/{$t("misc.month")}</span>
     </p>
 <div class="flex items-center font-poppins gap-1.5 text-sm"><input type="checkbox"  bind:checked={billedQuarterly}  class="toggle toggle-xs" /> Billed Quarterly</div>
 <div class="divider w-full h-[1px] bg-gray-400 my-2"></div>
