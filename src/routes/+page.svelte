@@ -3,7 +3,7 @@
   import { goto } from "$app/navigation";
   import Plans from "$lib/components/ui/landing/Plans.svelte";
   import { t } from "$lib/scripts/i18n";
-  import { BadgeCheck, MemoryStick, CpuIcon } from "lucide-svelte";
+  import { BadgeCheck, MemoryStick, CpuIcon, CupSodaIcon, Globe2, Globe, Upload, Users, SettingsIcon } from "lucide-svelte";
 
   import { onMount } from "svelte";
 
@@ -180,36 +180,68 @@
 
 <div
   style="background-size: cover;"
-  class="relative -mt-72 sm:-mt-64 lg:-mt-56 xl:-mt-[22rem] 2xl:-mt-96 bg-[url('/images/hostingbg2.svg?v=2')] object-fit max-md:bg-center flex flex-col  min-h-screen text-[#efefef] pb-96 px-5 mainArea relative"
+  class="relative -mt-96 lg:-mt-56 xl:-mt-[22rem] 2xl:-mt-96 bg-[url('/images/hostingbg2.svg?v=2')] object-fit max-md:bg-center flex flex-col  min-h-screen text-[#efefef] pb-96 px-5 mainArea relative"
 >
-  <div class="flex max-md:flex-col gap-6 md:gap-12 mt-80 md:mt-64 lg:ml-16 md:h-[25rem] justify-start">
-    <img src="/images/Panel.webp?v=2" class="z-10 h-[64vw] sm:h-[58vw] md:h-[30vw] lg:h-[31.3vw] xl:h-[25rem]" />
+  <div class="flex max-md:flex-col gap-6 md:gap-12 mt-96 md:mt-64 lg:ml-16 2xl:ml-36 md:h-[25rem] justify-start">
+    <img src="/images/Panel.webp?v=3" class=" rounded-3xl z-10 h-[64vw] sm:h-[58vw] md:h-[30vw] lg:h-[31.3vw] xl:h-[25rem]" />
     <img
       src="/images/Panel2.svg?v=2"
       class="absolute -left-10 -top-10 blur-3xl opacity-75"
     />
-    <div class=" z-10 flex flex-col justify-between">
+    <div class=" z-10 flex flex-col justify-between h-min">
 <div class=" sm:w-2/3 md:w-[20rem] lg:w-[23rem] xl:w-[27rem]">
   <p class="text-3xl lg:text-[2rem] xl:text-4xl font-poppins-bold mt-2 mb-6 md:leading-[2.8rem]">
-    {$t("landing.panel.title")}
+    Simplicity, built from the ground up.
   </p>
   <p class="font-poppins w-[90%] text-[.95rem] lg:text-base">
-    {@html $t("landing.panel.desc")}
+    Our custom open-source panel makes everything easy. Install Geyser crossplay, Dynmap and more with zero configuration on your end.
   </p>
 </div>
-      <img src="/images/Panel3.svg?v=2" class="w-[25rem] xl:w-[27rem] max-md:mt-4" />
+      <img src="/images/Panel3.svg?v=2" class="w-[25rem] xl:w-[27rem] mt-4" />
+    </div>
+  </div>
+    <div class="flex flex-row-reverse max-md:flex-col-reverse gap-6 md:gap-12 mt-24 lg:mr-16 2xl:mr-80 md:h-[16rem] justify-start">
+<div class="grid grid-cols-2 gap-8 h-fit scale-[80%] -ml-6">  
+  <div class="flex gap-2 w-52 h-fit">
+    <CpuIcon size=32 color="#edcfb0" class="flex-shrink-0"/>
+    <div class="flex flex-col h-min"><b>4 Shared vCPUs</b><p>Reliable, fast performance.</p></div>
+  </div>
+    <div class="flex gap-2 w-52 h-fit">
+    <Globe size=32 color="#edcfb0" class="flex-shrink-0"/>
+    <div class="flex flex-col h-min"><b>Custom Subdomains</b><p>Choose an address like [name].arthmc.xyz</p></div>
+  </div>
+      <div class="flex gap-2 w-52 h-fit">
+    <SettingsIcon size=32 color="#edcfb0" class="flex-shrink-0"/>
+    <div class="flex flex-col h-min"><b>Power users</b><p class="w-[90%]">SFTP access and 2 extra ports available.</p></div>
+  </div>
+        <div class="flex gap-2 w-52 h-fit">
+    <Users size=32 color="#edcfb0" class="flex-shrink-0"/>
+    <div class="flex flex-col h-min"><b>Player Manager</b><p>Manage on & offline players from the panel.</p></div>
+  </div>
+  </div>
+
+    <div class=" z-10 flex flex-col justify-between h-min">
+<div class=" sm:w-2/3 md:w-[20rem] lg:w-[23rem] xl:w-[27rem] flex flex-col items-end">
+  <p class="text-3xl lg:text-[2rem] xl:text-4xl font-poppins-bold mt-2 mb-6 md:leading-[2.8rem] text-right">
+    Capable of anything you need.
+  </p>
+  <p class="font-poppins w-[80%] text-[.95rem] lg:text-base text-right">
+    We give you all of the tools and power for whatever you need.
+  </p>
+</div>
+     
     </div>
   </div>
   <div
-    class="flex max-md:flex-col-reverse gap-5 mt-24 justify-end lg:mr-24 mb-16 max-lg:items-end"
+    class="flex max-md:flex-col-reverse gap-5 justify-center max-md:mt-24 lg:mr-72 mb-16 max-lg:items-end"
   >
     <div class="md:w-1/3 z-10 text-right flex flex-col items-end max-md:flex-col-reverse">
 <div class="flex flex-col items-end">
   <p class="text-3xl lg:text-[2rem] xl:text-4xl font-poppins-bold mt-12 mb-6">
-    {$t("landing.performance.title")}
+    Unmatched pricing.
   </p>
-  <p class="font-poppins w-[90%]">
-    {$t("landing.performance.desc")}
+  <p class="font-poppins w-[88%] md:w-[64%]">
+    By cutting down on middlemen, we can offer unmatched pricing for all plans. At $1/GB of ram, we're less than half the price of the competition.
   </p>
 </div>
       <img
