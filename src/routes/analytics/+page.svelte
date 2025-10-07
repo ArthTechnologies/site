@@ -40,8 +40,11 @@
 
   let y1 = [];
 
+  let y2 = [];
+
 
   let points = "";
+  let points2 = ""; 
 
 
   let linux;
@@ -345,12 +348,27 @@
 
 
             y1.push(100);
+            y2.push(100);
+                      
 
 
           } else {
-
+  
          
             y1.push(100 - (100 / res.max) * res.days[i].hits);
+            let clickPercentage = 0;
+            let sum = 0;
+            if (res.days[i].redirects && res.days[i].hits) {
+              sum += res.days[i].redirects;
+            }
+
+            if (res.days[i].redirectsB && res.days[i].hits) {
+              sum += res.days[i].redirectsB;
+            }
+
+            clickPercentage = (sum / res.days[i].hits) * 100;
+               
+            y2.push(100 - (100 / res.max) * (res.days[i].hits * (clickPercentage / 100)));  
 
 
           }
@@ -362,7 +380,9 @@
         for (let i = 0; i <= 30; i++) {
 
 
-          points += `${x1[i]},${y1[i]} `;
+          points += `${x1[i]},${y1[i]} `; 
+          points2 += `${x1[i]},${y2[i]} `;
+
 
 
         }
@@ -471,7 +491,22 @@
 
 
 
+           <polyline
 
+
+        style="stroke: #ff8c00; stroke-width: 2"
+
+
+        points="
+
+
+      {points2}
+
+
+    "
+
+
+      />
 
       <!-- data -->
 
@@ -492,6 +527,7 @@
 
 
       />
+ 
 
 
     </svg>
