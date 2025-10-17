@@ -14,24 +14,23 @@
   if (browser) {
     //a-b test
     let slug = window.location.pathname;
-    /*if (slug === "/") {
+    if (slug === "/") {
       if (localStorage.getItem("ab_NewLandingPage") == null) {
         let x = Math.floor(Math.random() * 2) == 0;
         console.log("x is..." + x);
-        /*if (!x) {
+        if (!x) {
           console.log("x is false");
           localStorage.setItem("ab_NewLandingPage", "false");
-          goto("/hosting");
+    
         } else {
         console.log("x is true");
         localStorage.setItem("ab_NewLandingPage", "true");
-        //}
-      } // else {
-      if (localStorage.getItem("ab_NewLandingPage") == "false") {
         goto("/hosting");
       }
-      // }
-    }*/
+    } // else {
+
+       
+    }
     onMainPage = window.location.pathname === "/";
     console.log(navigator.doNotTrack);
     let object = {
