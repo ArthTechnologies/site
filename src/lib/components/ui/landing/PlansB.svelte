@@ -66,7 +66,7 @@
 <div class="divider w-full h-[1px] bg-gray-400 my-2"></div>
 <ul class="list-disc font-poppins list-inside text-md">
       <li>4GB RAM</li>
-      <li>10GB Storage</li>
+      <li>16GB Storage</li>
       <li>Ryzen 7 CPUs</li>
       </ul>
     <a
@@ -123,7 +123,7 @@
 <div class="divider w-full h-[1px] bg-gray-400 my-2"></div>
 <ul class="list-disc font-poppins list-inside text-md">
       <li>6GB RAM</li>
-      <li>15GB Storage</li>
+      <li>24GB Storage</li>
       <li>Ryzen 7 CPUs</li>
       </ul>
     <a
@@ -180,7 +180,7 @@
 <div class="divider w-full h-[1px] bg-gray-400 my-2"></div>
 <ul class="list-disc font-poppins list-inside text-md">
       <li>8GB RAM</li>
-      <li>20GB Storage</li>
+      <li>32GB Storage</li>
       <li>Ryzen 7 CPUs</li>
       </ul>
     <a
