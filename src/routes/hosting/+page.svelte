@@ -174,7 +174,7 @@
   >
     {$t("landing.title")}
   </b>
-
+<iframe src="https://status.arthmc.xyz/badge?theme=dark" class="mt-6 -mb-4 bg-[#222838] pl-1 w-[182px] rounded-lg shadow-sm" height="30" frameborder="0" scrolling="no" style="color-scheme: normal"></iframe>
   <Plans />
 </div>
 
