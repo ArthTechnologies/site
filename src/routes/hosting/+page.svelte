@@ -2,7 +2,6 @@
   import { browser } from "$app/environment";
   import { goto } from "$app/navigation";
   import Plans from "$lib/components/ui/landing/Plans.svelte";
-    import PlansB from "$lib/components/ui/landing/PlansB.svelte";
   import { t } from "$lib/scripts/i18n";
   import { BadgeCheck, MemoryStick, CpuIcon, CupSodaIcon, Globe2, Globe, Upload, Users, SettingsIcon } from "lucide-svelte";
 
@@ -176,7 +175,7 @@
     {$t("landing.title")}
   </b>
 
-  <PlansB />
+  <Plans />
 </div>
 
 <div

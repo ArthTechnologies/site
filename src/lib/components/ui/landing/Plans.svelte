@@ -2,7 +2,7 @@
   import { browser } from "$app/environment";
   import { t } from "$lib/scripts/i18n";
   import { CpuIcon, MemoryStick } from "lucide-svelte";
-  let billedQuarterly = true;
+  let billedQuarterly = false;
 
   function getStartedClicked() {
     if (browser) {
@@ -62,7 +62,7 @@
     <p class="font-poppins font-bold text-xl  text-center max-md:flex flex-col mb-0.5">
       $3.99<span class="text-sm">/{$t("misc.month")}</span>
     </p>
-<div class="flex items-center font-poppins gap-1.5 text-sm"><input type="checkbox"  bind:checked={billedQuarterly}  class="toggle toggle-xs" /> Billed Quarterly</div>
+
 <div class="divider w-full h-[1px] bg-gray-400 my-2"></div>
 <ul class="list-disc font-poppins list-inside text-md">
       <li>4GB RAM</li>
@@ -119,7 +119,7 @@
     <p class="font-poppins font-bold text-xl  text-center max-md:flex flex-col mb-0.5">
       $5.99<span class="text-sm">/{$t("misc.month")}</span>
     </p>
-<div class="flex items-center font-poppins gap-1.5 text-sm"><input type="checkbox"  bind:checked={billedQuarterly}  class="toggle toggle-xs" /> Billed Quarterly</div>
+
 <div class="divider w-full h-[1px] bg-gray-400 my-2"></div>
 <ul class="list-disc font-poppins list-inside text-md">
       <li>6GB RAM</li>
@@ -176,7 +176,7 @@
     <p class="font-poppins font-bold text-xl  text-center max-md:flex flex-col mb-0.5 text-[#edcfb0]">
       $7.99<span class="text-sm opacity-80">/{$t("misc.month")}</span>
     </p>
-<div class="flex items-center font-poppins gap-1.5 text-sm"><input type="checkbox" bind:checked={billedQuarterly}  class="toggle toggle-xs" /> Billed Quarterly</div>
+
 <div class="divider w-full h-[1px] bg-gray-400 my-2"></div>
 <ul class="list-disc font-poppins list-inside text-md">
       <li>8GB RAM</li>
