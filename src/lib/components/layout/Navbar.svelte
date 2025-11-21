@@ -16,11 +16,15 @@
   if (typeof navigator !== "undefined") {
     locale.set(navigator.language);
   }
+  let referrer = "unknown";
   if (navType === "dark") {
     bgColor = "bg-base-300";
   }
   onMount(() => {
     window.addEventListener("click", handleWindowClick);
+    setInterval(() => {
+      referrer = localStorage.getItem("referrer") || "unknown";
+    }, 1000);
   });
   function handleWindowClick(event) {
     const dropdown = document.getElementById("dropdown");
@@ -118,7 +122,7 @@
       >
       <a
         on:click={getStartedClicked}
-        href="https://servers.arthmc.xyz/signup"
+        href="https://servers.arthmc.xyz/signup?referrer={referrer}"
         target="_blank"
         rel="noreferrer"
       >

@@ -3,7 +3,12 @@
   import { t } from "$lib/scripts/i18n";
   import { CpuIcon, MemoryStick } from "lucide-svelte";
   let billedQuarterly = false;
-
+  let referrer = "unknown";
+  if (browser) {
+        setInterval(() => {
+      referrer = localStorage.getItem("referrer") || "unknown";
+    }, 1000);
+  }
   function getStartedClicked() {
     if (browser) {
       if (localStorage.getItem("allowAnalytics") == "true") {
@@ -71,7 +76,7 @@
       </ul>
     <a
       on:click={getStartedClicked}
-      href="https://servers.arthmc.xyz/signup?plan=basic&quarterly={billedQuarterly}"
+      href="https://servers.arthmc.xyz/signup?plan=basic&quarterly={billedQuarterly}&referrer={referrer}"
       target="_blank"
       rel="noreferrer"
       class="w-full"
@@ -128,7 +133,7 @@
       </ul>
     <a
       on:click={getStartedClicked}
-      href="https://servers.arthmc.xyz/signup?plan=plus&quarterly={billedQuarterly}"
+      href="https://servers.arthmc.xyz/signup?plan=plus&quarterly={billedQuarterly}&referrer={referrer}"
       target="_blank"
       rel="noreferrer"
       class="w-full"
@@ -185,7 +190,7 @@
       </ul>
     <a
       on:click={getStartedClicked}
-      href="https://servers.arthmc.xyz/signup?plan=premium&quarterly={billedQuarterly}"
+      href="https://servers.arthmc.xyz/signup?plan=premium&quarterly={billedQuarterly}&referrer={referrer}"
       target="_blank"
       rel="noreferrer"
       class="w-full"  

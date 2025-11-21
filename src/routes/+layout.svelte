@@ -40,6 +40,11 @@
       returning: localStorage.getItem("allowAnalytics") == "true",
       referrer: document.referrer,
     };
+    let referrer = document.referrer;
+    if (referrer == "" || referrer == null) {
+      referrer = "unknown";
+    }
+    if (localStorage.getItem("referrer") == null) localStorage.setItem("referrer", referrer);
     console.log(object);
     if (
       navigator.doNotTrack == "1" ||
