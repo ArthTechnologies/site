@@ -16,14 +16,16 @@
   if (typeof navigator !== "undefined") {
     locale.set(navigator.language);
   }
-  let referrer = "unknown";
+  let referrer = "none";
+  let campaign_name = "none"; 
   if (navType === "dark") {
     bgColor = "bg-base-300";
   }
   onMount(() => {
     window.addEventListener("click", handleWindowClick);
     setInterval(() => {
-      referrer = localStorage.getItem("referrer") || "unknown";
+      referrer = localStorage.getItem("referrer") || "none";
+      campaign_name = localStorage.getItem("campaign_name") || "none";  
     }, 1000);
   });
   function handleWindowClick(event) {
@@ -122,7 +124,7 @@
       >
       <a
         on:click={getStartedClicked}
-        href="https://servers.arthmc.xyz/signup?referrer={referrer}"
+        href="https://servers.arthmc.xyz/signup?referrer={referrer}&campaign_name={campaign_name}"
         target="_blank"
         rel="noreferrer"
       >

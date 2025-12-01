@@ -44,7 +44,16 @@
     if (referrer == "" || referrer == null) {
       referrer = "unknown";
     }
+    let campaign_name = "unknown";
+    const urlParams = new URLSearchParams(window.location.search);
+    console.log(urlParams);
+    if (urlParams.has("utm_campaign")) {
+      campaign_name = urlParams.get("utm_campaign") || "none";
+    }
+        console.log("cn\n"  + campaign_name);
+
     if (localStorage.getItem("referrer") == null) localStorage.setItem("referrer", referrer);
+    if (localStorage.getItem("campaign_name") == null) localStorage.setItem("campaign_name", campaign_name);
     console.log(object);
     if (
       navigator.doNotTrack == "1" ||

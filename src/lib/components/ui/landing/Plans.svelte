@@ -3,10 +3,12 @@
   import { t } from "$lib/scripts/i18n";
   import { CpuIcon, MemoryStick } from "lucide-svelte";
   let billedQuarterly = false;
-  let referrer = "unknown";
+  let referrer = "none";
+  let campaign_name = "none";
   if (browser) {
         setInterval(() => {
-      referrer = localStorage.getItem("referrer") || "unknown";
+      referrer = localStorage.getItem("referrer") || "none";
+      campaign_name = localStorage.getItem("campaign_name") || "none";  
     }, 1000);
   }
   function getStartedClicked() {
@@ -76,7 +78,7 @@
       </ul>
     <a
       on:click={getStartedClicked}
-      href="https://servers.arthmc.xyz/signup?plan=basic&quarterly={billedQuarterly}&referrer={referrer}"
+      href="https://servers.arthmc.xyz/signup?plan=basic&quarterly={billedQuarterly}&referrer={referrer}&campaign_name={campaign_name}"
       target="_blank"
       rel="noreferrer"
       class="w-full"
@@ -133,7 +135,7 @@
       </ul>
     <a
       on:click={getStartedClicked}
-      href="https://servers.arthmc.xyz/signup?plan=plus&quarterly={billedQuarterly}&referrer={referrer}"
+href="https://servers.arthmc.xyz/signup?plan=plus&quarterly={billedQuarterly}&referrer={referrer}&campaign_name={campaign_name}"
       target="_blank"
       rel="noreferrer"
       class="w-full"
@@ -190,7 +192,7 @@
       </ul>
     <a
       on:click={getStartedClicked}
-      href="https://servers.arthmc.xyz/signup?plan=premium&quarterly={billedQuarterly}&referrer={referrer}"
+      href="https://servers.arthmc.xyz/signup?plan=premium&quarterly={billedQuarterly}&referrer={referrer}&campaign_name={campaign_name}"
       target="_blank"
       rel="noreferrer"
       class="w-full"  
