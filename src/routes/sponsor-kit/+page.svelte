@@ -1,4 +1,5 @@
 <script lang="ts">
+import { API_URL } from "$lib/scripts/config";
   import { browser } from "$app/environment";
   import { marked } from "marked";
   let t;
@@ -8,7 +9,7 @@
   let effective;
 
   if (browser) {
-    fetch("https://ocelot.arthmc.xyz/file/docs/sponsor-kit.md")
+    fetch(`${API_URL}/file/docs/sponsor-kit.md`)
       .then((response) => response.text())
       .then((text) => {
         t = marked(text);

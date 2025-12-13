@@ -1,16 +1,17 @@
 <script>
+  import { API_URL } from "$lib/scripts/config";
   import { browser } from "$app/environment";
   import CopyClipboard from "$lib/components/ui/CopyClipboard.svelte";
   import { t } from "$lib/scripts/i18n";
 
   let lang = "en-US";
-  let link = "https://ocelot.arthmc.xyz/rss/" + lang;
+  let link = `${API_URL}/rss/` + lang;
   if (browser) {
     lang = navigator.language;
     if (localStorage.getItem("lang") != null) {
       lang = localStorage.getItem("lang");
     }
-    link = "https://ocelot.arthmc.xyz/rss/arthblog.rss?lang=" + lang;
+    link = `${API_URL}/rss/arthblog.rss?lang=` + lang;
   }
   const copy = () => {
     if (browser) {

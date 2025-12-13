@@ -1,4 +1,5 @@
 <script>
+  import { API_URL } from "$lib/scripts/config";
   import { browser } from "$app/environment";
   import { t } from "$lib/scripts/i18n";
   import { CpuIcon, MemoryStick } from "lucide-svelte";
@@ -15,9 +16,10 @@
     if (browser) {
       if (localStorage.getItem("allowAnalytics") == "true") {
         let page = localStorage.getItem("ab_NewLandingPage");
+        let referrer = localStorage.getItem("referrer") || "";
         fetch(
-          "https://ocelot.arthmc.xyz/analytics/getStartedButtonClicked?bpage=" +
-            page,
+          `${API_URL}/analytics/getStartedButtonClicked?bpage=` +
+            page + "&referrer=" + encodeURIComponent(referrer),
           {
             method: "POST",
             headers: {

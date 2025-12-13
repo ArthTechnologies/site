@@ -1,4 +1,5 @@
 <script>
+  import { API_URL } from "$lib/scripts/config";
   import { browser } from "$app/environment";
   import { t } from "$lib/scripts/i18n";
 
@@ -10,7 +11,7 @@
   let backend = $t("status.offline");
   let website = $t("status.offline");
 
-  const response = fetch("https://ocelot.arthmc.xyz/status")
+  const response = fetch(`${API_URL}/status`)
     .then((response) => response.json())
     .then((json) => {
       if (json != undefined) {

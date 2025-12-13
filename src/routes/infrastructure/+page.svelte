@@ -1,4 +1,5 @@
 <script lang="ts">
+import { API_URL } from "$lib/scripts/config";
     import { browser } from "$app/environment";
     import CpuChart from "$lib/components/ui/CpuChart.svelte";
     import MemoryChart from "$lib/components/ui/MemoryChart.svelte";
@@ -19,7 +20,7 @@
       
        
         getPerformance();
-        fetch('https://ocelot.arthmc.xyz/nodeInfo')
+        fetch(`${API_URL}/nodeInfo`
             .then(response => response.json())
             .then(data => {
                 nodeInfo = data;

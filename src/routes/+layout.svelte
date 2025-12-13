@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { API_URL } from "$lib/scripts/config";
   import Navbar from "$lib/components/layout/Navbar.svelte";
   import "../app.css";
   import "$lib/styles/components.scss";
@@ -63,7 +64,7 @@
     } else if (localStorage.getItem("allowAnalytics") == null) {
       console.log("sending analytics...");
 
-      fetch("https://ocelot.arthmc.xyz/analytics/", {
+      fetch(`${API_URL}/analytics/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

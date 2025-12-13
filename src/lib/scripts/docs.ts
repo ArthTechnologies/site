@@ -21,7 +21,7 @@ setTimeout(() => {
             slug = slug.split("/")[slug.split("/").length-1];
         }
 
-        let url = "https://ocelot.arthmc.xyz/file/docs/"+slug+".md";
+        let url = `${API_URL}/file/docs/`+slug+".md";
         console.log(slug)
 
         fetch(url)
