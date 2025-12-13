@@ -20,7 +20,7 @@ import { API_URL } from "$lib/scripts/config";
       
        
         getPerformance();
-        fetch(`${API_URL}/nodeInfo`
+        fetch(`${API_URL}/nodeInfo`)
             .then(response => response.json())
             .then(data => {
                 nodeInfo = data;
