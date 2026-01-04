@@ -1,4 +1,4 @@
-<script type="ts">
+<script lang="ts">
   import { API_URL } from "$lib/scripts/config";
   import { browser } from "$app/environment";
   import ShareToMastodon from "$lib/components/ui/ShareToMastodon.svelte";
