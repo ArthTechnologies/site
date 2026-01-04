@@ -1,5 +1,6 @@
 import { browser } from "$app/environment";
 import { marked } from "marked";
+import { API_URL } from "$lib/scripts/config";
 
 
 export function load(slug) {
