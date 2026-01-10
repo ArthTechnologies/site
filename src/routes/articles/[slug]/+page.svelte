@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { API_URL } from "$lib/scripts/config";
   import { browser } from "$app/environment";
   import ShareToMastodon from "$lib/components/ui/ShareToMastodon.svelte";
   import { onMount } from "svelte";
@@ -28,7 +27,7 @@
       }
       slug = slug.split("/").pop();
       
-      fetch(`${API_URL}/file/posts/` + slug + ".md")
+      fetch(`/content/posts/` + slug.replace("*", "/") + ".md")
         .then((response) => response.text())
         .then((text) => {
           //turn everything before line 7 into a variable and remove the from text

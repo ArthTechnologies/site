@@ -1,5 +1,4 @@
 <script>
-  import { API_URL } from "$lib/scripts/config";
   import RSS from "$lib/components/ui/RSS.svelte";
   import Email from "$lib/components/ui/Email.svelte";
   import { browser } from "$app/environment";
@@ -35,7 +34,7 @@
     //get the top 10 posts
 
     if (browser) {
-      promise = fetch(`${API_URL}/index/posts`)
+      promise = fetch(`/api/content/posts`)
         .then((response) => response.json())
         .then((json) => {
           //take each item in the array, take the title and desc, and put them in posts

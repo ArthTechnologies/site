@@ -1,5 +1,4 @@
 <script lang="ts">
-import { API_URL } from "$lib/scripts/config";
   import { browser } from "$app/environment";
   import { marked } from "marked";
   let t;
@@ -9,7 +8,7 @@ import { API_URL } from "$lib/scripts/config";
   let effective;
 
   if (browser) {
-    fetch(`${API_URL}/file/docs/privacy_old.md`)
+    fetch(`/content/docs/privacy_old.md`)
       .then((response) => response.text())
       .then((text) => {
         const lines = text.split("\n");
