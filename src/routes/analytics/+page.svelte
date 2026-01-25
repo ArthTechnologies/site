@@ -103,6 +103,7 @@
 
 
       .then((json) => {
+        if (!json) return;
 
 
         res = json;
@@ -440,6 +441,9 @@
         }
 
 
+      })
+      .catch((err) => {
+        console.error("Analytics fetch failed:", err.message);
       });
 
 

@@ -24,7 +24,10 @@ import { API_URL } from "$lib/scripts/config";
             .then(response => response.json())
             .then(data => {
                 nodeInfo = data;
-                document.getElementById("https://us-dallas-1.arthmc.xyz/").checked = true;
+                document.getElementById("https://us-dallas-1.arthmc.xyz/")?.checked = true;
+            })
+            .catch((err) => {
+                console.error("Node info fetch failed:", err.message);
             });
 
     }
@@ -40,6 +43,10 @@ import { API_URL } from "$lib/scripts/config";
                 performance = res;
                 console.log(performance);
                 performanceReq = 3;
+            })
+            .catch((err) => {
+                console.error("Performance fetch failed:", err.message);
+                performanceReq = 1;
             });
     }
 </script>

@@ -11,10 +11,11 @@
     fetch(`/content/docs/sponsor-kit.md`)
       .then((response) => response.text())
       .then((text) => {
+        if (!text) return;
         t = marked(text);
-        version = metadata.version;
-        published = metadata.published;
-        effective = metadata.effective;
+      })
+      .catch((err) => {
+        console.error("Sponsor kit fetch failed:", err.message);
       });
   }
 </script>

@@ -26,7 +26,9 @@
               "Content-Type": "application/json",
             },
           }
-        );
+        ).catch((err) => {
+          console.error("Analytics fetch failed:", err.message);
+        });
       }
     }
   }

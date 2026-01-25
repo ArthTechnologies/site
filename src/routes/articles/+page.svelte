@@ -37,6 +37,7 @@
       promise = fetch(`/api/content/posts`)
         .then((response) => response.json())
         .then((json) => {
+          if (!json || !json[lang]) return;
           //take each item in the array, take the title and desc, and put them in posts
           json[lang].forEach((item) => {
             posts.push({
@@ -60,6 +61,9 @@
               };
             }
           });
+        })
+        .catch((err) => {
+          console.error("Posts fetch failed:", err.message);
         });
     }
   }

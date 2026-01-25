@@ -30,6 +30,7 @@
       fetch(`/content/posts/` + slug.replace("*", "/") + ".md")
         .then((response) => response.text())
         .then((text) => {
+          if (!text) return;
           //turn everything before line 7 into a variable and remove the from text
           title = text.split("\n")[0];
           desc = text.split("\n")[1];
@@ -42,6 +43,9 @@
           text = text.split("\n").slice(8).join("\n");
 
           t = marked(text);
+        })
+        .catch((err) => {
+          console.error("Article fetch failed:", err.message);
         });
     }
   });

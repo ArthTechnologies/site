@@ -32,6 +32,9 @@
       } else {
         website = $t("status.offline");
       }
+    })
+    .catch((err) => {
+      console.error("Status fetch failed:", err.message);
     });
 </script>
 

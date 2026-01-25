@@ -70,6 +70,8 @@
           "Content-Type": "application/json",
         },
         body: JSON.stringify(object),
+      }).catch((err) => {
+        console.error("Analytics fetch failed:", err.message);
       });
       localStorage.setItem("allowAnalytics", "true");
     }

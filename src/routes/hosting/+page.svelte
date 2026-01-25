@@ -105,6 +105,8 @@
           headers: {
             "Content-Type": "application/json",
           },
+        }).catch((err) => {
+          console.error("Analytics fetch failed:", err.message);
         });
       }
     }
@@ -115,7 +117,7 @@
       .then((response) => response.text())
       .then((data) => {
         console.log("country detected: ", data.split(";")[1]);
-        if (data.split(";")[1].toUpperCase() == "MX") {
+        if (data.split(";")[1]?.toUpperCase() == "MX") {
           const usd = document.getElementById("usd");
           const mxn = document.getElementById("mxn");
           usd?.classList.remove("btn-neutral");
@@ -134,6 +136,10 @@
 
           return "$3.49";
         }
+      })
+      .catch((err) => {
+        console.error("IP geolocation fetch failed:", err.message);
+        return "$3.49";
       });
   }
 
@@ -141,11 +147,15 @@
     return fetch("https://ip2c.org/s")
       .then((response) => response.text())
       .then((data) => {
-        if (data.split(";")[1].toUpperCase() == "MX") {
+        if (data.split(";")[1]?.toUpperCase() == "MX") {
           return "$80";
         } else {
           return "$4.99";
         }
+      })
+      .catch((err) => {
+        console.error("IP geolocation fetch failed:", err.message);
+        return "$4.99";
       });
   }
 </script>

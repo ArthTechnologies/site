@@ -27,12 +27,16 @@ setTimeout(() => {
         fetch(url)
   .then((response) => response.text())
   .then((text) => {
-
+    if (!text) return;
     t = marked(text);
         //append t to element "text"
 
-        document.getElementById("text").innerHTML = t;
-    });
+        const el = document.getElementById("text");
+        if (el) el.innerHTML = t;
+    })
+  .catch((err) => {
+    console.error("Docs fetch failed:", err.message);
+  });
       }
 }, 50);
 }
