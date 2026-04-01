@@ -114,9 +114,50 @@
     });
   }
 
+  interface Toast {
+    id: number;
+    device: string;
+    referrer: string;
+    campaign: string;
+    time: string;
+  }
+
+  let toasts: Toast[] = [];
+  let toastSeq = 0;
+  const TOAST_TTL = 5000; // ms before auto-dismiss
+
+  function addToast(payload: Omit<Toast, "id">) {
+    const id = ++toastSeq;
+    toasts = [{ id, ...payload }, ...toasts].slice(0, 5); // keep max 5
+    setTimeout(() => dismissToast(id), TOAST_TTL);
+  }
+
+  function dismissToast(id: number) {
+    toasts = toasts.filter(t => t.id !== id);
+  }
+
+  function fmtTime(iso: string): string {
+    return new Date(iso).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+  }
+
   let es: EventSource;
 
-  onMount(() => {
+  onMount(async () => {
+    // ── Step 1: load data immediately via plain HTTP so the page is never blank ──
+    try {
+      const res = await fetch("/api/analytics?json=1");
+      if (!res.ok) throw new Error(res.statusText);
+      const data = await res.json();
+      processData(data.days ?? {});
+      loading = false;
+      setTimeout(initChart, 0);
+    } catch (e) {
+      error = "Failed to load analytics data.";
+      loading = false;
+      return;
+    }
+
+    // ── Step 2: open SSE for live push updates ──
     es = new EventSource("/api/analytics");
 
     es.onopen = () => { live = true; };
@@ -124,22 +165,15 @@
     es.onmessage = (event) => {
       const data = JSON.parse(event.data);
       processData(data.days ?? {});
-      loading = false;
-
-      if (!chart) {
-        setTimeout(initChart, 0);
-      } else {
-        updateChart();
-      }
+      updateChart();
     };
 
-    es.onerror = () => {
-      live = false;
-      if (loading) {
-        error = "Could not connect to analytics stream.";
-        loading = false;
-      }
-    };
+    es.addEventListener("notification", (event: MessageEvent) => {
+      const p = JSON.parse(event.data);
+      addToast(p);
+    });
+
+    es.onerror = () => { live = false; };
   });
 
   onDestroy(() => {
@@ -147,6 +181,25 @@
     chart?.destroy();
   });
 </script>
+
+<!-- Toast stack -->
+<div class="fixed bottom-4 right-4 z-50 flex flex-col-reverse gap-2 pointer-events-none">
+  {#each toasts as toast (toast.id)}
+    <div class="pointer-events-auto flex items-start gap-3 bg-base-100 border border-base-300 shadow-lg rounded-xl px-4 py-3 w-72 animate-fade-in">
+      <span class="mt-0.5 w-2 h-2 rounded-full bg-blue-400 shrink-0 animate-pulse"></span>
+      <div class="flex-1 min-w-0">
+        <p class="text-sm font-semibold leading-tight">New view</p>
+        <p class="text-xs text-base-content/60 mt-0.5">{toast.device}</p>
+        <p class="text-xs text-base-content/40 truncate">{toast.referrer === 'unknown' ? 'Direct' : toast.referrer}</p>
+        {#if toast.campaign !== 'unknown'}
+          <p class="text-xs text-orange-400 truncate">📣 {toast.campaign}</p>
+        {/if}
+        <p class="text-xs text-base-content/30 mt-0.5">{fmtTime(toast.time)}</p>
+      </div>
+      <button class="text-base-content/30 hover:text-base-content transition-colors text-lg leading-none" on:click={() => dismissToast(toast.id)}>×</button>
+    </div>
+  {/each}
+</div>
 
 <div class="min-h-screen bg-base-200 p-6 md:p-12 font-poppins">
   <div class="flex items-center gap-3 mb-1">
@@ -300,3 +353,13 @@
     </div>
   {/if}
 </div>
+
+<style>
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  :global(.animate-fade-in) {
+    animation: fade-in 0.2s ease-out;
+  }
+</style>

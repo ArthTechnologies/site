@@ -44,6 +44,24 @@ function broadcast(data: AnalyticsData) {
   }
 }
 
+export interface HitNotification {
+  device: string;
+  referrer: string;
+  campaign: string;
+  time: string;
+}
+
+export function broadcastNotification(payload: HitNotification) {
+  const msg = enc.encode(`event: notification\ndata: ${JSON.stringify(payload)}\n\n`);
+  for (const ctrl of clients) {
+    try {
+      ctrl.enqueue(msg);
+    } catch {
+      clients.delete(ctrl);
+    }
+  }
+}
+
 function emptyBreakdown(): Breakdown {
   return { views: 0, clicks: 0, signups: 0, payments: 0 };
 }
