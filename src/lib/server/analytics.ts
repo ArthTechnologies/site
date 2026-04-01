@@ -15,11 +15,34 @@ interface DayData extends Breakdown {
   byCampaign: Record<string, Breakdown>;
 }
 
-interface AnalyticsData {
+export interface AnalyticsData {
   days: Record<string, DayData>;
 }
 
 const DATA_PATH = path.resolve("data/analytics.json");
+const enc = new TextEncoder();
+
+// SSE client registry — persists across requests within the Node process
+const clients = new Set<ReadableStreamDefaultController<Uint8Array>>();
+
+export function addClient(ctrl: ReadableStreamDefaultController<Uint8Array>) {
+  clients.add(ctrl);
+}
+
+export function removeClient(ctrl: ReadableStreamDefaultController<Uint8Array>) {
+  clients.delete(ctrl);
+}
+
+function broadcast(data: AnalyticsData) {
+  const msg = enc.encode(`data: ${JSON.stringify(data)}\n\n`);
+  for (const ctrl of clients) {
+    try {
+      ctrl.enqueue(msg);
+    } catch {
+      clients.delete(ctrl);
+    }
+  }
+}
 
 function emptyBreakdown(): Breakdown {
   return { views: 0, clicks: 0, signups: 0, payments: 0 };
@@ -58,18 +81,16 @@ export function recordEvent(
   if (!data.days[key]) data.days[key] = emptyDay();
   const day = data.days[key];
 
-  // Global daily total
   day[field]++;
 
-  // Per-referrer breakdown
   if (!day.byReferrer[referrer]) day.byReferrer[referrer] = emptyBreakdown();
   day.byReferrer[referrer][field]++;
 
-  // Per-campaign breakdown
   if (!day.byCampaign[campaign]) day.byCampaign[campaign] = emptyBreakdown();
   day.byCampaign[campaign][field]++;
 
   write(data);
+  broadcast(data);
 }
 
 export function getAll(): AnalyticsData {

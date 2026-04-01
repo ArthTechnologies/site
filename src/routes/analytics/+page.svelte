@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onMount } from "svelte";
+  import { onMount, onDestroy } from "svelte";
   import {
     Chart,
     LineElement,
@@ -11,15 +11,7 @@
     LineController,
   } from "chart.js";
 
-  Chart.register(
-    LineElement,
-    PointElement,
-    LinearScale,
-    CategoryScale,
-    Legend,
-    Tooltip,
-    LineController
-  );
+  Chart.register(LineElement, PointElement, LinearScale, CategoryScale, Legend, Tooltip, LineController);
 
   interface Breakdown {
     views: number;
@@ -35,12 +27,12 @@
 
   let days: [string, DayData][] = [];
   let canvas: HTMLCanvasElement;
+  let chart: Chart | null = null;
   let loading = true;
   let error = "";
+  let live = false;
 
   let totals = { views: 0, clicks: 0, signups: 0, payments: 0 };
-
-  // Aggregated referrer and campaign totals across all 30 days
   let byReferrer: Record<string, Breakdown> = {};
   let byCampaign: Record<string, Breakdown> = {};
 
@@ -49,78 +41,121 @@
     return Math.round((a / b) * 100) + "%";
   }
 
-  function addBreakdown(
-    target: Record<string, Breakdown>,
-    source: Record<string, Breakdown> = {}
-  ) {
-    for (const [key, val] of Object.entries(source)) {
-      if (!target[key]) target[key] = { views: 0, clicks: 0, signups: 0, payments: 0 };
-      target[key].views    += val.views    ?? 0;
-      target[key].clicks   += val.clicks   ?? 0;
-      target[key].signups  += val.signups  ?? 0;
-      target[key].payments += val.payments ?? 0;
-    }
-  }
-
   function sorted(map: Record<string, Breakdown>): [string, Breakdown][] {
     return Object.entries(map).sort(([, a], [, b]) => b.views - a.views);
   }
 
-  onMount(async () => {
-    try {
-      const res = await fetch("/api/analytics");
-      const data = await res.json();
+  function processData(raw: Record<string, DayData>) {
+    days = Object.entries(raw)
+      .sort(([a], [b]) => a.localeCompare(b))
+      .slice(-30);
 
-      days = Object.entries(data.days as Record<string, DayData>)
-        .sort(([a], [b]) => a.localeCompare(b))
-        .slice(-30);
+    totals = { views: 0, clicks: 0, signups: 0, payments: 0 };
+    byReferrer = {};
+    byCampaign = {};
 
-      for (const [, d] of days) {
-        totals.views    += d.views    ?? 0;
-        totals.clicks   += d.clicks   ?? 0;
-        totals.signups  += d.signups  ?? 0;
-        totals.payments += d.payments ?? 0;
-        addBreakdown(byReferrer, d.byReferrer);
-        addBreakdown(byCampaign, d.byCampaign);
+    for (const [, d] of days) {
+      totals.views    += d.views    ?? 0;
+      totals.clicks   += d.clicks   ?? 0;
+      totals.signups  += d.signups  ?? 0;
+      totals.payments += d.payments ?? 0;
+
+      for (const [key, val] of Object.entries(d.byReferrer ?? {})) {
+        if (!byReferrer[key]) byReferrer[key] = { views: 0, clicks: 0, signups: 0, payments: 0 };
+        byReferrer[key].views    += val.views    ?? 0;
+        byReferrer[key].clicks   += val.clicks   ?? 0;
+        byReferrer[key].signups  += val.signups  ?? 0;
+        byReferrer[key].payments += val.payments ?? 0;
       }
-
-      loading = false;
-
-      setTimeout(() => {
-        if (!canvas) return;
-        const labels = days.map(([d]) => d.slice(5));
-        const mk = (field: keyof Breakdown) => days.map(([, v]) => v[field] ?? 0);
-
-        new Chart(canvas, {
-          type: "line",
-          data: {
-            labels,
-            datasets: [
-              { label: "Views",    data: mk("views"),    borderColor: "#60a5fa", tension: 0.3, fill: false, pointRadius: 3 },
-              { label: "Clicks",   data: mk("clicks"),   borderColor: "#f97316", tension: 0.3, fill: false, pointRadius: 3 },
-              { label: "Signups",  data: mk("signups"),  borderColor: "#4ade80", tension: 0.3, fill: false, pointRadius: 3 },
-              { label: "Payments", data: mk("payments"), borderColor: "#facc15", tension: 0.3, fill: false, pointRadius: 3 },
-            ],
-          },
-          options: {
-            responsive: true,
-            plugins: {
-              legend: { position: "top" },
-              tooltip: { mode: "index", intersect: false },
-            },
-            scales: { y: { beginAtZero: true } },
-          },
-        });
-      }, 0);
-    } catch (e) {
-      error = "Failed to load analytics.";
-      loading = false;
+      for (const [key, val] of Object.entries(d.byCampaign ?? {})) {
+        if (!byCampaign[key]) byCampaign[key] = { views: 0, clicks: 0, signups: 0, payments: 0 };
+        byCampaign[key].views    += val.views    ?? 0;
+        byCampaign[key].clicks   += val.clicks   ?? 0;
+        byCampaign[key].signups  += val.signups  ?? 0;
+        byCampaign[key].payments += val.payments ?? 0;
+      }
     }
+  }
+
+  function updateChart() {
+    if (!chart) return;
+    const mk = (field: keyof Breakdown) => days.map(([, v]) => v[field] ?? 0);
+    chart.data.labels = days.map(([d]) => d.slice(5));
+    chart.data.datasets[0].data = mk("views");
+    chart.data.datasets[1].data = mk("clicks");
+    chart.data.datasets[2].data = mk("signups");
+    chart.data.datasets[3].data = mk("payments");
+    chart.update("none"); // "none" skips animation for instant feel
+  }
+
+  function initChart() {
+    if (!canvas || chart) return;
+    const mk = (field: keyof Breakdown) => days.map(([, v]) => v[field] ?? 0);
+    chart = new Chart(canvas, {
+      type: "line",
+      data: {
+        labels: days.map(([d]) => d.slice(5)),
+        datasets: [
+          { label: "Views",    data: mk("views"),    borderColor: "#60a5fa", tension: 0.3, fill: false, pointRadius: 3 },
+          { label: "Clicks",   data: mk("clicks"),   borderColor: "#f97316", tension: 0.3, fill: false, pointRadius: 3 },
+          { label: "Signups",  data: mk("signups"),  borderColor: "#4ade80", tension: 0.3, fill: false, pointRadius: 3 },
+          { label: "Payments", data: mk("payments"), borderColor: "#facc15", tension: 0.3, fill: false, pointRadius: 3 },
+        ],
+      },
+      options: {
+        responsive: true,
+        animation: false,
+        plugins: {
+          legend: { position: "top" },
+          tooltip: { mode: "index", intersect: false },
+        },
+        scales: { y: { beginAtZero: true } },
+      },
+    });
+  }
+
+  let es: EventSource;
+
+  onMount(() => {
+    es = new EventSource("/api/analytics");
+
+    es.onopen = () => { live = true; };
+
+    es.onmessage = (event) => {
+      const data = JSON.parse(event.data);
+      processData(data.days ?? {});
+      loading = false;
+
+      if (!chart) {
+        setTimeout(initChart, 0);
+      } else {
+        updateChart();
+      }
+    };
+
+    es.onerror = () => {
+      live = false;
+      if (loading) {
+        error = "Could not connect to analytics stream.";
+        loading = false;
+      }
+    };
+  });
+
+  onDestroy(() => {
+    es?.close();
+    chart?.destroy();
   });
 </script>
 
 <div class="min-h-screen bg-base-200 p-6 md:p-12 font-poppins">
-  <h1 class="text-3xl font-bold mb-1">Analytics</h1>
+  <div class="flex items-center gap-3 mb-1">
+    <h1 class="text-3xl font-bold">Analytics</h1>
+    <span class="flex items-center gap-1.5 text-xs font-semibold px-2 py-1 rounded-full {live ? 'bg-green-500/20 text-green-400' : 'bg-base-300 text-base-content/40'}">
+      <span class="w-1.5 h-1.5 rounded-full {live ? 'bg-green-400 animate-pulse' : 'bg-base-content/30'}"></span>
+      {live ? 'live' : 'connecting…'}
+    </span>
+  </div>
   <p class="text-base-content/50 mb-8 text-sm">TikTok ads funnel · last 30 days</p>
 
   {#if loading}
