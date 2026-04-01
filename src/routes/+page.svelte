@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { API_URL } from "$lib/scripts/config";
   import { browser } from "$app/environment";
   import { goto } from "$app/navigation";
   import Plans from "$lib/components/ui/landing/Plans.svelte";
@@ -97,17 +96,14 @@
   }
 
   function getStartedClicked() {
-    if (browser) {
-      if (localStorage.getItem("allowAnalytics") == "true") {
-        let referrer = localStorage.getItem("referrer") || "";
-        fetch(`${API_URL}/analytics/getStartedButtonClicked?referrer=` + encodeURIComponent(referrer), {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-      }
-    }
+    fetch("/api/analytics/click", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        referrer: localStorage.getItem("referrer") || "unknown",
+        campaign: localStorage.getItem("campaign_name") || "unknown",
+      }),
+    }).catch(() => {});
   }
 
   function getBasicPrice() {

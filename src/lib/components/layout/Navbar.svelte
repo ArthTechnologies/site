@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { API_URL } from "$lib/scripts/config";
   import ThemeToggle from "./../ui/ThemeToggle.svelte";
   import Helper from "./../ui/Helper.svelte";
   let Webname = "Arth Panel";
@@ -43,24 +42,14 @@
   }
 
   function getStartedClicked() {
-    if (browser) {
-      if (localStorage.getItem("allowAnalytics") == "true") {
-        let page = localStorage.getItem("ab_NewLandingPage");
-        let referrer = localStorage.getItem("referrer") || "";
-        fetch(
-          `${API_URL}/analytics/getStartedButtonClicked?bpage=` +
-            page + "&referrer=" + encodeURIComponent(referrer),
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        ).catch((err) => {
-          console.error("Analytics fetch failed:", err.message);
-        });
-      }
-    }
+    fetch("/api/analytics/click", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        referrer: localStorage.getItem("referrer") || "unknown",
+        campaign: localStorage.getItem("campaign_name") || "unknown",
+      }),
+    }).catch(() => {});
   }
 </script>
 

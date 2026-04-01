@@ -97,19 +97,14 @@
   }
 
   function getStartedClicked() {
-    if (browser) {
-      if (localStorage.getItem("allowAnalytics") == "true") {
-        let referrer = localStorage.getItem("referrer") || "";
-        fetch(`${API_URL}/analytics/getStartedButtonClicked?referrer=` + encodeURIComponent(referrer), {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }).catch((err) => {
-          console.error("Analytics fetch failed:", err.message);
-        });
-      }
-    }
+    fetch("/api/analytics/click", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        referrer: localStorage.getItem("referrer") || "unknown",
+        campaign: localStorage.getItem("campaign_name") || "unknown",
+      }),
+    }).catch(() => {});
   }
 
   function getBasicPrice() {
