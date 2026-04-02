@@ -114,3 +114,8 @@ export function recordEvent(
 export function getAll(): AnalyticsData {
   return read();
 }
+
+export function deleteAll() {
+  if (fs.existsSync(DATA_PATH)) fs.unlinkSync(DATA_PATH);
+  broadcast({ days: {} });
+}
