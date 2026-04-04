@@ -16,6 +16,8 @@ export function GET({ url }: { url: URL }) {
     start(c) {
       ctrl = c;
       addClient(c);
+      // Ping immediately so the client knows the connection is live
+      c.enqueue(enc.encode("event: ping\ndata: {}\n\n"));
     },
     cancel() {
       removeClient(ctrl);

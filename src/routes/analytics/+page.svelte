@@ -160,15 +160,17 @@
     // ── Step 2: open SSE for live push updates ──
     es = new EventSource("/api/analytics");
 
-    es.onopen = () => { live = true; };
+    es.addEventListener("ping", () => { live = true; });
 
     es.onmessage = (event) => {
+      live = true; // fallback — any message means we're connected
       const data = JSON.parse(event.data);
       processData(data.days ?? {});
       updateChart();
     };
 
     es.addEventListener("notification", (event: MessageEvent) => {
+      live = true;
       const p = JSON.parse(event.data);
       addToast(p);
     });
