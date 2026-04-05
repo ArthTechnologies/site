@@ -11,6 +11,21 @@
 
   let onMainPage = false;
 
+  function simplifyReferrer(url: string): string {
+    if (!url || url === "unknown") return "unknown";
+    try {
+      const u = new URL(url);
+      let domain = u.hostname || "";
+      // Remove www. prefix
+      domain = domain.replace(/^www\./, "");
+      // Extract just the domain name (first part before first dot)
+      domain = domain.split(".")[0];
+      return domain || "unknown";
+    } catch {
+      return "unknown";
+    }
+  }
+
   if (browser) {
     // A/B test — keep as-is
     let slug = window.location.pathname;
@@ -28,7 +43,7 @@
     onMainPage = window.location.pathname === "/";
 
     // Persist referrer & UTM campaign for click attribution
-    let referrer = document.referrer || "unknown";
+    let referrer = simplifyReferrer(document.referrer || "unknown");
     const urlParams = new URLSearchParams(window.location.search);
     const campaign_name = urlParams.get("utm_campaign") || "unknown";
     if (localStorage.getItem("referrer") == null) localStorage.setItem("referrer", referrer);
