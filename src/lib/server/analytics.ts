@@ -22,6 +22,19 @@ export interface AnalyticsData {
 const DATA_PATH = path.resolve("data/analytics.json");
 const enc = new TextEncoder();
 
+function normalizeReferrer(referrer: string): string {
+  if (!referrer || referrer === "unknown") return "unknown";
+  try {
+    const u = new URL(referrer);
+    let domain = u.hostname || "";
+    domain = domain.replace(/^www\./, "");
+    domain = domain.split(".")[0];
+    return domain || "unknown";
+  } catch {
+    return "unknown";
+  }
+}
+
 // SSE client registry — persists across requests within the Node process
 const clients = new Set<ReadableStreamDefaultController<Uint8Array>>();
 
@@ -95,6 +108,9 @@ export function recordEvent(
 ) {
   const data = read();
   const key = today();
+
+  // Normalize referrer server-side to ensure consistency
+  referrer = normalizeReferrer(referrer);
 
   if (!data.days[key]) data.days[key] = emptyDay();
   const day = data.days[key];
