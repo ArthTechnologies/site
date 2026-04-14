@@ -24,6 +24,12 @@ const enc = new TextEncoder();
 
 function normalizeReferrer(referrer: string): string {
   if (!referrer || referrer === "unknown") return "unknown";
+
+  // If it's not a URL (no ://), assume it's already simplified
+  if (!referrer.includes("://")) {
+    return referrer;
+  }
+
   try {
     const u = new URL(referrer);
     let domain = u.hostname || "";
