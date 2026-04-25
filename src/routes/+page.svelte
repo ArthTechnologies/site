@@ -2,6 +2,7 @@
   import { browser } from "$app/environment";
   import { goto } from "$app/navigation";
   import Plans from "$lib/components/ui/landing/Plans.svelte";
+  import TrustpilotWidget from "$lib/components/ui/TrustpilotWidget.svelte";
   import { t } from "$lib/scripts/i18n";
   import { BadgeCheck, MemoryStick, CpuIcon, CupSodaIcon, Globe2, Globe, Upload, Users, SettingsIcon } from "lucide-svelte";
 
@@ -172,7 +173,9 @@
   >
     {$t("landing.title")}
   </b>
-
+  <div class="mt-6 -mb-4">
+    <TrustpilotWidget />
+  </div>
   <Plans />
 </div>
 
