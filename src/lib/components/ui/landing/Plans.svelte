@@ -60,7 +60,7 @@
       </div>
     </div>
     <p class="font-poppins font-bold text-xl  text-center max-md:flex flex-col mb-0.5">
-      $3.99<span class="text-sm">/{$t("misc.month")}</span>
+      $5.99<span class="text-sm">/{$t("misc.month")}</span>
     </p>
 
 <div class="divider w-full h-[1px] bg-gray-400 my-2"></div>
@@ -117,7 +117,7 @@
       </div>
     </div>
     <p class="font-poppins font-bold text-xl  text-center max-md:flex flex-col mb-0.5">
-      $5.99<span class="text-sm">/{$t("misc.month")}</span>
+      $8.99<span class="text-sm">/{$t("misc.month")}</span>
     </p>
 
 <div class="divider w-full h-[1px] bg-gray-400 my-2"></div>
@@ -174,7 +174,7 @@ href="https://servers.arthmc.xyz/signup?plan=plus&quarterly={billedQuarterly}&re
       </div>
     </div>
     <p class="font-poppins font-bold text-xl  text-center max-md:flex flex-col mb-0.5 text-[#edcfb0]">
-      $7.99<span class="text-sm opacity-80">/{$t("misc.month")}</span>
+      $11.99<span class="text-sm opacity-80">/{$t("misc.month")}</span>
     </p>
 
 <div class="divider w-full h-[1px] bg-gray-400 my-2"></div>

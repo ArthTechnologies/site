@@ -239,7 +239,7 @@
     Unmatched pricing.
   </p>
   <p class="font-poppins w-[88%] md:w-[64%]">
-    By cutting down on middlemen, we can offer unmatched pricing for all plans. At $1/GB of ram, we're less than half the price of the competition.
+    By cutting down on middlemen, we can offer unmatched pricing for all plans. At $1.5/GB of ram, we're less than half the price of the competition.
   </p>
 </div>
       <img
@@ -248,7 +248,7 @@
     />
     </div>
     <img
-      src="/images/Performance1.svg?v=2"
+      src="/images/Performance1.svg?v=3"
       class="z-10  sm:w-[75%] md:w-fit md:h-64 lg:h-80"
     />
   </div>
