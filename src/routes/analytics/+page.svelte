@@ -32,6 +32,10 @@
   let error = "";
   let live = false;
 
+  type WindowMode = "last30" | "mtd";
+  let windowMode: WindowMode = "last30";
+  let rawDays: Record<string, DayData> = {};
+
   let totals = { views: 0, clicks: 0, signups: 0, payments: 0 };
   let byReferrer: Record<string, Breakdown> = {};
   let byCampaign: Record<string, Breakdown> = {};
@@ -46,9 +50,15 @@
   }
 
   function processData(raw: Record<string, DayData>) {
-    days = Object.entries(raw)
-      .sort(([a], [b]) => a.localeCompare(b))
-      .slice(-30);
+    rawDays = raw;
+    const sorted = Object.entries(raw).sort(([a], [b]) => a.localeCompare(b));
+
+    if (windowMode === "mtd") {
+      const prefix = new Date().toISOString().slice(0, 7); // "YYYY-MM"
+      days = sorted.filter(([d]) => d.startsWith(prefix));
+    } else {
+      days = sorted.slice(-30);
+    }
 
     totals = { views: 0, clicks: 0, signups: 0, payments: 0 };
     byReferrer = {};
@@ -163,7 +173,7 @@
     es.addEventListener("ping", () => { live = true; });
 
     es.onmessage = (event) => {
-      live = true; // fallback — any message means we're connected
+      live = true;
       const data = JSON.parse(event.data);
       processData(data.days ?? {});
       updateChart();
@@ -177,6 +187,12 @@
 
     es.onerror = () => { live = false; };
   });
+
+  function setWindow(mode: WindowMode) {
+    windowMode = mode;
+    processData(rawDays);
+    updateChart();
+  }
 
   onDestroy(() => {
     es?.close();
@@ -210,8 +226,18 @@
       <span class="w-1.5 h-1.5 rounded-full {live ? 'bg-green-400 animate-pulse' : 'bg-base-content/30'}"></span>
       {live ? 'live' : 'connecting…'}
     </span>
+    <div class="flex rounded-lg overflow-hidden border border-base-300 text-xs font-semibold ml-auto">
+      <button
+        class="px-3 py-1.5 transition-colors {windowMode === 'last30' ? 'bg-base-content text-base-100' : 'text-base-content/50 hover:text-base-content'}"
+        on:click={() => setWindow('last30')}
+      >Last 30 days</button>
+      <button
+        class="px-3 py-1.5 transition-colors {windowMode === 'mtd' ? 'bg-base-content text-base-100' : 'text-base-content/50 hover:text-base-content'}"
+        on:click={() => setWindow('mtd')}
+      >Month to date</button>
+    </div>
   </div>
-  <p class="text-base-content/50 mb-8 text-sm">TikTok ads funnel · last 30 days</p>
+  <p class="text-base-content/50 mb-8 text-sm">TikTok ads funnel · {windowMode === 'mtd' ? 'month to date' : 'last 30 days'}</p>
 
   {#if loading}
     <p class="text-base-content/50 animate-pulse">Loading…</p>
@@ -223,7 +249,7 @@
       <div class="bg-base-100 rounded-2xl shadow p-5">
         <p class="text-xs text-blue-400 font-semibold uppercase tracking-wider mb-1">Views</p>
         <p class="text-3xl font-bold">{totals.views}</p>
-        <p class="text-xs text-base-content/40 mt-1">30d total</p>
+        <p class="text-xs text-base-content/40 mt-1">{windowMode === 'mtd' ? 'MTD total' : '30d total'}</p>
       </div>
       <div class="bg-base-100 rounded-2xl shadow p-5">
         <p class="text-xs text-orange-400 font-semibold uppercase tracking-wider mb-1">Clicks</p>
