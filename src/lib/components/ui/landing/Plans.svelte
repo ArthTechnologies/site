@@ -1,14 +1,17 @@
 <script>
   import { browser } from "$app/environment";
   import { t } from "$lib/scripts/i18n";
-  import { CpuIcon, MemoryStick } from "lucide-svelte";
+  import { CpuIcon, MemoryStick, BadgePercent } from "lucide-svelte";
   let billedQuarterly = false;
   let referrer = "none";
   let campaign_name = "none";
+  let utm_source = "none";
+  $: promoCode = utm_source && utm_source.startsWith("code_") ? utm_source.slice(5).toUpperCase() : "";
   if (browser) {
     setInterval(() => {
       referrer = localStorage.getItem("referrer") || "none";
       campaign_name = localStorage.getItem("campaign_name") || "none";
+      utm_source = localStorage.getItem("utm_source") || "none";
     }, 1000);
   }
   function getStartedClicked() {
@@ -62,6 +65,11 @@
     <p class="font-poppins font-bold text-xl  text-center max-md:flex flex-col mb-0.5">
       $5.99<span class="text-sm">/{$t("misc.month")}</span>
     </p>
+    {#if promoCode}
+      <div class="flex items-center gap-1 text-xs font-poppins-bold text-[#F56922] bg-[#F56922]/10 rounded-full px-2 py-0.5 -mt-1">
+        <BadgePercent size="14" />10% off with {promoCode}
+      </div>
+    {/if}
 
 <div class="divider w-full h-[1px] bg-gray-400 my-2"></div>
 <ul class="list-disc font-poppins list-inside text-md">
@@ -71,7 +79,7 @@
       </ul>
     <a
       on:click={getStartedClicked}
-      href="https://servers.arthmc.xyz/signup?plan=basic&quarterly={billedQuarterly}&referrer={referrer}&campaign_name={campaign_name}"
+      href="https://servers.arthmc.xyz/signup?plan=basic&quarterly={billedQuarterly}&referrer={referrer}&campaign_name={campaign_name}&utm_source={utm_source}"
       target="_blank"
       rel="noreferrer"
       class="w-full"
@@ -119,6 +127,11 @@
     <p class="font-poppins font-bold text-xl  text-center max-md:flex flex-col mb-0.5">
       $8.99<span class="text-sm">/{$t("misc.month")}</span>
     </p>
+    {#if promoCode}
+      <div class="flex items-center gap-1 text-xs font-poppins-bold text-[#F56922] bg-[#F56922]/10 rounded-full px-2 py-0.5 -mt-1">
+        <BadgePercent size="14" />10% off with {promoCode}
+      </div>
+    {/if}
 
 <div class="divider w-full h-[1px] bg-gray-400 my-2"></div>
 <ul class="list-disc font-poppins list-inside text-md">
@@ -128,7 +141,7 @@
       </ul>
     <a
       on:click={getStartedClicked}
-href="https://servers.arthmc.xyz/signup?plan=plus&quarterly={billedQuarterly}&referrer={referrer}&campaign_name={campaign_name}"
+href="https://servers.arthmc.xyz/signup?plan=plus&quarterly={billedQuarterly}&referrer={referrer}&campaign_name={campaign_name}&utm_source={utm_source}"
       target="_blank"
       rel="noreferrer"
       class="w-full"
@@ -176,6 +189,11 @@ href="https://servers.arthmc.xyz/signup?plan=plus&quarterly={billedQuarterly}&re
     <p class="font-poppins font-bold text-xl  text-center max-md:flex flex-col mb-0.5 text-[#edcfb0]">
       $11.99<span class="text-sm opacity-80">/{$t("misc.month")}</span>
     </p>
+    {#if promoCode}
+      <div class="flex items-center gap-1 text-xs font-poppins-bold text-[#edcfb0] bg-[#edcfb0]/10 rounded-full px-2 py-0.5 -mt-1">
+        <BadgePercent size="14" />10% off with {promoCode}
+      </div>
+    {/if}
 
 <div class="divider w-full h-[1px] bg-gray-400 my-2"></div>
 <ul class="list-disc font-poppins list-inside text-md">
@@ -185,7 +203,7 @@ href="https://servers.arthmc.xyz/signup?plan=plus&quarterly={billedQuarterly}&re
       </ul>
     <a
       on:click={getStartedClicked}
-      href="https://servers.arthmc.xyz/signup?plan=premium&quarterly={billedQuarterly}&referrer={referrer}&campaign_name={campaign_name}"
+      href="https://servers.arthmc.xyz/signup?plan=premium&quarterly={billedQuarterly}&referrer={referrer}&campaign_name={campaign_name}&utm_source={utm_source}"
       target="_blank"
       rel="noreferrer"
       class="w-full"  

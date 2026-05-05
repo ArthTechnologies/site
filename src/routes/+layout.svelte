@@ -46,8 +46,10 @@
     let referrer = simplifyReferrer(document.referrer || "unknown");
     const urlParams = new URLSearchParams(window.location.search);
     const campaign_name = urlParams.get("utm_campaign") || "unknown";
+    const utm_source = urlParams.get("utm_source") || "unknown";
     if (localStorage.getItem("referrer") == null) localStorage.setItem("referrer", referrer);
     if (localStorage.getItem("campaign_name") == null) localStorage.setItem("campaign_name", campaign_name);
+    if (localStorage.getItem("utm_source") == null) localStorage.setItem("utm_source", utm_source);
 
     // Track page view — fire and forget, no consent gate
     fetch("/api/analytics/view", {
