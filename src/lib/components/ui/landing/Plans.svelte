@@ -5,13 +5,13 @@
   let billedQuarterly = false;
   let referrer = "none";
   let campaign_name = "none";
-  let utm_source = "none";
-  $: promoCode = utm_source && utm_source.startsWith("code_") ? utm_source.slice(5).toUpperCase() : "";
+  $: promoCode = campaign_name && campaign_name.startsWith("code_") ? campaign_name.slice(5).toUpperCase() : "";
   if (browser) {
-    setInterval(() => {
+    // Wait 1s so the +layout.svelte logic that captures utm_campaign and writes
+    // it to localStorage has a chance to run before we read.
+    setTimeout(() => {
       referrer = localStorage.getItem("referrer") || "none";
       campaign_name = localStorage.getItem("campaign_name") || "none";
-      utm_source = localStorage.getItem("utm_source") || "none";
     }, 1000);
   }
   function getStartedClicked() {
@@ -79,7 +79,7 @@
       </ul>
     <a
       on:click={getStartedClicked}
-      href="https://servers.arthmc.xyz/signup?plan=basic&quarterly={billedQuarterly}&referrer={referrer}&campaign_name={campaign_name}&utm_source={utm_source}"
+      href="https://servers.arthmc.xyz/signup?plan=basic&quarterly={billedQuarterly}&referrer={referrer}&campaign_name={campaign_name}"
       target="_blank"
       rel="noreferrer"
       class="w-full"
@@ -141,7 +141,7 @@
       </ul>
     <a
       on:click={getStartedClicked}
-href="https://servers.arthmc.xyz/signup?plan=plus&quarterly={billedQuarterly}&referrer={referrer}&campaign_name={campaign_name}&utm_source={utm_source}"
+href="https://servers.arthmc.xyz/signup?plan=plus&quarterly={billedQuarterly}&referrer={referrer}&campaign_name={campaign_name}"
       target="_blank"
       rel="noreferrer"
       class="w-full"
@@ -203,7 +203,7 @@ href="https://servers.arthmc.xyz/signup?plan=plus&quarterly={billedQuarterly}&re
       </ul>
     <a
       on:click={getStartedClicked}
-      href="https://servers.arthmc.xyz/signup?plan=premium&quarterly={billedQuarterly}&referrer={referrer}&campaign_name={campaign_name}&utm_source={utm_source}"
+      href="https://servers.arthmc.xyz/signup?plan=premium&quarterly={billedQuarterly}&referrer={referrer}&campaign_name={campaign_name}"
       target="_blank"
       rel="noreferrer"
       class="w-full"  
