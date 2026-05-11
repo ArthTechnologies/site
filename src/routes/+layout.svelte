@@ -7,7 +7,6 @@
   import { themeChange } from "theme-change";
   import Footer from "$lib/components/layout/Footer.svelte";
   import { browser } from "$app/environment";
-  import { goto } from "$app/navigation";
 
   let onMainPage = false;
 
@@ -27,19 +26,20 @@
   }
 
   if (browser) {
-    // A/B test — keep as-is
-    let slug = window.location.pathname;
-    if (slug === "/") {
-      if (localStorage.getItem("ab_NewLandingPage") == null) {
-        let x = Math.floor(Math.random() * 2) == 0;
-        if (!x) {
-          localStorage.setItem("ab_NewLandingPage", "false");
-        } else {
-          localStorage.setItem("ab_NewLandingPage", "true");
-          goto("/hosting");
-        }
-      }
-    }
+    // A/B test disabled — was redirecting 50% of homepage visitors to /hosting
+    // with no analytics attribution to measure outcomes.
+    // let slug = window.location.pathname;
+    // if (slug === "/") {
+    //   if (localStorage.getItem("ab_NewLandingPage") == null) {
+    //     let x = Math.floor(Math.random() * 2) == 0;
+    //     if (!x) {
+    //       localStorage.setItem("ab_NewLandingPage", "false");
+    //     } else {
+    //       localStorage.setItem("ab_NewLandingPage", "true");
+    //       goto("/hosting");
+    //     }
+    //   }
+    // }
     onMainPage = window.location.pathname === "/";
 
     // Persist referrer & UTM campaign for click attribution
