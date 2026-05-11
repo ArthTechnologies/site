@@ -23,7 +23,9 @@ export function decodeAccountId(id: string): DecodedAccountId | null {
 
   const starIdx = decoded.indexOf("*");
   if (starIdx === -1) return null;
-  const nodeName = decoded.slice(0, starIdx);
+  // Strip .arthmc.xyz suffix if the full hostname was encoded instead of just the short name
+  let nodeName = decoded.slice(0, starIdx);
+  if (nodeName.endsWith(".arthmc.xyz")) nodeName = nodeName.slice(0, -".arthmc.xyz".length);
   const rest = decoded.slice(starIdx + 1);
 
   const colonIdx = rest.indexOf(":");
