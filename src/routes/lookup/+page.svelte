@@ -13,7 +13,10 @@
     Loader2,
     Copy,
     Check,
+    ExternalLink,
   } from "lucide-svelte";
+
+  const OBSERVER_URL = "https://servers.arthmc.xyz";
   import { decodeAccountId, instanceUrl } from "$lib/scripts/accountId";
   import credentials from "$lib/stores/lookupCredentials";
   import LookupCredentialsModal from "$lib/components/ui/LookupCredentialsModal.svelte";
@@ -117,6 +120,21 @@
       copied = true;
       setTimeout(() => (copied = false), 1200);
     });
+  }
+
+  function openInObserver() {
+    if (!result || !result.account.token) return;
+    const d = decodeAccountId(result.account.accountId);
+    if (!d) return;
+    const params = new URLSearchParams({
+      token: result.account.token,
+      accountId: result.account.accountId,
+      email: result.account.email || "",
+      accountEmail: result.account.name,
+      name: (result.account.email || "").split("@")[0],
+      userNode: `${instanceUrl(d.nodeName)}/`,
+    });
+    window.open(`${OBSERVER_URL}/admin-impersonate?${params.toString()}`, "_blank");
   }
 
   function softwareColor(s: string | null): string {
@@ -293,11 +311,24 @@
               </div>
             </div>
           </div>
-          {#if result.account.adminAccess}
-            <span class="badge badge-secondary gap-1"
-              ><Shield size="12" />admin</span
+          <div class="flex items-center gap-2 flex-wrap">
+            {#if result.account.adminAccess}
+              <span class="badge badge-secondary gap-1"
+                ><Shield size="12" />admin</span
+              >
+            {/if}
+            <button
+              class="btn btn-primary btn-sm gap-1.5"
+              on:click={openInObserver}
+              disabled={!result.account.token}
+              title={result.account.token
+                ? "Open this account's panel in a new tab"
+                : "Token missing from response"}
             >
-          {/if}
+              <ExternalLink size="14" />
+              Open in Observer
+            </button>
+          </div>
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-5">
