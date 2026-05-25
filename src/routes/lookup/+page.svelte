@@ -14,6 +14,7 @@
     Copy,
     Check,
     ExternalLink,
+    GitBranch,
   } from "lucide-svelte";
 
   const OBSERVER_URL = "https://servers.arthmc.xyz";
@@ -28,6 +29,10 @@
   let errorKind: "creds" | "auth" | "notfound" | "network" | "decode" | "other" | null =
     null;
   let copied = false;
+
+  let duplicateResults: any = null;
+  let checkingDuplicates = false;
+  let duplicateError: string | null = null;
 
   $: decoded = decodeAccountId(input);
   $: hasCredsForDecoded = decoded ? !!$credentials[decoded.nodeName] : false;
@@ -77,6 +82,8 @@
       return;
     }
 
+    duplicateResults = null;
+    duplicateError = null;
     loading = true;
     try {
       const res = await fetch(`${instanceUrl(d.nodeName)}/admin/lookup/${id}`, {
@@ -135,6 +142,56 @@
       userNode: `${instanceUrl(d.nodeName)}/`,
     });
     window.open(`${OBSERVER_URL}/admin-impersonate?${params.toString()}`, "_blank");
+  }
+
+  async function checkDuplicates() {
+    if (!result || !decoded) return;
+
+    const creds = $credentials[decoded.nodeName];
+    if (!creds) {
+      duplicateError = `No credentials stored for "${decoded.nodeName}".`;
+      return;
+    }
+
+    const nodes = Object.entries($credentials).map(([nodeName, c]) => ({
+      url: instanceUrl(nodeName) + "/",
+      username: (c as any).username,
+      token: (c as any).token,
+    }));
+
+    checkingDuplicates = true;
+    duplicateError = null;
+    duplicateResults = null;
+
+    try {
+      const res = await fetch(
+        `${instanceUrl(decoded.nodeName)}/admin/cross-node-duplicates`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            username: creds.username,
+            token: creds.token,
+          },
+          body: JSON.stringify({ observerUrl: OBSERVER_URL, nodes }),
+        }
+      );
+
+      if (res.status === 403) {
+        duplicateError = `Admin access denied on "${decoded.nodeName}".`;
+        return;
+      }
+      if (!res.ok) {
+        duplicateError = `Quartz responded with HTTP ${res.status}.`;
+        return;
+      }
+
+      duplicateResults = await res.json();
+    } catch (e: any) {
+      duplicateError = `Network error: ${e?.message ?? "unknown"}`;
+    } finally {
+      checkingDuplicates = false;
+    }
   }
 
   function softwareColor(s: string | null): string {
@@ -318,6 +375,19 @@
               >
             {/if}
             <button
+              class="btn btn-warning btn-sm gap-1.5"
+              on:click={checkDuplicates}
+              disabled={checkingDuplicates}
+              title="Check for accounts with the same email or username across all registered nodes"
+            >
+              {#if checkingDuplicates}
+                <Loader2 size="14" class="animate-spin" />
+              {:else}
+                <GitBranch size="14" />
+              {/if}
+              Check Duplicates
+            </button>
+            <button
               class="btn btn-primary btn-sm gap-1.5"
               on:click={openInObserver}
               disabled={!result.account.token}
@@ -380,6 +450,90 @@
         </div>
       </div>
     </div>
+
+    <!-- duplicate check results -->
+    {#if duplicateError}
+      <div class="mt-4 alert alert-error">
+        <AlertTriangle size="16" />
+        <span>Duplicate check failed: {duplicateError}</span>
+      </div>
+    {/if}
+
+    {#if duplicateResults}
+      <div class="mt-6">
+        <div class="flex items-center gap-2 mb-3 ml-1 flex-wrap">
+          <GitBranch size="16" class="opacity-60" />
+          <h2 class="font-semibold tracking-wide uppercase text-sm opacity-80">
+            Cross-Node Duplicates
+          </h2>
+          <span
+            class="badge badge-sm {duplicateResults.duplicates.length > 0
+              ? 'badge-warning'
+              : 'badge-success'}"
+          >
+            {duplicateResults.duplicates.length > 0
+              ? `${duplicateResults.duplicates.length} found`
+              : "none found"}
+          </span>
+          <span class="text-xs opacity-40">
+            {duplicateResults.checkedNodes}/{duplicateResults.scannedNodes} nodes checked
+          </span>
+        </div>
+
+        {#if duplicateResults.duplicates.length === 0}
+          <div
+            class="bg-base-200/50 rounded-2xl p-8 text-center text-sm opacity-60 border border-dashed border-base-300"
+          >
+            No duplicate accounts found across checked nodes.
+          </div>
+        {:else}
+          <div class="grid gap-3">
+            {#each duplicateResults.duplicates as dup}
+              <div
+                class="bg-warning/10 rounded-xl p-4 border border-warning/30"
+              >
+                <div class="font-semibold text-sm break-all">
+                  {dup.email || dup.username}
+                </div>
+                <div class="mt-2 flex flex-wrap gap-2">
+                  {#each dup.nodes as n}
+                    <span
+                      class="badge badge-sm badge-outline gap-1 font-mono"
+                      title={n.accountId}
+                    >
+                      <Server size="10" />
+                      {n.node
+                        .replace("https://", "")
+                        .replace(".arthmc.xyz/", "")}
+                      {#if n.type}
+                        <span class="opacity-50">({n.type})</span>
+                      {/if}
+                    </span>
+                  {/each}
+                </div>
+              </div>
+            {/each}
+          </div>
+        {/if}
+
+        {#if duplicateResults.errors && duplicateResults.errors.length > 0}
+          <div class="mt-3 space-y-1">
+            {#each duplicateResults.errors as err}
+              <div
+                class="flex items-center gap-1.5 text-xs text-warning/70"
+              >
+                <AlertTriangle size="10" />
+                <span class="font-mono"
+                  >{err.node
+                    .replace("https://", "")
+                    .replace(".arthmc.xyz/", "")}</span
+                >: {err.error}
+              </div>
+            {/each}
+          </div>
+        {/if}
+      </div>
+    {/if}
 
     <!-- servers -->
     <div class="mt-6">
