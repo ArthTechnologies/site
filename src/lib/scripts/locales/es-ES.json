@@ -9,7 +9,7 @@
   "navbar.login": "Iniciar sesión",
   "navbar.getStarted": "Empezar",
   "landing.subtitle": "Experimenta un rendimiento sin igual y características exclusivas en cada plan.",
-  "landing.title": "Minecraft Hosting de calidad a precios asequibles",
+  "landing.title": "Quality Minecraft Hosting at Affordable Prices",
   "landing.plans.title": "Planes",
   "landing.plans.title2": "Todos los planes",
   "landing.plans.basic.title": "Básico",
@@ -54,7 +54,7 @@
   "footer.about": "Sobre",
   "footer.privacy": "Privacidad",
   "footer.socials": "Redes sociales",
-  "footer.youtube": "YouTube",
+  "footer.youtube": "Youtube",
   "footer.discord": "Discord",
   "tutorials": "Base de conocimientos",
   "plans": "Planes",
@@ -72,5 +72,5 @@
   },
   "footer.articles": "Artículos",
   "footer.terms": "Términos de servicio",
-  "footer.github": "GitHub"
+  "footer.github": ""
 }
