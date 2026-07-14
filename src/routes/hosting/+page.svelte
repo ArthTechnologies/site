@@ -179,7 +179,7 @@
   <b
     class="text-white leading-tight mt-40 max-md:mb-10 mb-1.5 xl:mb-6 md:mt-5 font-bold text-4xl md:text-5xl lg:text-6xl lg:w-[65rem] text-center font-poppins-bold"
   >
-    Quality Minecraft Hosting<br /><span class="text-green-400">2 Weeks Free</span>
+    {$t("landing.title")}
   </b>
 <iframe src="https://status.arthmc.xyz/badge?theme=dark" class="mt-6 -mb-4 bg-[#222838] pl-1 w-[182px] rounded-lg shadow-sm" height="30" frameborder="0" scrolling="no" style="color-scheme: normal"></iframe>
   <Plans />
