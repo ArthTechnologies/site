@@ -10,7 +10,7 @@ test('payment details remain private in stored and streamed analytics', () => {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'analytics-test-'));
   try {
     fs.mkdirSync(path.join(dir, 'data'));
-    fs.writeFileSync(path.join(dir, 'data/analytics.json'), JSON.stringify({days:{'2026-10-02':{views:1,clicks:0,signups:0,payments:1,byReferrer:{google:{views:1,clicks:0,signups:0,payments:1}},byCampaign:{},paymentDetails:[{billingEmail:'private@example.com',accountId:'acc_private',stripeCustomerId:'cus_private'}]}}}));
+    fs.writeFileSync(path.join(dir, 'data/analytics.json'), JSON.stringify({days:{'2026-10-02':{views:1,clicks:0,signups:0,payments:1,byReferrer:{'youtube:Some Creator':{views:1,clicks:0,signups:0,payments:1},'other:private@example.com':{views:0,clicks:0,signups:0,payments:1}},byCampaign:{'Fall Campaign 2026':{views:1,clicks:0,signups:0,payments:1}},paymentDetails:[{billingEmail:'private@example.com',accountId:'acc_private',stripeCustomerId:'cus_private'}]}}}));
     const source = fs.readFileSync(path.join(__dirname, '../src/lib/server/analytics.ts'), 'utf8');
     const js = ts.transpileModule(source, {compilerOptions:{module:ts.ModuleKind.CommonJS,esModuleInterop:true}}).outputText;
     const exports = {};
@@ -19,6 +19,9 @@ test('payment details remain private in stored and streamed analytics', () => {
     const events = [];
     exports.addClient({enqueue: value => events.push(Buffer.from(value).toString())});
     assert.equal(exports.getAll().days['2026-10-02'].payments, 1);
+    assert.equal(exports.getAll().days['2026-10-02'].byReferrer['youtube:Some Creator'].payments, 1);
+    assert.equal(exports.getAll().days['2026-10-02'].byReferrer.other.payments, 1);
+    assert.equal(exports.getAll().days['2026-10-02'].byCampaign['Fall Campaign 2026'].payments, 1);
     assert.doesNotMatch(JSON.stringify(exports.getAll()), /private@example|acc_private|cus_private|paymentDetails/);
     exports.recordEvent('payments','google','unknown',{billingEmail:'new@example.com',accountId:'acc_new'});
     const stored = JSON.parse(fs.readFileSync(path.join(dir, 'data/analytics.json')));
@@ -32,4 +35,15 @@ test('payment details remain private in stored and streamed analytics', () => {
     exports.recordEvent('payments','google','unknown');
     assert.equal(exports.getAll().days[today].payments, 2);
   } finally { fs.rmSync(dir, {recursive:true, force:true}); }
+});
+
+test('public deletion is denied without calling the storage deletion function', async () => {
+  const source = fs.readFileSync(path.join(__dirname, '../src/routes/api/analytics/data/+server.ts'), 'utf8');
+  const js = ts.transpileModule(source, {compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText;
+  const exports = {};
+  let deleted = false;
+  vm.runInNewContext(js, {exports, require: name => name === '@sveltejs/kit' ? {json: (body, init) => ({body, ...init})} : {deleteAll: () => {deleted = true;}}});
+  const response = await exports.DELETE();
+  assert.equal(response.status, 403);
+  assert.equal(deleted, false);
 });

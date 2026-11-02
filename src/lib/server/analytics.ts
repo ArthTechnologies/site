@@ -147,7 +147,9 @@ export function getAll(): AnalyticsData {
 // Project only numeric aggregate fields, including for pre-existing files.
 // Free-form labels can contain customer information, so suppress unsafe labels.
 function publicLabel(key: string): string {
-  return typeof key === "string" && /^[a-z0-9_-]{1,80}$/i.test(key) && !/(?:acc_|cus_)/i.test(key) && !["__proto__", "constructor", "prototype"].includes(key.toLowerCase()) ? key : "other";
+  // "Other" is unrestricted customer-supplied text and can contain identifying
+  // details. Preserve ordinary source, campaign and YouTube creator labels.
+  return typeof key === "string" && /^[a-z0-9_ .:'-]{1,120}$/i.test(key) && !/(?:acc_|cus_)/i.test(key) && !/^other:/i.test(key) && !["__proto__", "constructor", "prototype"].includes(key.toLowerCase()) ? key : "other";
 }
 
 function publicAnalytics(data: AnalyticsData): AnalyticsData {

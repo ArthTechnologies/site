@@ -1,7 +1,6 @@
-import { deleteAll } from "$lib/server/analytics";
 import { json } from "@sveltejs/kit";
 
 export async function DELETE() {
-  deleteAll();
-  return json({ ok: true });
+  // There is no staff authentication on this public endpoint.
+  return json({ error: "Analytics deletion is unavailable" }, { status: 403 });
 }
