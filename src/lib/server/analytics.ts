@@ -13,6 +13,7 @@ interface Breakdown {
 interface DayData extends Breakdown {
   byReferrer: Record<string, Breakdown>;
   byCampaign: Record<string, Breakdown>;
+  paymentDetails?: { billingEmail: string | null; accountId: string | null; referrer: string; campaign: string }[];
 }
 
 export interface AnalyticsData {
@@ -53,7 +54,7 @@ export function removeClient(ctrl: ReadableStreamDefaultController<Uint8Array>) 
 }
 
 function broadcast(data: AnalyticsData) {
-  const msg = enc.encode(`data: ${JSON.stringify(data)}\n\n`);
+  const msg = enc.encode(`data: ${JSON.stringify(publicAnalytics(data))}\n\n`);
   for (const ctrl of clients) {
     try {
       ctrl.enqueue(msg);
@@ -71,7 +72,8 @@ export interface HitNotification {
 }
 
 export function broadcastNotification(payload: HitNotification) {
-  const msg = enc.encode(`event: notification\ndata: ${JSON.stringify(payload)}\n\n`);
+  const safe = { device: payload.device, referrer: publicLabel(payload.referrer, "referrer"), campaign: publicLabel(payload.campaign, "campaign"), time: payload.time };
+  const msg = enc.encode(`event: notification\ndata: ${JSON.stringify(safe)}\n\n`);
   for (const ctrl of clients) {
     try {
       ctrl.enqueue(msg);
@@ -110,7 +112,8 @@ function today(): string {
 export function recordEvent(
   field: EventField,
   referrer = "unknown",
-  campaign = "unknown"
+  campaign = "unknown",
+  details?: { billingEmail: string | null; accountId: string | null }
 ) {
   const data = read();
   const key = today();
@@ -122,6 +125,10 @@ export function recordEvent(
   const day = data.days[key];
 
   day[field]++;
+  if (field === "payments" && details) {
+    if (!Array.isArray(day.paymentDetails)) day.paymentDetails = [];
+    day.paymentDetails.push({ ...details, referrer, campaign });
+  }
 
   if (!day.byReferrer[referrer]) day.byReferrer[referrer] = emptyBreakdown();
   day.byReferrer[referrer][field]++;
@@ -134,10 +141,41 @@ export function recordEvent(
 }
 
 export function getAll(): AnalyticsData {
-  return read();
+  return publicAnalytics(read());
 }
 
-export function deleteAll() {
-  if (fs.existsSync(DATA_PATH)) fs.unlinkSync(DATA_PATH);
-  broadcast({ days: {} });
+// Project only numeric aggregate fields, including for pre-existing files.
+// Free-form labels can contain customer information, so suppress unsafe labels.
+function publicLabel(key: string, kind: "referrer" | "campaign"): string {
+  // Labels originate from visitors and may contain names or other identifiers.
+  // Only expose fixed categories; keep their counts when grouping the rest.
+  const known = kind === "referrer"
+    ? ["unknown", "google", "google_ad", "geyser", "geysermc", "youtube", "tiktok", "friend", "other", "search", "bing", "duckduckgo", "ecosia", "mojeek", "facebook", "trustpilot"]
+    : ["unknown", "code_techbot", "domain_click"];
+  if (typeof key !== "string") return "other";
+  const label = key.toLowerCase();
+  if (kind === "referrer" && label.startsWith("youtube:")) return "youtube";
+  return known.includes(label) ? label : "other";
+}
+
+function publicAnalytics(data: AnalyticsData): AnalyticsData {
+  const number = (v: unknown) => typeof v === "number" && Number.isFinite(v) ? v : 0;
+  const counts = (v: any): Breakdown => ({ views: number(v?.views), clicks: number(v?.clicks), signups: number(v?.signups), payments: number(v?.payments) });
+  const categories = (v: any, kind: "referrer" | "campaign"): Record<string, Breakdown> => {
+    const result: Record<string, Breakdown> = {};
+    for (const [key, value] of Object.entries(v || {})) {
+      const safe = publicLabel(key, kind);
+      const current = result[safe] || emptyBreakdown();
+      const next = counts(value);
+      for (const field of ["views", "clicks", "signups", "payments"] as const) current[field] += next[field];
+      result[safe] = current;
+    }
+    return result;
+  };
+  const days: Record<string, DayData> = {};
+  for (const [date, day] of Object.entries(data.days || {})) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) continue;
+    days[date] = { ...counts(day), byReferrer: categories(day.byReferrer, "referrer"), byCampaign: categories(day.byCampaign, "campaign") };
+  }
+  return { days };
 }
