@@ -72,7 +72,7 @@ export interface HitNotification {
 }
 
 export function broadcastNotification(payload: HitNotification) {
-  const safe = { ...payload, referrer: publicLabel(payload.referrer), campaign: publicLabel(payload.campaign) };
+  const safe = { device: payload.device, referrer: publicLabel(payload.referrer, "referrer"), campaign: publicLabel(payload.campaign, "campaign"), time: payload.time };
   const msg = enc.encode(`event: notification\ndata: ${JSON.stringify(safe)}\n\n`);
   for (const ctrl of clients) {
     try {
@@ -146,19 +146,25 @@ export function getAll(): AnalyticsData {
 
 // Project only numeric aggregate fields, including for pre-existing files.
 // Free-form labels can contain customer information, so suppress unsafe labels.
-function publicLabel(key: string): string {
-  // "Other" is unrestricted customer-supplied text and can contain identifying
-  // details. Preserve ordinary source, campaign and YouTube creator labels.
-  return typeof key === "string" && /^[a-z0-9_ .:'-]{1,120}$/i.test(key) && !/(?:acc_|cus_)/i.test(key) && !/^other:/i.test(key) && !["__proto__", "constructor", "prototype"].includes(key.toLowerCase()) ? key : "other";
+function publicLabel(key: string, kind: "referrer" | "campaign"): string {
+  // Labels originate from visitors and may contain names or other identifiers.
+  // Only expose fixed categories; keep their counts when grouping the rest.
+  const known = kind === "referrer"
+    ? ["unknown", "google", "google_ad", "geyser", "geysermc", "youtube", "tiktok", "friend", "other", "search", "bing", "duckduckgo", "ecosia", "mojeek", "facebook", "trustpilot"]
+    : ["unknown", "code_techbot", "domain_click"];
+  if (typeof key !== "string") return "other";
+  const label = key.toLowerCase();
+  if (kind === "referrer" && label.startsWith("youtube:")) return "youtube";
+  return known.includes(label) ? label : "other";
 }
 
 function publicAnalytics(data: AnalyticsData): AnalyticsData {
   const number = (v: unknown) => typeof v === "number" && Number.isFinite(v) ? v : 0;
   const counts = (v: any): Breakdown => ({ views: number(v?.views), clicks: number(v?.clicks), signups: number(v?.signups), payments: number(v?.payments) });
-  const categories = (v: any): Record<string, Breakdown> => {
+  const categories = (v: any, kind: "referrer" | "campaign"): Record<string, Breakdown> => {
     const result: Record<string, Breakdown> = {};
     for (const [key, value] of Object.entries(v || {})) {
-      const safe = publicLabel(key);
+      const safe = publicLabel(key, kind);
       const current = result[safe] || emptyBreakdown();
       const next = counts(value);
       for (const field of ["views", "clicks", "signups", "payments"] as const) current[field] += next[field];
@@ -169,12 +175,7 @@ function publicAnalytics(data: AnalyticsData): AnalyticsData {
   const days: Record<string, DayData> = {};
   for (const [date, day] of Object.entries(data.days || {})) {
     if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) continue;
-    days[date] = { ...counts(day), byReferrer: categories(day.byReferrer), byCampaign: categories(day.byCampaign) };
+    days[date] = { ...counts(day), byReferrer: categories(day.byReferrer, "referrer"), byCampaign: categories(day.byCampaign, "campaign") };
   }
   return { days };
-}
-
-export function deleteAll() {
-  if (fs.existsSync(DATA_PATH)) fs.unlinkSync(DATA_PATH);
-  broadcast({ days: {} });
 }
