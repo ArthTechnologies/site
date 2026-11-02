@@ -13,7 +13,8 @@ export function OPTIONS() {
 }
 
 export async function POST({ request }: RequestEvent) {
-  const { referrer = "unknown", campaign = "unknown" } = await request.json().catch(() => ({}));
-  recordEvent("payments", referrer, campaign);
+  const { referrer = "unknown", campaign = "unknown", billingEmail, accountId } = await request.json().catch(() => ({}));
+  const bounded = (value: unknown) => typeof value === "string" && value.length <= 254 ? value : null;
+  recordEvent("payments", referrer, campaign, { billingEmail: bounded(billingEmail), accountId: bounded(accountId) });
   return json({ ok: true }, { headers: CORS });
 }
